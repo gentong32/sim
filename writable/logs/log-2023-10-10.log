@@ -1,0 +1,539 @@
+CRITICAL - 2023-10-10 07:59:15 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1186): CodeIgniter\Model->__call('hapus_daftar_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 07:59:26 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1186): CodeIgniter\Model->__call('hapus_daftar_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 07:59:31 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1176.
+ 1 APPPATH\Controllers\Admin.php(1176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1176)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 08:34:38 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1176.
+ 1 APPPATH\Controllers\Admin.php(1176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1176)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 08:37:56 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1186): CodeIgniter\Model->__call('hapus_daftar_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 08:38:08 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1186): CodeIgniter\Model->__call('hapus_daftar_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 08:38:40 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1186): CodeIgniter\Model->__call('hapus_daftar_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 08:41:36 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1185): CodeIgniter\Model->__call('hapus_daftar_siswa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 08:54:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1185): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-1...', '10', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-10 08:54:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 4 APPPATH\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND tahun_ajaran = :tahun_ajaran:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1185): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 08:54:23 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1175.
+ 1 APPPATH\Controllers\Admin.php(1175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1175)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 08:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 08:55:23 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1175.
+ 1 APPPATH\Controllers\Admin.php(1175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1175)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 08:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 08:55:30 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1175.
+ 1 APPPATH\Controllers\Admin.php(1175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1175)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 09:06:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1185): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-1...', '10', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-10 09:06:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 4 APPPATH\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND tahun_ajaran = :tahun_ajaran:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1185): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 09:16:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1185): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-1...', '10', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-10 09:16:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 4 APPPATH\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND tahun_ajaran = :tahun_ajaran:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1185): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 09:24:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1186): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-1...', '10', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-10 09:24:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 4 APPPATH\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND tahun_ajaran = :tahun_ajaran:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1186): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 09:25:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1205): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-1...', '10', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->tes()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-10 09:25:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 4 APPPATH\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND tahun_ajaran = :tahun_ajaran:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1205): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->tes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 09:26:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1205): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-1...', '10', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->tes()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-10 09:26:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND tahun_ajaran = \'2023\')')
+ 4 APPPATH\Models\M_sekolah.php(168): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_siswa_sekolah WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND tahun_ajaran = :tahun_ajaran:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1205): App\Models\M_sekolah->hapus_daftar_siswa('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->tes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 09:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 09:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 09:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 09:59:42 --> Undefined variable $data_rombel
+in APPPATH\Views\v_admin_siswa_edit.php on line 2.
+ 1 APPPATH\Views\v_admin_siswa_edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_rombel', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_siswa_edit.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_siswa_edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_siswa_edit', [], true)
+ 5 APPPATH\Controllers\Admin.php(610): view('v_admin_siswa_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->edit_siswa('438d9468-61b5-4513-95f0-f587366c96ef')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 09:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 09:59:57 --> Undefined variable $data_rombel
+in APPPATH\Views\v_admin_siswa_edit.php on line 2.
+ 1 APPPATH\Views\v_admin_siswa_edit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_rombel', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_siswa_edit.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_siswa_edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_siswa_edit', [], true)
+ 5 APPPATH\Controllers\Admin.php(610): view('v_admin_siswa_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->edit_siswa('438d9468-61b5-4513-95f0-f587366c96ef')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 10:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 10:13:00 --> Undefined array key "kelastujuan"
+in APPPATH\Controllers\Admin.php on line 1180.
+ 1 APPPATH\Controllers\Admin.php(1180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelastujuan"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1180)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 10:14:40 --> Undefined array key "kelastujuan"
+in APPPATH\Controllers\Admin.php on line 1180.
+ 1 APPPATH\Controllers\Admin.php(1180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelastujuan"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1180)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 10:16:33 --> Undefined array key "kelastujuan"
+in APPPATH\Controllers\Admin.php on line 1180.
+ 1 APPPATH\Controllers\Admin.php(1180): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelastujuan"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1180)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_siswa_pindah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 10:38:18 --> mysqli_sql_exception: Duplicate entry '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' for key 'PRIMARY' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(49): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(68): App\Models\M_sekolah->getInfoSekolah('2f3bd0be-5929-1...', 2022)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-A')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-10 10:38:18 --> Duplicate entry '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (:id_sekolah:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(49): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(68): App\Models\M_sekolah->getInfoSekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', 2022)
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-A')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-10 10:38:50 --> mysqli_sql_exception: Duplicate entry '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' for key 'PRIMARY' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(49): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(68): App\Models\M_sekolah->getInfoSekolah('2f3bd0be-5929-1...', 2022)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-A')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-10 10:38:50 --> Duplicate entry '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (:id_sekolah:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(49): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(68): App\Models\M_sekolah->getInfoSekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', 2022)
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-A')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 10:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-10 10:39:22 --> mysqli_sql_exception: Duplicate entry '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' for key 'PRIMARY' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(49): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(68): App\Models\M_sekolah->getInfoSekolah('2f3bd0be-5929-1...', 2022)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-A')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-10 10:39:22 --> Duplicate entry '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\', 2022)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (:id_sekolah:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(49): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(68): App\Models\M_sekolah->getInfoSekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', 2022)
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-A')
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 10:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:43:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 10:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 11:24:15 --> Undefined variable $manual_tahun
+in APPPATH\Helpers\utama_helper.php on line 34.
+ 1 APPPATH\Helpers\utama_helper.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manual_tahun', 'D:\\laragon\\www\\sim\\app\\Helpers\\utama_helper.php', 34)
+ 2 APPPATH\Controllers\Admin.php(66): tahun_ajaran('mulai')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 11:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 11:24:23 --> Undefined variable $manual_tahun
+in APPPATH\Helpers\utama_helper.php on line 34.
+ 1 APPPATH\Helpers\utama_helper.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $manual_tahun', 'D:\\laragon\\www\\sim\\app\\Helpers\\utama_helper.php', 34)
+ 2 APPPATH\Controllers\Admin.php(66): tahun_ajaran('mulai')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 11:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 11:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 11:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 11:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 11:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 11:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 11:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 12:24:06 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 78.
+ 1 APPPATH\Controllers\Admin.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-B')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 12:24:46 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 78.
+ 1 APPPATH\Controllers\Admin.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-2')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 12:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 12:26:32 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 78.
+ 1 APPPATH\Controllers\Admin.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('10', 'X-2')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 12:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 12:47:33 --> Too few arguments to function App\Controllers\Admin::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 73 and exactly 2 expected
+in APPPATH\Controllers\Admin.php on line 1117.
+ 1 APPPATH\Controllers\Admin.php(73): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('2022', '10', 'X-1')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-10 12:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-10 12:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-10 12:57:59 --> Undefined variable $daftar_kelas_tujuan
+in APPPATH\Views\v_admin_siswa_kelas.php on line 267.
+ 1 APPPATH\Views\v_admin_siswa_kelas.php(267): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_kelas_tujuan', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_siswa_kelas.php', 267)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_siswa_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_siswa_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(109): view('v_admin_siswa_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->siswa_kelas('2022', '10', 'X-1')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 14:07:41 --> Too few arguments to function App\Controllers\Admin::get_rombel_sekolah(), 0 passed in D:\laragon\www\sim\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Admin.php on line 1082.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 14:09:42 --> Too few arguments to function App\Controllers\Admin::get_rombel_sekolah(), 0 passed in D:\laragon\www\sim\system\CodeIgniter.php on line 932 and exactly 1 expected
+in APPPATH\Controllers\Admin.php on line 1082.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-10 22:15:51 --> Undefined variable $sekolah
+in APPPATH\Views\layout\layout_admin.php on line 24.
+ 1 APPPATH\Views\layout\layout_admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_mapel', [], true)
+ 6 APPPATH\Controllers\Admin.php(1226): view('v_admin_mapel')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')

@@ -1,0 +1,706 @@
+INFO - 2023-09-29 08:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:06:22 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('769594', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('769594')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:06:22 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'25f0bbcb-eb2a-47c1-85fc-653c84996818\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$KfAWvHpzqvafdrd75268nOIGBuWceCZerFWPzJPYH/89s0kfFdVje\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'25f0bbcb-eb2a-47c1-85fc-653c84996818\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$KfAWvHpzqvafdrd75268nOIGBuWceCZerFWPzJPYH/89s0kfFdVje\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'25f0bbcb-eb2a-47c1-85fc-653c84996818\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$KfAWvHpzqvafdrd75268nOIGBuWceCZerFWPzJPYH/89s0kfFdVje\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('769594', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('769594')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:06:49 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('719167', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('719167')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:06:49 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'b25fd18c-559e-4df1-b7b6-5a0782522850\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$byS5peBpkFag1vQZXVzi8u8i2qHbwxZRf5yOMIemB9Lny3Sey7AQi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'b25fd18c-559e-4df1-b7b6-5a0782522850\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$byS5peBpkFag1vQZXVzi8u8i2qHbwxZRf5yOMIemB9Lny3Sey7AQi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'b25fd18c-559e-4df1-b7b6-5a0782522850\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$byS5peBpkFag1vQZXVzi8u8i2qHbwxZRf5yOMIemB9Lny3Sey7AQi\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('719167', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('719167')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 08:06:53 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Admin.php on line 229.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('719167')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:14:59 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('620965', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('620965')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:14:59 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'eabd66e5-b3f3-4d60-b5f5-7151aab1c977\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$cznyDkgZ3Np0yzkp4CFYyu7XFTDhHsPnYQnXalgkrtSIG7j.BVyOa\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'eabd66e5-b3f3-4d60-b5f5-7151aab1c977\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$cznyDkgZ3Np0yzkp4CFYyu7XFTDhHsPnYQnXalgkrtSIG7j.BVyOa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'eabd66e5-b3f3-4d60-b5f5-7151aab1c977\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$cznyDkgZ3Np0yzkp4CFYyu7XFTDhHsPnYQnXalgkrtSIG7j.BVyOa\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('620965', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('620965')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:21:16 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('293322', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('293322')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:21:16 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'a441b3a3-6c78-45f2-b402-c730f1f8b51d\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$TzNDkKIkfuO2KmTZksdhO.8bqlHsr0hMAzm6LrrMlaF/.WjJKpApa\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'a441b3a3-6c78-45f2-b402-c730f1f8b51d\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$TzNDkKIkfuO2KmTZksdhO.8bqlHsr0hMAzm6LrrMlaF/.WjJKpApa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'a441b3a3-6c78-45f2-b402-c730f1f8b51d\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$TzNDkKIkfuO2KmTZksdhO.8bqlHsr0hMAzm6LrrMlaF/.WjJKpApa\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('293322', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('293322')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 08:21:20 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Admin.php on line 229.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('293322')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 08:39:25 --> Undefined array key 9
+in APPPATH\Controllers\Admin.php on line 179.
+ 1 APPPATH\Controllers\Admin.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 179)
+ 2 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('203302', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('203302')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 08:40:16 --> Undefined array key 9
+in APPPATH\Controllers\Admin.php on line 179.
+ 1 APPPATH\Controllers\Admin.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 9', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 179)
+ 2 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('450473', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('450473')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:44:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:45:00 --> mysqli_sql_exception: Duplicate entry 'P' for key 'PRIMARY' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('793900', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('793900')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:45:00 --> Duplicate entry 'P' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'P\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', \'2001000003\', \'Siswa 3\', \'10\', \'Tempat Lahir 3\', 39460, \'P\', \'080010003\', \'$2y$10$EFWkK80l1OIqSokMTIdwkeLHZCPm9U7PzSjPedC1Er8/KM8mlpKna\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'P\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', \'2001000003\', \'Siswa 3\', \'10\', \'Tempat Lahir 3\', 39460, \'P\', \'080010003\', \'$2y$10$EFWkK80l1OIqSokMTIdwkeLHZCPm9U7PzSjPedC1Er8/KM8mlpKna\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'P\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', \'2001000003\', \'Siswa 3\', \'10\', \'Tempat Lahir 3\', 39460, \'P\', \'080010003\', \'$2y$10$EFWkK80l1OIqSokMTIdwkeLHZCPm9U7PzSjPedC1Er8/KM8mlpKna\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('793900', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('793900')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:49:26 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('597211', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('597211')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:49:26 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'92320593-6048-4e48-b288-afb2dd584725\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$BDp0gxF2kjPZFu/iM0S2qup8lpJCptf07uHzV/2/Ja8O4Ii25qGlW\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'92320593-6048-4e48-b288-afb2dd584725\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$BDp0gxF2kjPZFu/iM0S2qup8lpJCptf07uHzV/2/Ja8O4Ii25qGlW\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'92320593-6048-4e48-b288-afb2dd584725\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$BDp0gxF2kjPZFu/iM0S2qup8lpJCptf07uHzV/2/Ja8O4Ii25qGlW\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('597211', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('597211')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 08:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 08:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 08:50:28 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(232): App\Controllers\Admin->import('874225', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('874225')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 08:50:28 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'98d3cf23-4849-4df6-95a7-8691210cd9c7\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$97tH9f4aMxyAj.0PGZF0POldKe1rSvcVRNEGUKC1ETvMgpwX2J.QO\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'98d3cf23-4849-4df6-95a7-8691210cd9c7\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$97tH9f4aMxyAj.0PGZF0POldKe1rSvcVRNEGUKC1ETvMgpwX2J.QO\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'98d3cf23-4849-4df6-95a7-8691210cd9c7\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, NULL, NULL, NULL, \'$2y$10$97tH9f4aMxyAj.0PGZF0POldKe1rSvcVRNEGUKC1ETvMgpwX2J.QO\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(193): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(232): App\Controllers\Admin->import('874225', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('874225')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 09:09:42 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Admin.php on line 171.
+ 1 APPPATH\Controllers\Admin.php(171): strtotime(null)
+ 2 APPPATH\Controllers\Admin.php(234): App\Controllers\Admin->import('805780', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('805780')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-09-29 09:09:43 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(195): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(234): App\Controllers\Admin->import('805780', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('805780')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:09:43 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'9989b009-cd34-4ff8-a3fc-d3cf0537c12d\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970-01-01\', NULL, NULL, \'$2y$10$ol2BBoH/R4MTZzyy.pK33uDR6nmNnHCzBpM1IFECJ4nykeKKOyDb6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'9989b009-cd34-4ff8-a3fc-d3cf0537c12d\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970-01-01\', NULL, NULL, \'$2y$10$ol2BBoH/R4MTZzyy.pK33uDR6nmNnHCzBpM1IFECJ4nykeKKOyDb6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'9989b009-cd34-4ff8-a3fc-d3cf0537c12d\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970-01-01\', NULL, NULL, \'$2y$10$ol2BBoH/R4MTZzyy.pK33uDR6nmNnHCzBpM1IFECJ4nykeKKOyDb6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(195): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(234): App\Controllers\Admin->import('805780', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('805780')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-29 09:23:17 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Admin.php on line 174.
+ 1 APPPATH\Controllers\Admin.php(244): App\Controllers\Admin->import('224890', '2023', 'S')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('224890')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 09:31:45 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Admin.php on line 172.
+ 1 APPPATH\Controllers\Admin.php(172): strtotime(null)
+ 2 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('770766', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('770766')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-09-29 09:31:45 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(236): App\Controllers\Admin->import('770766', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('770766')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:31:45 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'9345eb5c-e690-415d-97dd-5abf9dc56432\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', NULL, NULL, \'$2y$10$nDTYtmXuClwmd7v.cfylXe88KZHXJk.MwmAirH0ou5H63c3EXWz26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'9345eb5c-e690-415d-97dd-5abf9dc56432\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', NULL, NULL, \'$2y$10$nDTYtmXuClwmd7v.cfylXe88KZHXJk.MwmAirH0ou5H63c3EXWz26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'9345eb5c-e690-415d-97dd-5abf9dc56432\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', NULL, NULL, \'$2y$10$nDTYtmXuClwmd7v.cfylXe88KZHXJk.MwmAirH0ou5H63c3EXWz26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('770766', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('770766')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 09:32:56 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Admin.php on line 172.
+ 1 APPPATH\Controllers\Admin.php(172): strtotime(null)
+ 2 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('735911', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('735911')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-09-29 09:32:56 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(236): App\Controllers\Admin->import('735911', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('735911')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:32:56 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'82709ce3-0a3f-41b3-aea4-e798dc5cce4e\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$F6jh2YB6HAZr.maAE6bS/uUASt1lwAixmJhiVPvzghLFyKS4VpIDS\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'82709ce3-0a3f-41b3-aea4-e798dc5cce4e\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$F6jh2YB6HAZr.maAE6bS/uUASt1lwAixmJhiVPvzghLFyKS4VpIDS\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'82709ce3-0a3f-41b3-aea4-e798dc5cce4e\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$F6jh2YB6HAZr.maAE6bS/uUASt1lwAixmJhiVPvzghLFyKS4VpIDS\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('735911', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('735911')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 09:33:58 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Admin.php on line 172.
+ 1 APPPATH\Controllers\Admin.php(172): strtotime(null)
+ 2 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('376828', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('376828')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-09-29 09:33:58 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(236): App\Controllers\Admin->import('376828', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('376828')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:33:58 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'5460a89d-b38f-4d78-bdbd-29c799f0bca5\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$ncxUjSoWBiyJ6OLyg9lUKO9oCXmcsdp8w9kT9DoNbTD7Xd7wulVf6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'5460a89d-b38f-4d78-bdbd-29c799f0bca5\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$ncxUjSoWBiyJ6OLyg9lUKO9oCXmcsdp8w9kT9DoNbTD7Xd7wulVf6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'5460a89d-b38f-4d78-bdbd-29c799f0bca5\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$ncxUjSoWBiyJ6OLyg9lUKO9oCXmcsdp8w9kT9DoNbTD7Xd7wulVf6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('376828', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('376828')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-29 09:35:40 --> [DEPRECATED] strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in APPPATH\Controllers\Admin.php on line 172.
+ 1 APPPATH\Controllers\Admin.php(172): strtotime(null)
+ 2 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('750139', '2023', 'S')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('750139')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-09-29 09:35:40 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(236): App\Controllers\Admin->import('750139', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('750139')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:35:40 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'afd274d4-800d-4bb0-a8f2-28649124ec10\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$aVvj4ExT0b2/QIqvqJWSNOcLhCBnNudFUU3aDcnaWUUvYXeQoLHqa\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'afd274d4-800d-4bb0-a8f2-28649124ec10\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$aVvj4ExT0b2/QIqvqJWSNOcLhCBnNudFUU3aDcnaWUUvYXeQoLHqa\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'afd274d4-800d-4bb0-a8f2-28649124ec10\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', \'1970/01/01\', NULL, \'$2y$10$aVvj4ExT0b2/QIqvqJWSNOcLhCBnNudFUU3aDcnaWUUvYXeQoLHqa\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('750139', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('750139')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 09:39:12 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(236): App\Controllers\Admin->import('234370', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('234370')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:39:12 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'f3a1dcb0-e0d6-4d7f-a9a0-ef562088d10b\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1990/01/02\', \'1990/01/02\', 1, NULL, \'$2y$10$.pBMxO5Tpz3sebyVMVgQcu5Eiv1dVDciMz8HP9OPkHsrdDRbMBwzu\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'f3a1dcb0-e0d6-4d7f-a9a0-ef562088d10b\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1990/01/02\', \'1990/01/02\', 1, NULL, \'$2y$10$.pBMxO5Tpz3sebyVMVgQcu5Eiv1dVDciMz8HP9OPkHsrdDRbMBwzu\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'f3a1dcb0-e0d6-4d7f-a9a0-ef562088d10b\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1990/01/02\', \'1990/01/02\', 1, NULL, \'$2y$10$.pBMxO5Tpz3sebyVMVgQcu5Eiv1dVDciMz8HP9OPkHsrdDRbMBwzu\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(236): App\Controllers\Admin->import('234370', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('234370')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 09:40:07 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(235): App\Controllers\Admin->import('852183', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('852183')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:40:07 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'0bb2f99e-f0f2-4805-a699-2104b53e25cd\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, NULL, \'$2y$10$YbUR4t7cEN2hmUvScSutfudlRP4J9haiL9II07ofEZBQObb7/GBa.\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'0bb2f99e-f0f2-4805-a699-2104b53e25cd\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, NULL, \'$2y$10$YbUR4t7cEN2hmUvScSutfudlRP4J9haiL9II07ofEZBQObb7/GBa.\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'0bb2f99e-f0f2-4805-a699-2104b53e25cd\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, \'1970/01/01\', \'1970/01/01\', NULL, NULL, \'$2y$10$YbUR4t7cEN2hmUvScSutfudlRP4J9haiL9II07ofEZBQObb7/GBa.\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(235): App\Controllers\Admin->import('852183', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('852183')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 09:46:46 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(235): App\Controllers\Admin->import('302491', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('302491')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:46:46 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'95a4ce2c-585d-4d05-abe4-051c526a152e\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', NULL, NULL, \'$2y$10$13dmrsgrvGzz7k.jxQF85edJmb9EhDK31xetJP8/AbcuCea1cwx0m\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'95a4ce2c-585d-4d05-abe4-051c526a152e\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', NULL, NULL, \'$2y$10$13dmrsgrvGzz7k.jxQF85edJmb9EhDK31xetJP8/AbcuCea1cwx0m\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'95a4ce2c-585d-4d05-abe4-051c526a152e\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1970/01/01\', NULL, NULL, \'$2y$10$13dmrsgrvGzz7k.jxQF85edJmb9EhDK31xetJP8/AbcuCea1cwx0m\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(235): App\Controllers\Admin->import('302491', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('302491')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 09:48:46 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(235): App\Controllers\Admin->import('350323', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('350323')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:48:46 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'94004d14-a9bb-4a1a-8506-59be184d9373\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$2ve/QcTiIg8d9Jy8aHozqOZvtf8HObwUFeMBpEwXYhXRYFNRxRnVS\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'94004d14-a9bb-4a1a-8506-59be184d9373\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$2ve/QcTiIg8d9Jy8aHozqOZvtf8HObwUFeMBpEwXYhXRYFNRxRnVS\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'94004d14-a9bb-4a1a-8506-59be184d9373\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$2ve/QcTiIg8d9Jy8aHozqOZvtf8HObwUFeMBpEwXYhXRYFNRxRnVS\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(235): App\Controllers\Admin->import('350323', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('350323')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 09:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 09:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 09:55:19 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(235): App\Controllers\Admin->import('772745', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('772745')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 09:55:19 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'90421ec4-418d-4cbe-a1fe-91428fb798dc\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$JyPlhp.XViFv4tK6OxbIwevqwMJTEd0mwA3M./K58d3xFXZuYMMmK\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'90421ec4-418d-4cbe-a1fe-91428fb798dc\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$JyPlhp.XViFv4tK6OxbIwevqwMJTEd0mwA3M./K58d3xFXZuYMMmK\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'90421ec4-418d-4cbe-a1fe-91428fb798dc\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$JyPlhp.XViFv4tK6OxbIwevqwMJTEd0mwA3M./K58d3xFXZuYMMmK\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(196): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(235): App\Controllers\Admin->import('772745', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('772745')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 10:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 10:01:22 --> mysqli_sql_exception: Column 'nisn' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(235): App\Controllers\Admin->import('945177', '2023', 'S')
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('945177')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-29 10:01:22 --> Column 'nisn' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'a1f46e4f-69a4-43b7-90d5-8a28bac3d42a\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$FAD0XbJz6TnjCMNbemohnuvwPkZ3Lec11/CE7Mh6t9P05d6tILll6\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'a1f46e4f-69a4-43b7-90d5-8a28bac3d42a\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$FAD0XbJz6TnjCMNbemohnuvwPkZ3Lec11/CE7Mh6t9P05d6tILll6\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (\'a1f46e4f-69a4-43b7-90d5-8a28bac3d42a\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', NULL, NULL, NULL, NULL, \'1899/12/30\', NULL, NULL, \'$2y$10$FAD0XbJz6TnjCMNbemohnuvwPkZ3Lec11/CE7Mh6t9P05d6tILll6\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_siswa` (`id_siswa`, `id_uploader`, `nisn`, `nama`, `alamat`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `telp`, `token`) VALUES (:id_siswa:, :id_uploader:, :nisn:, :nama:, :alamat:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :telp:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(252): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(197): App\Models\M_user->simpan_daftar_siswa([...])
+ 7 APPPATH\Controllers\Admin.php(235): App\Controllers\Admin->import('945177', '2023', 'S')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('945177')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-29 10:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:34:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 10:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

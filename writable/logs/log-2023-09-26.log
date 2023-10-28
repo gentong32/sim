@@ -1,0 +1,927 @@
+INFO - 2023-09-26 06:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:04:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 06:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 06:15:25 --> File "././uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('././uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('././uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('././uploads/fileexcelG.xlsx')
+ 4 APPPATH\Controllers\Admin.php(109): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('G')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 06:22:47 --> File "././uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('././uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('././uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('././uploads/fileexcelG.xlsx')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 06:23:02 --> File "../uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('../uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('../uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('../uploads/fileexcelG.xlsx')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 06:23:08 --> File "./uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('./uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('./uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('./uploads/fileexcelG.xlsx')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 06:23:37 --> File "././writable/uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('././writable/uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('././writable/uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('././writable/uploads/fileexcelG.xlsx')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 06:23:56 --> File "./writable/uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('./writable/uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('./writable/uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('./writable/uploads/fileexcelG.xlsx')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 08:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 08:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 08:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 08:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 08:38:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 08:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 08:40:12 --> File "./writable/uploads/fileexcelG.xlsx" does not exist.
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Shared\File.php on line 149.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(135): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('./writable/uploads/fileexcelG.xlsx')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(106): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile('./writable/uploads/fileexcelG.xlsx', null)
+ 3 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('./writable/uploads/fileexcelG.xlsx')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 08:47:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-09-26 08:47:39 --> [DEPRECATED] auto_detect_line_endings is deprecated in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php on line 318.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(318): ini_set('auto_detect_line_endings', '1')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(364): PhpOffice\PhpSpreadsheet\Reader\Csv->setAutoDetect('1')
+ 3 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(355): PhpOffice\PhpSpreadsheet\Reader\Csv->loadStringOrFile('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx', Object(PhpOffice\PhpSpreadsheet\Spreadsheet), false)
+ 4 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(268): PhpOffice\PhpSpreadsheet\Reader\Csv->loadIntoExisting('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx', Object(PhpOffice\PhpSpreadsheet\Spreadsheet))
+ 5 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Csv->loadSpreadsheetFromFile('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx')
+ 6 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(108): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx', 0)
+ 7 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 08:47:39 --> Start row (2) is beyond highest row (1)
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\RowIterator.php on line 71.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\RowIterator.php(53): PhpOffice\PhpSpreadsheet\Worksheet\RowIterator->resetStart(2)
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php(3227): PhpOffice\PhpSpreadsheet\Worksheet\RowIterator->__construct(Object(PhpOffice\PhpSpreadsheet\Worksheet\Worksheet), 2, null)
+ 3 APPPATH\Controllers\Admin.php(62): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->getRowIterator(2)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2023-09-26 08:52:02 --> [DEPRECATED] auto_detect_line_endings is deprecated in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php on line 318.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(318): ini_set('auto_detect_line_endings', '1')
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(364): PhpOffice\PhpSpreadsheet\Reader\Csv->setAutoDetect('1')
+ 3 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(355): PhpOffice\PhpSpreadsheet\Reader\Csv->loadStringOrFile('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx', Object(PhpOffice\PhpSpreadsheet\Spreadsheet), false)
+ 4 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv.php(268): PhpOffice\PhpSpreadsheet\Reader\Csv->loadIntoExisting('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx', Object(PhpOffice\PhpSpreadsheet\Spreadsheet))
+ 5 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\BaseReader.php(182): PhpOffice\PhpSpreadsheet\Reader\Csv->loadSpreadsheetFromFile('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx')
+ 6 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\IOFactory.php(108): PhpOffice\PhpSpreadsheet\Reader\BaseReader->load('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx', 0)
+ 7 APPPATH\Controllers\Admin.php(58): PhpOffice\PhpSpreadsheet\IOFactory::load('D:\\laragon\\www\\sim\\writable\\/uploads/fileexcelG.xlsx')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 08:52:02 --> Start row (2) is beyond highest row (1)
+in VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\RowIterator.php on line 71.
+ 1 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\RowIterator.php(53): PhpOffice\PhpSpreadsheet\Worksheet\RowIterator->resetStart(2)
+ 2 VENDORPATH\phpoffice\phpspreadsheet\src\PhpSpreadsheet\Worksheet\Worksheet.php(3227): PhpOffice\PhpSpreadsheet\Worksheet\RowIterator->__construct(Object(PhpOffice\PhpSpreadsheet\Worksheet\Worksheet), 2, null)
+ 3 APPPATH\Controllers\Admin.php(62): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->getRowIterator(2)
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 08:56:02 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Admin.php on line 104.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('G')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 09:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 09:59:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 10:56:11 --> Undefined property: App\Controllers\Admin::$db
+in APPPATH\Controllers\Admin.php on line 71.
+ 1 APPPATH\Controllers\Admin.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 10:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 10:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 10:56:33 --> Undefined array key "id_admin"
+in APPPATH\Controllers\Login.php on line 50.
+ 1 APPPATH\Controllers\Login.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_admin"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Login.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 10:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 10:59:20 --> Undefined array key "id_admin"
+in APPPATH\Controllers\Login.php on line 50.
+ 1 APPPATH\Controllers\Login.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_admin"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Login.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:00:13 --> Undefined array key "id_admin"
+in APPPATH\Controllers\Login.php on line 52.
+ 1 APPPATH\Controllers\Login.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_admin"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Login.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:02:34 --> Undefined array key "id_admin"
+in APPPATH\Controllers\Login.php on line 52.
+ 1 APPPATH\Controllers\Login.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_admin"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Login.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:03:54 --> Undefined array key "id_admin"
+in APPPATH\Controllers\Login.php on line 52.
+ 1 APPPATH\Controllers\Login.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_admin"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Login.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:11:22 --> Undefined property: App\Controllers\Admin::$db
+in APPPATH\Controllers\Admin.php on line 73.
+ 1 APPPATH\Controllers\Admin.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 73)
+ 2 APPPATH\Controllers\Admin.php(120): App\Controllers\Admin->import()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('G')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:12:33 --> Undefined property: App\Controllers\Admin::$db
+in APPPATH\Controllers\Admin.php on line 73.
+ 1 APPPATH\Controllers\Admin.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 73)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:24:04 --> Undefined property: App\Controllers\Admin::$db
+in APPPATH\Controllers\Admin.php on line 77.
+ 1 APPPATH\Controllers\Admin.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 11:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:30:37 --> syntax error, unexpected token "$", expecting variable
+in APPPATH\Models\M_user.php on line 134.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\sim\\app\\Models\\M_user.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\M_user')
+ 3 APPPATH\Controllers\Admin.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\M_user')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:30:48 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(83): CodeIgniter\Model->__call('simpanguru', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:35:01 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(83): CodeIgniter\Model->__call('simpanguru', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:35:10 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(83): CodeIgniter\Model->__call('simpanguru', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:40:50 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(83): CodeIgniter\Model->__call('simpanguru', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:41:02 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(83): CodeIgniter\Model->__call('simpanguru', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 11:43:22 --> CodeIgniter\Database\BaseBuilder::insertBatch(): Argument #2 ($escape) must be of type ?bool, array given, called in D:\laragon\www\sim\app\Models\M_user.php on line 136
+in SYSTEMPATH\Database\BaseBuilder.php on line 2170.
+ 1 APPPATH\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch([...], [...])
+ 2 APPPATH\Controllers\Admin.php(83): App\Models\M_user->simpanguru([...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-26 11:49:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16','...' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', NULL, false)
+#4 D:\laragon\www\sim\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\laragon\www\sim\app\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(84): App\Models\M_user->simpanguru(Array)
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->import()
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-26 11:49:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16','...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 APPPATH\Controllers\Admin.php(84): App\Models\M_user->simpanguru([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-26 11:50:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16','...' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', NULL, false)
+#4 D:\laragon\www\sim\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\laragon\www\sim\app\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(84): App\Models\M_user->simpanguru(Array)
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->import()
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-26 11:50:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16','...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 APPPATH\Controllers\Admin.php(84): App\Models\M_user->simpanguru([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 11:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-26 11:51:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16','...' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', NULL, false)
+#4 D:\laragon\www\sim\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\laragon\www\sim\app\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(84): App\Models\M_user->simpanguru(Array)
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->import()
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-26 11:51:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16','...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_guru` (0, 1, 2, 3, 4, 5, 6, 7)
+VALUES (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000001\',\'Guru 1\',\'Alamat 1\',\'L\',80000001,\'email1@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000002\',\'Guru 2\',\'Alamat 2\',\'L\',80000002,\'email2@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000003\',\'Guru 3\',\'Alamat 3\',\'P\',80000003,\'email3@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000004\',\'Guru 4\',\'Alamat 4\',\'L\',80000004,\'email4@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000005\',\'Guru 5\',\'Alamat 5\',\'L\',80000005,\'email5@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000006\',\'Guru 6\',\'Alamat 6\',\'L\',80000006,\'email6@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000007\',\'Guru 7\',\'Alamat 7\',\'P\',80000007,\'email7@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000008\',\'Guru 8\',\'Alamat 8\',\'P\',80000008,\'email8@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000009\',\'Guru 9\',\'Alamat 9\',\'P\',80000009,\'email9@imail.kom\'), (NULL,\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'1000000010000010\',\'Guru 10\',\'Alamat 10\',\'L\',80000010,\'email10@imail.kom\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Models\M_user.php(136): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 APPPATH\Controllers\Admin.php(84): App\Models\M_user->simpanguru([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 12:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:18:27 --> Cannot use object of type PhpOffice\PhpSpreadsheet\Worksheet\Row as array
+in APPPATH\Controllers\Admin.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:22:43 --> Call to undefined method PhpOffice\PhpSpreadsheet\Worksheet\Row::getCellByColumnAndRow()
+in APPPATH\Controllers\Admin.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:22:47 --> Call to undefined method PhpOffice\PhpSpreadsheet\Worksheet\Row::getCellByColumnAndRow()
+in APPPATH\Controllers\Admin.php on line 73.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:27:01 --> Cannot use object of type PhpOffice\PhpSpreadsheet\Worksheet\RowCellIterator as array
+in APPPATH\Controllers\Admin.php on line 94.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:29:10 --> Cannot use object of type PhpOffice\PhpSpreadsheet\Worksheet\RowCellIterator as array
+in APPPATH\Controllers\Admin.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:29:35 --> Call to a member function getValue() on string
+in APPPATH\Controllers\Admin.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 13:29:55 --> Uninitialized string offset 1
+in APPPATH\Controllers\Admin.php on line 82.
+ 1 APPPATH\Controllers\Admin.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 82)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->import()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 13:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 13:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 14:10:05 --> unlink(D:\laragon\www\sim\writable\uploads/fileexcel.Gxlsx): No such file or directory
+in APPPATH\Controllers\Admin.php on line 122.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.Gxlsx): No such file or directory', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 122)
+ 2 APPPATH\Controllers\Admin.php(122): unlink('D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.Gxlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('G')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 14:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 14:13:35 --> unlink(D:\laragon\www\sim\writable\uploads/fileexcel.494446xlsx): No such file or directory
+in APPPATH\Controllers\Admin.php on line 122.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.494446xlsx): No such file or directory', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 122)
+ 2 APPPATH\Controllers\Admin.php(122): unlink('D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.494446xlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('494446')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 14:16:03 --> unlink(D:\laragon\www\sim\writable\uploads/fileexcel.494446xlsx): No such file or directory
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.494446xlsx): No such file or directory', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 133)
+ 2 APPPATH\Controllers\Admin.php(133): unlink('D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.494446xlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->teshapus()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 14:16:44 --> unlink(D:\laragon\www\sim\writable\uploads/fileexcel.494446xlsx): No such file or directory
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.494446xlsx): No such file or directory', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 133)
+ 2 APPPATH\Controllers\Admin.php(133): unlink('D:\\laragon\\www\\sim\\writable\\uploads/fileexcel.494446xlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->teshapus()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 14:17:13 --> unlink(D:\laragon\www\sim\writable\uploads\fileexcel.494446xlsx): No such file or directory
+in APPPATH\Controllers\Admin.php on line 133.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\laragon\\www\\sim\\writable\\uploads\\fileexcel.494446xlsx): No such file or directory', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 133)
+ 2 APPPATH\Controllers\Admin.php(133): unlink('D:\\laragon\\www\\sim\\writable\\uploads\\fileexcel.494446xlsx')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->teshapus()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 14:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 14:34:32 --> Undefined variable $nama_user
+in APPPATH\Views\layout\layout_admin.php on line 28.
+ 1 APPPATH\Views\layout\layout_admin.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_user', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_infoimpor', [], true)
+ 6 APPPATH\Controllers\Admin.php(56): view('v_admin_infoimpor', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->info_impor()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 14:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 14:49:54 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(94): CodeIgniter\Model->__call('delete_daftar_guru_sekolah', [...])
+ 4 APPPATH\Controllers\Admin.php(123): App\Controllers\Admin->import('504716')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('504716')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 14:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 14:50:57 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(94): CodeIgniter\Model->__call('delete_daftar_guru_sekolah', [...])
+ 4 APPPATH\Controllers\Admin.php(123): App\Controllers\Admin->import('921318')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('921318')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 14:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-26 14:53:13 --> mysqli_sql_exception: Duplicate entry '1000000010000001' for key 'Index 2' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', NULL, false)
+#4 D:\laragon\www\sim\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\laragon\www\sim\app\Models\M_user.php(141): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(95): App\Models\M_user->simpan_daftar_guru(Array)
+#7 D:\laragon\www\sim\app\Controllers\Admin.php(123): App\Controllers\Admin->import('751859')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('751859')
+#9 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2023-09-26 14:53:13 --> Duplicate entry '1000000010000001' for key 'Index 2'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_guru` (`alamat`, `email`, `id_uploader`, `jenis_kelamin`, `nama`, `nuptk`, `telp`)
+VALUES (\'Alamat 1\',\'email1@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 1\',\'1000000010000001\',80000001), (\'Alamat 2\',\'email2@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 2\',\'1000000010000002\',80000002), (\'Alamat 3\',\'email3@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 3\',\'1000000010000003\',80000003), (\'Alamat 4\',\'email4@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 4\',\'1000000010000004\',80000004), (\'Alamat 5\',\'email5@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 5\',\'1000000010000005\',80000005), (\'Alamat 6\',\'email6@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 6\',\'1000000010000006\',80000006), (\'Alamat 7\',\'email7@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 7\',\'1000000010000007\',80000007), (\'Alamat 8\',\'email8@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 8\',\'1000000010000008\',80000008), (\'Alamat 9\',\'email9@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 9\',\'1000000010000009\',80000009), (\'Alamat 10\',\'email10@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 10\',\'1000000010000010\',80000010)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_guru` (`alamat`, `email`, `id_uploader`, `jenis_kelamin`, `nama`, `nuptk`, `telp`)
+VALUES (\'Alamat 1\',\'email1@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 1\',\'1000000010000001\',80000001), (\'Alamat 2\',\'email2@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 2\',\'1000000010000002\',80000002), (\'Alamat 3\',\'email3@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 3\',\'1000000010000003\',80000003), (\'Alamat 4\',\'email4@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 4\',\'1000000010000004\',80000004), (\'Alamat 5\',\'email5@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 5\',\'1000000010000005\',80000005), (\'Alamat 6\',\'email6@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 6\',\'1000000010000006\',80000006), (\'Alamat 7\',\'email7@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 7\',\'1000000010000007\',80000007), (\'Alamat 8\',\'email8@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 8\',\'1000000010000008\',80000008), (\'Alamat 9\',\'email9@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 9\',\'1000000010000009\',80000009), (\'Alamat 10\',\'email10@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 10\',\'1000000010000010\',80000010)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_guru` (`alamat`, `email`, `id_uploader`, `jenis_kelamin`, `nama`, `nuptk`, `telp`)
+VALUES (\'Alamat 1\',\'email1@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 1\',\'1000000010000001\',80000001), (\'Alamat 2\',\'email2@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 2\',\'1000000010000002\',80000002), (\'Alamat 3\',\'email3@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 3\',\'1000000010000003\',80000003), (\'Alamat 4\',\'email4@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 4\',\'1000000010000004\',80000004), (\'Alamat 5\',\'email5@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 5\',\'1000000010000005\',80000005), (\'Alamat 6\',\'email6@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 6\',\'1000000010000006\',80000006), (\'Alamat 7\',\'email7@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 7\',\'1000000010000007\',80000007), (\'Alamat 8\',\'email8@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 8\',\'1000000010000008\',80000008), (\'Alamat 9\',\'email9@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 9\',\'1000000010000009\',80000009), (\'Alamat 10\',\'email10@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 10\',\'1000000010000010\',80000010)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_guru` (`alamat`, `email`, `id_uploader`, `jenis_kelamin`, `nama`, `nuptk`, `telp`)
+VALUES (\'Alamat 1\',\'email1@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 1\',\'1000000010000001\',80000001), (\'Alamat 2\',\'email2@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 2\',\'1000000010000002\',80000002), (\'Alamat 3\',\'email3@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 3\',\'1000000010000003\',80000003), (\'Alamat 4\',\'email4@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 4\',\'1000000010000004\',80000004), (\'Alamat 5\',\'email5@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 5\',\'1000000010000005\',80000005), (\'Alamat 6\',\'email6@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 6\',\'1000000010000006\',80000006), (\'Alamat 7\',\'email7@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 7\',\'1000000010000007\',80000007), (\'Alamat 8\',\'email8@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 8\',\'1000000010000008\',80000008), (\'Alamat 9\',\'email9@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'P\',\'Guru 9\',\'1000000010000009\',80000009), (\'Alamat 10\',\'email10@imail.kom\',\'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\',\'L\',\'Guru 10\',\'1000000010000010\',80000010)', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Models\M_user.php(141): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 APPPATH\Controllers\Admin.php(95): App\Models\M_user->simpan_daftar_guru([...])
+ 8 APPPATH\Controllers\Admin.php(123): App\Controllers\Admin->import('751859')
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('751859')
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-26 14:58:41 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Admin.php on line 120.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('751859')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 14:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 14:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 14:59:20 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::onDuplicate()
+in APPPATH\Models\M_user.php on line 141.
+ 1 APPPATH\Controllers\Admin.php(95): App\Models\M_user->simpan_daftar_guru([...])
+ 2 APPPATH\Controllers\Admin.php(123): App\Controllers\Admin->import('559938')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('559938')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 15:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 15:00:28 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::onDuplicate()
+in APPPATH\Models\M_user.php on line 141.
+ 1 APPPATH\Controllers\Admin.php(95): App\Models\M_user->simpan_daftar_guru([...])
+ 2 APPPATH\Controllers\Admin.php(123): App\Controllers\Admin->import('407817')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('407817')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 15:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:05:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-26 15:30:40 --> mysqli_sql_exception: Duplicate entry 'L' for key 'PRIMARY' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(152): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(118): App\Models\M_user->simpan_daftar_guru(Array)
+#6 D:\laragon\www\sim\app\Controllers\Admin.php(148): App\Controllers\Admin->import('195419', NULL)
+#7 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->upload_data('195419')
+#8 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-09-26 15:30:40 --> Duplicate entry 'L' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_guru` (`id_guru`, `id_uploader`, `nuptk`, `nama`, `alamat`, `jenis_kelamin`, `telp`, `email`) VALUES (\'L\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', \'1000000010000002\', \'3912dd42-1705-4260-987f-8a5f0a2fae9e\', \'Guru 2\', \'ae91050d-77c4-4f2d-a34f-f15e28cc839d\', \'Alamat 2\', \'6700d965-7cde-43c3-bec6-874895d53098\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_guru` (`id_guru`, `id_uploader`, `nuptk`, `nama`, `alamat`, `jenis_kelamin`, `telp`, `email`) VALUES (\'L\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', \'1000000010000002\', \'3912dd42-1705-4260-987f-8a5f0a2fae9e\', \'Guru 2\', \'ae91050d-77c4-4f2d-a34f-f15e28cc839d\', \'Alamat 2\', \'6700d965-7cde-43c3-bec6-874895d53098\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_guru` (`id_guru`, `id_uploader`, `nuptk`, `nama`, `alamat`, `jenis_kelamin`, `telp`, `email`) VALUES (\'L\', \'62be0ed0-590f-11ee-ac1f-00ffe2cd5f16\', \'1000000010000002\', \'3912dd42-1705-4260-987f-8a5f0a2fae9e\', \'Guru 2\', \'ae91050d-77c4-4f2d-a34f-f15e28cc839d\', \'Alamat 2\', \'6700d965-7cde-43c3-bec6-874895d53098\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_guru` (`id_guru`, `id_uploader`, `nuptk`, `nama`, `alamat`, `jenis_kelamin`, `telp`, `email`) VALUES (:id_guru:, :id_uploader:, :nuptk:, :nama:, :alamat:, :jenis_kelamin:, :telp:, :email:)', [...], false)
+ 5 APPPATH\Models\M_user.php(152): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Admin.php(118): App\Models\M_user->simpan_daftar_guru([...])
+ 7 APPPATH\Controllers\Admin.php(148): App\Controllers\Admin->import('195419', null)
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('195419')
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 15:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 15:33:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(120): CodeIgniter\Model->__call('simpan_daftar_guru_sekolah', [...])
+ 4 APPPATH\Controllers\Admin.php(148): App\Controllers\Admin->import('373108', null)
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('373108')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 15:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:39:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 15:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:33:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 16:45:23 --> Cannot use object of type stdClass as array
+in APPPATH\Views\v_admin_user.php on line 154.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_user', [], true)
+ 4 APPPATH\Controllers\Admin.php(51): view('v_admin_user', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->user()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 16:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 16:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 17:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 21:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 22:49:38 --> Undefined variable $tahun_ajaran
+in APPPATH\Views\v_admin_user_input.php on line 67.
+ 1 APPPATH\Views\v_admin_user_input.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_ajaran', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_user_input.php', 67)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_user_input.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_user_input', [], true)
+ 5 APPPATH\Controllers\Admin.php(177): view('v_admin_user_input', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->tambah_guru()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 22:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-26 22:50:58 --> Undefined variable $tahun_ajaran
+in APPPATH\Views\v_admin_user_input.php on line 67.
+ 1 APPPATH\Views\v_admin_user_input.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_ajaran', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_user_input.php', 67)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_user_input.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_user_input', [], true)
+ 5 APPPATH\Controllers\Admin.php(177): view('v_admin_user_input', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->tambah_guru()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-09-26 22:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:53:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-26 22:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

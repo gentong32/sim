@@ -1,0 +1,1848 @@
+INFO - 2023-10-23 07:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 07:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 07:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 07:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 07:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 07:45:46 --> Undefined variable $daftar_kelas
+in APPPATH\Views\v_admin_guru_kelas.php on line 182.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 182)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1630): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_kelas()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 08:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 08:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 09:35:04 --> Undefined variable $daftar_guru_kelas
+in APPPATH\Views\v_admin_guru_kelas.php on line 186.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(186): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_guru_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 186)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1650): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_kelas()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 09:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 09:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 09:39:40 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin.php(1639): CodeIgniter\Model->__call('get_daftar_guru_mapel', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 09:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 09:52:04 --> mysqli_sql_exception: Column 'id_sekolah' in where clause is ambiguous in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\n      ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\n      ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\n      ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(171): CodeIgniter\Database\BaseConnection->query('SELECT *\n      ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 09:52:04 --> Column 'id_sekolah' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(171): CodeIgniter\Database\BaseConnection->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE id_sekolah = :id_sekolah: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 09:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 09:52:37 --> mysqli_sql_exception: Unknown column 'nama' in 'order clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\n      ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\n      ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\n      ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(171): CodeIgniter\Database\BaseConnection->query('SELECT *\n      ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 09:52:37 --> Unknown column 'nama' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(171): CodeIgniter\Database\BaseConnection->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = :id_sekolah: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 09:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 09:55:04 --> mysqli_sql_exception: Column 'kelas' in order clause is ambiguous in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\n      ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\n      ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\n      ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(171): CodeIgniter\Database\BaseConnection->query('SELECT *\n      ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 09:55:04 --> Column 'kelas' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY kelas, sub_kelas', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY kelas, sub_kelas')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY kelas, sub_kelas')
+ 4 APPPATH\Models\M_user.php(171): CodeIgniter\Database\BaseConnection->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY kelas, sub_kelas', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 09:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 09:58:22 --> Undefined variable $daftar_guru_kelas
+in APPPATH\Views\v_admin_guru_kelas.php on line 186.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(186): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_guru_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 186)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1649): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:31:23 --> mysqli_sql_exception: Subquery returns more than 1 row in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\n      ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\n      ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\n      ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT *\n      ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:31:23 --> Subquery returns more than 1 row
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT *
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel GROUP BY tahun_mulai) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:33:40 --> Undefined variable $baris
+in APPPATH\Views\v_admin_guru_kelas.php on line 187.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baris', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 187)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1654): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:34:12 --> Attempt to read property "nama_rombel" on array
+in APPPATH\Views\v_admin_guru_kelas.php on line 191.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_rombel" on array', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 191)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1654): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:45:21 --> mysqli_sql_exception: Column 'id_guru' in group statement is ambiguous in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:45:21 --> Column 'id_guru' in group statement is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY id_mapel, id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY id_mapel, id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY id_mapel, id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY id_mapel, id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:46:05 --> mysqli_sql_exception: Unknown column 'gs.id_guru' in 'group statement' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:46:05 --> Unknown column 'gs.id_guru' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id_guru
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:46:18 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tg.nama' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:46:18 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tg.nama' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) GROUP BY gm.id_mapel, gs.id
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:47:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = (' at line 8 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:47:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = (' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:47:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = '' at line 8 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:47:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = '' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = \'2003\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = \'2003\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = \'2003\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = \'2003\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:48:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = '' at line 8 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:48:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = '' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = \'2023\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = \'2023\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = \'2023\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = \'2023\' 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:48:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = 2' at line 8 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:48:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE tr.id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16' AND tahun_mulai = 2' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = 2023 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = 2023 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = 2023 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama 
+                FROM tb_guru_mapel gm 
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel 
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel 
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru 
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk 
+                GROUP BY gm.id_mapel, gs.id 
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = 2023 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:49:18 --> mysqli_sql_exception: Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tg.nama' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:49:18 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tg.nama' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:51:01 --> mysqli_sql_exception: Unknown column 'gr.nama' in 'group statement' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:51:01 --> Unknown column 'gr.nama' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gr.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gr.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gr.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gr.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 10:51:09 --> mysqli_sql_exception: Unknown column 'gm.nama' in 'group statement' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 10:51:09 --> Unknown column 'gm.nama' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gm.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gm.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gm.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel) AS rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_mapel, gs.id, gm.nama 
+                ORDER BY tm.kelas, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 10:51:23 --> Undefined array key "nama_rombel"
+in APPPATH\Views\v_admin_guru_kelas.php on line 191.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_rombel"', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 191)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1654): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 10:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 10:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:02:49 --> mysqli_sql_exception: In aggregated query without GROUP BY, expression #2 of SELECT list contains nonaggregated column 'simsekolah.tm.nama_mapel'; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:02:49 --> In aggregated query without GROUP BY, expression #2 of SELECT list contains nonaggregated column 'simsekolah.tm.nama_mapel'; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(173): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:03:32 --> mysqli_sql_exception: Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:03:32 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tg.nama 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tg.nama 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tg.nama 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tg.nama 
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:04:25 --> mysqli_sql_exception: Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:04:25 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_rombel
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_rombel
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_rombel
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY gm.id_rombel
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:05:13 --> mysqli_sql_exception: Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:05:13 --> Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:05:33 --> mysqli_sql_exception: Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:05:33 --> Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:05:35 --> mysqli_sql_exception: Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:05:35 --> Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel,nama_mapel, nama
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:06:08 --> mysqli_sql_exception: Expression #4 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.jenis' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:06:08 --> Expression #4 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.jenis' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:06:40 --> mysqli_sql_exception: Expression #5 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.sub_kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:06:40 --> Expression #5 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.sub_kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:06:52 --> mysqli_sql_exception: Expression #6 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.urutan' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:06:52 --> Expression #6 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.urutan' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_rombel, nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:07:28 --> mysqli_sql_exception: Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:07:28 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:07:42 --> mysqli_sql_exception: Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:07:42 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:08:15 --> mysqli_sql_exception: Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:08:15 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tm.nama_mapel' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT REPLACE(GROUP_CONCAT(nama_rombel), \',\', \', \') AS nama_rombel, nama_mapel, nama
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:21:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 11:31:15 --> Undefined array key "kelas"
+in APPPATH\Views\v_admin_guru_kelas.php on line 215.
+ 1 APPPATH\Views\v_admin_guru_kelas.php(215): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php', 215)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_guru_kelas.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_guru_kelas', [], true)
+ 5 APPPATH\Controllers\Admin.php(1650): view('v_admin_guru_kelas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:32:14 --> mysqli_sql_exception: Expression #4 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tr.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:32:14 --> Expression #4 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tr.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_guru_mapel gm
+                LEFT JOIN tb_rombel tr ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tm.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 11:34:10 --> mysqli_sql_exception: Expression #4 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tr.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 11:34:10 --> Expression #4 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'simsekolah.tr.kelas' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_mapel tm ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tm.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 11:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 11:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 13:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 13:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 13:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 13:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 13:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 13:36:38 --> mysqli_sql_exception: Unknown column 'gm.id_mapel' in 'on clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-1...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-23 13:36:38 --> Unknown column 'gm.id_mapel' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_mapel tm 
+                LEFT JOIN tb_rombel tr ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_mapel tm 
+                LEFT JOIN tb_rombel tr ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_mapel tm 
+                LEFT JOIN tb_rombel tr ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan')
+ 4 APPPATH\Models\M_user.php(174): CodeIgniter\Database\BaseConnection->query('SELECT GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, nama_mapel, nama, tr.kelas
+                FROM tb_mapel tm 
+                LEFT JOIN tb_rombel tr ON tm.id = gm.id_mapel
+                LEFT JOIN tb_guru_mapel gm ON tr.id = gm.id_rombel
+                LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
+                LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
+                WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+                GROUP BY nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas, tm.urutan
+                ORDER BY tr.kelas, nama_rombel, tm.nama_mapel, tg.nama, tm.jenis, tm.sub_kelas, urutan', [...])
+ 5 APPPATH\Controllers\Admin.php(1639): App\Models\M_user->get_daftar_guru_mapel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-23 14:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:19:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:21:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:25:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 14:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 15:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

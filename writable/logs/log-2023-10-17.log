@@ -1,0 +1,519 @@
+CRITICAL - 2023-10-17 13:38:28 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1346.
+ 1 APPPATH\Controllers\Admin.php(1346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1346)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-17 13:38:32 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1346.
+ 1 APPPATH\Controllers\Admin.php(1346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1346)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-17 13:38:34 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1346.
+ 1 APPPATH\Controllers\Admin.php(1346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1346)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-17 13:38:37 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1346.
+ 1 APPPATH\Controllers\Admin.php(1346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1346)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-17 13:38:54 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1346.
+ 1 APPPATH\Controllers\Admin.php(1346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1346)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 14:08:07 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1372): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-1', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 14:08:07 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1372): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-1', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 14:15:48 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1372): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-0', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 14:15:48 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1372): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-0', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 14:17:41 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-0', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 14:17:41 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-0', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 14:18:18 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-0', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 14:18:18 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-0', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 14:22:08 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-0', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 14:22:08 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-0', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 15:33:00 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-0', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:33:00 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-0', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 15:34:04 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-0', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:34:04 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-0\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-0', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-17 15:34:09 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-1', 2022)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:34:09 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = 2022', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = 2022')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = 2022')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-1', 2022)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-17 15:37:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1369.
+ 1 APPPATH\Controllers\Admin.php(1369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1369)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-17 15:38:05 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1369.
+ 1 APPPATH\Controllers\Admin.php(1369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1369)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-17 15:38:39 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-1', '2022')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:38:39 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = \'2022\'')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-1', '2022')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-17 15:39:12 --> mysqli_sql_exception: Unknown column 'rombel' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-1...', '10', 'X-1', '2022')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:39:12 --> Unknown column 'rombel' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = \'2022\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = \'2022\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND kelas=\'10\' AND rombel=\'X-1\' AND tahun_mulai = \'2022\'')
+ 4 APPPATH\Models\M_sekolah.php(140): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND kelas=:kelas: AND rombel=:rombel: AND tahun_mulai = :tahun_mulai:', [...])
+ 5 APPPATH\Controllers\Admin.php(1374): App\Models\M_sekolah->hapus_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '10', 'X-1', '2022')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->hapus_rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-17 15:57:22 --> mysqli_sql_exception: Table 'simsekolah.rombel' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(130): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1093): App\Models\M_sekolah->duplikat_rombel_tahun_lalu('2f3bd0be-5929-1...', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:57:22 --> Table 'simsekolah.rombel' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;')
+ 4 APPPATH\Models\M_sekolah.php(130): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, :tahun:
+                FROM rombel
+                WHERE id_sekolah=:id_sekolah: AND tahun = :tahun_lalu:;', [...])
+ 5 APPPATH\Controllers\Admin.php(1093): App\Models\M_sekolah->duplikat_rombel_tahun_lalu('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-17 15:57:24 --> mysqli_sql_exception: Table 'simsekolah.rombel' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(130): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1093): App\Models\M_sekolah->duplikat_rombel_tahun_lalu('2f3bd0be-5929-1...', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:57:24 --> Table 'simsekolah.rombel' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;')
+ 4 APPPATH\Models\M_sekolah.php(130): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, :tahun:
+                FROM rombel
+                WHERE id_sekolah=:id_sekolah: AND tahun = :tahun_lalu:;', [...])
+ 5 APPPATH\Controllers\Admin.php(1093): App\Models\M_sekolah->duplikat_rombel_tahun_lalu('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-17 15:57:42 --> mysqli_sql_exception: Unknown column 'tahun' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(130): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1093): App\Models\M_sekolah->duplikat_rombel_tahun_lalu('2f3bd0be-5929-1...', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-17 15:57:42 --> Unknown column 'tahun' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM tb_rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM tb_rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, \'2023\'
+                FROM tb_rombel
+                WHERE id_sekolah=\'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun = 2022;')
+ 4 APPPATH\Models\M_sekolah.php(130): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_rombel (id_sekolah, kelas, nama_rombel, tahun)
+                SELECT id_sekolah, kelas, nama_rombel, :tahun:
+                FROM tb_rombel
+                WHERE id_sekolah=:id_sekolah: AND tahun = :tahun_lalu:;', [...])
+ 5 APPPATH\Controllers\Admin.php(1093): App\Models\M_sekolah->duplikat_rombel_tahun_lalu('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 15:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 15:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 20:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 21:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-17 21:52:34 --> Undefined property: stdClass::$sub_kelas
+in APPPATH\Views\v_admin_rombel.php on line 156.
+ 1 APPPATH\Views\v_admin_rombel.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$sub_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_rombel.php', 156)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_rombel.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_rombel', [], true)
+ 5 APPPATH\Controllers\Admin.php(1102): view('v_admin_rombel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-17 21:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-17 22:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.alamat {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.alamat p {
+  margin: 0;
+  padding: 5px;
+  font-size: 10px;
+}

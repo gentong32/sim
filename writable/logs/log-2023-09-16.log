@@ -1,0 +1,24 @@
+CRITICAL - 2023-09-16 09:18:20 --> Invalid file: "http://localhost:8080/layout/layout_kelas_off.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhost:8080/layout/layout_kelas_off.php')
+ 2 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('http://localhost:8080/layout/layout_kelas_off', [], true)
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_hasil_tugas1', [], true)
+ 4 APPPATH\Controllers\Tugas.php(43): view('v_hasil_tugas1', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tugas->hasil1()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tugas))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-09-16 09:44:40 --> Undefined variable: ikon
+in APPPATH\Views\layout\layout_default.php on line 42.
+ 1 APPPATH\Views\layout\layout_default.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: ikon', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_agenda', [], true)
+ 6 APPPATH\Controllers\Agenda.php(23): view('v_agenda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')

@@ -1,0 +1,459 @@
+CRITICAL - 2023-10-27 11:26:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 11:26:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 11:26:46 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:27:44 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:28:36 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:29:01 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:29:42 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:29:47 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-27 17:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-27 17:30:02 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:30:13 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:30:27 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:31:10 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-27 17:36:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nu' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT g.id_gur...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT g.id_gur...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT g.id_gur...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(67): CodeIgniter\Database\BaseConnection->query('SELECT g.id_gur...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Login.php(45): App\Models\M_user->cekLoginGuru('amri@jimail.kom', '12345', NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-27 17:36:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nu' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = \'amri@jimail.kom\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = \'amri@jimail.kom\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = \'amri@jimail.kom\'')
+ 4 APPPATH\Models\M_user.php(67): CodeIgniter\Database\BaseConnection->query('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = :email:', [...])
+ 5 APPPATH\Controllers\Login.php(45): App\Models\M_user->cekLoginGuru('amri@jimail.kom', '12345', null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:37:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:38:14 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:39:11 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:39:34 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:40:16 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:40:55 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:44:07 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:45:26 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:47:16 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:47:18 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:47:35 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:47:47 --> Undefined array key "kelas"
+in APPPATH\Controllers\Admin.php on line 1686.
+ 1 APPPATH\Controllers\Admin.php(1686): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1686)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 17:48:32 --> Undefined array key "rombelTerpilih"
+in APPPATH\Controllers\Admin.php on line 1688.
+ 1 APPPATH\Controllers\Admin.php(1688): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rombelTerpilih"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1688)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-27 17:49:45 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT id FROM ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id FROM ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id FROM ...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(513): CodeIgniter\Database\BaseConnection->query('SELECT id FROM ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1691): App\Models\M_sekolah->cek_rombel('2f3bd0be-5929-1...', 2023, '10', '-')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-27 17:49:45 --> Unknown column 'tahun_ajaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT id FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_ajaran = 2023
+                AND kelas = \'10\'
+                AND subkelas = \'-\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_ajaran = 2023
+                AND kelas = \'10\'
+                AND subkelas = \'-\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id FROM tb_rombel
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\' AND tahun_ajaran = 2023
+                AND kelas = \'10\'
+                AND subkelas = \'-\'')
+ 4 APPPATH\Models\M_sekolah.php(513): CodeIgniter\Database\BaseConnection->query('SELECT id FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:
+                AND kelas = :kelas:
+                AND subkelas = :subkelas:', [...])
+ 5 APPPATH\Controllers\Admin.php(1691): App\Models\M_sekolah->cek_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', 2023, '10', '-')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-27 21:45:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nu' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT g.id_gur...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT g.id_gur...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT g.id_gur...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(67): CodeIgniter\Database\BaseConnection->query('SELECT g.id_gur...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Login.php(45): App\Models\M_user->cekLoginGuru('amri@jimail.kom', '12345', NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-10-27 21:45:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '*
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nu' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = \'amri@jimail.kom\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = \'amri@jimail.kom\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = \'amri@jimail.kom\'')
+ 4 APPPATH\Models\M_user.php(67): CodeIgniter\Database\BaseConnection->query('SELECT g.id_guru as id_guru, *
+                FROM tb_guru g
+                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                JOIN (
+                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
+                    FROM tb_guru_sekolah
+                    
+                    GROUP BY id_guru
+                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = :email:', [...])
+ 5 APPPATH\Controllers\Login.php(45): App\Models\M_user->cekLoginGuru('amri@jimail.kom', '12345', null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:46:43 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 APPPATH\Models\M_sekolah.php(542): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 6 APPPATH\Controllers\Admin.php(1695): App\Models\M_sekolah->insert_guru_mapel(Object(CodeIgniter\Database\MySQLi\Result), '20', '129')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:47:33 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 APPPATH\Models\M_sekolah.php(542): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 6 APPPATH\Controllers\Admin.php(1695): App\Models\M_sekolah->insert_guru_mapel(Object(CodeIgniter\Database\MySQLi\Result), '20', '129')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:50:18 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\Query->getQuery()
+ 5 APPPATH\Models\M_sekolah.php(542): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_guru_mapel (id_rombel, id_mapel, id_guru)
+                VALUES (:id_rombel:, :id_mapel:, :id_guru:)', [...])
+ 6 APPPATH\Controllers\Admin.php(1695): App\Models\M_sekolah->insert_guru_mapel(Object(CodeIgniter\Database\MySQLi\Result), '20', '129')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:50:27 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-27 21:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-27 21:51:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1685.
+ 1 APPPATH\Controllers\Admin.php(1685): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1685)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:54:02 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Controllers\Admin.php on line 1705.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_1()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:54:27 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Controllers\Admin.php on line 1705.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_1()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-27 21:55:47 --> Undefined array key "id"
+in APPPATH\Controllers\Admin.php on line 1705.
+ 1 APPPATH\Controllers\Admin.php(1705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1705)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_1()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-27 21:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-27 21:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-27 21:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-27 21:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-27 21:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-27 21:58:15 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Admin.php on line 1694.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')

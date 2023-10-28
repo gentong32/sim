@@ -1,0 +1,402 @@
+CRITICAL - 2023-10-26 10:13:44 --> Too few arguments to function App\Controllers\Admin::get_mapel(), 1 passed in D:\laragon\www\sim\system\CodeIgniter.php on line 932 and exactly 2 expected
+in APPPATH\Controllers\Admin.php on line 1264.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_mapel('0')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:16:43 --> Undefined array key "tahun_ajaran"
+in APPPATH\Controllers\Admin.php on line 1123.
+ 1 APPPATH\Controllers\Admin.php(1123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahun_ajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1123)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:17:48 --> Undefined array key "tahun_ajaran"
+in APPPATH\Controllers\Admin.php on line 1123.
+ 1 APPPATH\Controllers\Admin.php(1123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahun_ajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1123)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:17:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1123.
+ 1 APPPATH\Controllers\Admin.php(1123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1123)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:26:29 --> Undefined array key "tahun_ajaran"
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahun_ajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:28:17 --> Undefined array key "tahun_ajaran"
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahun_ajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:29:31 --> Undefined array key "tahun_ajaran"
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahun_ajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:30:58 --> Undefined array key "tahun_ajaran"
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahun_ajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:32:56 --> Undefined array key "tahunajaran"
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahunajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 11:34:18 --> Undefined array key "tahunajaran"
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tahunajaran"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 13:25:46 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 13:26:18 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 13:27:32 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 13:28:29 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:28:47 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:29:20 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:29:30 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:29:41 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:34:36 --> foreach() argument must be of type array|object, null given
+in APPPATH\Controllers\Admin.php on line 1212.
+ 1 APPPATH\Controllers\Admin.php(1212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1212)
+ 2 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:44:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-26 13:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:50:04 --> Too few arguments to function App\Controllers\Admin::get_mapel(), 1 passed in D:\laragon\www\sim\system\CodeIgniter.php on line 932 and exactly 2 expected
+in APPPATH\Controllers\Admin.php on line 1274.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_mapel('0')
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 13:56:47 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-10-26 13:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-26 13:56:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 14:01:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-10-26 14:28:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1122.
+ 1 APPPATH\Controllers\Admin.php(1122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1122)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->get_rombel_sekolah()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-26 15:17:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-1...', '2023/2024')
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-1...', '2023/2024')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-26 15:17:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 4 APPPATH\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = :id_sekolah:  AND tahun_mulai = :tahun: ORDER BY kelas, nama_rombel', [...])
+ 5 APPPATH\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 6 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-26 15:17:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-1...', '2023/2024')
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-1...', '2023/2024')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-26 15:17:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 4 APPPATH\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  
+                WHERE id_sekolah = :id_sekolah:  AND tahun_mulai = :tahun: ORDER BY kelas, nama_rombel', [...])
+ 5 APPPATH\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 6 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-26 15:19:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-1...', '2023/2024')
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-1...', '2023/2024')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-26 15:19:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 4 APPPATH\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = :id_sekolah:  AND tahun_mulai = :tahun: ORDER BY kelas, nama_rombel', [...])
+ 5 APPPATH\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 6 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-26 15:19:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND id_mapel = NULL  
+                WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-1...', '2023/2024')
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-1...', '2023/2024')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-26 15:19:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND id_mapel = NULL  
+                WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  AND id_mapel = NULL  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  AND id_mapel = NULL  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  AND id_mapel = NULL  
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 4 APPPATH\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND  AND id_mapel = :id_mapel:  
+                WHERE id_sekolah = :id_sekolah:  AND tahun_mulai = :tahun: ORDER BY kelas, nama_rombel', [...])
+ 5 APPPATH\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 6 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-10-26 15:19:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-1...', '2023/2024')
+#5 D:\laragon\www\sim\app\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-1...', '2023/2024')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-10-26 15:19:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id_sekolah = '2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16'  AND tahun_mulai = '20' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = \'2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16\'  AND tahun_mulai = \'2023/2024\' ORDER BY kelas, nama_rombel')
+ 4 APPPATH\Models\M_sekolah.php(131): CodeIgniter\Database\BaseConnection->query('SELECT tr.*, tm.id as aktif FROM tb_rombel tr
+                LEFT JOIN tb_guru_mapel tm ON tr.id = tm.id_rombel AND   
+                WHERE id_sekolah = :id_sekolah:  AND tahun_mulai = :tahun: ORDER BY kelas, nama_rombel', [...])
+ 5 APPPATH\Controllers\Admin.php(1210): App\Models\M_sekolah->get_rombel_sekolah('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 6 APPPATH\Controllers\Admin.php(1661): App\Controllers\Admin->get_daftar_kelas('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', '2023/2024')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
