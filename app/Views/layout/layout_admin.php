@@ -28,7 +28,8 @@
                 <a href="#" id="userLink"><?= $nama_user ?></a>
                 <div class="dropdown" id="logoutDropdown">
                     <ul>
-                        <li><a href="<?= base_url('login/logout') ?>">Logout</a></li>
+                        <li><a href="<?= base_url('login/change_password') ?>">- Ubah Password</a></li>
+                        <li><a href="<?= base_url('login/logout') ?>">- Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,16 +44,17 @@
                 <li><a href="<?= base_url() ?>admin/user">Data User</a></li>
                 <li id="dataReferensiLokal"><a href="#">Data Referensi Lokal ></a>
                     <ul id="submenuReferensi">
-                        <li><a href="<?= base_url() ?>admin/rombel">Rombel</a></li>
-                        <li><a href="<?= base_url() ?>admin/siswa_kelas">Siswa Kelas</a></li>
+                        <li><a href="<?= base_url() ?>admin/kepsek">Kepala Sekolah</a></li>
                         <li><a href="<?= base_url() ?>admin/mapel">Mata Pelajaran</a></li>
-                        <li><a href="<?= base_url() ?>admin/guru_mapel">Guru Mapel</a></li>
+                        <li><a href="<?= base_url() ?>admin/rombel">Rombel - Wali Kelas</a></li>
+                        <li><a href="<?= base_url() ?>admin/guru_mapel">Guru Kelas / Mapel</a></li>
+                        <li><a href="<?= base_url() ?>admin/siswa_kelas">Siswa Kelas</a></li>
                         <li><a href="<?= base_url() ?>admin/projek">Projek Sekolah</a></li>
                         <li><a href="<?= base_url() ?>admin/dimensi">Dimensi Projek</a></li>
                         <li><a href="<?= base_url() ?>admin/ekskul">Ekskul</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= base_url() ?>admin/kalender">Kalender Pendidikan</a></li>
+                <li><a href="<?= base_url() ?>admin/agenda">Kalender Pendidikan</a></li>
             </ul>
         </div>
         <div class="content">

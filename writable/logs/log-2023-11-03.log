@@ -1,0 +1,1064 @@
+INFO - 2023-11-03 07:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 08:26:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'simsekolah', 3306, '', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\sim\app\Models\M_user.php(14): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Login.php(43): App\Models\M_user->cekLoginAdmin('antok2000@gmail...', 'j3n3ngku4nt0')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\sim\app\Models\M_user.php(14): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#3 D:\laragon\www\sim\app\Controllers\Login.php(43): App\Models\M_user->cekLoginAdmin('antok2000@gmail...', 'j3n3ngku4nt0')
+#4 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+#5 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#9 {main}
+CRITICAL - 2023-11-03 08:26:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\M_user.php(14): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_admin WHERE email = :email:', [...])
+ 3 APPPATH\Controllers\Login.php(43): App\Models\M_user->cekLoginAdmin('antok2000@gmail.com', 'j3n3ngku4nt0')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 08:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 08:29:22 --> Undefined property: stdClass::$id_admin
+in APPPATH\Models\M_user.php on line 35.
+ 1 APPPATH\Models\M_user.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_admin', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 35)
+ 2 APPPATH\Controllers\Login.php(43): App\Models\M_user->cekLoginAdmin('antok2000@gmail.com', 'j3n3ngku4nt0')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 08:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 08:31:26 --> Undefined property: stdClass::$id_admin
+in APPPATH\Models\M_user.php on line 35.
+ 1 APPPATH\Models\M_user.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_admin', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 35)
+ 2 APPPATH\Controllers\Login.php(43): App\Models\M_user->cekLoginAdmin('antok2000@gmail.com', 'j3n3ngku4nt0')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 08:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 08:31:35 --> Undefined property: stdClass::$id_admin
+in APPPATH\Models\M_user.php on line 35.
+ 1 APPPATH\Models\M_user.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_admin', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 35)
+ 2 APPPATH\Controllers\Login.php(43): App\Models\M_user->cekLoginAdmin('antok2000@gmail.com', 'j3n3ngku4nt0')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 08:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 08:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 08:55:49 --> Undefined variable $data_rombel
+in APPPATH\Views\v_superadmin_admin_input.php on line 2.
+ 1 APPPATH\Views\v_superadmin_admin_input.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_rombel', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_admin_input.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_admin_input.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_admin_input', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(47): view('v_superadmin_admin_input', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tambah_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 08:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 08:56:21 --> Undefined variable $tahun_ajaran
+in APPPATH\Views\v_superadmin_admin_input.php on line 127.
+ 1 APPPATH\Views\v_superadmin_admin_input.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_ajaran', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_admin_input.php', 127)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_admin_input.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_admin_input', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(47): view('v_superadmin_admin_input', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tambah_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 09:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:14:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 09:14:06 --> Undefined variable $data_rombel
+in APPPATH\Views\v_superadmin_admin_input.php on line 201.
+ 1 APPPATH\Views\v_superadmin_admin_input.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_rombel', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_admin_input.php', 201)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_admin_input.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_admin_input', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(47): view('v_superadmin_admin_input', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tambah_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 09:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 09:19:45 --> Undefined variable $sekolah
+in APPPATH\Views\layout\layout_admin.php on line 24.
+ 1 APPPATH\Views\layout\layout_admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_admin_input', [], true)
+ 6 APPPATH\Controllers\Superadmin.php(47): view('v_superadmin_admin_input', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tambah_admin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 09:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 09:31:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':email:' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(434): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Superadmin.php(56): App\Models\M_user->cek_email_admin('aa')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->cek_email_admin()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 09:31:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':email:' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_admin 
+                WHERE email = :email:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_admin 
+                WHERE email = :email:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_admin 
+                WHERE email = :email:')
+ 4 APPPATH\Models\M_user.php(434): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_admin 
+                WHERE email = :email:', [...])
+ 5 APPPATH\Controllers\Superadmin.php(56): App\Models\M_user->cek_email_admin('aa')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->cek_email_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 09:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 09:31:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':email:' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(434): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Superadmin.php(56): App\Models\M_user->cek_email_admin('aa@sas.kom')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->cek_email_admin()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 09:31:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':email:' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_admin 
+                WHERE email = :email:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_admin 
+                WHERE email = :email:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_admin 
+                WHERE email = :email:')
+ 4 APPPATH\Models\M_user.php(434): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_admin 
+                WHERE email = :email:', [...])
+ 5 APPPATH\Controllers\Superadmin.php(56): App\Models\M_user->cek_email_admin('aa@sas.kom')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->cek_email_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 09:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 09:31:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':email:' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(434): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Superadmin.php(56): App\Models\M_user->cek_email_admin(NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->cek_email_admin()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 09:31:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':email:' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_admin 
+                WHERE email = :email:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_admin 
+                WHERE email = :email:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_admin 
+                WHERE email = :email:')
+ 4 APPPATH\Models\M_user.php(434): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_admin 
+                WHERE email = :email:', [...])
+ 5 APPPATH\Controllers\Superadmin.php(56): App\Models\M_user->cek_email_admin(null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->cek_email_admin()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 09:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 09:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 10:01:35 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Superadmin.php(81): CodeIgniter\Model->__call('tambah_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->simpan_admin()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 10:03:13 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Superadmin.php(81): CodeIgniter\Model->__call('tambah_admin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->simpan_admin()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-03 13:05:05 --> mysqli_sql_exception: Unknown column 'id_admin' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(647): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Superadmin.php(92): App\Models\M_user->get_admin('2')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->edit_admin('2')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 13:05:05 --> Unknown column 'id_admin' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_admin 
+                WHERE id_admin = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_admin 
+                WHERE id_admin = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_admin 
+                WHERE id_admin = \'2\'')
+ 4 APPPATH\Models\M_user.php(647): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_admin 
+                WHERE id_admin = :id_admin:', [...])
+ 5 APPPATH\Controllers\Superadmin.php(92): App\Models\M_user->get_admin('2')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->edit_admin('2')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 13:07:35 --> mysqli_sql_exception: Unknown column 'id_admin' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(647): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Superadmin.php(92): App\Models\M_user->get_admin('2')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->edit_admin('2')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 13:07:35 --> Unknown column 'id_admin' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_admin 
+                WHERE id_admin = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_admin 
+                WHERE id_admin = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_admin 
+                WHERE id_admin = \'2\'')
+ 4 APPPATH\Models\M_user.php(647): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_admin 
+                WHERE id_admin = :id_admin:', [...])
+ 5 APPPATH\Controllers\Superadmin.php(92): App\Models\M_user->get_admin('2')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->edit_admin('2')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 13:07:51 --> Cannot use object of type stdClass as array
+in APPPATH\Views\v_superadmin_admin_edit.php on line 105.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_admin_edit', [], true)
+ 4 APPPATH\Controllers\Superadmin.php(94): view('v_superadmin_admin_edit', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->edit_admin('2')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:10:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 13:10:39 --> mysqli_sql_exception: Duplicate entry '' for key 'PRIMARY' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(638): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Superadmin.php(81): App\Models\M_user->tambah_admin(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->simpan_admin()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-03 13:10:39 --> Duplicate entry '' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_admin` (`nama`, `jenjang`, `email`, `token`) VALUES (\'Joni\', \'SD\', \'aa@sas.kom\', \'$2y$10$ehC0drsxJ7xxfVdQCTcCE.xCf9jKbM4q1bm1Pc5yB/q3/nhgLlKNO\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_admin` (`nama`, `jenjang`, `email`, `token`) VALUES (\'Joni\', \'SD\', \'aa@sas.kom\', \'$2y$10$ehC0drsxJ7xxfVdQCTcCE.xCf9jKbM4q1bm1Pc5yB/q3/nhgLlKNO\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_admin` (`nama`, `jenjang`, `email`, `token`) VALUES (\'Joni\', \'SD\', \'aa@sas.kom\', \'$2y$10$ehC0drsxJ7xxfVdQCTcCE.xCf9jKbM4q1bm1Pc5yB/q3/nhgLlKNO\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_admin` (`nama`, `jenjang`, `email`, `token`) VALUES (:nama:, :jenjang:, :email:, :token:)', [...], false)
+ 5 APPPATH\Models\M_user.php(638): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Superadmin.php(81): App\Models\M_user->tambah_admin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->simpan_admin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-03 13:19:14 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 107.
+ 1 APPPATH\Controllers\Superadmin.php(107): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2023-11-03 13:19:14 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 108.
+ 1 APPPATH\Controllers\Superadmin.php(108): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-03 13:19:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tb_admi...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_admi...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_admi...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_admi...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(655): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\laragon\www\sim\app\Controllers\Superadmin.php(111): App\Models\M_user->update_admin(Array, NULL)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-03 13:19:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\'
+WHERE  IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\'
+WHERE  IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\'
+WHERE  IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_admin` SET `nama` = :nama:, `email` = :email:
+WHERE  IS NULL', [...], false)
+ 5 APPPATH\Models\M_user.php(655): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Superadmin.php(111): App\Models\M_user->update_admin([...], null)
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-03 13:22:37 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 108.
+ 1 APPPATH\Controllers\Superadmin.php(108): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2023-11-03 13:22:37 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 109.
+ 1 APPPATH\Controllers\Superadmin.php(109): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2023-11-03 13:22:37 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 110.
+ 1 APPPATH\Controllers\Superadmin.php(110): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-03 13:22:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tb_admi...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_admi...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_admi...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_admi...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(655): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\laragon\www\sim\app\Controllers\Superadmin.php(113): App\Models\M_user->update_admin(Array, NULL)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-03 13:22:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\', `jenjang` = \'\'
+WHERE  IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\', `jenjang` = \'\'
+WHERE  IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\', `jenjang` = \'\'
+WHERE  IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_admin` SET `nama` = :nama:, `email` = :email:, `jenjang` = :jenjang:
+WHERE  IS NULL', [...], false)
+ 5 APPPATH\Models\M_user.php(655): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Superadmin.php(113): App\Models\M_user->update_admin([...], null)
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-03 13:24:28 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 110.
+ 1 APPPATH\Controllers\Superadmin.php(110): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2023-11-03 13:24:28 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 111.
+ 1 APPPATH\Controllers\Superadmin.php(111): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2023-11-03 13:24:28 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Superadmin.php on line 112.
+ 1 APPPATH\Controllers\Superadmin.php(112): htmlspecialchars(null)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-03 13:24:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tb_admi...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_admi...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_admi...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_admi...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(655): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\laragon\www\sim\app\Controllers\Superadmin.php(115): App\Models\M_user->update_admin(Array, NULL)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-03 13:24:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\', `jenjang` = \'\'
+WHERE  IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\', `jenjang` = \'\'
+WHERE  IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_admin` SET `nama` = \'\', `email` = \'\', `jenjang` = \'\'
+WHERE  IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_admin` SET `nama` = :nama:, `email` = :email:, `jenjang` = :jenjang:
+WHERE  IS NULL', [...], false)
+ 5 APPPATH\Models\M_user.php(655): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Superadmin.php(115): App\Models\M_user->update_admin([...], null)
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->update_admin()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 13:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 13:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 14:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 14:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 14:02:35 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Superadmin.php on line 126.
+ 1 APPPATH\Controllers\Superadmin.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->hapus_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:23:43 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 155.
+ 1 APPPATH\Controllers\Superadmin.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 155)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:24:09 --> Array to string conversion
+in APPPATH\Controllers\Superadmin.php on line 155.
+ 1 APPPATH\Controllers\Superadmin.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 155)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:24:22 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 157.
+ 1 APPPATH\Controllers\Superadmin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:25:06 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 157.
+ 1 APPPATH\Controllers\Superadmin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:25:08 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 157.
+ 1 APPPATH\Controllers\Superadmin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:25:25 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 158.
+ 1 APPPATH\Controllers\Superadmin.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 158)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:25:55 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 158.
+ 1 APPPATH\Controllers\Superadmin.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 158)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:26:06 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 158.
+ 1 APPPATH\Controllers\Superadmin.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 158)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-03 15:27:00 --> Undefined property: App\Controllers\Superadmin::$M_sekolah
+in APPPATH\Controllers\Superadmin.php on line 158.
+ 1 APPPATH\Controllers\Superadmin.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Superadmin::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Superadmin.php', 158)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->tesjenjang()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 16:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 16:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 16:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 16:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 16:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 19:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 20:59:09 --> mysqli_sql_exception: Column 'id_kepsek' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(617): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1942): App\Models\M_user->tambah_kepsek('5d784c9e-f35a-4...', NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_kepsek()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 20:59:09 --> Column 'id_kepsek' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_kepsek (id_sekolah, id_kepsek)
+                VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_kepsek (id_sekolah, id_kepsek)
+                VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_kepsek (id_sekolah, id_kepsek)
+                VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', NULL)')
+ 4 APPPATH\Models\M_user.php(617): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_kepsek (id_sekolah, id_kepsek)
+                VALUES (:id_sekolah:, :id_kepsek:)', [...])
+ 5 APPPATH\Controllers\Admin.php(1942): App\Models\M_user->tambah_kepsek('5d784c9e-f35a-4654-9851-b94d22be6f1e', null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_kepsek()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 20:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 20:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 21:14:14 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 27.
+ 1 APPPATH\Controllers\Admin.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 27)
+ 2 APPPATH\Controllers\Admin.php(36): App\Controllers\Admin->cekadmin()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 21:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 21:47:37 --> Call to undefined function form_open()
+in APPPATH\Views\v_admin_input_sekolah.php on line 101.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_input_sekolah', [], true)
+ 4 APPPATH\Controllers\Admin.php(56): view('v_admin_input_sekolah', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->update_sekolah()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 21:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 21:48:13 --> Undefined variable $sekolah
+in APPPATH\Views\layout\layout_admin.php on line 24.
+ 1 APPPATH\Views\layout\layout_admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_input_sekolah', [], true)
+ 6 APPPATH\Controllers\Admin.php(57): view('v_admin_input_sekolah', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->update_sekolah()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 21:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 21:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 22:04:48 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 802.
+ 1 APPPATH\Controllers\Admin.php(802): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 802)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 22:08:19 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 802.
+ 1 APPPATH\Controllers\Admin.php(802): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 802)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 22:08:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 799.
+ 1 APPPATH\Controllers\Admin.php(799): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 799)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-03 22:10:28 --> Array to string conversion
+in APPPATH\Controllers\Admin.php on line 806.
+ 1 APPPATH\Controllers\Admin.php(806): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 806)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 22:34:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn='20613768'' at line 5 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nam...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nam...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nam...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nam...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru('20613768')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 22:34:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn='20613768'' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=\'20613768\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=\'20613768\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=\'20613768\'')
+ 4 APPPATH\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=:npsn:', [...])
+ 5 APPPATH\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru('20613768')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-03 22:34:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn=NULL' at line 5 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nam...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nam...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nam...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nam...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru(NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 22:34:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn=NULL' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL')
+ 4 APPPATH\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=:npsn:', [...])
+ 5 APPPATH\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru(null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 22:35:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn=NULL' at line 5 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nam...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nam...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nam...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nam...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru(NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 22:35:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn=NULL' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL')
+ 4 APPPATH\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=:npsn:', [...])
+ 5 APPPATH\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru(null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 22:36:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn='20613768'' at line 5 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nam...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nam...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nam...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nam...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru('20613768')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 22:36:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn='20613768'' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=\'20613768\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=\'20613768\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=\'20613768\'')
+ 4 APPPATH\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=:npsn:', [...])
+ 5 APPPATH\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru('20613768')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-03 22:36:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn=NULL' at line 5 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nam...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nam...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nam...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nam...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru(NULL)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-03 22:36:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHER npsn=NULL' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=NULL')
+ 4 APPPATH\Models\M_sekolah.php(53): CodeIgniter\Database\BaseConnection->query('SELECT npsn,nama_sekolah,alamat_sekolah,desa,kecamatan,nama_kota,nama_propinsi 
+                FROM daf_sekolah ds 
+                LEFT JOIN daf_kota dk ON dk.id_kota = ds.id_kota
+                LEFT JOIN daf_propinsi dp ON dp.id_propinsi = dk.id_propinsi
+                WHER npsn=:npsn:', [...])
+ 5 APPPATH\Controllers\Admin.php(797): App\Models\M_sekolah->getdatasekolahbaru(null)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->cek_npsn()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-03 22:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-03 22:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

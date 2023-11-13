@@ -21,6 +21,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'ceknpsn'       => \App\Filters\CekNPSN::class
     ];
 
     /**
@@ -60,5 +61,7 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        'ceknpsn'       => \App\Filters\CekNPSN::class
+    ];
 }

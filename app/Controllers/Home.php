@@ -2,24 +2,30 @@
 
 namespace App\Controllers;
 
+use App\Models\M_user;
+
 class Home extends BaseController
 {
-    public function index(): string
+    function __construct()
     {
-        $kelas_map = [
-            '10_1' => 'X - 1',
-            '10_12' => 'X - 12',
-        ];
-        $kelas = $this->request->getVar('kelas');
-        if (!isset($kelas))
-            $data['kelas']  = "X - 1";
-        else {
-            $formatKelas = $kelas_map[$kelas] ?? '';
-            $data['kelas'] = $formatKelas;
-        }
+        $this->M_user = new M_user();
+    }
+
+    public function index()
+    {
+        if (!khusususer())
+            return redirect()->to("/");
+        $id_user = session()->get('id_user');
+        $data_saya = $this->M_user->get_data_guru($id_user);
+        $nuptk = $data_saya->nuptk;
+        $id_sekolah = session()->get('id_sekolah');
+        $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
+        $daftarkelasajar = $this->M_user->cekajarkelas($nuptk);
         $data['beranda'] = true;
-        $data['valkelas'] = $kelas;
         $data['ikon'] = 'absen';
+        $data['daftarkelaswali'] = $daftarkelaswali;
+        $data['daftarkelasajar'] = $daftarkelasajar;
+
         return view('v_beranda', $data);
     }
 }

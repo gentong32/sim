@@ -96,7 +96,7 @@
 <h3>Tahun Ajaran <?= $tahun_ajaran ?></h3>
 <div class="form-container">
     <h2>Tambah Data Staf</h2>
-    <?= form_open(base_url() . 'admin/simpan_staf'); ?>
+    <?= form_open(base_url() . 'admin/simpan_staf', array('id' => 'myForm')); ?>
 
     <div class="form-group">
         <label for="nama"><i class="fas fa-user"></i> Nama <span class="wajib">*</span></label>
@@ -139,9 +139,11 @@
 <?= $this->section('script') ?>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    var ijinajax = false;
+    var ijinajax = true;
 
     function batal() {
+        var form = document.getElementById('myForm');
+        form.setAttribute('novalidate', true);
         window.open("<?= base_url() ?>admin/user", "_self");
     }
 
@@ -174,14 +176,7 @@
     });
 
     function cekdata() {
-        var ijinlewat = false;
-
-        if ($('#emailError').text() == '')
-            ijinlewat = true;
-
-        if (ijinlewat && ijinajax)
-            return true;
-        else
+        if (ijinajax == false)
             return false;
     }
 </script>

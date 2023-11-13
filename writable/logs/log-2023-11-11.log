@@ -1,0 +1,1240 @@
+INFO - 2023-11-11 06:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:40:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(124): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:40:57 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(124): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:41:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(124): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:41:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(124): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:43:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:43:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama;
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:43:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:43:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:45:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:45:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:45:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:45:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:45:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:45:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 06:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 06:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 06:47:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 06:47:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: 
+                AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 08:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 08:03:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 08:03:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 12
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(483): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY
+                    gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' 
+                AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 08:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 08:03:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 11 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 08:03:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 11
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(481): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 08:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 08:04:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' 
+                OR' at line 11 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 08:04:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' 
+                OR' at line 11
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(481): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 08:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-11 08:05:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 11 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT\n        ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(480): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4...', '2023', '10', 'X - 1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-11 08:05:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AN' at line 11
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' ORDER BY nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' ORDER BY nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' ORDER BY nama')
+ 4 APPPATH\Models\M_user.php(480): CodeIgniter\Database\BaseConnection->query('SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = \'I\' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = \'S\' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = \'A\' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn
+                GROUP BY gs.nisn, g.nama 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' ORDER BY nama', [...])
+ 5 APPPATH\Controllers\Presensi.php(126): App\Models\M_user->getrekappresensi('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 08:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:09:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 08:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 10:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 10:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 10:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 10:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 10:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 10:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 10:39:59 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Presensi.php on line 114.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Presensi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Presensi')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Presensi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 12:12:25 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Presensi.php on line 114.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Presensi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Presensi')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Presensi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 12:12:34 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Presensi.php on line 114.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Presensi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Presensi')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Presensi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 12:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 12:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 12:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 12:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 12:34:26 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Presensi.php(129): CodeIgniter\Model->__call('get_batas_semester', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 12:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 12:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 12:53:19 --> Undefined variable $jmldatakalender
+in APPPATH\Views\v_superadmin_kalender_list.php on line 199.
+ 1 APPPATH\Views\v_superadmin_kalender_list.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jmldatakalender', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php', 199)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_kalender_list', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(251): view('v_superadmin_kalender_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->list_kalender()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 12:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 12:53:27 --> Undefined variable $jmldatakalender
+in APPPATH\Views\v_superadmin_kalender_list.php on line 199.
+ 1 APPPATH\Views\v_superadmin_kalender_list.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jmldatakalender', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php', 199)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_kalender_list', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(251): view('v_superadmin_kalender_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->list_kalender()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 12:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 12:55:09 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\v_superadmin_kalender_list.php on line 211.
+ 1 APPPATH\Views\v_superadmin_kalender_list.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php', 211)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_kalender_list', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(252): view('v_superadmin_kalender_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->list_kalender()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 13:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 13:00:25 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\v_superadmin_kalender_list.php on line 211.
+ 1 APPPATH\Views\v_superadmin_kalender_list.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php', 211)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_superadmin_kalender_list.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_superadmin_kalender_list', [], true)
+ 5 APPPATH\Controllers\Superadmin.php(252): view('v_superadmin_kalender_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Superadmin->list_kalender()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 13:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 13:16:14 --> Array to string conversion
+in APPPATH\Controllers\Presensi.php on line 112.
+ 1 APPPATH\Controllers\Presensi.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 13:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 13:16:19 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Presensi.php on line 120.
+ 1 APPPATH\Controllers\Presensi.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 13:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 13:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 13:36:19 --> Array to string conversion
+in APPPATH\Controllers\Presensi.php on line 112.
+ 1 APPPATH\Controllers\Presensi.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 13:40:11 --> Array to string conversion
+in APPPATH\Controllers\Presensi.php on line 112.
+ 1 APPPATH\Controllers\Presensi.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 13:41:04 --> Array to string conversion
+in APPPATH\Controllers\Presensi.php on line 112.
+ 1 APPPATH\Controllers\Presensi.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 13:50:54 --> Array to string conversion
+in APPPATH\Controllers\Presensi.php on line 112.
+ 1 APPPATH\Controllers\Presensi.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 13:54:02 --> Undefined constant "App\Controllers\n"
+in APPPATH\Controllers\Presensi.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->rekap()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-11 21:18:39 --> Undefined variable $datakalender
+in APPPATH\Views\v_agenda.php on line 228.
+ 1 APPPATH\Views\v_agenda.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datakalender', 'D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php', 228)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_agenda', [], true)
+ 5 APPPATH\Controllers\Agenda.php(32): view('v_agenda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 21:18:53 --> Undefined variable $datakalender
+in APPPATH\Views\v_agenda.php on line 228.
+ 1 APPPATH\Views\v_agenda.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datakalender', 'D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php', 228)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_agenda', [], true)
+ 5 APPPATH\Controllers\Agenda.php(32): view('v_agenda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 21:20:48 --> Undefined property: App\Controllers\Agenda::$M_sekolah
+in APPPATH\Controllers\Agenda.php on line 20.
+ 1 APPPATH\Controllers\Agenda.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Agenda::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Agenda.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 21:21:08 --> Undefined variable $pesan
+in APPPATH\Views\v_agenda.php on line 232.
+ 1 APPPATH\Views\v_agenda.php(232): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pesan', 'D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php', 232)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_agenda', [], true)
+ 5 APPPATH\Controllers\Agenda.php(37): view('v_agenda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 21:30:39 --> Undefined variable $jmldataagenda
+in APPPATH\Views\v_agenda.php on line 351.
+ 1 APPPATH\Views\v_agenda.php(351): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jmldataagenda', 'D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php', 351)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_agenda.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_agenda', [], true)
+ 5 APPPATH\Controllers\Agenda.php(39): view('v_agenda', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 21:41:55 --> Undefined variable $beranda
+in APPPATH\Views\layout\layout_default.php on line 106.
+ 1 APPPATH\Views\layout\layout_default.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $beranda', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 106)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_presensi', [], true)
+ 6 APPPATH\Controllers\Presensi.php(45): view('v_presensi', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-11 21:42:35 --> Undefined variable $beranda
+in APPPATH\Views\layout\layout_default.php on line 106.
+ 1 APPPATH\Views\layout\layout_default.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $beranda', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 106)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_presensi', [], true)
+ 6 APPPATH\Controllers\Presensi.php(45): view('v_presensi', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-11 21:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-11 21:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

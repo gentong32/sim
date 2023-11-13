@@ -182,127 +182,131 @@ if (tahun_sekarang() != $tahun_pilihan) {
 <h2 class="judul">Siswa Pindah / Naik Kelas</h2>
 <h3>Tahun Ajaran <?= $tahun_ajaran ?></h3>
 <hr>
-<label for="tahun">Tahun Asal</label>
-<select id="tahunAjaran">
-    <?php
-    if (bulan_sekarang() < 6) { ?>
-        <option value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
-    <?php } ?>
-    <?php if (bulan_sekarang() >= 6 && bulan_sekarang() <= 7) { ?>
-        <option <?= $selected1 ?> value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
-        <option <?= $selected2 ?> value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang() . "/" . (tahun_sekarang() + 1)) ?></option>
-    <?php } ?>
-    <?php if (bulan_sekarang() > 7) { ?>
-        <option value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang()) . "/" . (tahun_sekarang() + 1) ?></option>
-    <?php } ?>
-</select>
-<button style="display: none;" id="terapkantahunasal" onclick="terapkantahunasal()" class=" button">Terapkan</button>
-<br>
-<label for="filterKelas">Kelas:</label>
-<select id="filterKelas">
-    <?php
-    foreach ($daftar_kelas as $baris) {
-        $selected = '';
-        if ($baris == $kelas)
-            $selected = "selected";
-        echo  "<option $selected value='" . $baris . "'>" . $baris . "</option>";
-    }
-    ?>
-</select>
+<?php if (!$daftar_rombel) { ?>
+    <span style='color:red'>Silakan lengkapi daftar Rombel yang ada di Sekolah terlebih dahulu</span>
+<?php } else { ?>
 
-<label for="filterRombel">Rombel:</label>
-<select id="filterRombel">
-    <?php
-    if ($jumlah_rombel_kosong > 0) {
-        $selected = '';
-        if ($rombel == "-")
-            $selected = "selected";
-        echo  "<option $selected value='-'>-</option>";
-    }
-    foreach ($daftar_rombel as $baris) {
-        $selected = '';
-        if ($baris->nama_rombel == $rombel)
-            $selected = "selected";
-        echo  "<option $selected value='" . $baris->nama_rombel . "'>" . $baris->nama_rombel . "</option>";
-    }
-    ?>
-</select>
+    <label for="tahun">Tahun Asal</label>
+    <select id="tahunAjaran">
+        <?php
+        if (bulan_sekarang() < 6) { ?>
+            <option value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
+        <?php } ?>
+        <?php if (bulan_sekarang() >= 6 && bulan_sekarang() <= 7) { ?>
+            <option <?= $selected1 ?> value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
+            <option <?= $selected2 ?> value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang() . "/" . (tahun_sekarang() + 1)) ?></option>
+        <?php } ?>
+        <?php if (bulan_sekarang() > 7) { ?>
+            <option value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang()) . "/" . (tahun_sekarang() + 1) ?></option>
+        <?php } ?>
+    </select>
+    <button style="display: none;" id="terapkantahunasal" onclick="terapkantahunasal()" class=" button">Terapkan</button>
+    <br>
+    <label for="filterKelas">Kelas:</label>
+    <select id="filterKelas">
+        <?php
+        foreach ($daftar_kelas as $baris) {
+            $selected = '';
+            if ($baris == $kelas)
+                $selected = "selected";
+            echo  "<option $selected value='" . $baris . "'>" . $baris . "</option>";
+        }
+        ?>
+    </select>
 
-<button style="display: none;" id="terapkan1" class="button" onclick="terapkan()">Terapkan</button>
+    <label for="filterRombel">Rombel:</label>
+    <select id="filterRombel">
+        <?php
+        if ($jumlah_rombel_kosong > 0) {
+            $selected = '';
+            if ($rombel == "-")
+                $selected = "selected";
+            echo  "<option $selected value='-'>-</option>";
+        }
+        foreach ($daftar_rombel as $baris) {
+            $selected = '';
+            if ($baris->nama_rombel == $rombel)
+                $selected = "selected";
+            echo  "<option $selected value='" . $baris->nama_rombel . "'>" . $baris->nama_rombel . "</option>";
+        }
+        ?>
+    </select>
 
-<table class="tabel" id="daftarSiswa">
-    <tr>
-        <th>Pilih</th>
-        <th>NIS</th>
-        <th>Nama</th>
-        <th>Kelas</th>
-        <th>Rombel</th>
-    </tr>
-    <?php foreach ($datasiswa as $row) { ?>
+    <button style="display: none;" id="terapkan1" class="button" onclick="terapkan()">Terapkan</button>
+
+    <table class="tabel" id="daftarSiswa">
         <tr>
-            <td><?php if ($row['status_pindah'] == 0) { ?>
-                    <input type="checkbox">
-                <?php } ?>
-            </td>
-            <td data-nisn="<?= $row['nisn'] ?>"><?= $row['nis'] ?></td>
-            <td><?= $row['nama'] ?></td>
-            <td><?= $row['kelas'] ?></td>
-            <td><?= $row['nama_rombel'] ?></td>
+            <th>Pilih</th>
+            <th>NIS</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Rombel</th>
         </tr>
-    <?php } ?>
-</table>
+        <?php foreach ($datasiswa as $row) { ?>
+            <tr>
+                <td><?php if ($row['status_pindah'] == 0) { ?>
+                        <input type="checkbox">
+                    <?php } ?>
+                </td>
+                <td data-nisn="<?= $row['nisn'] ?>"><?= $row['nis'] ?></td>
+                <td><?= $row['nama'] ?></td>
+                <td><?= $row['kelas'] ?></td>
+                <td><?= $row['nama_rombel'] ?></td>
+            </tr>
+        <?php } ?>
+    </table>
 
-<label for="toggleCheckbox">Pilih Semua</label>
-<input type="checkbox" id="toggleCheckbox" onchange="toggleSelectAll()">
+    <label for="toggleCheckbox">Pilih Semua</label>
+    <input type="checkbox" id="toggleCheckbox" onchange="toggleSelectAll()">
 
 
-<br><br>
-<hr>
-<label for="tahun">Tahun Tujuan</label>
-<select id="tahunAjaranTujuan">
-    <?php
-    if (bulan_sekarang() < 6) { ?>
-        <option value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
-    <?php } ?>
-    <?php if (bulan_sekarang() >= 6 && bulan_sekarang() <= 7) { ?>
-        <option value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
-        <option selected value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang() . "/" . (tahun_sekarang() + 1)) ?></option>
-    <?php } ?>
-    <?php if (bulan_sekarang() > 7) { ?>
-        <option value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang()) . "/" . (tahun_sekarang() + 1) ?></option>
-    <?php } ?>
-</select>
+    <br><br>
+    <hr>
+    <label for="tahun">Tahun Tujuan</label>
+    <select id="tahunAjaranTujuan">
+        <?php
+        if (bulan_sekarang() < 6) { ?>
+            <option value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
+        <?php } ?>
+        <?php if (bulan_sekarang() >= 6 && bulan_sekarang() <= 7) { ?>
+            <option value="<?= (tahun_sekarang() - 1) ?>"><?= (tahun_sekarang() - 1) . "/" . (tahun_sekarang()) ?></option>
+            <option selected value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang() . "/" . (tahun_sekarang() + 1)) ?></option>
+        <?php } ?>
+        <?php if (bulan_sekarang() > 7) { ?>
+            <option value="<?= (tahun_sekarang()) ?>"><?= (tahun_sekarang()) . "/" . (tahun_sekarang() + 1) ?></option>
+        <?php } ?>
+    </select>
 
-<br>
-<label for="filterKelasTujuan">Kelas:</label>
-<select id="filterKelasTujuan">
-    <option value="0">-Pilih-</option>
-    <?php
-    foreach ($daftar_kelas_tujuan as $baris) {
-        echo  "<option value='" . $baris . "'>" . $baris . "</option>";
-    }
-    ?>
-</select>
-<label for="filterRombelTujuan">Rombel:</label>
-<select id="filterRombelTujuan">
-    <option value="0">-</option>
-</select>
-<button style="display: none;" id="terapkan2" class="button">Terapkan</button>
-<br>
-<button disabled id="tb_pindah" class="button2" onclick="pindahKelas()">Pindah / Naik Kelas</button>
-<button disabled id="tb_kembali" class="button2" onclick="kembaliKeKelasTahunPrev()">Kembali ke Asal</button>
-<button disabled id="tb_simpan_kelas" class="button3" onclick="simpanKelas()">Simpan ke Database</button>
-<div id="info"></div>
-<table class="tabel" id="daftarSiswaTahunNext">
-    <tr>
-        <th>Pilih</th>
-        <th>NIS</th>
-        <th>Nama</th>
-        <th>Kelas Asal</th>
-        <th>Rombel Asal</th>
-    </tr>
-</table>
-
+    <br>
+    <label for="filterKelasTujuan">Kelas:</label>
+    <select id="filterKelasTujuan">
+        <option value="0">-Pilih-</option>
+        <?php
+        foreach ($daftar_kelas_tujuan as $baris) {
+            echo  "<option value='" . $baris . "'>" . $baris . "</option>";
+        }
+        ?>
+    </select>
+    <label for="filterRombelTujuan">Rombel:</label>
+    <select id="filterRombelTujuan">
+        <option value="0">-</option>
+    </select>
+    <button style="display: none;" id="terapkan2" class="button">Terapkan</button>
+    <br>
+    <button disabled id="tb_pindah" class="button2" onclick="pindahKelas()">Pindah / Naik Kelas</button>
+    <button disabled id="tb_kembali" class="button2" onclick="kembaliKeKelasTahunPrev()">Kembali ke Asal</button>
+    <button disabled id="tb_simpan_kelas" class="button3" onclick="simpanKelas()">Simpan ke Database</button>
+    <div id="info"></div>
+    <table class="tabel" id="daftarSiswaTahunNext">
+        <tr>
+            <th>Pilih</th>
+            <th>NIS</th>
+            <th>Nama</th>
+            <th>Kelas Asal</th>
+            <th>Rombel Asal</th>
+        </tr>
+    </table>
+<?php } ?>
 
 <?= $this->endSection() ?>
 

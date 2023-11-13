@@ -1,8 +1,26 @@
 <?php
 
+function khusussuperadmin()
+{
+    if (session()->get('sebagai') == "superadmin") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function khususadmin()
 {
     if (session()->get('sebagai') == "admin") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function khusususer()
+{
+    if (session()->get('loggedIn')) {
         return true;
     } else {
         return false;
@@ -36,7 +54,7 @@ function tahun_ajaran($opsi = null)
     $bln = $ambiltanggal[1];
     $thn = $ambiltanggal[2];
 
-    if ($opsi != "mulai") {
+    if ($opsi == "lengkap") {
         if ($bln >= 7)
             $tahunajaran = $thn . "/" . ($thn + 1);
         else
@@ -57,7 +75,6 @@ function bulan_sekarang()
     // $tanggal = new DateTime("2023-06-01 00:00:00");
     $tanggal = new DateTime();
     $bulan = $tanggal->format("n");
-
     return $bulan;
 }
 
@@ -84,4 +101,16 @@ function fase($kelas)
         return "e";
     else if ($kelas == "11" || $kelas == "12")
         return "e";
+}
+
+function kelasdarijenjang($jenjang)
+{
+    if ($jenjang == "SD") {
+        $data = ["1", "2", "3", "4", "5", "6"];
+    } else if ($jenjang == "SMP") {
+        $data = ["7", "8", "9"];
+    } else if ($jenjang == "SMA") {
+        $data = ["10", "11", "12"];
+    }
+    return $data;
 }

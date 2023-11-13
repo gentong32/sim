@@ -11,12 +11,20 @@
 }
 
 .daftar {
-  max-width: 95%;
+  padding: 20px;
   margin: auto;
+  max-width: 600px;
+  width: auto;
+  margin-bottom: 20px;
+  height: auto;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .dataTables_wrapper .dataTable tbody td {
   text-align: left;
+  margin-top: -100px;
 }
 
 .dataTables_wrapper .dataTable tbody td:nth-child(4) {

@@ -176,6 +176,7 @@
     .tabel2 {
         border-collapse: collapse;
         width: 100%;
+        max-width: 600px;
         margin-top: 5px;
         margin-bottom: 15px;
     }
@@ -217,8 +218,20 @@
         margin-bottom: 0px;
     }
 
-    .opsi2 {
+    .opsi1 {
         width: 200px;
+    }
+
+    .opsi2 {
+        width: 150px;
+    }
+
+    .opsi3 {
+        width: 300px;
+    }
+
+    .opsi4 {
+        width: 300px;
     }
 
     .dselect {
@@ -228,57 +241,76 @@
     .dselect label {
         vertical-align: middle;
     }
+
+    #dtambah {
+        border: 0.5px solid gray;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .tbtambah[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
 </style>
 <?= $this->endSection() ?>
 
 <?= $this->section('konten') ?>
 <div>
-    <h2>Daftar Guru Kelas / Mapel</h2>
+    <h2>Guru Kelas / Mapel</h2>
 
-    <div class="guru_mapel">
-        <div class="dselect">
-            <label for="guru">Guru</label>
-            <select class="js-example-basic-single opsi2" name="guru" id="guru">
-                <option value="0">-- Pilih Guru --</option>
-                <?php foreach ($daftar_guru as $guru) : ?>
-                    <option value=<?= $guru['id'] ?>><?= $guru['nama'] ?>
-                    </option>
-                <?php endforeach ?>
-            </select>
-        </div>
-        <div class="dselect">
-            <label for="kelas">Kelas</label>
-            <select name="kelas" id="kelas" class="js-example-basic-single opsi2">
-                <option value="0">-- Kelas --</option>
-                <?php foreach ($daftar_kelas as $kelas) : ?>
-                    <option value='<?= $kelas ?>'><?= $kelas ?>
-                    </option>
-                <?php endforeach ?>
-            </select>
-        </div>
-        <div class="dselect">
-            <label for="kelas">Kategori Mapel</label>
-            <select name="pilihan" id="pilihan" class="js-example-basic-single opsi2">
-                <option value="0">-- Pilihan --</option>
-            </select>
-        </div>
-        <div class="dselect">
-            <label for="mapel">Mapel</label>
-            <select name="mapel" id="mapel" class="js-example-basic-single opsi2">
-                <option value="0">-- Mata Pelajaran --</option>
-            </select>
-        </div>
+    <div id="dtambah" style="display: none;">
+        <div class="guru_mapel">
+            <div class="dselect">
+                <label for="guru">Guru</label><br>
+                <select class="js-example-basic-single opsi1" name="guru" id="guru">
+                    <option value="0">-- Pilih Guru --</option>
+                    <?php foreach ($daftar_guru as $guru) : ?>
+                        <option value=<?= $guru['id'] ?>><?= $guru['nama'] ?>
+                        </option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <div class="dselect">
+                <label for="kelas">Kelas</label><br>
+                <select name="kelas" id="kelas" class="js-example-basic-single opsi2">
+                    <option value="0">-- Kelas --</option>
+                    <?php foreach ($daftar_kelas as $kelas) : ?>
+                        <option value='<?= $kelas ?>'><?= $kelas ?>
+                        </option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <div class="dselect">
+                <label for="kelas">Kategori Mapel</label><br>
+                <select name="pilihan" id="pilihan" class="js-example-basic-single opsi2">
+                    <option value="0">-- Pilihan --</option>
+                </select>
+            </div>
+            <div class="dselect">
+                <label for="mapel">Mapel</label><br>
+                <select name="mapel" id="mapel" class="js-example-basic-single opsi3">
+                    <option value="0">-- Mata Pelajaran --</option>
+                </select>
+            </div>
 
-        <table class="tabel2" name="pilihrombel" id="pilihrombel">
-            <tr>
-                <th>Nama Rombel</th>
-                <th>Pilih</th>
-            </tr>
-        </table>
+            <table class="tabel2" name="pilihrombel" id="pilihrombel">
+                <tr>
+                    <th>Nama Rombel</th>
+                    <th>Pilih</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
 
-        <button onclick="cekkelas()">Submit</button>
+            <button class="batal" id="tbbatal" onclick="batalinput()">Batal</button>
+            <button class="ok" id="tbsubmit" onclick="cekkelas()">Submit</button>
+        </div>
     </div>
-
+    <?= (!$daftar_rombel) ? "<span style='color:red'>Silakan lengkapi daftar Rombel yang ada di Sekolah terlebih dahulu</span><br>" : "" ?>
+    <button <?= (!$daftar_rombel) ? "disabled" : "" ?> class="tbtambah" id="tbtambah" onclick="tampilinput()">Tambahkan Guru Mapel</button>
 
     <?php
     $baris = 0;
@@ -328,7 +360,7 @@
         $('.js-example-basic-single').select2();
     });
 
-    var tahunsekarang = <?= tahun_ajaran('mulai') ?>;
+    var tahunsekarang = <?= tahun_ajaran() ?>;
     var selectedKelas = 0;
     var selectedPilihan = 0;
     var selectedGuru = 0;
@@ -349,32 +381,52 @@
         ambilsubkelas();
     });
 
+    function tampilinput() {
+        document.getElementById('dtambah').style.display = "block";
+        document.getElementById('tbtambah').style.display = "none";
+    }
+
+    function batalinput() {
+        document.getElementById('dtambah').style.display = "none";
+        document.getElementById('tbtambah').style.display = "block";
+    }
+
     function ambilsubkelas() {
-        fetch('<?= base_url() . "admin/get_sub_kelas_mapel/" ?>' + selectedKelas, {
-                method: 'GET',
-            })
-            .then(response => response.json())
-            .then(data => {
+        var filterRombelSelect = document.getElementById('pilihan');
+        if (selectedKelas > 0) {
+            fetch('<?= base_url() . "admin/get_sub_kelas_mapel/" ?>' + selectedKelas, {
+                    method: 'GET',
+                })
+                .then(response => response.json())
+                .then(data => {
 
-                var filterRombelSelect = document.getElementById('pilihan');
-                filterRombelSelect.innerHTML = '';
+                    filterRombelSelect.innerHTML = '';
 
-                for (var key in data) {
-                    if (data.hasOwnProperty(key)) {
-                        var rombel = data[key];
-                        var option = document.createElement('option');
-                        option.value = rombel.sub_kelas;
-                        option.text = rombel.sub_kelas;
-                        filterRombelSelect.add(option);
+                    for (var key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            var rombel = data[key];
+                            var option = document.createElement('option');
+                            option.value = rombel.sub_kelas;
+                            option.text = rombel.sub_kelas;
+                            filterRombelSelect.add(option);
+                        }
                     }
-                }
-                selectedPilihan = filterRombelSelect.value;
-                ambilmapel();
+                    selectedPilihan = filterRombelSelect.value;
+                    ambilmapel();
 
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } else {
+            filterRombelSelect.innerHTML = '<option value="0">-- Pilihan --</option>';
+            var filterMapelSelect = document.getElementById('mapel');
+            filterMapelSelect.innerHTML = '<option value="0">-- Mata Pelajaran --</option>';
+            var filterrombel = document.getElementById('pilihrombel');
+            var tbody = filterrombel.getElementsByTagName('tbody')[0];
+            tbody.innerHTML = "<tr><th>Nama Rombel</th> <th>Pilih</th></tr><tr><td></td><td></td></tr>";
+
+        }
     }
 
     $('#pilihan').on('change', function() {
@@ -416,7 +468,7 @@
 
     function ambilrombel() {
         if (selectedKelas > 0) {
-            var url = '<?= base_url() . "admin/get_rombel_sekolah" ?>';
+            var url = '<?= base_url() . "admin/get_rombel_mapel" ?>';
             var data = {
                 tahunsekarang: tahunsekarang,
                 kelas: selectedKelas,

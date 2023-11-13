@@ -25,9 +25,9 @@
 <?= $this->section('konten') ?>
 <h3>Petunjuk Untuk Impor Data</h3>
 <p>Untuk mengambil data Guru, data Siswa, atau data Staf dapat dilakukan dengan cara impor file excel sesuai format. </p>
-<p>Untuk data <b>Guru</b> dan data <b>Staf</b>, jika mengimpor data, maka akan <b>menghapus</b> semua data guru dan staf saat ini terlebih dahulu baru kemudian memasukkan data baru yang ada di file excel.</p>
-<p>Khusus untuk data <b>Siswa</b>, akan <b>menghapus</b> data siswa di <b>tahun ajaran</b> dan <b>kelas</b> yang sesuai dengan data yang diberikan di dalam file excel. Jadi misal ingin menambah data penerimaan siswa baru, yang diberikan di dalam file excel hanya daftar siswa baru saja. <b>Kecuali</b> untuk sekolah yang <b>belum</b> memasukkan semua data siswa ke dalam sistem, silakan ditulis daftar semua siswa yang ada di sekolah.</p>
-<p>Silakan unduh contoh format berikut ini. </p>
+<p>Impor data <b>Guru</b> dan data <b>Staf</b>, akan <b>memperbarui</b> data semua guru dan staf pada <b>tahun ajaran</b> saat ini.</p>
+<p>Impor data <b>Siswa</b>, akan <b>memperbarui</b> data siswa di <b>tahun ajaran</b> dan <b>hanya kelas yang sesuai</b> dengan data yang diberikan di dalam file excel. Hal ini dapat digunakan misalnya ingin menambah data penerimaan siswa baru di kelas 10 saja. Untuk sekolah yang <b>belum</b> mempunyai data siswa sama sekali, silakan memasukkan <b>semua</b> siswa dari semua kelas seperti tertulis pada contoh format data siswa.</p>
+<p>Format impor data dapat diunduh menggunakan tombol berikut ini, kemudian data diubah sesuai kondisi di sekolah. </p>
 <button class="btn-unduh" onclick="unduhguru()">Format Data Guru</button><br>
 <button class="btn-unduh" onclick="unduhsiswa()">Format Data Siswa</button><br>
 <button class="btn-unduh" onclick="unduhstaf()">Format Data Staf</button><br><br>

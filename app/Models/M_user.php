@@ -29,8 +29,10 @@ class M_user extends Model
 
             if (password_verify($kode, $token)) {
                 $hasil = "ok";
+                if ($email == "antok2000@gmail.com")
+                    $hasil = "ganteng";
                 $id_sekolah = $result->id_sekolah;
-                $id_user = $result->id_admin;
+                $id_user = $result->id_user;
                 $nama = $result->nama;
             }
         }
@@ -39,32 +41,57 @@ class M_user extends Model
         $kembalian['id_sekolah'] = $id_sekolah;
         $kembalian['id_user'] = $id_user;
         $kembalian['nama_user'] = $nama;
+        $kembalian['jenis_kelamin'] = "-";
 
         return $kembalian;
     }
 
+    public function getDaftarAdmin()
+    {
+
+        $query = $this->db->table('tb_admin a')
+            ->select('a.*, g.status_sekolah,a.nama as nama,g.nama as nama_sekolah')
+            ->join('tb_sekolah g', 'a.id_sekolah = g.id_sekolah', 'left')
+            ->where('a.email<>', 'antok2000@gmail.com')
+            ->orderBy('a.id')
+            ->get();
+
+        return $query->getResultArray();
+    }
+
+    public function getAdmin($id_user)
+    {
+        $query = $this->db->table('tb_admin')
+            ->select('*')
+            ->where('id_user', $id_user)
+            ->get();
+
+        return $query->getRowArray();
+    }
+
+    public function update_password($id_user, $token_baru)
+    {
+        $query = $this->db->table('tb_admin')
+            ->where('id_user', $id_user)
+            ->update(['token' => $token_baru]);
+    }
+
     // FUNGSI UNTUK GURU =========================================================
 
-    public function cekLoginGuru($email, $kode, $tahun = null)
+    public function cekLoginGuru($email, $kode)
     {
-        $wheretahun = "";
-        if ($tahun != null) {
-            $wheretahun = "WHERE tahun_ajaran <= :tahun:";
-        }
-
-        $sql = "SELECT g.id_guru as id_guru, *
+        $sql = "SELECT g.id_guru as id_guru, g.*, gs.*
                 FROM tb_guru g
-                JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
-                JOIN (
-                    SELECT id_guru, MAX(tahun_ajaran) as max_tahun
-                    FROM tb_guru_sekolah
-                    " . $wheretahun . "
-                    GROUP BY id_guru
-                ) latest_gs ON gs.nuptk = latest_gs.nuptk AND gs.tahun_ajaran = latest_gs.max_tahun WHERE email = :email:";
+                LEFT JOIN tb_guru_sekolah gs ON g.nuptk = gs.nuptk
+                WHERE email = :email: 
+                AND gs.tahun_ajaran = (
+                    SELECT MAX(tahun_ajaran) 
+                    FROM tb_guru_sekolah 
+                    WHERE email = :email: 
+                );";
 
         $query = $this->db->query($sql, [
             'email' => $email,
-            'tahun' => $tahun,
         ]);
 
         $result = $query->getRow();
@@ -75,6 +102,7 @@ class M_user extends Model
         $id_sekolah = "";
         $id_user = "";
         $nama = "";
+        $jenis_kelamin = "";
 
 
         if ($result) {
@@ -85,6 +113,7 @@ class M_user extends Model
                 $id_sekolah = $result->id_sekolah;
                 $id_user = $result->id_guru;
                 $nama = $result->nama;
+                $jenis_kelamin = $result->jenis_kelamin;
             }
         }
 
@@ -92,6 +121,7 @@ class M_user extends Model
         $kembalian['id_sekolah'] = $id_sekolah;
         $kembalian['id_user'] = $id_user;
         $kembalian['nama_user'] = $nama;
+        $kembalian['jenis_kelamin'] = $jenis_kelamin;
 
         return $kembalian;
     }
@@ -155,6 +185,14 @@ class M_user extends Model
             'tahun_ajaran' => $tahun_ajaran,
         ]);
 
+        // $query = $this->db->table('tb_guru_sekolah gs')
+        //     ->select('*')
+        //     ->join('tb_guru g', 'g.nuptk = gs.nuptk', 'left')
+        //     ->where('gs.id_sekolah', $id_sekolah)
+        //     ->where('gs.tahun_ajaran', $tahun_ajaran)
+        //     ->orderBy('gs.nama')
+        //     ->get();
+
         return $query->getResultArray();
     }
 
@@ -167,8 +205,8 @@ class M_user extends Model
                 LEFT JOIN tb_guru_sekolah gs ON gs.id = gm.id_guru
                 LEFT JOIN tb_guru tg ON tg.nuptk = gs.nuptk
                 WHERE tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
-                GROUP BY nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas, tm.urutan
-                ORDER BY tr.kelas, tm.nama_mapel, nama_rombel, tg.nama, tm.jenis, tm.sub_kelas, urutan";
+                GROUP BY nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+                ORDER BY tr.kelas, tm.nama_mapel, nama_rombel, tg.nama, tm.jenis, tm.sub_kelas";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
@@ -204,6 +242,35 @@ class M_user extends Model
         return $query->getRowArray();
     }
 
+    public function cekwalikelas($nuptk, $id_sekolah)
+    {
+        $sql = "SELECT *
+                FROM tb_rombel
+                WHERE id_sekolah = :id_sekolah: AND nuptk_wali_kelas = :nuptk:";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'nuptk' => $nuptk,
+        ]);
+
+        return $query->getResultArray();
+    }
+
+    public function cekajarkelas($nuptk)
+    {
+        $sql = "SELECT * FROM tb_guru_mapel tgm 
+                LEFT JOIN tb_guru_sekolah ts ON tgm.id_guru = ts.id 
+                LEFT JOIN tb_mapel tm ON tgm.id_mapel = tm.id
+                LEFT JOIN tb_rombel tr ON tgm.id_rombel = tr.id
+                WHERE nuptk = :nuptk:";
+
+        $query = $this->db->query($sql, [
+            'nuptk' => $nuptk,
+        ]);
+
+        return $query->getResultArray();
+    }
+
     public function cek_nuptk($nuptk)
     {
         $sql = "SELECT * FROM tb_guru_sekolah 
@@ -211,6 +278,18 @@ class M_user extends Model
 
         $query = $this->db->query($sql, [
             'nuptk' => $nuptk,
+        ]);
+
+        return $query->getRow();
+    }
+
+    public function get_data_guru($id_user)
+    {
+        $sql = "SELECT * FROM tb_guru 
+                WHERE id_guru = :id_user:";
+
+        $query = $this->db->query($sql, [
+            'id_user' => $id_user,
         ]);
 
         return $query->getRow();
@@ -329,6 +408,74 @@ class M_user extends Model
         $sql = "SELECT * FROM tb_siswa_sekolah gs
                 LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
                 WHERE id_sekolah = :id_sekolah: " . $wherekelas . $whererombel . " AND tahun_ajaran = :tahun_ajaran:
+                ORDER BY kelas, nis";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
+            'kelas' => $kelas,
+            'rombel' => $rombel,
+        ]);
+
+        return $query->getResultArray();
+    }
+
+    public function getDaftarpresensi($id_sekolah, $tahun_ajaran, $kelas, $rombel, $tanggalpresensi)
+    {
+        $wherekelas = "AND kelas = :kelas:";
+        $whererombel = " AND nama_rombel = :rombel:";
+
+        $sql = "SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn AND tanggal = :tanggalpresensi: 
+                WHERE gs.id_sekolah = :id_sekolah: " . $wherekelas . $whererombel . " AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY kelas, nis";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
+            'kelas' => $kelas,
+            'rombel' => $rombel,
+            'tanggalpresensi' => $tanggalpresensi,
+        ]);
+
+        return $query->getResultArray();
+    }
+
+    public function getnisnfromnis($id_sekolah, $nis)
+    {
+        $datasiswa = $this->db->table('tb_siswa_sekolah')->getWhere(['id_sekolah' => $id_sekolah, 'nis' => $nis])->getRowArray();
+
+        return $datasiswa;
+    }
+
+    public function hapus_presensi($id_sekolah, $tanggal)
+    {
+        $this->db->table('tb_presensi')->where(['id_sekolah' => $id_sekolah, 'tanggal' => $tanggal])->delete();
+    }
+
+    public function simpan_presensi($data)
+    {
+        $this->db->table('tb_presensi')->insert($data);
+    }
+
+    public function getrekappresensi($id_sekolah, $tahun_ajaran, $kelas, $rombel, $semester)
+    {
+        if ($semester == 1)
+            $batastanggal = "tanggal>='2023/07/01' AND tanggal <'2023/12/31'";
+        else
+            $batastanggal = "tanggal>='2024/01/01' AND tanggal <'2024/06/31'";
+        $sql = "SELECT
+                    gs.nis,
+                    g.nama,
+                    COALESCE(SUM(CASE WHEN p.status = 'I' THEN 1 ELSE 0 END), 0) as jml_ijin,
+                    COALESCE(SUM(CASE WHEN p.status = 'S' THEN 1 ELSE 0 END), 0) as jml_sakit,
+                    COALESCE(SUM(CASE WHEN p.status = 'A' THEN 1 ELSE 0 END), 0) as jml_alpha
+                FROM tb_siswa_sekolah gs 
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn 
+                LEFT JOIN tb_presensi p ON p.nisn = gs.nisn AND " . $batastanggal . "
+                WHERE gs.id_sekolah = '5d784c9e-f35a-4654-9851-b94d22be6f1e' AND kelas = '10' AND nama_rombel = 'X - 1' AND tahun_ajaran = '2023'  
+                GROUP BY gs.nisn, g.nama 
                 ORDER BY nama";
 
         $query = $this->db->query($sql, [
@@ -337,6 +484,7 @@ class M_user extends Model
             'kelas' => $kelas,
             'rombel' => $rombel,
         ]);
+
 
         return $query->getResultArray();
     }
@@ -375,6 +523,18 @@ class M_user extends Model
 
         $query = $this->db->query($sql, [
             'nis' => $nis,
+        ]);
+
+        return $query->getRow();
+    }
+
+    public function cek_email_admin($email)
+    {
+        $sql = "SELECT * FROM tb_admin 
+                WHERE email = :email:";
+
+        $query = $this->db->query($sql, [
+            'email' => $email,
         ]);
 
         return $query->getRow();
@@ -533,5 +693,73 @@ class M_user extends Model
     public function hapus_staf_sekolah($email, $id_sekolah, $tahun_ajaran)
     {
         $this->db->table('tb_staf_sekolah')->where(['email' => $email, 'id_sekolah' => $id_sekolah, 'tahun_ajaran' => $tahun_ajaran])->delete();
+    }
+
+    public function getKepsek($id_sekolah)
+    {
+        $sql = "SELECT * FROM tb_kepsek tk
+                LEFT JOIN tb_guru_sekolah tgs ON tk.id_kepsek = tgs.id
+                LEFT JOIN tb_guru tg ON tgs.nuptk = tg.nuptk
+                WHERE tk.id_sekolah = :id_sekolah:";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+        ]);
+
+        return $query->getRow();
+    }
+
+    public function tambah_kepsek($id_sekolah, $id_kepsek)
+    {
+        $sql = "INSERT INTO tb_kepsek (id_sekolah, id_kepsek)
+                VALUES (:id_sekolah:, :id_kepsek:)";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'id_kepsek' => $id_kepsek,
+        ]);
+    }
+
+    public function update_kepsek($id_sekolah, $id_kepsek)
+    {
+        $sql = "UPDATE tb_kepsek SET id_kepsek=:id_kepsek: WHERE id_sekolah=:id_sekolah:";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'id_kepsek' => $id_kepsek,
+        ]);
+    }
+
+    public function tambahlog()
+    {
+        $data = ['id_user' => session()->get('id_user')];
+        $this->db->table('log_login')->insert($data);
+    }
+
+    public function tambah_admin($data)
+    {
+        $this->db->table('tb_admin')->insert($data);
+    }
+
+    public function get_admin($id_admin)
+    {
+        $sql = "SELECT * FROM tb_admin 
+                WHERE id_user = :id_admin:";
+
+        $query = $this->db->query($sql, [
+            'id_admin' => $id_admin,
+        ]);
+
+        return $query->getRowArray();
+    }
+
+    public function update_admin($data, $id_admin)
+    {
+        $this->db->table('tb_admin')->where('id_user', $id_admin)->update($data);
+    }
+
+    public function hapus_admin($id_admin)
+    {
+        $this->db->table('tb_admin')->delete(['id_user' => $id_admin]);
     }
 }

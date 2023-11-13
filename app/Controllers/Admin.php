@@ -8,8 +8,12 @@ use Faker\Core\Uuid;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
+use CodeIgniter\I18n\Time;
+
 class Admin extends BaseController
 {
+    // protected $filters = ['ceknpsn' => ['before' => ['index']]];
+
     function __construct()
     {
         $this->M_user = new M_user();
@@ -18,21 +22,107 @@ class Admin extends BaseController
 
     public function index()
     {
-        if (!khususadmin())
-            return redirect()->to("/");
-
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran("mulai"));
+        $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
         $tglsekarang = tanggal_sekarang();
-        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         $data['jml_guru'] = sizeof($getdaftarguru);
         $data['tanggal'] = $tglsekarang['panjang'];
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['sekolah'] = $datasekolah;
         $data['info'] = $infosekolah;
         $data['nama_user'] = session()->get('nama_user');
         return view('v_admin_dashboard', $data);
+    }
+
+    public function input_sekolah()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+        helper('form');
+        $tglsekarang = tanggal_sekarang();
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $dataadmin = $this->M_user->getAdmin(session()->get('id_user'));
+        $status_bayar = $this->ceklunas($id_sekolah, tahun_ajaran());
+        $data['sekolah'] = $datasekolah;
+        $data['admin'] = $dataadmin;
+        $data['status_bayar'] = $status_bayar;
+        $data['tanggal'] = $tglsekarang['panjang'];
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        return view('v_admin_input_sekolah', $data);
+    }
+
+    public function edit_sekolah()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+        helper('form');
+        $tglsekarang = tanggal_sekarang();
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $dataadmin = $this->M_user->getAdmin(session()->get('id_user'));
+        $status_bayar = $this->ceklunas($id_sekolah, tahun_ajaran());
+        $data['sekolah'] = $datasekolah;
+        $data['admin'] = $dataadmin;
+        $data['status_bayar'] = $status_bayar;
+        $data['tanggal'] = $tglsekarang['panjang'];
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        return view('v_admin_edit_sekolah', $data);
+    }
+
+    public function simpan_sekolah()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $npsn = ($this->request->getVar('npsn'));
+        $nama_sekolah = ($this->request->getVar('nama_sekolah'));
+        $alamat_sekolah = ($this->request->getVar('alamat_sekolah'));
+        $kelurahan = ($this->request->getVar('kelurahan'));
+        $kecamatan = ($this->request->getVar('kecamatan'));
+        $kota = ($this->request->getVar('kota'));
+        $propinsi = ($this->request->getVar('propinsi'));
+        $telp_sekolah = ($this->request->getVar('telp_sekolah'));
+        $email_sekolah = ($this->request->getVar('email_sekolah'));
+        $nama_admin = ($this->request->getVar('nama_admin'));
+        $alamat_admin = ($this->request->getVar('alamat_admin'));
+        $telp_admin = ($this->request->getVar('telp_admin'));
+        $email_admin = ($this->request->getVar('email_admin'));
+
+        if ($npsn == "" || $npsn == null)
+            die();
+
+        $data = [
+            'npsn'          => htmlspecialchars($npsn),
+            'nama'          => htmlspecialchars($nama_sekolah),
+            'alamat'        => htmlspecialchars($alamat_sekolah),
+            'kelurahan'     => htmlspecialchars($kelurahan),
+            'kecamatan'     => htmlspecialchars($kecamatan),
+            'kota'          => htmlspecialchars($kota),
+            'propinsi'      => htmlspecialchars($propinsi),
+            'telp'          => htmlspecialchars($telp_sekolah),
+            'email'         => htmlspecialchars($email_sekolah),
+        ];
+
+        $id_sekolah = session()->get('id_sekolah');
+
+        $this->M_sekolah->update_sekolah($data, $id_sekolah);
+
+        $data2 = [
+            'nama'          => htmlspecialchars($nama_admin),
+            'alamat'        => htmlspecialchars($alamat_admin),
+            'telp'          => htmlspecialchars($telp_admin),
+            'email'         => htmlspecialchars($email_admin),
+        ];
+
+        $id_admin = session()->get('id_user');
+        $this->M_user->update_admin($data2, $id_admin);
+
+        return redirect()->to("/admin");
     }
 
     public function user()
@@ -42,18 +132,19 @@ class Admin extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran("mulai"));
+        $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
 
 
-        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         if (sizeof($getdaftarguru) == 0) {
-            $this->M_user->duplikat_guru_tahun_lalu($id_sekolah, tahun_ajaran('mulai'));
-            $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran('mulai'));
+            $this->M_user->duplikat_guru_tahun_lalu($id_sekolah, tahun_ajaran());
+            $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         }
-        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran("mulai"));
-        $getdaftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran());
+
+        $getdaftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran());
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['info'] = $infosekolah;
         $data['nama_user'] = session()->get('nama_user');
         $data['kode_acak'] = rand(100000, 999999);
@@ -69,26 +160,32 @@ class Admin extends BaseController
         if (!khususadmin())
             return redirect()->to("/");
 
-        $pilihantahun = tahun_ajaran("mulai");
+        $pilihantahun = tahun_ajaran();
         $id_sekolah = session()->get('id_sekolah');
         if ($tahun != null)
             $pilihantahun = $tahun;
 
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, $pilihantahun);
-        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, $pilihantahun);
+
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $id_sekolah = session()->get('id_sekolah');
+        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
 
         $pilihantahuntujuan = $pilihantahun;
         if (bulan_sekarang() >= 6)
             $pilihantahuntujuan = tahun_sekarang();
 
-        $daftar_kelas_tujuan = $this->get_daftar_kelas($id_sekolah, $pilihantahuntujuan);
+        $daftar_kelas_tujuan = $daftar_kelas; //$this->get_daftar_kelas($id_sekolah, $pilihantahuntujuan);
 
         if ($kelas == null) {
             $kelas = $daftar_kelas[0];
         }
         $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, $pilihantahun, $kelas);
-        $rombel_pertama = $daftar_rombel[0]->nama_rombel;
+
+        $rombel_pertama = "-";
+        if ($daftar_rombel)
+            $rombel_pertama = $daftar_rombel[0]->nama_rombel;
 
         $jumlah_rombel_kosong = 0;
         $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, $pilihantahun, $kelas, null);
@@ -105,9 +202,12 @@ class Admin extends BaseController
         }
 
         $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, $pilihantahun, $kelas, $rombel);
+        // echo $rombel;
+        // echo var_dump($getdaftarsiswa);
+        // die();
 
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['tahun_mulai'] = $pilihantahun;
         $data['info'] = $infosekolah;
         $data['nama_user'] = session()->get('nama_user');
@@ -210,8 +310,8 @@ class Admin extends BaseController
             if ($hasilsukses == "sukses") {
                 $this->M_user->simpan_daftar_guru($data);
                 $this->M_user->delete_daftar_guru_sekolah($id_sekolah, $tahun_ajaran);
-                $this->M_user->simpan_daftar_guru_sekolah($data2);
-                $this->M_sekolah->update_jumlah_guru($id_sekolah, $tahun_ajaran, $jumlah_user);
+                echo ($this->M_user->simpan_daftar_guru_sekolah($data2));
+                echo ($this->M_sekolah->update_jumlah_guru($id_sekolah, $tahun_ajaran, $jumlah_user));
             }
 
             echo $hasilsukses;
@@ -219,13 +319,15 @@ class Admin extends BaseController
 
         // SISWA =====================================================
         if ($pengguna == "S") {
+            $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+            $jenjang = $dataadmin['jenjang'];
             $daftar_kelas = [];
             foreach ($worksheet->getRowIterator(2) as $row) {
                 $rowData = [];
                 $saveData = [];
                 $saveData2 = [];
 
-                $cellIterator = $row->getCellIterator('B', 'K');
+                $cellIterator = $row->getCellIterator('B', 'L');
 
                 foreach ($cellIterator as $cell) {
                     $rowData[] = $cell->getValue();
@@ -249,7 +351,7 @@ class Admin extends BaseController
                 $tanggal_numerik = $rowData[6] - 1;
                 $tanggal_database = date('Y/m/d', strtotime('1900-01-00 +' . $tanggal_numerik . ' days'));
 
-                $saveData['id_siswa'] = $rowData[10];
+                $saveData['id_siswa'] = $rowData[11];
                 $saveData['id_uploader'] = $id_user;
                 $saveData['nisn'] = $rowData[0];
                 $saveData['nama'] = $rowData[2];
@@ -257,8 +359,9 @@ class Admin extends BaseController
                 $saveData['tempat_lahir'] = $rowData[5];
                 $saveData['tanggal_lahir'] = $tanggal_database;
                 $saveData['jenis_kelamin'] = $rowData[7];
-                $saveData['telp'] = $rowData[8];
-                $saveData['email'] = $rowData[9];
+                $saveData['agama'] = $rowData[8];
+                $saveData['telp'] = $rowData[9];
+                $saveData['email'] = $rowData[10];
                 $saveData['token'] = password_hash('123456', PASSWORD_DEFAULT);
 
                 $saveData2['nisn'] = $rowData[0];
@@ -272,10 +375,12 @@ class Admin extends BaseController
                         $hasilsukses = "gagal";
                         break;
                     }
-                    $data[] = $saveData;
-                    $data2[] = $saveData2;
-                    if (!in_array($rowData[3], $daftar_kelas)) {
-                        $daftar_kelas[] = $rowData[3];
+                    if (in_array($rowData[3], kelasdarijenjang($jenjang))) {
+                        $data[] = $saveData;
+                        $data2[] = $saveData2;
+                        if (!in_array($rowData[3], $daftar_kelas)) {
+                            $daftar_kelas[] = $rowData[3];
+                        }
                     }
                 }
             }
@@ -284,7 +389,7 @@ class Admin extends BaseController
                 $this->M_user->simpan_daftar_siswa($data);
                 $this->M_user->delete_daftar_siswa_sekolah($id_sekolah, $tahun_ajaran, $daftar_kelas);
                 $this->M_user->simpan_daftar_siswa_sekolah($data2);
-                $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran("mulai"));
+                $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran());
                 $jumlah_user = sizeof($getdaftarsiswa);
                 $this->M_sekolah->update_jumlah_siswa($id_sekolah, $tahun_ajaran, $jumlah_user);
             }
@@ -364,7 +469,9 @@ class Admin extends BaseController
 
     public function unduh_data_siswa()
     {
-        $alamatdata = "./assets/template/format_data_siswa.xlsx";
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = strtolower($dataadmin['jenjang']);
+        $alamatdata = "./assets/template/format_data_siswa_" . $jenjang . ".xlsx";
         return $this->response->download($alamatdata, null);
     }
 
@@ -407,7 +514,7 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         return view('v_admin_guru_input', $data);
     }
@@ -421,7 +528,7 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['data_guru'] = $this->M_user->getDataGuru($id_guru);
         $data['id_guru'] = $id_guru;
@@ -440,8 +547,21 @@ class Admin extends BaseController
         $telp = ($this->request->getVar('telp'));
         $email = ($this->request->getVar('email'));
 
+        $uuid = sprintf(
+            '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0x0fff) | 0x4000,
+            mt_rand(0, 0x3fff) | 0x8000,
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff)
+        );
+
         $data = [
             'id_uploader'   => session()->get('id_user'),
+            'id_guru'       => $uuid,
             'nuptk'         => htmlspecialchars($nuptk),
             'nama'          => htmlspecialchars($nama),
             'alamat'        => htmlspecialchars($alamat),
@@ -461,7 +581,7 @@ class Admin extends BaseController
 
         $this->M_user->tambah_guru($data);
         $this->M_user->tambah_guru_sekolah($data2);
-        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         $jumlah_user = sizeof($getdaftarguru);
         $this->M_sekolah->update_jumlah_guru($id_sekolah, $tahun_ajaran, $jumlah_user);
 
@@ -508,7 +628,7 @@ class Admin extends BaseController
         $nuptk = $getdataguru['nuptk'];
 
         $this->M_user->hapus_guru_sekolah($nuptk, $id_sekolah, $tahun_ajaran);
-        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         $jumlah_user = sizeof($getdaftarguru);
         $this->M_sekolah->update_jumlah_guru($id_sekolah, $tahun_ajaran, $jumlah_user);
     }
@@ -534,7 +654,7 @@ class Admin extends BaseController
             return redirect()->to("/");
 
         $id_sekolah = session()->get('id_sekolah');
-        $daftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran("mulai"));
+        $daftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         $getsekolah = $this->M_sekolah->getSekolah($id_sekolah);
 
         $spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
@@ -604,11 +724,14 @@ class Admin extends BaseController
         helper('form');
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $datarombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran("mulai"));
+        $datarombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran());
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = $dataadmin['jenjang'];
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['data_rombel'] = $datarombel;
+        $data['kelas'] = kelasdarijenjang($jenjang);
         return view('v_admin_siswa_input', $data);
     }
 
@@ -620,13 +743,16 @@ class Admin extends BaseController
         helper('form');
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $datarombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran("mulai"));
+        $datarombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran());
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = $dataadmin['jenjang'];
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
-        $data['data_siswa'] = $this->M_user->getDataSiswa($id_siswa, tahun_ajaran('mulai'));
+        $data['data_siswa'] = $this->M_user->getDataSiswa($id_siswa, tahun_ajaran());
         $data['id_siswa'] = $id_siswa;
         $data['data_rombel'] = $datarombel;
+        $data['kelas'] = kelasdarijenjang($jenjang);
         return view('v_admin_siswa_edit', $data);
     }
 
@@ -645,10 +771,23 @@ class Admin extends BaseController
         $tanggal_lahir_exp = explode("-", $tanggal_lahir_0);
         $tanggal_lahir = $tanggal_lahir_exp[2] . "-" . $tanggal_lahir_exp[1] . "-" . $tanggal_lahir_exp[0];
         $jenis_kelamin = ($this->request->getVar('jenis_kelamin'));
+        $agama = ($this->request->getVar('agama'));
         $telp = ($this->request->getVar('telp'));
         $email = ($this->request->getVar('email'));
+        $uuid = sprintf(
+            '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0x0fff) | 0x4000,
+            mt_rand(0, 0x3fff) | 0x8000,
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff),
+            mt_rand(0, 0xffff)
+        );
 
         $data = [
+            'id_siswa'      => $uuid,
             'id_uploader'   => session()->get('id_user'),
             'nisn'          => htmlspecialchars($nisn),
             'nama'          => htmlspecialchars($nama),
@@ -656,6 +795,7 @@ class Admin extends BaseController
             'tempat_lahir'  => htmlspecialchars($tempat_lahir),
             'tanggal_lahir' => htmlspecialchars($tanggal_lahir),
             'jenis_kelamin' => htmlspecialchars($jenis_kelamin),
+            'agama'         => htmlspecialchars($agama),
             'telp'          => htmlspecialchars($telp),
             'email'         => htmlspecialchars($email),
             'token'         => password_hash('123456', PASSWORD_DEFAULT),
@@ -673,7 +813,7 @@ class Admin extends BaseController
 
         $this->M_user->tambah_siswa($data);
         $this->M_user->tambah_siswa_sekolah($data2);
-        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran());
         $jumlah_user = sizeof($getdaftarsiswa);
         $this->M_sekolah->update_jumlah_siswa($id_sekolah, $tahun_ajaran, $jumlah_user);
 
@@ -696,6 +836,7 @@ class Admin extends BaseController
         $tanggal_lahir_exp = explode("-", $tanggal_lahir_0);
         $tanggal_lahir = $tanggal_lahir_exp[2] . "-" . $tanggal_lahir_exp[1] . "-" . $tanggal_lahir_exp[0];
         $jenis_kelamin = ($this->request->getVar('jenis_kelamin'));
+        $agama = ($this->request->getVar('agama'));
         $telp = ($this->request->getVar('telp'));
         $email = ($this->request->getVar('email'));
 
@@ -708,6 +849,7 @@ class Admin extends BaseController
             'tempat_lahir'  => htmlspecialchars($tempat_lahir),
             'tanggal_lahir' => htmlspecialchars($tanggal_lahir),
             'jenis_kelamin' => htmlspecialchars($jenis_kelamin),
+            'agama'         => htmlspecialchars($agama),
             'telp'          => htmlspecialchars($telp),
             'email'         => htmlspecialchars($email),
         ];
@@ -719,7 +861,7 @@ class Admin extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $this->M_user->update_siswa($data, $id_siswa);
-        $this->M_user->update_siswa_sekolah($data2, $nisn, $id_sekolah, tahun_ajaran('mulai'));
+        $this->M_user->update_siswa_sekolah($data2, $nisn, $id_sekolah, tahun_ajaran());
 
         return redirect()->to("/admin/user");
     }
@@ -732,15 +874,44 @@ class Admin extends BaseController
         $id_siswa = $this->request->getVar('id_siswa');
         $id_sekolah = session()->get('id_sekolah');
         $tahun_ajaran = substr($this->request->getVar('tahun_ajaran'), 0, 4);
-        $getdatasiswa = $this->M_user->getDataSiswa($id_siswa, tahun_ajaran('mulai'));
+        $getdatasiswa = $this->M_user->getDataSiswa($id_siswa, tahun_ajaran());
         $nisn = $getdatasiswa['nisn'];
 
         $this->M_user->hapus_siswa_sekolah($nisn, $id_sekolah, $tahun_ajaran);
-        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran());
         $jumlah_user = sizeof($getdaftarsiswa);
         $this->M_sekolah->update_jumlah_siswa($id_sekolah, $tahun_ajaran, $jumlah_user);
     }
 
+    public function cek_npsn()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $npsn = $this->request->getPost('inpsn');
+        $cek_npsn = $this->M_sekolah->cek_npsn($npsn);
+        $data = [];
+
+        if ($cek_npsn) {
+            $data['pesan'] = "ada";
+        } else {
+            $getsekolah = $this->M_sekolah->getdatasekolahbaru($npsn);
+            if ($getsekolah) {
+                $data['pesan'] = "aman";
+                $data['npsn'] = $getsekolah['npsn'];
+                $data['nama_sekolah'] = $getsekolah['nama_sekolah'];
+                $data['alamat_sekolah'] = $getsekolah['alamat_sekolah'];
+                $data['kelurahan'] = $getsekolah['desa'];
+                $data['kecamatan'] = $getsekolah['kecamatan'];
+                $data['nama_kota'] = $getsekolah['nama_kota'];
+                $data['nama_propinsi'] = $getsekolah['nama_propinsi'];
+            } else {
+                $data['pesan'] = $npsn . "abc";
+            }
+        }
+
+        echo json_encode($data);
+    }
 
     public function cek_nisn_sekolah()
     {
@@ -776,7 +947,7 @@ class Admin extends BaseController
             return redirect()->to("/");
 
         $id_sekolah = session()->get('id_sekolah');
-        $daftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran("mulai"));
+        $daftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran());
         $jumlah_data = sizeof($daftarsiswa);
 
         $getsekolah = $this->M_sekolah->getSekolah($id_sekolah);
@@ -793,8 +964,9 @@ class Admin extends BaseController
         $sheet->setCellValue('G1', "Tempat Lahir");
         $sheet->setCellValue('H1', "Tanggal Lahir");
         $sheet->setCellValue('I1', "Jenis Kelamin");
-        $sheet->setCellValue('J1', "Telp");
-        $sheet->setCellValue('K1', "Email");
+        $sheet->setCellValue('J1', "Agama");
+        $sheet->setCellValue('K1', "Telp");
+        $sheet->setCellValue('L1', "Email");
 
         $sheet->getColumnDimension('A')->setWidth(6);
         $sheet->getColumnDimension('B')->setWidth(11);
@@ -805,10 +977,11 @@ class Admin extends BaseController
         $sheet->getColumnDimension('G')->setWidth(15);
         $sheet->getColumnDimension('H')->setWidth(13);
         $sheet->getColumnDimension('I')->setWidth(13);
-        $sheet->getColumnDimension('J')->setWidth(12);
-        $sheet->getColumnDimension('K')->setWidth(20);
+        $sheet->getColumnDimension('J')->setWidth(13);
+        $sheet->getColumnDimension('K')->setWidth(12);
+        $sheet->getColumnDimension('L')->setWidth(20);
 
-        $style = $sheet->getStyle('A1:K1');
+        $style = $sheet->getStyle('A1:L1');
         $style->getFont()->setBold(true);
         $style->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
 
@@ -827,7 +1000,7 @@ class Admin extends BaseController
         $range = 'H2:H' . ($jumlah_data + 5);
         $sheet->getStyle($range)->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DDMMYYYY);
 
-        $range = 'I2:K' . ($jumlah_data + 5);
+        $range = 'I2:L' . ($jumlah_data + 5);
         $sheet->getStyle($range)->getNumberFormat()->setFormatCode(\PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_TEXT);
 
         $spreadsheet->getProperties()
@@ -849,8 +1022,9 @@ class Admin extends BaseController
             $sheet->setCellValue('G' . $row, $item['tempat_lahir']);
             $sheet->setCellValueExplicit('H' . $row, $item['tanggal_lahir'], \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_ISO_DATE);
             $sheet->setCellValue('I' . $row, $item['jenis_kelamin']);
-            $sheet->setCellValueExplicit('J' . $row, $item['telp'], \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING);
-            $sheet->setCellValue('K' . $row, $item['email']);
+            $sheet->setCellValue('J' . $row, $item['agama']);
+            $sheet->setCellValueExplicit('K' . $row, $item['telp'], \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING);
+            $sheet->setCellValue('L' . $row, $item['email']);
             $row++;
         }
 
@@ -873,7 +1047,7 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         return view('v_admin_staf_input', $data);
     }
@@ -887,7 +1061,7 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['data_staf'] = $this->M_user->getDataStaf($id_staf);
         $data['id_staf'] = $id_staf;
@@ -938,7 +1112,7 @@ class Admin extends BaseController
 
         $this->M_user->tambah_staf($data);
         $this->M_user->tambah_staf_sekolah($data2);
-        $getdaftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran());
         $jumlah_user = sizeof($getdaftarstaf);
         $this->M_sekolah->update_jumlah_staf($id_sekolah, $tahun_ajaran, $jumlah_user);
 
@@ -989,11 +1163,49 @@ class Admin extends BaseController
         $email = $getdatastaf['email'];
 
         $this->M_user->hapus_staf_sekolah($email, $id_sekolah, $tahun_ajaran);
-        $getdaftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran());
         $jumlah_user = sizeof($getdaftarstaf);
         $this->M_sekolah->update_jumlah_staf($id_sekolah, $tahun_ajaran, $jumlah_user);
     }
 
+    public function reset_guru_pass()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_guru = $this->request->getVar('id_guru');
+        $data = [
+            'token'         => password_hash('123456', PASSWORD_DEFAULT)
+        ];
+
+        $this->M_user->update_guru($data, $id_guru);
+    }
+
+    public function reset_siswa_pass()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_siswa = $this->request->getVar('id_siswa');
+        $data = [
+            'token'         => password_hash('123456', PASSWORD_DEFAULT)
+        ];
+
+        $this->M_user->update_siswa($data, $id_siswa);
+    }
+
+    public function reset_staf_pass()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_staf = $this->request->getVar('id_staf');
+        $data = [
+            'token'         => password_hash('123456', PASSWORD_DEFAULT)
+        ];
+
+        $this->M_user->update_staf($data, $id_staf);
+    }
 
     public function cek_email_sekolah()
     {
@@ -1015,7 +1227,7 @@ class Admin extends BaseController
             return redirect()->to("/");
 
         $id_sekolah = session()->get('id_sekolah');
-        $daftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran("mulai"));
+        $daftarstaf = $this->M_user->getDaftarStaf($id_sekolah, tahun_ajaran());
 
         $getsekolah = $this->M_sekolah->getSekolah($id_sekolah);
 
@@ -1073,45 +1285,39 @@ class Admin extends BaseController
         exit;
     }
 
-    public function rombel_asli()
-    {
-        if (!khususadmin())
-            return redirect()->to("/");
-
-        $id_sekolah = session()->get('id_sekolah');
-        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $data['sekolah'] = $datasekolah;
-        $data['nama_user'] = session()->get('nama_user');
-        $data['tahun_ajaran'] = tahun_ajaran('mulai');
-        return view('v_admin_kelas_rombel', $data);
-    }
-
     public function rombel()
     {
         if (!khususadmin())
             return redirect()->to("/");
 
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
         $id_sekolah = session()->get('id_sekolah');
-        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $daftar_sub_kelas = $this->get_daftar_sub_kelas($id_sekolah, tahun_ajaran());
-        $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran('mulai'));
+        $daftar_guru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
+        $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran());
         if (sizeof($daftar_rombel) == 0) {
-            $this->M_sekolah->duplikat_rombel_tahun_lalu($id_sekolah, tahun_ajaran('mulai'));
-            $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran('mulai'));
+            $this->M_sekolah->duplikat_rombel_tahun_lalu($id_sekolah, tahun_ajaran());
+            $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran());
         }
 
+        // echo "<pre>";
+        // echo var_dump($daftar_rombel);
+        // echo "</pre>";
+
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['daftar_kelas'] = $daftar_kelas;
+        $data['daftar_guru'] = json_encode($daftar_guru);
         $data['daftar_sub_kelas'] = $daftar_sub_kelas;
         $data['daftar_rombel'] = $daftar_rombel;
 
         return view('v_admin_rombel', $data);
     }
 
-    public function get_rombel_sekolah()
+    public function get_rombel_mapel()
     {
         if (!khususadmin())
             return redirect()->to("/");
@@ -1125,7 +1331,7 @@ class Admin extends BaseController
         $id_guru = $dataMapel['guru'];
         $id_mapel = $dataMapel['mapel'];
 
-        $datarombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, $tahun_ajaran, $kelas, $subkelas, $id_guru, $id_mapel);
+        $datarombel = $this->M_sekolah->get_rombel_mapel($id_sekolah, $tahun_ajaran, $kelas, $subkelas, $id_guru, $id_mapel);
         echo json_encode($datarombel);
         // $response = ['message' => $id_mapel];
         // return $this->response->setJSON($response);
@@ -1139,12 +1345,12 @@ class Admin extends BaseController
         $dataToSave = json_decode(file_get_contents('php://input'), true);
 
         $id_sekolah = session()->get('id_sekolah');
-        $this->M_sekolah->hapus_rombel_sekolah($id_sekolah, tahun_ajaran("mulai"));
+        $this->M_sekolah->hapus_rombel_sekolah($id_sekolah, tahun_ajaran());
 
         foreach ($dataToSave as $item) {
             $kelas = $item['kelas'];
             $rombel = $item['rombel'];
-            $this->M_sekolah->tambah_rombel_sekolah($id_sekolah, $kelas, $rombel, tahun_ajaran("mulai"));
+            $this->M_sekolah->tambah_rombel_sekolah($id_sekolah, $kelas, $rombel, tahun_ajaran());
         }
 
         // Setelah melakukan operasi yang diperlukan, Anda dapat memberikan respons kembali ke klien:
@@ -1164,7 +1370,8 @@ class Admin extends BaseController
         $kelas = $dataToSave['kelas'];
         $sub_kelas = $dataToSave['sub_kelas'];
         $rombel = $dataToSave['rombel'];
-        $this->M_sekolah->tambah_rombel_sekolah($id_sekolah, $kelas, $sub_kelas, $rombel, tahun_ajaran("mulai"));
+        $nuptk_wali_kelas = $dataToSave['nuptk_wali_kelas'];
+        $this->M_sekolah->tambah_rombel_sekolah($id_sekolah, $kelas, $sub_kelas, $rombel, $nuptk_wali_kelas, tahun_ajaran());
 
         // Setelah melakukan operasi yang diperlukan, Anda dapat memberikan respons kembali ke klien:
         $response = ['message' => "Berhasil disimpan"];
@@ -1184,8 +1391,9 @@ class Admin extends BaseController
         $sub_kelas = $dataToSave['sub_kelas'];
         $rombel = $dataToSave['rombel'];
         $rombellama = $dataToSave['rombellama'];
+        $nuptk_wali_kelas = $dataToSave['nuptk_wali_kelas'];
 
-        $this->M_sekolah->update_rombel_sekolah($id_sekolah, $kelas, $sub_kelas, $rombellama, $rombel, tahun_ajaran("mulai"));
+        $this->M_sekolah->update_rombel_sekolah($id_sekolah, $kelas, $sub_kelas, $rombellama, $rombel, $nuptk_wali_kelas, tahun_ajaran());
 
         // Setelah melakukan operasi yang diperlukan, Anda dapat memberikan respons kembali ke klien:
         $response = ['message' => $kelas . "-" . $rombel . "-" . $rombellama];
@@ -1200,7 +1408,7 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         return view('v_admin_siswa_naikkelas', $data);
     }
@@ -1223,7 +1431,9 @@ class Admin extends BaseController
         $daftar_sub_kelas = [];
         foreach ($datamapel as $row) {
             if (!in_array('[' . $row["kelas"] . ', "' . $row["sub_kelas"] . '"]', $daftar_sub_kelas)) {
-                $daftar_sub_kelas[] = '[' . $row["kelas"] . ', "' . $row["sub_kelas"] . '"]';
+                if (($row["kelas"] == 11 || $row["kelas"] == 12) && $row["sub_kelas"] == "-") {
+                } else
+                    $daftar_sub_kelas[] = '[' . $row["kelas"] . ', "' . $row["sub_kelas"] . '"]';
             }
         }
         return $daftar_sub_kelas;
@@ -1333,17 +1543,108 @@ class Admin extends BaseController
         if (!khususadmin())
             return redirect()->to("/");
 
+        $this->cekdaftarmapel();
+
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = $dataadmin['jenjang'];
+        $daftar_kelas = kelasdarijenjang($jenjang);
         $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['daftar_kelas'] = $daftar_kelas;
         $data['daftar_mapel'] = $daftar_mapel;
 
         return view('v_admin_mapel', $data);
+    }
+
+    public function cekdaftarmapel()
+    {
+        $id_sekolah = session()->get('id_sekolah');
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = $dataadmin['jenjang'];
+        $cekmapel = $this->M_sekolah->cek_mapel($id_sekolah, kelasdarijenjang($jenjang)[0]);
+        if (!$cekmapel) {
+            $this->M_sekolah->hapus_semuamapel($id_sekolah);
+            foreach (kelasdarijenjang($jenjang) as $kelas) {
+                $this->M_sekolah->impor_mapel($id_sekolah, $kelas);
+            }
+        }
+    }
+
+    public function mapel_pilihan()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $kelas = $_GET['kelas'];
+        $sub_kelas = $_GET['sub_kelas'];
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $dafmapelpilihan = $this->M_sekolah->get_daftar_mapel_pilihan($kelas);
+        $data['sekolah'] = $datasekolah;
+        $data['nama_user'] = session()->get('nama_user');
+        $data['kelas'] = $kelas;
+        $data['sub_kelas'] = $sub_kelas;
+        $data['dafmapelpilihan'] = $dafmapelpilihan;
+
+        return view('v_admin_mapel_pilihan', $data);
+    }
+
+    public function simpan_mapel_pilihan_kelas()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datatosave = json_decode(file_get_contents('php://input'), true);
+
+        $kelas = $datatosave['kelas'];
+        $sub_kelas = $datatosave['sub_kelas'];
+
+        $this->M_sekolah->hapus_mapelpilihan($id_sekolah, $kelas, $sub_kelas);
+        foreach ($datatosave['mapelpilihan'] as $mapel_pilihan) {
+
+            if ($mapel_pilihan != null) {
+                $get_mapel = $this->M_sekolah->get_namamapel($mapel_pilihan);
+                $nama_mapel = $get_mapel['nama_mapel'];
+                $data['id_sekolah'] = $id_sekolah;
+                $data['kelas'] = $kelas;
+                $data['jenis'] = 2;
+                $data['sub_kelas'] = $sub_kelas;
+                $data['kd_mapel'] = $mapel_pilihan;
+                $data['nama_mapel'] = $nama_mapel;
+                $simpandata = $this->M_sekolah->tambah_mapelpilihan($data);
+            }
+        }
+        $simpandata = true;
+        if ($simpandata)
+            $response = ['pesan' => "Berhasil menyimpan"];
+        else
+            $response = ['pesan' => "Gagal Menyimpan"];
+
+        return $this->response->setJSON($response);
+    }
+
+    public function impor_mapel_pilihan()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $dataMapel = json_decode(file_get_contents('php://input'), true);
+        $kelas = $dataMapel['kelas'];
+        // $kelas = '5';
+        $impordata = $this->M_sekolah->impor_mapel($id_sekolah, $kelas);
+        if ($impordata)
+            $response = ['pesan' => "Berhasil"];
+        else
+            $response = ['pesan' => "Gagal Mengimpor"];
+
+        return $this->response->setJSON($response);
     }
 
     public function simpan_mapel()
@@ -1366,9 +1667,13 @@ class Admin extends BaseController
         $data['jenis'] = $jenis;
         $data['sub_kelas'] = $sub_kelas;
         $data['nama_mapel'] = $dataMapel['cellContent'];
-        $data['urutan'] = $dataMapel['baris'];
+        $addedit = $dataMapel['addedit'];
+        $idedit = $dataMapel['idedit'];
 
-        $simpandata = $this->M_sekolah->simpan_mapel($data);
+        if ($addedit == "add")
+            $simpandata = $this->M_sekolah->tambah_mapel($data);
+        else
+            $simpandata = $this->M_sekolah->update_mapel($data, $idedit);
 
         if ($simpandata)
             $response = ['pesan' => "Berhasil"];
@@ -1422,10 +1727,10 @@ class Admin extends BaseController
 
         // echo $rombel;
 
-        $hapusdata = $this->M_sekolah->hapus_rombel($id_sekolah, $kelas, $rombel, tahun_ajaran("mulai"));
+        $hapusdata = $this->M_sekolah->hapus_rombel($id_sekolah, $kelas, $rombel, tahun_ajaran());
 
         if ($hapusdata)
-            $response = ['pesan' => $id_sekolah . "," . $kelas . "," . $rombel . "," . tahun_ajaran("mulai")];
+            $response = ['pesan' => $id_sekolah . "," . $kelas . "," . $rombel . "," . tahun_ajaran()];
         else
             $response = ['pesan' => "Gagal Menghapus"];
 
@@ -1462,11 +1767,11 @@ class Admin extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
+        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran('lengkap'));
         $daftar_tema = $this->M_sekolah->get_tema();
         $projek_sekolah = $this->M_sekolah->get_projek_sekolah($id_sekolah);
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['daftar_kelas'] = $daftar_kelas;
         $data['daftar_tema'] = $daftar_tema;
@@ -1556,14 +1861,14 @@ class Admin extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
+        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran('lengkap'));
         if ($kelas == null)
             $kelas = $daftar_kelas[0];
         $dimensi_projek = $this->M_sekolah->get_dimensi_projek($id_sekolah, $kelas);
 
         $daftar_dimensi = $this->M_sekolah->get_dimensi();
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['daftar_kelas'] = $daftar_kelas;
         $data['kelas'] = $kelas;
@@ -1599,7 +1904,7 @@ class Admin extends BaseController
         $daftar_elemen_d[] = $daftar_elemen_d6;
 
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['data_projek'] = $dataprojek;
         $data['daf_dimensi'] = $daf_dimensi;
@@ -1652,18 +1957,21 @@ class Admin extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran("mulai"));
+        $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         if (sizeof($getdaftarguru) == 0) {
-            $this->M_user->duplikat_guru_tahun_lalu($id_sekolah, tahun_ajaran('mulai'));
-            $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran('mulai'));
+            $this->M_user->duplikat_guru_tahun_lalu($id_sekolah, tahun_ajaran());
+            $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         }
         $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
-        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
         $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran());
         $daftar_guru_mapel = $this->M_user->get_daftar_guru_mapel($id_sekolah);
 
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = $dataadmin['jenjang'];
+        $daftar_kelas = kelasdarijenjang($jenjang);
+
         $data['sekolah'] = $datasekolah;
-        $data['tahun_ajaran'] = tahun_ajaran();
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['daftar_guru'] = $getdaftarguru;
         $data['daftar_mapel'] = $daftar_mapel;
@@ -1700,9 +2008,272 @@ class Admin extends BaseController
         return $this->response->setJSON($response);
     }
 
-    public function cek_1()
+    public function ekskul()
     {
-        $id_rombel = $this->M_sekolah->cek_rombel('2f3bd0be-5929-11ee-ac1f-00ffe2cd5f16', 2023, 10, '-', 'X-1');
-        echo $id_rombel['id'];
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran('lengkap'));
+        $daftar_ekskul = $this->M_sekolah->get_daftar_ekskul($id_sekolah);
+        $daftar_guru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran('lengkap'));
+        $data['daftar_guru'] = json_encode($daftar_guru);
+        $data['sekolah'] = $datasekolah;
+        $data['nama_user'] = session()->get('nama_user');
+        $data['daftar_kelas'] = $daftar_kelas;
+        $data['daftar_ekskul'] = $daftar_ekskul;
+        $data['tahun_ajaran'] = tahun_ajaran();
+        return view('v_admin_ekskul', $data);
+    }
+
+    public function simpan_ekskul()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $dataToSave = json_decode(file_get_contents('php://input'), true);
+
+        $id_sekolah = session()->get('id_sekolah');
+
+        $jenis = $dataToSave['jenis'];
+        $ekskul = $dataToSave['ekskul'];
+        $id_guru = $dataToSave['id_guru'];
+        $this->M_sekolah->tambah_ekskul_sekolah($id_sekolah, $jenis, $ekskul, $id_guru);
+
+        $response = ['message' => "Berhasil disimpan"];
+        return $this->response->setJSON($response);
+    }
+
+    public function update_ekskul()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $dataToSave = json_decode(file_get_contents('php://input'), true);
+
+        $id_sekolah = session()->get('id_sekolah');
+
+        $jenis = $dataToSave['jenis'];
+        $ekskul = $dataToSave['ekskul'];
+        $ekskullama = $dataToSave['ekskullama'];
+        $id_guru = $dataToSave['id_guru'];
+
+        $this->M_sekolah->update_ekskul_sekolah($id_sekolah, $jenis, $ekskullama, $ekskul, $id_guru);
+
+        $response = ['message' => "Berhasil diupdate"];
+        return $this->response->setJSON($response);
+    }
+
+    public function hapus_ekskul()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $dataToSave = json_decode(file_get_contents('php://input'), true);
+
+        $id_sekolah = session()->get('id_sekolah');
+
+        $id = $dataToSave['id'];
+
+        $this->M_sekolah->hapus_ekskul_sekolah($id_sekolah, $id);
+
+        $response = ['message' => "Berhasil diupdate"];
+        return $this->response->setJSON($response);
+    }
+
+    public function agenda()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $datakalender = $this->M_sekolah->getAgenda($id_sekolah);
+        $dataagenda = $this->M_sekolah->getAgendaSaja($id_sekolah);
+        $data['sekolah'] = $datasekolah;
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        $data['datakalender'] = json_encode($datakalender);
+        $data['jmldataagenda'] = sizeof($dataagenda);
+
+        $pesan = session()->getFlashdata('pesan');
+        $data['pesan'] = $pesan;
+
+        return view('v_admin_agenda', $data);
+    }
+
+    public function list_agenda()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $datakalender = $this->M_sekolah->getAgenda($id_sekolah, tahun_ajaran());
+        $data['sekolah'] = $datasekolah;
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        $data['datakalender'] = $datakalender;
+        $data['jmldatakalender'] = sizeof($datakalender);
+
+        return view('v_admin_agenda_list', $data);
+    }
+
+    public function simpan_agenda()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $id_user = session()->get('id_user');
+
+        $tanggal = $this->request->getVar('tanggal');
+        $bulan = $this->request->getVar('bulan');
+        $tahun = $this->request->getVar('tahun');
+        $agenda = $this->request->getVar('iagenda');
+        $jenis = $this->request->getVar('ipilih');
+        $addedit = $this->request->getVar('addedit');
+
+        session()->setFlashdata('pesan', $bulan . "-" . $tahun);
+
+        $tanggalnya = $tahun . "-" . (intval($bulan) + 1) . "-" . $tanggal;
+
+        if ($addedit == "add")
+            $this->M_sekolah->tambah_agenda($id_sekolah, $tanggalnya, $agenda, $jenis, $id_user);
+        else
+            $this->M_sekolah->update_agenda($id_sekolah, $tanggalnya, $agenda, $jenis, $id_user);
+
+        return redirect()->to(base_url() . 'admin/agenda');
+    }
+
+    public function hapus_agenda()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $id_user = session()->get('id_user');
+
+        $tanggal = $this->request->getVar('tanggal');
+        $bulan = $this->request->getVar('bulan');
+        $tahun = $this->request->getVar('tahun');
+
+        session()->setFlashdata('pesan', $bulan . "-" . $tahun);
+
+        $tanggalnya = $tahun . "-" . (intval($bulan) + 1) . "-" . $tanggal;
+
+        $this->M_sekolah->hapus_agenda($id_sekolah, $tanggalnya, $id_user);
+
+        return redirect()->to(base_url() . 'admin/agenda');
+    }
+
+    public function kepsek()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $daftar_guru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
+        $data_kepsek = $this->M_user->getKepsek($id_sekolah);
+        $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
+
+        $addedit = "add";
+        if ($data_kepsek) {
+            $addedit = "edit";
+        }
+        $filetdtgn = "kosong";
+        $namafile = './public/tandatangan/tandatangan1.png';
+
+        if (file_exists($namafile)) {
+            $filetdtgn = "ada";
+        }
+
+        $data['filetdtgn'] = $filetdtgn;
+        $data['addedit'] = $addedit;
+        $data['sekolah'] = $datasekolah;
+        $data['info_sekolah'] = $infosekolah;
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        $data['data_kepsek'] = $data_kepsek;
+        $data['daftar_guru'] = $daftar_guru;
+
+        return view('v_admin_kepsek', $data);
+    }
+
+    public function simpan_kepsek()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $id_kepsek = $this->request->getVar('kepsek');
+        $addedit = $this->request->getVar('addedit');
+
+        if ($addedit == "add")
+            $this->M_user->tambah_kepsek($id_sekolah, $id_kepsek);
+        else
+            $this->M_user->update_kepsek($id_sekolah, $id_kepsek);
+
+        return redirect()->to(base_url() . 'admin/kepsek');
+    }
+
+    public function upload_tdtgn()
+    {
+        $request = \Config\Services::request();
+        $id_sekolah = session()->get('id_sekolah');
+        $id_kepsek = $request->getPost('id_kepsek');
+        $file_tdtgn = $request->getFile('file_tdtgn');
+
+        if ($file_tdtgn->isValid()) {
+            $namaFile = $file_tdtgn->getName();
+            $ukuranFile = $file_tdtgn->getSize();
+            $tipeFile = $file_tdtgn->getMimeType();
+            $ext = $file_tdtgn->getClientExtension();
+
+            if ($ukuranFile > 100 * 1024 || $ext !== 'png') {
+                return redirect()->back()->with('error', 'Gagal unggah file. File harus berukuran kurang dari 100 KB dan berformat PNG.');
+            }
+
+            $namafilebaru = "tdtgn_" . substr($id_sekolah, 0, 8) . $id_kepsek . "." . $ext;
+
+            $lokasiFile = 'tandatangan/' . $namafilebaru;
+
+            if (is_file($lokasiFile)) {
+                unlink($lokasiFile);
+            }
+
+            $file_tdtgn->move('tandatangan/', $namafilebaru);
+        } else {
+            echo $file_tdtgn->getError();
+            if (session()->get('username') == "hardianto@kemdikbud.go.id") {
+                echo "Eror file sk";
+                die();
+            }
+        }
+        return redirect()->to('/admin/kepsek');
+    }
+
+    private function ceklunas($id_sekolah, $tahun_ajaran)
+    {
+        $cekpembayaran = $this->M_sekolah->cek_pembayaran($id_sekolah, $tahun_ajaran);
+        if ($cekpembayaran) {
+            return "Aktif";
+        } else {
+            return "Trial";
+        }
+    }
+
+    public function cek()
+    {
+        $get_mapel = $this->M_sekolah->get_namamapel('mp154');
+        $nama_mapel = $get_mapel['nama_mapel'];
+        $data['id_sekolah'] = '5d784c9e-f35a-4654-9851-b94d22be6f1e';
+        $data['kelas'] = '7';
+        $data['jenis'] = 2;
+        $data['sub_kelas'] = 'B';
+        $data['nama_mapel'] = $nama_mapel;
+        $simpandata = $this->M_sekolah->tambah_mapelpilihan($data);
     }
 }

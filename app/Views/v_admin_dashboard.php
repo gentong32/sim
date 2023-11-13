@@ -55,24 +55,39 @@
         font-size: 20px;
     }
 
-    .guru {
-        background-color: #3498db;
-        /* Warna biru */
+    .tbupdate {
+        display: inline-block;
+        padding: 5px 5px;
+        margin-top: 0px;
+        margin-right: 5px;
+        font-size: 14px;
+        font-weight: bold;
         color: #fff;
-        /* Warna teks putih */
+        background-color: #F7A45B;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        height: 30px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .guru {
+        /* background-color: #3498db; */
+        color: #222;
+        border: 0.5px solid #000;
     }
 
     .siswa {
-        background-color: #e74c3c;
-        /* Warna merah */
-        color: #fff;
-        /* Warna teks putih */
+        /* background-color: #e74c3c; */
+        color: #222;
+        border: 0.5px solid #000;
     }
 </style>
 <?= $this->endSection() ?>
 
 <?= $this->section('konten') ?>
-<h2>Informasi <?= $sekolah['nama'] ?></h2>
+<h2>Informasi Sekolah</h2>
+<h2><?= $sekolah['nama'] ?></h2>
 <table>
     <tr>
         <td>NPSN</td>
@@ -82,7 +97,7 @@
     <tr>
         <td>Alamat</td>
         <td>:</td>
-        <td><?= $sekolah['alamat'] ?><br><?= $sekolah['kelurahan'] ?>, <?= $sekolah['kecamatan'] ?>, <?= $sekolah['kota'] ?><br> <?= $sekolah['propinsi'] ?></td>
+        <td><?= ($sekolah['npsn'] != "") ? $sekolah['alamat'] . "<br>" . $sekolah['kelurahan'] . "," . $sekolah['kecamatan'] . "," . $sekolah['kota'] . "<br>" . $sekolah['propinsi'] : "" ?></td>
     </tr>
     <tr>
         <td>Email</td>
@@ -96,6 +111,7 @@
     </tr>
 </table>
 <h3>Tahun Ajaran <?= $tahun_ajaran ?></h3>
+<button class="tbupdate" onclick="edit_sekolah()">Update Data Sekolah</button>
 <div class="cardcontainer">
     <div class="card guru">
         <h4>Jumlah Guru</h4>
@@ -110,6 +126,8 @@
 
 <?= $this->section('script') ?>
 <script>
-    localStorage.setItem('activeTab', 'guru');
+    function edit_sekolah() {
+        window.open("<?= base_url('admin/edit_sekolah') ?>", "_self");
+    }
 </script>
 <?= $this->endSection() ?>

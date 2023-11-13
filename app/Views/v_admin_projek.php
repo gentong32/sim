@@ -186,11 +186,8 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        /* Transparan hitam */
         z-index: 9998;
-        /* Nilai lebih rendah dari formContainer, tapi lebih tinggi dari elemen lain */
         display: none;
-        /* Sembunyikan secara default */
     }
 
     #formContainer {

@@ -1,5 +1,4 @@
 <?php
-$kelas = array_unique(array_column($data_rombel, 'kelas'));
 $tg_exp = explode("-", $data_siswa['tanggal_lahir']);
 $tanggal_lahir = $tg_exp[2] . "-" . $tg_exp[1] . "-" . $tg_exp[0];
 ?>
@@ -151,6 +150,18 @@ $tanggal_lahir = $tg_exp[2] . "-" . $tg_exp[1] . "-" . $tg_exp[0];
         <select id="jenis_kelamin" name="jenis_kelamin" required>
             <option <?= ($data_siswa['jenis_kelamin'] == "L") ? 'selected' : '' ?> value="Laki-laki">Laki-laki</option>
             <option <?= ($data_siswa['jenis_kelamin'] == "P") ? 'selected' : '' ?> value="Perempuan">Perempuan</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="agama"><i class="fas fa-venus-mars"></i> Agama <span class="wajib">*</span></label>
+        <select id="agama" name="agama" required>
+            <option <?= ($data_siswa['agama'] == "Islam") ? 'selected' : '' ?> value="Islam">Islam</option>
+            <option <?= ($data_siswa['agama'] == "Kristen") ? 'selected' : '' ?> value="Kristen">Kristen</option>
+            <option <?= ($data_siswa['agama'] == "Katolik") ? 'selected' : '' ?> value="Katolik">Katolik</option>
+            <option <?= ($data_siswa['agama'] == "Buddha") ? 'selected' : '' ?> value="Buddha">Buddha</option>
+            <option <?= ($data_siswa['agama'] == "Hindu") ? 'selected' : '' ?> value="Hindu">Hindu</option>
+            <option <?= ($data_siswa['agama'] == "Khonghucu") ? 'selected' : '' ?> value="Khonghucu">Khonghucu</option>
         </select>
     </div>
 

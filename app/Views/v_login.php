@@ -42,7 +42,7 @@
             var auth1 = $("#password").val() != "" && name != "";
             if (auth) {
                 window.open('<?= base_url() ?>home', '_self');
-            } else if (auth2) {
+            } else if (auth1) {
                 return true;
             }
 

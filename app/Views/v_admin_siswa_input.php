@@ -1,7 +1,3 @@
-<?php
-$kelas = array_unique(array_column($data_rombel, 'kelas'));
-?>
-
 <?= $this->extend('layout/layout_admin') ?>
 
 <?= $this->section('style') ?>
@@ -150,6 +146,18 @@ $kelas = array_unique(array_column($data_rombel, 'kelas'));
         <select id="jenis_kelamin" name="jenis_kelamin" required>
             <option value="Laki-laki">Laki-laki</option>
             <option value="Perempuan">Perempuan</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="agama"><i class="fas fa-venus-mars"></i> Agama <span class="wajib">*</span></label>
+        <select id="agama" name="agama" required>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Khonghucu">Khonghucu</option>
         </select>
     </div>
 

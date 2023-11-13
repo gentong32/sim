@@ -72,6 +72,7 @@
         margin-top: 0px;
         padding: 20px;
         border: 1px solid #ccc;
+        width: 95%;
     }
 
     h2 {
@@ -89,7 +90,6 @@
     .info_user tr>td:nth-child(2) {
         width: 40px;
     }
-
 
     @media screen and (max-width: 768px) {
         table {
@@ -216,6 +216,7 @@
                 <th>Alamat</th>
                 <th class="none">Tempat/Tanggal Lahir</th>
                 <th class="none">J. Kelamin</th>
+                <th class="none">Agama</th>
                 <th>Telepon</th>
                 <th class="none">Email</th>
                 <th>Aksi</th>
@@ -311,13 +312,22 @@
     }
 
     document.getElementById('importButtonG').addEventListener('click', function() {
-        document.getElementById('fileInputG').click();
+        <?php if ($info['jumlah_guru'] > 0) { ?>
+            if (confirm("Impor Data akan menghapus data lama yang sudah ada di tahun ajaran saat ini. Akan melanjutkan?"))
+            <?php } ?>
+            document.getElementById('fileInputG').click();
     });
     document.getElementById('importButtonS').addEventListener('click', function() {
-        document.getElementById('fileInputS').click();
+        <?php if ($info['jumlah_siswa'] > 0) { ?>
+            if (confirm("Impor Data akan menghapus data lama yang sudah ada di tahun ajaran dan kelas saat ini. Akan melanjutkan?"))
+            <?php } ?>
+            document.getElementById('fileInputS').click();
     });
     document.getElementById('importButtonT').addEventListener('click', function() {
-        document.getElementById('fileInputT').click();
+        <?php if ($info['jumlah_staf'] > 0) { ?>
+            if (confirm("Impor Data akan menghapus data lama yang sudah ada di tahun ajaran saat ini. Akan melanjutkan?"))
+            <?php } ?>
+            document.getElementById('fileInputT').click();
     });
 
     document.getElementById('fileInputG').addEventListener('change', function() {
@@ -360,7 +370,7 @@
 
         var formData = new FormData();
         formData.append('file', uploadedFile);
-        formData.append('tahun_ajaran', '<?= tahun_ajaran("mulai") ?>');
+        formData.append('tahun_ajaran', '<?= tahun_ajaran() ?>');
         formData.append('pengguna', kode);
 
         fetch('/admin/upload_data/' + kodeacak, {
@@ -448,7 +458,7 @@
                 jk,
                 guru.telp,
                 guru.email,
-                '<button class="editButton" onclick="editguru(`' + guru.id_guru + '`)">Edit</button><button class="deleteButton" data-id="' + index + '" onclick="konfirmasiDelete(`' + guru.id_guru + '`, ' + index + ')">Delete</button>'
+                '<button class="editButton" onclick="editguru(`' + guru.id_guru + '`)">Edit</button> <button class="deleteButton" data-id="' + index + '" onclick="konfirmasiDelete(`' + guru.id_guru + '`, ' + index + ')">Delete</button> <button class="editButton" onclick="resetgurupass(`' + guru.id_guru + '`)">Reset</button>'
             ]).draw(false);
         });
     }
@@ -491,9 +501,10 @@
                 siswa.alamat,
                 siswa.tempat_lahir + ", " + tanggallahir,
                 jk,
+                siswa.agama,
                 siswa.telp,
                 siswa.email,
-                '<button class="editButton" onclick="editsiswa(`' + siswa.id_siswa + '`)">Edit</button><button class="deleteButton" data-id="' + index + '" onclick="konfirmasiDeleteSiswa(`' + siswa.id_siswa + '`, ' + index + ')">Delete</button>'
+                '<button class="editButton" onclick="editsiswa(`' + siswa.id_siswa + '`)">Edit</button><button class="deleteButton" data-id="' + index + '" onclick="konfirmasiDeleteSiswa(`' + siswa.id_siswa + '`, ' + index + ')">Delete</button> <button class="editButton" onclick="resetsiswapass(`' + siswa.id_siswa + '`)">Reset</button>'
             ]).draw(false);
         });
     }
@@ -535,7 +546,7 @@
                 jk,
                 staf.telp,
                 staf.email,
-                '<button class="editButton" onclick="editstaf(`' + staf.id_staf + '`)">Edit</button><button class="deleteButton" data-id="' + index + '" onclick="konfirmasiDeleteStaf(`' + staf.id_staf + '`, ' + index + ')">Delete</button>'
+                '<button class="editButton" onclick="editstaf(`' + staf.id_staf + '`)">Edit</button><button class="deleteButton" data-id="' + index + '" onclick="konfirmasiDeleteStaf(`' + staf.id_staf + '`, ' + index + ')">Delete</button> <button class="editButton" onclick="resetstafpass(`' + staf.id_staf + '`)">Reset</button>'
             ]).draw(false);
         });
     }
@@ -597,6 +608,66 @@
                 }
             };
             xhr.send('id_staf=' + id_staf + '&tahun_ajaran=<?= $tahun_ajaran ?>');
+        } else {
+            return false;
+        }
+    }
+
+    function resetgurupass(id_guru) {
+        var konfirmasi = confirm("Ini mau di reset passwordnya menjadi default 123456?");
+
+        if (konfirmasi) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/admin/reset_guru_pass');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    window.location.reload();
+                } else {
+                    console.log('Terjadi kesalahan saat reset password');
+                }
+            };
+            xhr.send('id_guru=' + id_guru);
+        } else {
+            return false;
+        }
+    }
+
+    function resetsiswapass(id_siswa) {
+        var konfirmasi = confirm("Ini mau di reset passwordnya menjadi default 123456?");
+
+        if (konfirmasi) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/admin/reset_siswa_pass');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    window.location.reload();
+                } else {
+                    console.log('Terjadi kesalahan saat reset password');
+                }
+            };
+            xhr.send('id_siswa=' + id_siswa);
+        } else {
+            return false;
+        }
+    }
+
+    function resetstafpass(id_staf) {
+        var konfirmasi = confirm("Ini mau di reset passwordnya menjadi default 123456?");
+
+        if (konfirmasi) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/admin/reset_staf_pass');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    window.location.reload();
+                } else {
+                    console.log('Terjadi kesalahan saat reset password');
+                }
+            };
+            xhr.send('id_staf=' + id_staf);
         } else {
             return false;
         }
