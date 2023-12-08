@@ -4,7 +4,7 @@
 
 <div class="wrap">
     <h2><span>Sistem Informasi Sekolah</span></h2>
-    <h1>Sekolah ABC</h1>
+    <h1 id="nama_sekolah_saya">Sekolah Indonesia</h1>
     <h3 class="text" id="welcome"><span>Silakan login</span></h3>
 
     <?php if (session()->getFlashdata('error_message')) : ?>
@@ -36,6 +36,10 @@
 
 <script>
     $(document).ready(function() {
+        var namasekolahsaya = localStorage.getItem('namasekolahsaya');
+        if (namasekolahsaya) {
+            document.getElementById('nama_sekolah_saya').innerHTML = namasekolahsaya;
+        }
         $("#theForm").on("submit", function(event) {
             var name = $("#username").val(),
                 auth = $("#password").val() === "" && name === "";

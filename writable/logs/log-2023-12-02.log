@@ -1,0 +1,533 @@
+INFO - 2023-12-02 08:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:23:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/11'   
+        WHERE id_sekolah = '5d784c' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2328): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023/10/11')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:23:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/11'   
+        WHERE id_sekolah = '5d784c' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/11\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/11\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/11\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2328): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023/10/11')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:24:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/2'   
+        WHERE id_sekolah = '5d784c9' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2328): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023/10/2')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:24:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/2'   
+        WHERE id_sekolah = '5d784c9' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2328): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023/10/2')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:25:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/2'   
+        WHERE id_sekolah = '5d784c9' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023/10/2')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:25:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/2'   
+        WHERE id_sekolah = '5d784c9' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023/10/2')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-02 08:25:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2324.
+ 1 APPPATH\Controllers\Admin.php(2324): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2324)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:25:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/2'   
+        WHERE id_sekolah = '5d784c9' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023/10/2')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:25:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/2'   
+        WHERE id_sekolah = '5d784c9' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/2\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023/10/2')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:26:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/02'   
+        WHERE id_sekolah = '5d784c' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023/10/02')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:26:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023/10/02'   
+        WHERE id_sekolah = '5d784c' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023/10/02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023/10/02')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:28:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023-10-02'   
+        WHERE id_sekolah = '5d784c' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023-10-02')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:28:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023-10-02'   
+        WHERE id_sekolah = '5d784c' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023-10-02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023-10-02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023-10-02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1295): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023-10-02')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:28:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023-10-02'   
+        WHERE id_sekolah = '5d784c' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1297): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4...', '2023', 0, '2023-10-02')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:28:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':kop_rapor:, tgl_mid_ganjil = '2023-10-02'   
+        WHERE id_sekolah = '5d784c' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023-10-02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023-10-02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = \'2023-10-02\'   
+        WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND tahun_ajaran = \'2023\'')
+ 4 APPPATH\Models\M_sekolah.php(1297): CodeIgniter\Database\BaseConnection->query('UPDATE tb_info_sekolah 
+        SET kop_rapor = :kop_rapor:, tgl_mid_ganjil = :tgl_mid:   
+        WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:', [...])
+ 5 APPPATH\Controllers\Admin.php(2332): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 0, '2023-10-02')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:30:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-02 08:36:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':batasmid:  
+                    ORDER BY ns.id_mapel, ns.id_tugas
+             ' at line 13 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT \n       ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(1025): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(133): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4...', '10', '-', '2001000031', 5, '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-02 08:36:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':batasmid:  
+                    ORDER BY ns.id_mapel, ns.id_tugas
+             ' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 
+                    m.nama_mapel,m.jenis,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    INNER JOIN tb_tugas t ON t.id = ns.id_tugas
+                    WHERE ns.nisn = \'2001000031\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND t.tahun_ajaran = \'2023\' AND tanggal_tugas < :batasmid:  
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                RIGHT JOIN tb_mapel m ON m.id = tasks.id_mapel
+                WHERE m.kelas = \'10\' AND (m.sub_kelas = \'-\' OR m.sub_kelas = \'-\') 
+                GROUP BY tasks.id_mapel, m.nama_mapel
+                ORDER BY m.kelas, m.jenis, m.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                    m.nama_mapel,m.jenis,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    INNER JOIN tb_tugas t ON t.id = ns.id_tugas
+                    WHERE ns.nisn = \'2001000031\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND t.tahun_ajaran = \'2023\' AND tanggal_tugas < :batasmid:  
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                RIGHT JOIN tb_mapel m ON m.id = tasks.id_mapel
+                WHERE m.kelas = \'10\' AND (m.sub_kelas = \'-\' OR m.sub_kelas = \'-\') 
+                GROUP BY tasks.id_mapel, m.nama_mapel
+                ORDER BY m.kelas, m.jenis, m.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                    m.nama_mapel,m.jenis,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    INNER JOIN tb_tugas t ON t.id = ns.id_tugas
+                    WHERE ns.nisn = \'2001000031\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND t.tahun_ajaran = \'2023\' AND tanggal_tugas < :batasmid:  
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                RIGHT JOIN tb_mapel m ON m.id = tasks.id_mapel
+                WHERE m.kelas = \'10\' AND (m.sub_kelas = \'-\' OR m.sub_kelas = \'-\') 
+                GROUP BY tasks.id_mapel, m.nama_mapel
+                ORDER BY m.kelas, m.jenis, m.id')
+ 4 APPPATH\Models\M_user.php(1025): CodeIgniter\Database\BaseConnection->query('SELECT 
+                    m.nama_mapel,m.jenis,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    INNER JOIN tb_tugas t ON t.id = ns.id_tugas
+                    WHERE ns.nisn = :nisn: AND ns.id_sekolah = :id_sekolah: AND t.tahun_ajaran = :tahun_ajaran: AND tanggal_tugas < :batasmid:  
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                RIGHT JOIN tb_mapel m ON m.id = tasks.id_mapel
+                WHERE m.kelas = :kelas: AND (m.sub_kelas = \'-\' OR m.sub_kelas = :sub_kelas:) 
+                GROUP BY tasks.id_mapel, m.nama_mapel
+                ORDER BY m.kelas, m.jenis, m.id', [...])
+ 5 APPPATH\Controllers\Nilai.php(133): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '10', '-', '2001000031', 5, '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 08:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 08:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-02 09:07:42 --> Too few arguments to function App\Models\M_user::rapor_nilai_mid(), 6 passed in D:\laragon\www\sim\app\Controllers\Nilai.php on line 133 and exactly 7 expected
+in APPPATH\Models\M_user.php on line 982.
+ 1 APPPATH\Controllers\Nilai.php(133): App\Models\M_user->rapor_nilai_mid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '10', '-', '2001000031', 5, '2023')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 09:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:29:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:33:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-02 09:53:08 --> Class "App\Models\DateTime" not found
+in APPPATH\Models\M_sekolah.php on line 84.
+ 1 APPPATH\Controllers\Admin.php(27): App\Models\M_sekolah->getInfoSekolah('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 09:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 09:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 10:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 10:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 10:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 10:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 14:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 15:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-02 16:50:48 --> Undefined variable $settglmid
+in APPPATH\Models\M_sekolah.php on line 1332.
+ 1 APPPATH\Models\M_sekolah.php(1332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $settglmid', 'D:\\laragon\\www\\sim\\app\\Models\\M_sekolah.php', 1332)
+ 2 APPPATH\Controllers\Admin.php(2340): App\Models\M_sekolah->simpanTglMid('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', 4, '2023/9/18')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_mid()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-02 16:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 16:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:07:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-02 17:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

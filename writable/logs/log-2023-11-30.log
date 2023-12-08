@@ -1,0 +1,998 @@
+CRITICAL - 2023-11-30 08:36:47 --> Undefined array key "valkelas"
+in APPPATH\Controllers\Nilai.php on line 347.
+ 1 APPPATH\Controllers\Nilai.php(347): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "valkelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 347)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_eks()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-30 09:34:58 --> Undefined array key "nama_mapel"
+in APPPATH\Controllers\Nilai.php on line 41.
+ 1 APPPATH\Controllers\Nilai.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-30 09:40:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(1017): CodeIgniter\Database\BaseConnection->query('SET @row_number...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4...', '2001000032', 5)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-30 09:40:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 4 APPPATH\Models\M_user.php(1017): CodeIgniter\Database\BaseConnection->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = :nisn: AND ns.id_sekolah = :id_sekolah:
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', [...])
+ 5 APPPATH\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000032', 5)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-30 09:41:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(1017): CodeIgniter\Database\BaseConnection->query('SET @row_number...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4...', '2001000032', 5)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-30 09:41:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 4 APPPATH\Models\M_user.php(1017): CodeIgniter\Database\BaseConnection->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = :nisn: AND ns.id_sekolah = :id_sekolah:
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', [...])
+ 5 APPPATH\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000032', 5)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 09:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-30 09:41:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(1017): CodeIgniter\Database\BaseConnection->query('SET @row_number...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4...', '2001000032', 5)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-30 09:41:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 4 APPPATH\Models\M_user.php(1017): CodeIgniter\Database\BaseConnection->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    
+                    MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,
+                    MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,
+                    MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,
+                    MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = :nisn: AND ns.id_sekolah = :id_sekolah:
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', [...])
+ 5 APPPATH\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000032', 5)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 09:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-30 09:42:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(1013): CodeIgniter\Database\BaseConnection->query('SET @row_number...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4...', '2001000032', 5)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-30 09:42:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = '';
+
+                SELECT 
+                    m.nama_map' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = \'2001000032\' AND ns.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\'
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel')
+ 4 APPPATH\Models\M_user.php(1013): CodeIgniter\Database\BaseConnection->query('SET @row_number = 0;
+                SET @current_mapel = \'\';
+
+                SELECT 
+                    m.nama_mapel,
+                    MAX(CASE WHEN task_number = 1 THEN nilai END) AS tugas_1,MAX(CASE WHEN task_number = 2 THEN nilai END) AS tugas_2,MAX(CASE WHEN task_number = 3 THEN nilai END) AS tugas_3,MAX(CASE WHEN task_number = 4 THEN nilai END) AS tugas_4,MAX(CASE WHEN task_number = 5 THEN nilai END) AS tugas_5 
+                FROM (
+                    SELECT 
+                        ns.id_mapel,
+                        ns.id_tugas,
+                        ns.nilai,
+                        @row_number := IF(@current_mapel = ns.id_mapel, @row_number + 1, 1) AS task_number,
+                        @current_mapel := ns.id_mapel AS dummy
+                    FROM tb_nilai_siswa ns
+                    WHERE ns.nisn = :nisn: AND ns.id_sekolah = :id_sekolah:
+                    ORDER BY ns.id_mapel, ns.id_tugas
+                ) AS tasks
+                INNER JOIN tb_mapel m ON m.id = tasks.id_mapel
+                GROUP BY tasks.id_mapel, m.nama_mapel', [...])
+ 5 APPPATH\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000032', 5)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 09:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 09:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-30 09:46:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = ''' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(994): CodeIgniter\Database\BaseConnection->query('SET @row_number...')
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4...', '2001000032', 5)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-30 09:46:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET @current_mapel = ''' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SET @row_number = 0;
+                    SET @current_mapel = \'\';', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SET @row_number = 0;
+                    SET @current_mapel = \'\';')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SET @row_number = 0;
+                    SET @current_mapel = \'\';')
+ 4 APPPATH\Models\M_user.php(994): CodeIgniter\Database\BaseConnection->query('SET @row_number = 0;
+                    SET @current_mapel = \'\';')
+ 5 APPPATH\Controllers\Nilai.php(121): App\Models\M_user->rapor_nilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000032', 5)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 09:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 09:47:49 --> Undefined variable $jml_tp_eks
+in APPPATH\Views\v_nilai_rapor.php on line 448.
+ 1 APPPATH\Views\v_nilai_rapor.php(448): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jml_tp_eks', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 448)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(148): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:15:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:15:21 --> Undefined variable $daftar_siswa
+in APPPATH\Views\v_nilai_rapor.php on line 22.
+ 1 APPPATH\Views\v_nilai_rapor.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_siswa', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(149): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:24:04 --> Undefined variable $nisn
+in APPPATH\Views\v_nilai_rapor.php on line 24.
+ 1 APPPATH\Views\v_nilai_rapor.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nisn', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(153): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:24:27 --> Undefined variable $nisn
+in APPPATH\Views\v_nilai_rapor.php on line 24.
+ 1 APPPATH\Views\v_nilai_rapor.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nisn', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(153): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:25:52 --> Undefined variable $jml_tp_eks
+in APPPATH\Views\v_nilai_rapor.php on line 69.
+ 1 APPPATH\Views\v_nilai_rapor.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jml_tp_eks', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 69)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(154): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:26:26 --> Undefined variable $nis
+in APPPATH\Views\v_nilai_rapor.php on line 75.
+ 1 APPPATH\Views\v_nilai_rapor.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nis', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 75)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(154): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:29:55 --> Too few arguments to function App\Models\M_user::getnisnfromnis(), 1 passed in D:\laragon\www\sim\app\Controllers\Nilai.php on line 125 and exactly 2 expected
+in APPPATH\Models\M_user.php on line 532.
+ 1 APPPATH\Controllers\Nilai.php(125): App\Models\M_user->getnisnfromnis('5022')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:30:12 --> Undefined variable $nisn
+in APPPATH\Views\v_nilai_rapor.php on line 24.
+ 1 APPPATH\Views\v_nilai_rapor.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nisn', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(156): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 10:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 10:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 10:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 10:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 10:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 10:42:59 --> Undefined variable $sekolah
+in APPPATH\Views\layout\layout_admin.php on line 24.
+ 1 APPPATH\Views\layout\layout_admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php', 24)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_admin.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_admin', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_kop_rapor', [], true)
+ 6 APPPATH\Controllers\Admin.php(2098): view('v_admin_kop_rapor', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->kop_rapor()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 10:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 11:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 12:54:47 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Home.php on line 20.
+ 1 APPPATH\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 12:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 12:54:48 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 28.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 12:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 12:54:51 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Home.php on line 20.
+ 1 APPPATH\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 12:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:55:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 12:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:56:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 13:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:04:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:09:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:35:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:36:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 14:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:13:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 15:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 16:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-30 20:38:39 --> mysqli_sql_exception: Column 'id_sekolah' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(76): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Buatrapor.php(21): App\Models\M_sekolah->getInfoSekolah(NULL, '2023')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Buatrapor->generatePDF()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-30 20:38:39 --> Column 'id_sekolah' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (NULL, \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (NULL, \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (NULL, \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (:id_sekolah:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(76): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Buatrapor.php(21): App\Models\M_sekolah->getInfoSekolah(null, '2023')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->generatePDF()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 20:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-30 20:38:51 --> mysqli_sql_exception: Column 'id_sekolah' cannot be null in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(76): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Buatrapor.php(21): App\Models\M_sekolah->getInfoSekolah(NULL, '2023')
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Buatrapor->generatePDF()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-30 20:38:51 --> Column 'id_sekolah' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (NULL, \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (NULL, \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (NULL, \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_info_sekolah` (`id_sekolah`, `tahun_ajaran`) VALUES (:id_sekolah:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(76): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Buatrapor.php(21): App\Models\M_sekolah->getInfoSekolah(null, '2023')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->generatePDF()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 20:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 20:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 21:01:28 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Home.php on line 20.
+ 1 APPPATH\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 21:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 21:01:33 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Nilai.php on line 29.
+ 1 APPPATH\Controllers\Nilai.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 21:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 21:01:34 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Home.php on line 20.
+ 1 APPPATH\Controllers\Home.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Home.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-30 21:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:03:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:08:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:11:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 21:16:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-30 22:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -6,6 +6,8 @@ class Pengumuman extends BaseController
 {
     public function index(): string
     {
+        echo "On progress...";
+        die();
         $kelas_map = [
             '10_1' => 'X - 1',
             '10_12' => 'X - 12',

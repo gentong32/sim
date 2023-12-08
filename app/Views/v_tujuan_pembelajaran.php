@@ -1,19 +1,8 @@
-<?= $this->extend('layout/layout_admin') ?>
+<?= $this->extend('layout/layout_default') ?>
 
 <?= $this->section('style') ?>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script>
-    window.addEventListener('resize', function() {
-        var lebarLayar = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var piltbl = document.getElementById('piltbl');
 
-        if (lebarLayar < 700) {
-            piltbl.innerText = 'Pil';
-        } else {
-            piltbl.innerText = 'Pilihan';
-        }
-    });
-</script>
 <style>
     .judul {
         font-size: 24px;
@@ -26,6 +15,8 @@
         border: #288AA4 solid 1px;
         border-radius: 10px;
         padding: 15px;
+        margin: auto;
+        text-align: center;
     }
 
     .sub-judul {
@@ -41,6 +32,7 @@
         border: 0.5px solid gray;
         border-collapse: collapse;
         text-align: left;
+        margin: auto;
         margin-bottom: 20px;
     }
 
@@ -165,9 +157,8 @@
         text-align: center;
     }
 
-    table td:nth-child(1),
-    table td:nth-child(2) {
-        text-align: center;
+    table td:nth-child(1) {
+        text-align: right;
     }
 
     .select2-dropdown .select2-results__option {
@@ -204,7 +195,8 @@
 
 <?= $this->section('konten') ?>
 <div>
-    <h2>Tujuan Pembelajaran</h2>
+    <h2><?= $nama_mapel ?></h2>
+    <h3>Kelas <?= $kelas ?></h3>
 
     <div class="kelas">
         <table class="tj_pem" id="itj_pem">
@@ -216,25 +208,14 @@
             <?php
             $baris = 0;
             $adapilihan = 0;
-            $daftar_pilihan = [];
-            foreach ($daftar_tujuan_pembelajaran as $datarow) {
+            foreach ($daftartp as $datarow) {
                 $baris++;
-                echo "<tr><td>" . $datarow->tujuan_pembelajaran . "</td>";
+                echo "<tr><td>" . $baris . "</td>";
+                echo "<td class='editable' contentEditable=false>" . $datarow->tujuan_pembelajaran . "</td>";
                 echo "<td><button class='edit' onclick='editTujPem(this,`" . $baris . "`,`" . $datarow->kelas . "`)'>Edit</button> <button class='delete' onclick = 'hapustj_pem(this,`" . $baris . "`,`" . $datarow->kelas . "`)'>Hapus</button> <button style = 'display:none' class = 'ok' onclick = 'oktj_pem(this,`" . $baris . "`,`" . $datarow->kelas . "`)'>OK</button> <button style = 'display:none' class = 'batal' onclick = 'bataltj_pem(this, `" . $baris . "`)'>Batal</button></td></tr>";
-
-                $daftar_pilihan[] = strtoupper($datarow->nama_tj_pem);
             }
             ?>
         </table>
-
-        <label for="dimensi"><b>KELAS:</b></label>
-        <select name="kelas" id="kelas">
-            <?php
-            foreach ($daftar_kelas as $row) {
-                echo "<option value='" . $row . "'>" . $row . "</option>";
-            }
-            ?>
-        </select>
 
         <button class="tbtambah" onclick="tambahtj_pem()">Tambah TP</button>
     </div>
@@ -252,15 +233,6 @@
 
         $('.js-example-basic-single').select2();
 
-        <?php if (sizeof($daftar_tj_pem) == 0) { ?>
-            kelasPilihan = <?= $daftar_tj_pem[0]->kelas ?>;
-        <?php } else { ?>
-            kelasPilihan = sessionStorage.getItem('kelaspilihan');
-        <?php } ?>
-        if (kelasPilihan) {
-            document.getElementById('kelas').value = kelasPilihan;
-        }
-
     });
 
     var daftartj_pem = [];
@@ -268,48 +240,29 @@
     var addedit;
     var tj_pemlama;
 
-    var dataKelasSubkelas = [
-        <?php foreach ($daftar_sub_kelas as $subkelas) {
-            echo $subkelas . ", ";
-        } ?>
-    ];
-
     <?php
-    foreach ($daftar_pilihan as $row) {
-        echo "daftartj_pem.push('$row');\n";
+    foreach ($daftartp as $row) {
+        echo "daftartj_pem.push('$row->tujuan_pembelajaran');\n";
     }
     ?>
 
     function tambahtj_pem() {
         var table = document.getElementById('itj_pem');
-        kelas = document.getElementById('kelas').value;
         addedit = "add";
         tj_pemlama = "";
 
         baris = table.rows.length;
         var newRow = table.insertRow(baris);
         var cell = newRow.insertCell(0);
-        cell.textContent = kelas;
+        cell.textContent = baris;
 
         cell = newRow.insertCell(1);
 
-        var kelasSubkelas = dataKelasSubkelas.filter(function(item) {
-            return item[0] == kelas;
-        });
-        var subkelasUnik = [...new Set(kelasSubkelas.map(item => item[1]))];
-        list_sub = "";
-        subkelasUnik.forEach(function(subkelas) {
-            list_sub = list_sub + "<option value='" + subkelas + "'>" + subkelas + "</option>";
-        });
-
-        cell.innerHTML = "<div id='pilsub_a" + baris + "'><select id='isipil" + baris +
-            "'>" + list_sub + "</select></div>";
-
-        cell = newRow.insertCell(2);
         cell.classList.add('editable');
         cell.setAttribute('contenteditable', 'true');
         cell.textContent = '...';
         cell.style.backgroundColor = 'white';
+        cell.style.textAlign = 'left';
 
         cell.focus();
         var range = document.createRange();
@@ -318,27 +271,15 @@
         selection.removeAllRanges();
         selection.addRange(range);
 
-        cell = newRow.insertCell(3);
-
-        list_sub2 = '<option value="0">- pilih -</option>';
-
-        var daftarGuru = <?= $daftar_guru; ?>;
-
-        daftarGuru.forEach(function(guru) {
-            list_sub2 = list_sub2 + "<option value='" + guru.nuptk + "'>" + guru.nama + "</option>";
-        });
-        cell.innerHTML = "<div id='pilwali_a" + baris + "'><select class='js-example-basic-single opsi2' id = 'isiwali" + baris +
-            "'>" + list_sub2 + "</select></div>";
-
-        cell = newRow.insertCell(4);
-        cell.innerHTML = "<button style='display: none' class='edit' onclick='editTujPem(this,`" + baris + "`)'>Edit</button> <button style='display: none' class='delete' onclick = 'hapustj_pem(this, `" + baris + "`)'>Hapus</button> <button class = 'ok' onclick = 'oktj_pem(this, `" + baris + "`, `" + kelas + "`)'>OK</button> <button class = 'batal' onclick = 'bataltj_pem(this, `" + baris + "`)'>Batal</button>";
+        cell = newRow.insertCell(2);
+        cell.innerHTML = "<button style='display: none' class='edit' onclick='editTujPem(this,`" + baris + "`)'>Edit</button> <button style='display: none' class='delete' onclick = 'hapustj_pem(this, `" + baris + "`)'>Hapus</button> <button class = 'ok' onclick = 'oktj_pem(this, `" + baris + "`)'>OK</button> <button class = 'batal' onclick = 'bataltj_pem(this, `" + baris + "`)'>Batal</button>";
 
         $('.js-example-basic-single').select2();
         disableEditDeleteButtons();
 
     }
 
-    function editTujPem(button, baris, kelas) {
+    function editTujPem(button, baris) {
         var row = button.parentElement.parentElement;
         var cell = row.querySelector('.editable');
         var editButton = row.querySelector('.edit');
@@ -352,55 +293,6 @@
         editButton.style.display = 'none';
         okButton.style.display = 'inline';
         batalButton.style.display = 'inline';
-
-        var pilsub_a = document.getElementById('pilsub_a' + baris);
-        pilsub_a.style.display = 'inline';
-        var pilsub_b = document.getElementById('pilsub_b' + baris);
-        pilsub_b.style.display = 'none';
-
-        var isi_pil = document.getElementById('isipil' + baris);
-
-        selectedpil = pilsub_b.textContent;
-        isi_pil.innerHTML = '';
-
-        var kelasSubkelas = dataKelasSubkelas.filter(function(item) {
-            return item[0] == kelas;
-        });
-
-        var subkelasUnik = [...new Set(kelasSubkelas.map(item => item[1]))];
-
-        subkelasUnik.forEach(function(subkelas) {
-            var optionElement = document.createElement('option');
-            optionElement.value = subkelas;
-            optionElement.textContent = subkelas;
-            if (subkelas === selectedpil) {
-                optionElement.selected = true;
-            }
-            isi_pil.appendChild(optionElement);
-        });
-
-        var pilwali_a = document.getElementById('pilwali_a' + baris);
-        pilwali_a.style.display = 'inline';
-        var pilwali_b = document.getElementById('pilwali_b' + baris);
-        pilwali_b.style.display = 'none';
-
-        var isi_wali = document.getElementById('isiwali' + baris);
-
-        selectedwali = pilwali_b.getAttribute('data-wali');
-
-        isi_wali.innerHTML = '<option value="0">- pilih -</option>';
-
-        var daftarGuru = <?= $daftar_guru; ?>;
-
-        daftarGuru.forEach(function(guru) {
-            var optionElement = document.createElement('option');
-            optionElement.value = guru.nuptk;
-            optionElement.textContent = guru.nama;
-            if (guru.nuptk === selectedwali) {
-                optionElement.selected = true;
-            }
-            isi_wali.appendChild(optionElement);
-        });
 
         cell.contentEditable = true;
         cell.style.backgroundColor = 'white';
@@ -430,24 +322,19 @@
         }
     });
 
-    function oktj_pem(button, baris, kelas) {
+    function oktj_pem(button, baris) {
         var row = button.parentElement.parentElement;
         var cell = row.querySelector('.editable');
         var editButton = row.querySelector('.edit');
         var deleteButton = row.querySelector('.delete');
         var okButton = row.querySelector('.ok');
         var batalButton = row.querySelector('.batal');
-        var cellContent = cell.textContent.toUpperCase();
-
-        var isi_pil = document.getElementById('isipil' + baris).value;
-        var isi_wali = document.getElementById('isiwali' + baris).value;
+        var cellContent = cell.textContent;
 
         if (daftartj_pem.includes(cellContent) && cellContent != tj_pemlama) {
-            alert('Nama tj_pem sudah ada!');
+            alert('Tujuan pembelajaran sudah ada!');
             return;
         }
-
-        sessionStorage.setItem('kelaspilihan', kelas);
 
         deleteButton.style.display = 'inline';
         editButton.style.display = 'inline';
@@ -462,19 +349,15 @@
         selection.removeAllRanges();
 
         if (addedit == "add") {
-            var url = '<?= base_url() . "admin/simpan_tj_pem" ?>';
+            var url = '<?= base_url() . "tujuan_pembelajaran/simpan_tj_pem" ?>';
             var data = {
-                kelas: kelas,
-                sub_kelas: isi_pil,
-                nuptk_wali_kelas: isi_wali,
+                valkelas: '<?= $valkelas ?>',
                 tj_pem: cellContent
             };
         } else {
-            var url = '<?= base_url() . "admin/update_tj_pem" ?>';
+            var url = '<?= base_url() . "tujuan_pembelajaran/update_tj_pem" ?>';
             var data = {
-                kelas: kelas,
-                sub_kelas: isi_pil,
-                nuptk_wali_kelas: isi_wali,
+                valkelas: '<?= $valkelas ?>',
                 tj_pem: cellContent,
                 tj_pemlama: tj_pemlama
             };
@@ -499,10 +382,10 @@
         if (confirm("Yakin mau menghapus tj_pem ini?")) {
             var row = button.parentElement.parentElement;
             var cell = row.querySelector('.editable');
-            var cellContent = cell.textContent.toUpperCase();
-            var url = '<?= base_url() . "admin/hapus_tj_pem" ?>';
+            var cellContent = cell.textContent;
+            var url = '<?= base_url() . "tujuan_pembelajaran/hapus_tj_pem" ?>';
             var data = {
-                kelas: kelas,
+                valkelas: '<?= $valkelas ?>',
                 tj_pem: cellContent,
             };
 
@@ -530,14 +413,6 @@
         if (addedit == "add")
             row.remove();
         else {
-            var pilsub_a = document.getElementById('pilsub_a' + baris);
-            pilsub_a.style.display = 'none';
-            var pilsub_b = document.getElementById('pilsub_b' + baris);
-            pilsub_b.style.display = 'inline';
-            var pilwali_a = document.getElementById('pilwali_a' + baris);
-            pilwali_a.style.display = 'none';
-            var pilwali_b = document.getElementById('pilwali_b' + baris);
-            pilwali_b.style.display = 'inline';
             var editButton = row.querySelector('.edit');
             var okButton = row.querySelector('.ok');
             var deleteButton = row.querySelector('.delete');

@@ -295,7 +295,7 @@
 
 <?= $this->section('konten') ?>
 
-<h2 class="calendar-title">Kalender Pendidikan</h2>
+<h2 class="calendar-title">Kalender Tahunan Pendidikan</h2>
 <div id="overlaykalender"></div>
 <div id="formContainer">
     <form action="<?= base_url("admin/simpan_agenda") ?>" method="post">

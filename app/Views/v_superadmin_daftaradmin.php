@@ -300,7 +300,7 @@
     });
 
     dataadmin.forEach(function(admin, index) {
-        if (admin.status_sekolah == 0) {
+        if (admin.status_sekolah == 0 || admin.status_sekolah == null) {
             nama_status = '<span style="color:red">Non Aktif</span>'
         } else if (admin.status_sekolah == 1) {
             nama_status = '<span style="color:black">Trial</span>';

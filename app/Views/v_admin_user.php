@@ -189,6 +189,7 @@
             <tr>
                 <th>No</th>
                 <th class="none">NUPTK</th>
+                <th class="none">NIP</th>
                 <th>Nama</th>
                 <th>Alamat</th>
                 <th class="none">J. Kelamin</th>
@@ -453,6 +454,7 @@
             table.row.add([
                 (index + 1),
                 guru.nuptk,
+                guru.nip,
                 guru.nama,
                 guru.alamat,
                 jk,

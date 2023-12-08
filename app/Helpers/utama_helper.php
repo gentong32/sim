@@ -45,6 +45,24 @@ function tanggal_sekarang()
     return $data;
 }
 
+function format_tanggal($strtanggal)
+{
+    $nama_bulan_panjang = ["Januari", "Pebruari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"];
+    $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nop", "Des"];
+
+    $tanggal = new DateTime($strtanggal);
+    $strtanggal = $tanggal->format("Y/m/d");
+    $ambiltanggal = explode("/", $strtanggal);
+    $tgl = $ambiltanggal[2];
+    $bln = $ambiltanggal[1];
+    $thn = $ambiltanggal[0];
+
+    $data['panjang'] = intval($tgl) . " " . $nama_bulan_panjang[$bln - 1] . " " . $thn;
+    $data['pendek'] = intval($tgl) . " " . $nama_bulan_pendek[$bln - 1] . " " . $thn;
+
+    return $data;
+}
+
 function tahun_ajaran($opsi = null)
 {
     // $tanggal = new DateTime("2023-06-01 00:00:00");

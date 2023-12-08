@@ -318,32 +318,37 @@
     $kelas_lama = '';
     $mapel_lama = '';
     $guru_lama = '';
-    foreach ($daftar_guru_mapel as $datarow) {
-        if ($datarow['kelas'] != $kelas_lama && $kelas_lama != '') {
-            echo '</table>';
-        }
-        if ($datarow['kelas'] != $kelas_lama) {
-            echo '<div class="jkelas">Kelas ' . $datarow['kelas'] . '</div>';
-            echo '<table class="tabel">
+    foreach ($daftar_guru_mapel as $datarow) { {
+            if ($datarow['kelas'] != $kelas_lama && $kelas_lama != '') {
+                echo '</table>';
+            }
+            if ($datarow['nama'] != null) {
+
+
+                if ($datarow['kelas'] != $kelas_lama) {
+                    echo '<div class="jkelas">Kelas ' . $datarow['kelas'] . '</div>';
+                    echo '<table class="tabel">
                         <tr>
                             <th>Mata Pelajaran</th>
                             <th>Nama Guru</th>
                             <th>Nama Rombel</th>
                         </tr>';
-            $kelas_lama = $datarow['kelas'];
+                    $kelas_lama = $datarow['kelas'];
+                }
+                $baris++;
+                if ($datarow['nama_mapel'] != $mapel_lama) {
+                    $namamapel = "<td style='border-top:1px solid #ddd'>" . $datarow['nama_mapel'] . "</td>";
+                    $mapel_lama = $datarow['nama_mapel'];
+                } else {
+                    $namamapel = "<td></td>";
+                }
+                echo "<tr>";
+                echo $namamapel;
+                echo "<td>" . $datarow['nama'] . "</td>";
+                echo "<td>" . $datarow['nama_rombel'] . "</td>";
+                echo "</tr>";
+            }
         }
-        $baris++;
-        if ($datarow['nama_mapel'] != $mapel_lama) {
-            $namamapel = "<td style='border-top:1px solid #ddd'>" . $datarow['nama_mapel'] . "</td>";
-            $mapel_lama = $datarow['nama_mapel'];
-        } else {
-            $namamapel = "<td></td>";
-        }
-        echo "<tr>";
-        echo $namamapel;
-        echo "<td>" . $datarow['nama'] . "</td>";
-        echo "<td>" . $datarow['nama_rombel'] . "</td>";
-        echo "</tr>";
     }
     ?>
     </table>
@@ -457,6 +462,16 @@
                             selectedMapel = mapel.id;
                         }
                     }
+                }
+                if (selectedPilihan == "-") {
+                    // var option = document.createElement('option');
+                    // option.value = "mpbk";
+                    // option.text = "B-K";
+                    // filterMapelSelect.add(option);
+                    var option = document.createElement('option');
+                    option.value = "mpp5";
+                    option.text = "P-5";
+                    filterMapelSelect.add(option);
                 }
 
                 ambilrombel();

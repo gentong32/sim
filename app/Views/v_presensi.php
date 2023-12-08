@@ -418,17 +418,18 @@
         document.getElementById('formContainer').style.display = 'none';
     }
 
-    function appendKelasToLink(menu) {
-        var selectedKelas = document.querySelector('.selected-option span').dataContent;
-        var link = document.querySelector('.menu-item a[href="/' + menu + '"]');
+    // function appendKelasToLink(menu) {
+    //     var selectedKelas = document.querySelector('.selected-option span').dataContent;
+    //     var link = document.querySelector('.menu-item a[href="/' + menu + '"]');
 
-        if (selectedKelas) {
-            link.href += '?kelas=' + selectedKelas;
-        }
-    }
+    //     if (selectedKelas) {
+    //         link.href += '?kelas=' + selectedKelas;
+    //     }
+    // }
 
     function fetchNewData(tanggal) {
-        fetch('<?= base_url("presensi/get_data_presensi/?tanggal=") ?>' + tanggal)
+        // alert(tanggal);
+        fetch('<?= base_url("presensi/get_data_presensi?tanggal=") ?>' + tanggal + '&kelas=<?= $kelaspilihan ?>')
             .then(response => response.json())
             .then(data => {
                 updateTable(data);

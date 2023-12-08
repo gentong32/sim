@@ -45,6 +45,23 @@ class Agenda extends BaseController
         return view('v_agenda', $data);
     }
 
+    public function list_agenda()
+    {
+        if (!khusususer())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $datakalender = $this->M_sekolah->getAgenda($id_sekolah, tahun_ajaran());
+        $data['sekolah'] = $datasekolah;
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        $data['datakalender'] = $datakalender;
+        $data['jmldatakalender'] = sizeof($datakalender);
+
+        return view('v_agenda_list', $data);
+    }
+
     public function simpan_agenda_kelas()
     {
         if (!khusususer())

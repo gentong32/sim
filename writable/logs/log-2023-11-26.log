@@ -1,0 +1,837 @@
+INFO - 2023-11-26 04:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 04:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 04:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 04:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 04:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 05:20:37 --> Undefined array key "fasee"
+in APPPATH\Views\v_nilai_p5.php on line 408.
+ 1 APPPATH\Views\v_nilai_p5.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fasee"', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_p5.php', 408)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_p5.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_p5', [], true)
+ 5 APPPATH\Controllers\Nilai.php(105): view('v_nilai_p5', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 05:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 05:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 06:53:48 --> Undefined variable $valkelas
+in APPPATH\Views\v_nilai.php on line 590.
+ 1 APPPATH\Views\v_nilai.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valkelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 590)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(103): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 06:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 06:54:07 --> Undefined variable $valkelas
+in APPPATH\Views\v_nilai.php on line 590.
+ 1 APPPATH\Views\v_nilai.php(590): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $valkelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 590)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(103): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 06:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 06:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 07:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 08:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:07:58 --> Undefined array key "kelas"
+in APPPATH\Controllers\Nilai.php on line 125.
+ 1 APPPATH\Controllers\Nilai.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daf_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:08:11 --> Undefined array key "kelas"
+in APPPATH\Controllers\Nilai.php on line 125.
+ 1 APPPATH\Controllers\Nilai.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daf_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:16:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:26:44 --> Undefined array key "kelas"
+in APPPATH\Controllers\Nilai.php on line 125.
+ 1 APPPATH\Controllers\Nilai.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-26 09:27:14 --> Undefined array key "kelas"
+in APPPATH\Controllers\Nilai.php on line 125.
+ 1 APPPATH\Controllers\Nilai.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 125)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:30:25 --> Undefined array key "sub_elemen"
+in APPPATH\Controllers\Nilai.php on line 124.
+ 1 APPPATH\Controllers\Nilai.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sub_elemen"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-26 09:30:31 --> Undefined array key "sub_elemen"
+in APPPATH\Controllers\Nilai.php on line 124.
+ 1 APPPATH\Controllers\Nilai.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sub_elemen"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:31:50 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(137): CodeIgniter\Model->__call('ceka', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:31:56 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(137): CodeIgniter\Model->__call('ceka', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:32:06 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(137): CodeIgniter\Model->__call('ceka', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:34:50 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(138): CodeIgniter\Model->__call('ceka', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:34:55 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(138): CodeIgniter\Model->__call('ceka', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:36:07 --> mysqli_sql_exception: Table 'simsekolah.dimensi_projek' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM d...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4...', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:36:07 --> Table 'simsekolah.dimensi_projek' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 4 APPPATH\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = :id_sekolah: AND id_projek = :id_projek:', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4654-9851-b94d22be6f1e', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:43:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:43:12 --> mysqli_sql_exception: Table 'simsekolah.dimensi_projek' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM d...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4...', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:43:12 --> Table 'simsekolah.dimensi_projek' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 4 APPPATH\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = :id_sekolah: AND id_projek = :id_projek:', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4654-9851-b94d22be6f1e', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:43:52 --> mysqli_sql_exception: Table 'simsekolah.dimensi_projek' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM d...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(145): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4...', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:43:52 --> Table 'simsekolah.dimensi_projek' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 4 APPPATH\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = :id_sekolah: AND id_projek = :id_projek:', [...])
+ 5 APPPATH\Controllers\Nilai.php(145): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4654-9851-b94d22be6f1e', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:44:09 --> mysqli_sql_exception: Table 'simsekolah.dimensi_projek' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM d...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(144): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4...', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:44:09 --> Table 'simsekolah.dimensi_projek' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 4 APPPATH\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = :id_sekolah: AND id_projek = :id_projek:', [...])
+ 5 APPPATH\Controllers\Nilai.php(144): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4654-9851-b94d22be6f1e', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:44:36 --> mysqli_sql_exception: Table 'simsekolah.dimensi_projek' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM d...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(144): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4...', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:44:36 --> Table 'simsekolah.dimensi_projek' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 4 APPPATH\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = :id_sekolah: AND id_projek = :id_projek:', [...])
+ 5 APPPATH\Controllers\Nilai.php(144): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4654-9851-b94d22be6f1e', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:44:45 --> mysqli_sql_exception: Table 'simsekolah.dimensi_projek' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM d...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM d...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM d...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(144): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4...', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:44:45 --> Table 'simsekolah.dimensi_projek' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND id_projek = \'RbPr4sK3Dp\'')
+ 4 APPPATH\Models\M_sekolah.php(1158): CodeIgniter\Database\BaseConnection->query('SELECT * FROM dimensi_projek 
+                WHERE id_sekolah = :id_sekolah: AND id_projek = :id_projek:', [...])
+ 5 APPPATH\Controllers\Nilai.php(144): App\Models\M_sekolah->cek_dimensi_projek('5d784c9e-f35a-4654-9851-b94d22be6f1e', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:45:01 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Nilai.php on line 145.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:45:32 --> Undefined property: stdClass::$id_dimensi_projek
+in APPPATH\Controllers\Nilai.php on line 145.
+ 1 APPPATH\Controllers\Nilai.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_dimensi_projek', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 09:45:41 --> Undefined variable $id_dimensi_projek
+in APPPATH\Controllers\Nilai.php on line 147.
+ 1 APPPATH\Controllers\Nilai.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_dimensi_projek', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 147)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 09:46:16 --> mysqli_sql_exception: Unknown column 'p.tahun_ajaran' in 'on clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(635): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(147): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4...', '2023', '10', 'X - 1', '44')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 09:46:16 --> Unknown column 'p.tahun_ajaran' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND id_dimensi_projek = \'44\' AND p.tahun_ajaran = \'2023\'  
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND gs.tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND id_dimensi_projek = \'44\' AND p.tahun_ajaran = \'2023\'  
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND gs.tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND id_dimensi_projek = \'44\' AND p.tahun_ajaran = \'2023\'  
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND gs.tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis')
+ 4 APPPATH\Models\M_user.php(635): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND id_dimensi_projek = :id_dimensi_projek: AND p.tahun_ajaran = :tahun_ajaran:  
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: AND gs.tahun_ajaran = :tahun_ajaran: 
+                ORDER BY kelas, nis', [...])
+ 5 APPPATH\Controllers\Nilai.php(147): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', '44')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 09:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 09:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 12:12:48 --> mysqli_sql_exception: Unknown column 'dp.id' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.nisn,...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.nisn,...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.nisn,...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(632): CodeIgniter\Database\BaseConnection->query('SELECT gs.nisn,...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4...', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 12:12:48 --> Unknown column 'dp.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id')
+ 4 APPPATH\Models\M_user.php(632): CodeIgniter\Database\BaseConnection->query('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 12:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 12:13:01 --> mysqli_sql_exception: Unknown column 'dp.id' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.nisn,...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.nisn,...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.nisn,...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(632): CodeIgniter\Database\BaseConnection->query('SELECT gs.nisn,...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4...', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 12:13:01 --> Unknown column 'dp.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id')
+ 4 APPPATH\Models\M_user.php(632): CodeIgniter\Database\BaseConnection->query('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                
+                ORDER BY gs.nisn, dp.id', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 12:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 12:13:22 --> mysqli_sql_exception: Unknown column 'dp.id' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.nisn,...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.nisn,...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.nisn,...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(631): CodeIgniter\Database\BaseConnection->query('SELECT gs.nisn,...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4...', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 12:13:22 --> Unknown column 'dp.id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ')
+ 4 APPPATH\Models\M_user.php(631): CodeIgniter\Database\BaseConnection->query('SELECT gs.nisn, dp.id as id_dimensi_projek, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 12:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 12:13:35 --> mysqli_sql_exception: Unknown column 'p.nilai' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, COALE...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COALE...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COALE...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(631): CodeIgniter\Database\BaseConnection->query('SELECT *, COALE...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4...', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 12:13:35 --> Unknown column 'p.nilai' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ')
+ 4 APPPATH\Models\M_user.php(631): CodeIgniter\Database\BaseConnection->query('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs 
+                ', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 12:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 12:20:26 --> mysqli_sql_exception: Table 'simsekolah.siswa' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, COALE...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COALE...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COALE...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(639): CodeIgniter\Database\BaseConnection->query('SELECT *, COALE...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4...', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 12:20:26 --> Table 'simsekolah.siswa' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs
+                CROSS JOIN tb_dimensi_projek dp
+                LEFT JOIN siswa s ON s.nisn = gs.nisn 
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND p.id_dimensi_projek = dp.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                    AND gs.tahun_ajaran = \'2023\'
+                    AND dp.id_projek = \'RbPr4sK3Dp\'
+                ORDER BY gs.nisn, dp.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs
+                CROSS JOIN tb_dimensi_projek dp
+                LEFT JOIN siswa s ON s.nisn = gs.nisn 
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND p.id_dimensi_projek = dp.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                    AND gs.tahun_ajaran = \'2023\'
+                    AND dp.id_projek = \'RbPr4sK3Dp\'
+                ORDER BY gs.nisn, dp.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs
+                CROSS JOIN tb_dimensi_projek dp
+                LEFT JOIN siswa s ON s.nisn = gs.nisn 
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND p.id_dimensi_projek = dp.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                    AND gs.tahun_ajaran = \'2023\'
+                    AND dp.id_projek = \'RbPr4sK3Dp\'
+                ORDER BY gs.nisn, dp.id')
+ 4 APPPATH\Models\M_user.php(639): CodeIgniter\Database\BaseConnection->query('SELECT *, COALESCE(p.nilai, 0) as nilai
+                FROM tb_siswa_sekolah gs
+                CROSS JOIN tb_dimensi_projek dp
+                LEFT JOIN siswa s ON s.nisn = gs.nisn 
+                LEFT JOIN tb_nilai_p5 p ON p.nisn = gs.nisn AND p.id_dimensi_projek = dp.id
+                WHERE gs.id_sekolah = :id_sekolah: 
+                    AND kelas = :kelas: 
+                    AND nama_rombel = :rombel: 
+                    AND gs.tahun_ajaran = :tahun_ajaran:
+                    AND dp.id_projek = :id_projek:
+                ORDER BY gs.nisn, dp.id', [...])
+ 5 APPPATH\Controllers\Nilai.php(143): App\Models\M_user->getDaftarNilaiP5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', 'RbPr4sK3Dp')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 12:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 12:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 21:26:56 --> Array to string conversion
+in APPPATH\Controllers\Nilai.php on line 282.
+ 1 APPPATH\Controllers\Nilai.php(282): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 282)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-26 21:30:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(296): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4...', '2001000031', '44', '1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 21:30:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'44\', \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'44\', \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'44\', \'1\'')
+ 4 APPPATH\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (:id_sekolah:, :nisn:, :id_dimensi_projek:, :nilai:', [...])
+ 5 APPPATH\Controllers\Nilai.php(296): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000031', '44', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 21:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 21:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 21:30:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(296): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4...', '2001000031', '44', '1')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 21:30:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'44\', \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'44\', \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'44\', \'1\'')
+ 4 APPPATH\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (:id_sekolah:, :nisn:, :id_dimensi_projek:, :nilai:', [...])
+ 5 APPPATH\Controllers\Nilai.php(296): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2001000031', '44', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-26 21:49:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(286): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4...', '5000', '99', '9')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 21:49:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'5000\', \'99\', \'9\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'5000\', \'99\', \'9\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'5000\', \'99\', \'9\'')
+ 4 APPPATH\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (:id_sekolah:, :nisn:, :id_dimensi_projek:, :nilai:', [...])
+ 5 APPPATH\Controllers\Nilai.php(286): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '5000', '99', '9')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 21:50:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-26 21:50:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(286): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4...', '5000', '99', '9')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-26 21:50:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'5000\', \'99\', \'9\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'5000\', \'99\', \'9\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'5000\', \'99\', \'9\'')
+ 4 APPPATH\Models\M_user.php(911): CodeIgniter\Database\BaseConnection->query('INSERT INTO tb_nilai_p5 (id_sekolah, nisn, id_dimensi_projek, nilai) VALUES
+                (:id_sekolah:, :nisn:, :id_dimensi_projek:, :nilai:', [...])
+ 5 APPPATH\Controllers\Nilai.php(286): App\Models\M_user->tambah_nilai_p5('5d784c9e-f35a-4654-9851-b94d22be6f1e', '5000', '99', '9')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-26 21:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 21:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-26 21:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-26 21:59:43 --> Undefined array key 2
+in APPPATH\Controllers\Nilai.php on line 301.
+ 1 APPPATH\Controllers\Nilai.php(301): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 301)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-26 22:00:21 --> Undefined array key 2
+in APPPATH\Controllers\Nilai.php on line 301.
+ 1 APPPATH\Controllers\Nilai.php(301): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 301)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-26 22:00:40 --> Undefined array key 2
+in APPPATH\Controllers\Nilai.php on line 301.
+ 1 APPPATH\Controllers\Nilai.php(301): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 301)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-26 22:01:19 --> Undefined array key 2
+in APPPATH\Controllers\Nilai.php on line 301.
+ 1 APPPATH\Controllers\Nilai.php(301): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 301)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai_p5()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-26 22:08:05 --> Undefined variable $judul_submenu
+in APPPATH\Views\layout\layout_default.php on line 94.
+ 1 APPPATH\Views\layout\layout_default.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul_submenu', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 94)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_pengumuman', [], true)
+ 6 APPPATH\Controllers\Pengumuman.php(24): view('v_pengumuman', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pengumuman->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengumuman))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')

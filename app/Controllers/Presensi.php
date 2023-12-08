@@ -52,13 +52,18 @@ class Presensi extends BaseController
     public function get_data_presensi()
     {
         $tanggal = $_GET['tanggal'];
+        $kelaspilihan = $_GET['kelas'];
         $id_user = session()->get('id_user');
         $data_saya = $this->M_user->get_data_guru($id_user);
 
         $nuptk = $data_saya->nuptk;
         $id_sekolah = session()->get('id_sekolah');
 
-        $kelaspilihan = "w1";
+        // echo $tanggal . $kelaspilihan;
+        // die();
+
+        // $kelaspilihan = $this->request->getVar('kelas');
+        // $kelaspilihan = "w1";
         $idx = substr($kelaspilihan, 1, 1);
         $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
 
@@ -106,14 +111,32 @@ class Presensi extends BaseController
         if (!khusususer())
             return redirect()->to("/");
 
+        $id_sekolah = session()->get('id_sekolah');
+
         $kelaspilihan = $this->request->getVar('kelas');
         $semester = $this->request->getVar('semester');
+
+        $info_sekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
+        $tgl_awal_ganjil = $info_sekolah['tgl_awal_ganjil'];
+        $tgl_awal_genap = $info_sekolah['tgl_awal_genap'];
+        $tgl_rapor_ganjil = $info_sekolah['tgl_rapor_ganjil'];
+        $tgl_rapor_genap = $info_sekolah['tgl_rapor_genap'];
+
         if (!$semester) {
             // if (date("n")>=7)
-            if (date("n") >= 7)
+            if (date("Y-m-d") >= date($tgl_awal_ganjil)) {
                 $semester = 1;
-            else
+            } else {
                 $semester = 2;
+            }
+        }
+
+        if ($semester == 1) {
+            $batasawal = $tgl_awal_ganjil;
+            $batasakhir = $tgl_rapor_ganjil;
+        } else {
+            $batasawal = $tgl_awal_genap;
+            $batasakhir = $tgl_rapor_genap;
         }
 
         if (substr($kelaspilihan, 0, 1) == "w") {
@@ -121,7 +144,6 @@ class Presensi extends BaseController
             $data_saya = $this->M_user->get_data_guru($id_user);
 
             $nuptk = $data_saya->nuptk;
-            $id_sekolah = session()->get('id_sekolah');
 
             $idx = substr($kelaspilihan, 1, 1);
             $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
@@ -129,7 +151,7 @@ class Presensi extends BaseController
             $nama_rombel = $daftarkelaswali[$idx - 1]['nama_rombel'];
             $kelas = $daftarkelaswali[$idx - 1]['kelas'];
 
-            $rekappresensi = $this->M_user->getrekappresensi($id_sekolah, tahun_ajaran(), $kelas, $nama_rombel, $semester);
+            $rekappresensi = $this->M_user->getrekappresensi($id_sekolah, tahun_ajaran(), $kelas, $nama_rombel, $batasawal, $batasakhir);
 
             // echo var_dump($rekappresensi);
             // die();

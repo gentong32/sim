@@ -66,6 +66,29 @@
                         </label></td></tr>";
                         $sekaliceked = "";
                     }
+
+                    $gurulain = 0;
+                    foreach ($daftarkelasajarlain as $kelasajarlain) {
+                        $gurulain++;
+                        $mapellain = ["-", "B-K", "P-5"];
+                        echo "<tr><td>" . $mapellain[$kelasajarlain['jenis_mapel']] . "</td><td>" . $kelasajarlain['nama_rombel'] . "</td>" .
+                            "<td><label class='toggle'>
+                            <input type='radio' name='toggle' value='l" . $gurulain . "' " . $sekaliceked . ">
+                            <span class='slider'></span>
+                        </label></td></tr>";
+                        $sekaliceked = "";
+                    }
+
+                    $ekskul = 0;
+                    foreach ($daftarwaliekskul as $waliekskul) {
+                        $ekskul++;
+                        echo "<tr><td>Ekskul " . $waliekskul['nama_ekskul'] . "</td><td>Semua</td>" .
+                            "<td><label class='toggle'>
+                            <input type='radio' name='toggle' value='e" . $ekskul . "' " . $sekaliceked . ">
+                            <span class='slider'></span>
+                        </label></td></tr>";
+                        $sekaliceked = "";
+                    }
                     ?>
                 </tbody>
             </table>
@@ -75,7 +98,7 @@
     <?php if (isset($submenu)) : ?>
         <div class="dkelas">
             <div class="back-button">
-                <a href="/home" onclick="appendKelasToLink('?kelas=<?= $valkelas ?>')"><img src="/assets/back.png" alt="back"></a>
+                <a href="/home"><img src="/assets/back.png" alt="back"></a>
             </div>
             <div class="center">
                 <div style="margin-left:0px;"><img src="/assets/<?= $ikon ?>.png" alt="Ikon"></div>
@@ -98,39 +121,10 @@
 
 <script>
     var selectedKelas;
+    var awalpil;
 
     function keluar() {
         window.open('<?= base_url() ?>login/logout', '_self');
     }
-
-    <?php if (isset($beranda)) { ?>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Ambil nilai terakhir dari localStorage saat halaman dimuat
-            var lastSelected = localStorage.getItem('pilihsebagai');
-
-            // Jika ada nilai terakhir, pilih radio button sesuai
-            if (lastSelected) {
-                document.querySelector('input[name="toggle"][value="' + lastSelected + '"]').checked = true;
-                selectedKelas = document.querySelector('input[name="toggle"][value="' + lastSelected + '"]').value;
-
-                if (selectedKelas.substring(0, 1) == "w")
-                    tampilkanw();
-                else
-                    tampilkang();
-            }
-
-            // Tambahkan event listener untuk menangani klik pada radio button
-            var radioButtons = document.querySelectorAll('input[name="toggle"]');
-            radioButtons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    localStorage.setItem('pilihsebagai', this.value);
-                    if (this.value.substring(0, 1) == "w")
-                        tampilkanw();
-                    else
-                        tampilkang();
-                });
-            });
-        });
-    <?php } ?>
 </script>
 <?= $this->renderSection('script') ?>

@@ -695,7 +695,7 @@
     }
 
     function lihatagenda() {
-        window.open('<?= base_url("admin/list_agenda") ?>', '_self');
+        window.open('<?= base_url("agenda/list_agenda") ?>', '_self');
     }
 </script>
 

@@ -86,6 +86,14 @@ html {
   display: block;
 }
 
+#submenuKalender {
+  display: none;
+}
+
+#submenuKalender.show {
+  display: block;
+}
+
 .close-btn {
   background: none;
   border: none;

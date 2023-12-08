@@ -31,18 +31,46 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 $routes->get('/', 'Login::index');
 $routes->get('/login/createpassword/(:any)', 'Login::createpassword/$1');
+$routes->get('/login/cekpassword/(:any)/(:any)', 'Login::cekpassword/$1/$2');
 $routes->get('/login/change_password', 'Login::change_password', ['filter' => 'ceknpsn']);
 
 $routes->get('/home', 'Home::index');
+
 $routes->get('/presensi', 'Presensi::index');
 $routes->get('/presensi/get_data_presensi', 'Presensi::get_data_presensi');
-$routes->post('/presensi/simpan_presensi', 'Presensi::simpan_presensi');
 $routes->get('/presensi_rekap', 'Presensi::rekap');
+$routes->post('/presensi/simpan_presensi', 'Presensi::simpan_presensi');
+
 $routes->get('/agenda', 'Agenda::index');
 $routes->post('/agenda/simpan_agenda_kelas', 'Agenda::simpan_agenda_kelas');
 $routes->post('/agenda/hapus_agenda_kelas', 'Agenda::hapus_agenda_kelas');
+$routes->get('/agenda/list_agenda', 'Agenda::list_agenda');
 
 $routes->get('/tujuan_pembelajaran', 'Tujuanpembelajaran::index');
+$routes->post('/tujuan_pembelajaran/simpan_tj_pem', 'Tujuanpembelajaran::simpan_tj_pem');
+$routes->post('/tujuan_pembelajaran/update_tj_pem', 'Tujuanpembelajaran::update_tj_pem');
+$routes->post('/tujuan_pembelajaran/hapus_tj_pem', 'Tujuanpembelajaran::hapus_tj_pem');
+$routes->post('/tujuan_pembelajaran/simpan_tj_pem_eks', 'Tujuanpembelajaran::simpan_tj_pem_eks');
+$routes->post('/tujuan_pembelajaran/update_tj_pem_eks', 'Tujuanpembelajaran::update_tj_pem_eks');
+$routes->post('/tujuan_pembelajaran/hapus_tj_pem_eks', 'Tujuanpembelajaran::hapus_tj_pem_eks');
+
+$routes->get('/tugas', 'Tugas::index');
+$routes->get('/tugas/get_tujuan_pembelajaran', 'Tugas::get_tujuan_pembelajaran');
+$routes->post('/tugas/simpan_tugas', 'Tugas::simpan_tugas');
+
+$routes->get('/nilai', 'Nilai::index');
+$routes->post('/nilai/simpan_nilai', 'Nilai::simpan_nilai');
+$routes->post('/nilai/get_daftar_elemen_sekolah', 'Nilai::get_daftar_elemen_sekolah');
+$routes->get('/nilai/get_daftar_nilai_p5', 'Nilai::get_daftar_nilai_p5');
+$routes->post('/nilai/simpan_nilai_p5', 'Nilai::simpan_nilai_p5');
+$routes->get('/nilai/get_rombel/(:any)', 'Nilai::get_rombel/$1');
+$routes->get('/nilai/get_daftar_nilai_eks', 'Nilai::get_daftar_nilai_eks');
+$routes->post('/nilai/simpan_nilai_eks', 'Nilai::simpan_nilai_eks');
+$routes->get('/nilai/get_daftar_indikator_eks', 'Nilai::get_daftar_indikator_eks');
+
+$routes->get('/buatrapor/raporPDF', 'Buatrapor::raporPDF');
+
+$routes->get('/pengumuman', 'Pengumuman::index');
 
 $routes->post('/login/authenticate', 'Login::authenticate');
 $routes->post('/login/cek_passlama', 'Login::cek_passlama');
@@ -101,6 +129,8 @@ $routes->post('admin/update_ekskul', 'Admin::update_ekskul');
 $routes->post('admin/hapus_ekskul', 'Admin::hapus_ekskul');
 $routes->post('admin/simpan_agenda', 'Admin::simpan_agenda');
 $routes->post('admin/hapus_agenda', 'Admin::hapus_agenda');
+$routes->post('admin/simpanKopRapor', 'Admin::simpanKopRapor');
+$routes->post('admin/simpan_mid', 'Admin::simpan_mid');
 
 $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('/', 'Admin::index');
@@ -137,6 +167,10 @@ $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('ekskul', 'Admin::ekskul');
     $routes->get('agenda', 'Admin::agenda');
     $routes->get('list_agenda', 'Admin::list_agenda');
+    $routes->get('kop_rapor', 'Admin::kop_rapor');
+    $routes->get('kalender_sekolah', 'Admin::kalender_sekolah');
+    $routes->get('simpan_mid', 'Admin::simpan_mid');
+    $routes->get('pengumuman', 'Admin::pengumuman');
 });
 
 /*

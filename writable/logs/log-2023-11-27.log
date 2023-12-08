@@ -1,0 +1,607 @@
+ERROR - 2023-11-27 07:57:55 --> mysqli_sql_exception: Table 'simsekolah.log_login' doesn't exist in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `lo...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_user.php(833): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Login.php(110): App\Models\M_user->tambahlog()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 07:57:55 --> Table 'simsekolah.log_login' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `log_login` (`id_user`) VALUES (\'389db24f-2d3d-43cc-9e5c-b12a5be9a173\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `log_login` (`id_user`) VALUES (\'389db24f-2d3d-43cc-9e5c-b12a5be9a173\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `log_login` (`id_user`) VALUES (\'389db24f-2d3d-43cc-9e5c-b12a5be9a173\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `log_login` (`id_user`) VALUES (:id_user:)', [...], false)
+ 5 APPPATH\Models\M_user.php(833): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Login.php(110): App\Models\M_user->tambahlog()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Login->authenticate()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-11-27 07:59:06 --> Undefined array key "nama_mapel"
+in APPPATH\Controllers\Nilai.php on line 44.
+ 1 APPPATH\Controllers\Nilai.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 08:33:14 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 08:33:14 --> Unknown column 'tahun_ajaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (:id_sekolah:, :nisn:, :id_mapel:, :id_tugas:, :nilai:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 08:33:56 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 08:33:56 --> Unknown column 'tahun_ajaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (:id_sekolah:, :nisn:, :id_mapel:, :id_tugas:, :nilai:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 08:35:24 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 08:35:24 --> Unknown column 'tahun_ajaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (:id_sekolah:, :nisn:, :id_mapel:, :id_tugas:, :nilai:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 08:35:34 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 08:35:34 --> Unknown column 'tahun_ajaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'90\', \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (:id_sekolah:, :nisn:, :id_mapel:, :id_tugas:, :nilai:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 08:36:11 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 08:36:11 --> Unknown column 'tahun_ajaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000032\', \'200\', \'12\', \'90\', \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000032\', \'200\', \'12\', \'90\', \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000032\', \'200\', \'12\', \'90\', \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (:id_sekolah:, :nisn:, :id_mapel:, :id_tugas:, :nilai:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 08:38:55 --> mysqli_sql_exception: Unknown column 'tahun_ajaran' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\laragon\www\sim\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\laragon\www\sim\app\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\laragon\www\sim\app\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai(Array)
+#6 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+#7 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#8 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-11-27 08:38:55 --> Unknown column 'tahun_ajaran' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'80\', \'2023\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'80\', \'2023\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (\'5d784c9e-f35a-4654-9851-b94d22be6f1e\', \'2001000031\', \'200\', \'12\', \'80\', \'2023\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_nilai_siswa` (`id_sekolah`, `nisn`, `id_mapel`, `id_tugas`, `nilai`, `tahun_ajaran`) VALUES (:id_sekolah:, :nisn:, :id_mapel:, :id_tugas:, :nilai:, :tahun_ajaran:)', [...], false)
+ 5 APPPATH\Models\M_sekolah.php(1192): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Nilai.php(177): App\Models\M_sekolah->insert_nilai([...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->simpan_nilai()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-11-27 09:38:34 --> mysqli_sql_exception: Unknown table 'tm' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('100000001000000...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Home->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-27 09:38:34 --> Unknown table 'tm'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'')
+ 4 APPPATH\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = :nuptk:', [...])
+ 5 APPPATH\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('1000000010000002')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 09:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-27 09:38:47 --> mysqli_sql_exception: Unknown table 'tm' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('100000001000000...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Home->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-27 09:38:47 --> Unknown table 'tm'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'')
+ 4 APPPATH\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as id_guru_ekskul, te.*, ts.*, tm.*, tr.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = :nuptk:', [...])
+ 5 APPPATH\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('1000000010000002')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 09:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-27 09:39:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = t' at line 2 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('100000001000000...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Home->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-27 09:39:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = t' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as id_guru_ekskul, te.*, ts.*,  
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as id_guru_ekskul, te.*, ts.*,  
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as id_guru_ekskul, te.*, ts.*,  
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = \'1000000010000002\'')
+ 4 APPPATH\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as id_guru_ekskul, te.*, ts.*,  
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id 
+                WHERE nuptk = :nuptk:', [...])
+ 5 APPPATH\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('1000000010000002')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 09:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 09:39:35 --> Undefined array key "nama_rombel"
+in APPPATH\Views\layout\layout_default.php on line 85.
+ 1 APPPATH\Views\layout\layout_default.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_rombel"', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 85)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_beranda', [], true)
+ 6 APPPATH\Controllers\Home.php(33): view('v_beranda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 09:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 09:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 09:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 10:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 10:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 10:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 10:07:35 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 29.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 10:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 10:19:35 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 29.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 10:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-27 10:19:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':tahun_ajaran:
+                WHERE nuptk = '1000000010000002'' at line 3 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('100000001000000...', '2023')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Home->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-27 10:19:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':tahun_ajaran:
+                WHERE nuptk = '1000000010000002'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT te.id as id_guru_ekskul, te.*, ts.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id AND te.tahun_ajaran = :tahun_ajaran:
+                WHERE nuptk = \'1000000010000002\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT te.id as id_guru_ekskul, te.*, ts.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id AND te.tahun_ajaran = :tahun_ajaran:
+                WHERE nuptk = \'1000000010000002\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT te.id as id_guru_ekskul, te.*, ts.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id AND te.tahun_ajaran = :tahun_ajaran:
+                WHERE nuptk = \'1000000010000002\'')
+ 4 APPPATH\Models\M_user.php(354): CodeIgniter\Database\BaseConnection->query('SELECT te.id as id_guru_ekskul, te.*, ts.* 
+                FROM tb_ekskul te
+                LEFT JOIN tb_guru_sekolah ts ON te.id_guru = ts.id AND te.tahun_ajaran = :tahun_ajaran:
+                WHERE nuptk = :nuptk:', [...])
+ 5 APPPATH\Controllers\Home.php(25): App\Models\M_user->cekwaliekskul('1000000010000002', '2023')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 10:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 10:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 10:20:13 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 29.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 11:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 11:03:01 --> Undefined variable $kelas
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 58.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 11:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 11:04:00 --> Undefined variable $nama_mapel
+in APPPATH\Views\v_tujuan_pembelajaran.php on line 198.
+ 1 APPPATH\Views\v_tujuan_pembelajaran.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_mapel', 'D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran.php', 198)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tujuan_pembelajaran', [], true)
+ 5 APPPATH\Controllers\Tujuanpembelajaran.php(65): view('v_tujuan_pembelajaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 11:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 11:05:42 --> Undefined variable $nama_mapel
+in APPPATH\Views\v_tujuan_pembelajaran_ekskul.php on line 198.
+ 1 APPPATH\Views\v_tujuan_pembelajaran_ekskul.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_mapel', 'D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php', 198)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tujuan_pembelajaran_ekskul', [], true)
+ 5 APPPATH\Controllers\Tujuanpembelajaran.php(64): view('v_tujuan_pembelajaran_ekskul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 11:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 11:06:00 --> Undefined variable $nama_ekskul
+in APPPATH\Views\v_tujuan_pembelajaran_ekskul.php on line 198.
+ 1 APPPATH\Views\v_tujuan_pembelajaran_ekskul.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_ekskul', 'D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php', 198)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tujuan_pembelajaran_ekskul', [], true)
+ 5 APPPATH\Controllers\Tujuanpembelajaran.php(64): view('v_tujuan_pembelajaran_ekskul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 11:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 11:06:51 --> Undefined variable $kelas
+in APPPATH\Views\v_tujuan_pembelajaran_ekskul.php on line 199.
+ 1 APPPATH\Views\v_tujuan_pembelajaran_ekskul.php(199): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php', 199)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tujuan_pembelajaran_ekskul', [], true)
+ 5 APPPATH\Controllers\Tujuanpembelajaran.php(66): view('v_tujuan_pembelajaran_ekskul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 11:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 11:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 11:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 11:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 11:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 11:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 13:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 13:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 13:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 13:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 13:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 13:50:55 --> Undefined variable $daftarkelasajar
+in APPPATH\Controllers\Nilai.php on line 40.
+ 1 APPPATH\Controllers\Nilai.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftarkelasajar', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 13:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 13:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 17:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 18:36:21 --> Array to string conversion
+in APPPATH\Views\v_tujuan_pembelajaran_ekskul.php on line 202.
+ 1 APPPATH\Views\v_tujuan_pembelajaran_ekskul.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php', 202)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran_ekskul.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tujuan_pembelajaran_ekskul', [], true)
+ 5 APPPATH\Controllers\Tujuanpembelajaran.php(67): view('v_tujuan_pembelajaran_ekskul', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 18:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 18:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:06:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 19:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 20:10:45 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 228.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->update_tj_pem_eks()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 20:10:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 20:11:01 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 228.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->update_tj_pem_eks()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 20:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 20:14:31 --> Undefined array key "kelasdipilih"
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 231.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelasdipilih"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->update_tj_pem_eks()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 20:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 20:17:22 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 160.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->hapus_tj_pem()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 20:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 20:20:00 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 160.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->hapus_tj_pem()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 20:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-27 20:21:15 --> Undefined array key 0
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 160.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->hapus_tj_pem()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-27 20:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:36:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-27 20:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

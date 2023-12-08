@@ -85,5 +85,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
-
+<script>
+    localStorage.setItem('namasekolahsaya', "SEKOLAH INDONESIA");
+</script>
 <?= $this->endSection() ?>

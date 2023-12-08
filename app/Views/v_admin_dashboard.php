@@ -97,7 +97,7 @@
     <tr>
         <td>Alamat</td>
         <td>:</td>
-        <td><?= ($sekolah['npsn'] != "") ? $sekolah['alamat'] . "<br>" . $sekolah['kelurahan'] . "," . $sekolah['kecamatan'] . "," . $sekolah['kota'] . "<br>" . $sekolah['propinsi'] : "" ?></td>
+        <td><?= ($sekolah['npsn'] != "") ? $sekolah['alamat'] . "<br>" . $sekolah['kelurahan'] . ", " . $sekolah['kecamatan'] . ", " . $sekolah['kota'] . "<br>" . $sekolah['propinsi'] : "" ?></td>
     </tr>
     <tr>
         <td>Email</td>
@@ -121,11 +121,20 @@
         <h4>Jumlah Siswa</h4>
         <p><?= $info['jumlah_siswa'] ?></p>
     </div>
+    <div class="card siswa">
+        <h4>Jumlah Staf</h4>
+        <p><?= $info['jumlah_staf'] ?></p>
+    </div>
 </div>
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
 <script>
+    <?php
+    if ($sekolah['nama'] != "") { ?>
+        localStorage.setItem('namasekolahsaya', "<?= $sekolah['nama'] ?>");
+    <?php } ?>
+
     function edit_sekolah() {
         window.open("<?= base_url('admin/edit_sekolah') ?>", "_self");
     }

@@ -1,0 +1,748 @@
+INFO - 2023-12-05 08:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 08:20:22 --> Undefined property: App\Controllers\Home::$M_sekolah
+in APPPATH\Controllers\Home.php on line 26.
+ 1 APPPATH\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$M_sekolah', 'D:\\laragon\\www\\sim\\app\\Controllers\\Home.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 08:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 08:20:41 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Home.php(28): CodeIgniter\Model->__call('info_sekolah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 08:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 08:37:25 --> Undefined variable $sekolah_saya
+in APPPATH\Views\v_admin_dashboard.php on line 134.
+ 1 APPPATH\Views\v_admin_dashboard.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sekolah_saya', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_dashboard.php', 134)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_dashboard', [], true)
+ 5 APPPATH\Controllers\Admin.php(36): view('v_admin_dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 08:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:48:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 08:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 09:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 09:53:38 --> Undefined array key 7
+in APPPATH\Controllers\Admin.php on line 285.
+ 1 APPPATH\Controllers\Admin.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 7', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 285)
+ 2 APPPATH\Controllers\Admin.php(497): App\Controllers\Admin->import('288664', '2023', 'G')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('288664')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 09:53:55 --> Undefined array key 7
+in APPPATH\Controllers\Admin.php on line 285.
+ 1 APPPATH\Controllers\Admin.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 7', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 285)
+ 2 APPPATH\Controllers\Admin.php(497): App\Controllers\Admin->import('717160', '2023', 'G')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('717160')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 09:55:00 --> Undefined array key 7
+in APPPATH\Controllers\Admin.php on line 285.
+ 1 APPPATH\Controllers\Admin.php(285): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 7', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 285)
+ 2 APPPATH\Controllers\Admin.php(497): App\Controllers\Admin->import('950036', '2023', 'G')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->upload_data('950036')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 10:14:18 --> Too few arguments to function App\Models\M_sekolah::get_daftar_mapel_pilihan(), 1 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 1591 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 490.
+ 1 APPPATH\Controllers\Admin.php(1591): App\Models\M_sekolah->get_daftar_mapel_pilihan('11')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel_pilihan()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 10:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 10:15:47 --> Too few arguments to function App\Models\M_sekolah::get_daftar_mapel_pilihan(), 1 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 1591 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 490.
+ 1 APPPATH\Controllers\Admin.php(1591): App\Models\M_sekolah->get_daftar_mapel_pilihan('11')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel_pilihan()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 10:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-05 10:26:53 --> mysqli_sql_exception: Unknown column 'dm.sub_kelas' in 'where clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT dm.*, tm...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT dm.*, tm...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT dm.*, tm...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(499): CodeIgniter\Database\BaseConnection->query('SELECT dm.*, tm...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1591): App\Models\M_sekolah->get_daftar_mapel_pilihan('38844e05-e8d8-4...', '11', 'B')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->mapel_pilihan()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-05 10:26:53 --> Unknown column 'dm.sub_kelas' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT dm.*, tm.id FROM daf_mapel dm
+        LEFT JOIN tb_mapel tm ON dm.kd_mapel = tm.kd_mapel AND tm.id_sekolah=\'38844e05-e8d8-40af-998e-0d54c50a6aa5\'
+        WHERE dm.kelas=\'11\' AND dm.sub_kelas=\'B\' AND dm.jenis=2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT dm.*, tm.id FROM daf_mapel dm
+        LEFT JOIN tb_mapel tm ON dm.kd_mapel = tm.kd_mapel AND tm.id_sekolah=\'38844e05-e8d8-40af-998e-0d54c50a6aa5\'
+        WHERE dm.kelas=\'11\' AND dm.sub_kelas=\'B\' AND dm.jenis=2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT dm.*, tm.id FROM daf_mapel dm
+        LEFT JOIN tb_mapel tm ON dm.kd_mapel = tm.kd_mapel AND tm.id_sekolah=\'38844e05-e8d8-40af-998e-0d54c50a6aa5\'
+        WHERE dm.kelas=\'11\' AND dm.sub_kelas=\'B\' AND dm.jenis=2')
+ 4 APPPATH\Models\M_sekolah.php(499): CodeIgniter\Database\BaseConnection->query('SELECT dm.*, tm.id FROM daf_mapel dm
+        LEFT JOIN tb_mapel tm ON dm.kd_mapel = tm.kd_mapel AND tm.id_sekolah=:id_sekolah:
+        WHERE dm.kelas=:kelas: AND dm.sub_kelas=:sub_kelas: AND dm.jenis=2', [...])
+ 5 APPPATH\Controllers\Admin.php(1591): App\Models\M_sekolah->get_daftar_mapel_pilihan('38844e05-e8d8-40af-998e-0d54c50a6aa5', '11', 'B')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel_pilihan()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 10:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 10:31:05 --> Undefined array key 0
+in APPPATH\Views\v_admin_rombel.php on line 263.
+ 1 APPPATH\Views\v_admin_rombel.php(263): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Views\\v_admin_rombel.php', 263)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_admin_rombel.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_admin_rombel', [], true)
+ 5 APPPATH\Controllers\Admin.php(1321): view('v_admin_rombel', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->rombel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 10:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:47:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 10:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-05 10:56:56 --> mysqli_sql_exception: Unknown column 'id_mapel' in 'order clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT \n    GRO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n    GRO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n    GRO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(270): CodeIgniter\Database\BaseConnection->query('SELECT \n    GRO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1972): App\Models\M_user->get_daftar_guru_mapel('38844e05-e8d8-4...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-05 10:56:56 --> Unknown column 'id_mapel' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, id_mapel, nama_rombel, nama
+', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, id_mapel, nama_rombel, nama
+')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, id_mapel, nama_rombel, nama
+')
+ 4 APPPATH\Models\M_user.php(270): CodeIgniter\Database\BaseConnection->query('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, id_mapel, nama_rombel, nama
+', [...])
+ 5 APPPATH\Controllers\Admin.php(1972): App\Models\M_user->get_daftar_guru_mapel('38844e05-e8d8-40af-998e-0d54c50a6aa5')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2023-12-05 10:58:22 --> mysqli_sql_exception: Table 'gm' from one of the SELECTs cannot be used in field list in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT \n    GRO...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n    GRO...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n    GRO...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(270): CodeIgniter\Database\BaseConnection->query('SELECT \n    GRO...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1972): App\Models\M_user->get_daftar_guru_mapel('38844e05-e8d8-4...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-12-05 10:58:22 --> Table 'gm' from one of the SELECTs cannot be used in field list
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, gm.id_mapel, nama_rombel, nama
+', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, gm.id_mapel, nama_rombel, nama
+')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'38844e05-e8d8-40af-998e-0d54c50a6aa5\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, gm.id_mapel, nama_rombel, nama
+')
+ 4 APPPATH\Models\M_user.php(270): CodeIgniter\Database\BaseConnection->query('SELECT 
+    GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+    nama_mapel, 
+    nama, 
+    tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            nama_mapel, nama, tr.kelas, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+ORDER BY 
+    kelas, urutangrup, gm.id_mapel, nama_rombel, nama
+', [...])
+ 5 APPPATH\Controllers\Admin.php(1972): App\Models\M_user->get_daftar_guru_mapel('38844e05-e8d8-40af-998e-0d54c50a6aa5')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 11:01:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 11:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 11:01:51 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 11:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 11:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 11:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-05 11:02:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 11:26:44 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 11:28:11 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 11:34:03 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2023-12-05 11:34:42 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 2010.
+ 1 APPPATH\Controllers\Admin.php(2010): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2010)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-12-05 11:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 11:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-05 11:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

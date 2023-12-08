@@ -52,9 +52,17 @@
                         <li><a href="<?= base_url() ?>admin/projek">Projek Sekolah</a></li>
                         <li><a href="<?= base_url() ?>admin/dimensi">Dimensi Projek</a></li>
                         <li><a href="<?= base_url() ?>admin/ekskul">Ekskul</a></li>
+                        <li><a href="<?= base_url() ?>admin/kop_rapor">Kop Rapor</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= base_url() ?>admin/agenda">Kalender Pendidikan</a></li>
+                <li id="menuKalender"><a href="#">Kalender Pendidikan ></a>
+                    <ul id="submenuKalender">
+                        <li><a href="<?= base_url() ?>admin/kalender_sekolah">Tanggal Penting</a></li>
+                        <li><a href="<?= base_url() ?>admin/agenda">Kalender Tahunan</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="<? //= base_url() 
+                                    ?>admin/pengumuman">Pengumuman</a></li> -->
             </ul>
         </div>
         <div class="content">
@@ -89,10 +97,15 @@
     document.addEventListener('DOMContentLoaded', function() {
         const dataReferensiLokal = document.getElementById('dataReferensiLokal');
         const submenuReferensi = document.getElementById('submenuReferensi');
+        const menuKalender = document.getElementById('menuKalender');
+        const submenuKalender = document.getElementById('submenuKalender');
 
         dataReferensiLokal.addEventListener('click', function(e) {
-            // e.preventDefault();
             submenuReferensi.classList.toggle('show');
+        });
+
+        menuKalender.addEventListener('click', function(e) {
+            submenuKalender.classList.toggle('show');
         });
     });
 

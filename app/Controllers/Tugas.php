@@ -2,67 +2,88 @@
 
 namespace App\Controllers;
 
+use App\Models\M_user;
+use App\Models\M_sekolah;
+
 class Tugas extends BaseController
 {
-    public function index(): string
+    function __construct()
     {
-        $kelas_map = [
-            '10_1' => 'X - 1',
-            '10_12' => 'X - 12',
-        ];
-        $kelas = $this->request->getVar('kelas');
-        if (!isset($kelas))
-            $data['kelas']  = "X - 1";
-        else {
-            $formatKelas = $kelas_map[$kelas] ?? '';
-            $data['kelas'] = $formatKelas;
-        }
-        $data['valkelas'] = $kelas;
-        $data['submenu'] = true;
-        $data['menutitle'] = 'Tugas';
-        $data['ikon'] = 'tugas';
-        return view('v_tugas', $data);
+        $this->M_user = new M_user();
+        $this->M_sekolah = new M_sekolah();
     }
 
-    public function hasil1(): string
+    public function index()
     {
-        $kelas_map = [
-            '10_1' => 'X - 1',
-            '10_12' => 'X - 12',
-        ];
-        $kelas = $this->request->getVar('kelas');
-        if (!isset($kelas))
-            $data['kelas']  = "X - 1";
-        else {
-            $formatKelas = $kelas_map[$kelas] ?? '';
-            $data['kelas'] = $formatKelas;
-        }
-        $data['valkelas'] = $kelas;
+        if (!khusususer())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $id_user = session()->get('id_user');
+
+        $kelaspilihan = $this->request->getVar('kelas');
+        $idx = substr($kelaspilihan, 1, 1);
+        $data_saya = $this->M_user->get_data_guru($id_user);
+        $nuptk = $data_saya->nuptk;
+        $daftarkelasajar = $this->M_user->cekajarkelas($nuptk, $id_sekolah);
+        $id_mapel = $daftarkelasajar[($idx) - 1]['id_mapel'];
+        $kelas = $daftarkelasajar[($idx) - 1]['kelas'];
+        $nama_mapel = $daftarkelasajar[($idx) - 1]['nama_mapel'];
+        $nama_rombel = $daftarkelasajar[$idx - 1]['nama_rombel'];
+        $id_guru_mapel = $daftarkelasajar[($idx) - 1]['id_guru_mapel'];
+        $daftartugas = $this->M_sekolah->get_tptugas($id_guru_mapel, tahun_ajaran());
+        $id_guru = $daftarkelasajar[($idx) - 1]['id_guru'];
+        $daftartp = $this->M_sekolah->getTP($id_guru, $id_mapel, $kelas, tahun_ajaran());
+        $datakalender = $this->M_sekolah->getAgenda($id_sekolah);
+
+        $pesan = session()->getFlashdata('pesan');
+        $data['pesan'] = $pesan;
+        $data['id_user'] = $id_user;
+        $data['id_guru_mapel'] = $id_guru_mapel;
+        $judul_submenu = "Tugas / Tes";
+        $data['valkelas'] = $kelaspilihan;
+        $data['kelas'] = $kelas;
+        $data['id_mapel'] = $id_mapel;
+        $data['nama_rombel'] = $nama_rombel;
+        $data['nama_mapel'] = $nama_mapel;
+        $data['daftar_tp'] = $daftartp;
+        $data['daftar_tugas'] = $daftartugas;
+        $data['judul_submenu'] = $judul_submenu;
+        $data['datakalender'] = json_encode($datakalender);
         $data['submenu'] = true;
-        $data['menutitle'] = '';
-        $data['tugas'] = 'Membuat Karangan Deskripsi';
+        $data['menutitle'] = 'TP';
         $data['ikon'] = 'tugas';
-        return view('v_hasil_tugas1', $data);
+
+        return view('v_tugas_tes', $data);
     }
 
-    public function hasil2(): string
+    public function simpan_tugas()
     {
-        $kelas_map = [
-            '10_1' => 'X - 1',
-            '10_12' => 'X - 12',
-        ];
-        $kelas = $this->request->getVar('kelas');
-        if (!isset($kelas))
-            $data['kelas']  = "X - 1";
-        else {
-            $formatKelas = $kelas_map[$kelas] ?? '';
-            $data['kelas'] = $formatKelas;
+        if (!khusususer())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $dataTP = json_decode(file_get_contents('php://input'), true);
+
+        $tanggaltugas = $dataTP['tanggaltugas'];
+        $namatugas = $dataTP['namatugas'];
+        $daftartp = $dataTP['pilihantp'];
+        $id_guru_mapel = $dataTP['id_guru_mapel'];
+
+        $data1['id_guru_mapel'] = $id_guru_mapel;
+        $data1['nama_tugas'] = $namatugas;
+        $data1['tahun_ajaran'] = tahun_ajaran();
+        $data1['tanggal_tugas'] = $tanggaltugas;
+        $insert = $this->M_sekolah->insert_tugas($data1);
+        $lastInsertedID = $insert;
+
+        foreach ($daftartp as $tpterpilih) {
+            $data2['id_tugas'] = $lastInsertedID;
+            $data2['id_tp'] = $tpterpilih;
+            $this->M_sekolah->insert_tugas_tp($data2);
         }
-        $data['valkelas'] = $kelas;
-        $data['submenu'] = true;
-        $data['menutitle'] = '';
-        $data['tugas'] = 'Praktikum Biologi Percobaan Fotosintesis';
-        $data['ikon'] = 'tugas';
-        return view('v_hasil_tugas2', $data);
+
+        $response = ['message' => "OK"];
+        return $this->response->setJSON($response);
     }
 }

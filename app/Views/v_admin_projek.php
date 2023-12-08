@@ -251,9 +251,9 @@
                     <option value="<?= $row['id'] ?>"><?= $row['nama_tema'] ?></option>
                 <?php endforeach ?>
             </select><br>
-            <label for="nama">Nama proyek:</label>
+            <label for="nama">Nama projek:</label>
             <textarea class="cprojek" id="iprojek"></textarea>
-            <label for="desc">Deskripsi proyek:</label>
+            <label for="desc">Deskripsi projek:</label>
             <textarea class="cdeskripsi" id="ideskripsi"></textarea><br>
             <button class="hapus" onclick="batalInput()">Batal</button>
             <button class="ok" onclick="okInput()">OK</button>

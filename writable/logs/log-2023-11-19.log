@@ -1,0 +1,326 @@
+ERROR - 2023-11-19 07:36:46 --> mysqli_sql_exception: Unknown column 't.id_tugas' in 'on clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(783): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4...', '2023', '10', 'X - 1', '9')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-19 07:36:46 --> Unknown column 't.id_tugas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\' 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = \'9\' 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\' 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = \'9\' 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\' 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = \'9\' 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis')
+ 4 APPPATH\Models\M_user.php(783): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = :id_tugas: 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = :id_tugas: 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY kelas, nis', [...])
+ 5 APPPATH\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', '9')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-19 07:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-19 07:36:57 --> mysqli_sql_exception: Unknown column 't.id_tugas' in 'on clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(783): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4...', '2023', '10', 'X - 1', '9')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-19 07:36:57 --> Unknown column 't.id_tugas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\' 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = \'9\' 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\' 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = \'9\' 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\' 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = \'9\' 
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' AND kelas = \'10\' AND nama_rombel = \'X - 1\' AND tahun_ajaran = \'2023\' 
+                ORDER BY kelas, nis')
+ 4 APPPATH\Models\M_user.php(783): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = :id_tugas: 
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id AND t.id_tugas = :id_tugas: 
+                WHERE gs.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :rombel: AND tahun_ajaran = :tahun_ajaran: 
+                ORDER BY kelas, nis', [...])
+ 5 APPPATH\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', '9')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-19 07:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 08:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 08:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 08:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-19 08:50:30 --> mysqli_sql_exception: Unknown column 't.nama_field' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.*, g....', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.*, g....')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.*, g....')
+#3 D:\laragon\www\sim\app\Models\M_user.php(785): CodeIgniter\Database\BaseConnection->query('SELECT gs.*, g....', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4...', '2023', '10', 'X - 1', '9')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-19 08:50:30 --> Unknown column 't.nama_field' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.nama_field SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\'
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND tahun_ajaran = \'2023\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.nama_field SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\'
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND tahun_ajaran = \'2023\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.nama_field SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\'
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND tahun_ajaran = \'2023\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis')
+ 4 APPPATH\Models\M_user.php(785): CodeIgniter\Database\BaseConnection->query('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.nama_field SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = :id_tugas:
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = :id_sekolah: 
+                    AND tahun_ajaran = :tahun_ajaran: 
+                    AND kelas = :kelas: 
+                    AND nama_rombel = :rombel: 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis', [...])
+ 5 APPPATH\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', '9')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-19 08:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-11-19 08:51:21 --> mysqli_sql_exception: Unknown column 'gs.id_siswa' in 'group statement' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.*, g....', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.*, g....')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.*, g....')
+#3 D:\laragon\www\sim\app\Models\M_user.php(785): CodeIgniter\Database\BaseConnection->query('SELECT gs.*, g....', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4...', '2023', '10', 'X - 1', '9')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2023-11-19 08:51:21 --> Unknown column 'gs.id_siswa' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.status SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\'
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND tahun_ajaran = \'2023\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.status SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\'
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND tahun_ajaran = \'2023\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.status SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = \'9\'
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = \'5d784c9e-f35a-4654-9851-b94d22be6f1e\' 
+                    AND tahun_ajaran = \'2023\' 
+                    AND kelas = \'10\' 
+                    AND nama_rombel = \'X - 1\' 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis')
+ 4 APPPATH\Models\M_user.php(785): CodeIgniter\Database\BaseConnection->query('SELECT gs.*, g.*, n.*, GROUP_CONCAT(t.status SEPARATOR \', \') AS nilai_tp
+                FROM tb_siswa_sekolah gs
+                LEFT JOIN tb_siswa g ON g.nisn = gs.nisn
+                LEFT JOIN tb_nilai_siswa n ON n.nisn = gs.nisn AND n.id_tugas = :id_tugas:
+                LEFT JOIN tb_nilai_tp t ON t.id_nilai_siswa = n.id
+                WHERE gs.id_sekolah = :id_sekolah: 
+                    AND tahun_ajaran = :tahun_ajaran: 
+                    AND kelas = :kelas: 
+                    AND nama_rombel = :rombel: 
+                GROUP BY n.id_tugas, gs.id_siswa
+                ORDER BY kelas, nis', [...])
+ 5 APPPATH\Controllers\Nilai.php(43): App\Models\M_user->getDaftarnilai('5d784c9e-f35a-4654-9851-b94d22be6f1e', '2023', '10', 'X - 1', '9')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2023-11-19 08:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 08:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:03:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 09:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 20:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:03:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:04:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 21:59:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:02:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 22:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 23:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-19 23:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
