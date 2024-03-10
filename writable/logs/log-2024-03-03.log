@@ -1,0 +1,2386 @@
+INFO - 2024-03-03 06:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-03 06:19:19 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 536, false, 302.2917503333333)
+ 3 APPPATH\Controllers\Nilai.php(270): TCPDF->writeHTML('<!-- DEBUG-VIEW START 2 APPPATH\\Views\\v_nilai_rapor.php -->
+<!-- DEBUG-VIEW START 1 APPPATH\\Views\\layout\\layout_default.php -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Sekolah</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/s_umum.css?v1.1">
+    <link rel="stylesheet" href="http://localhost:8080/css/mystyle.css?v1.1">
+    
+<style>
+    .rapor_container {
+        max-width: 700px;
+        width: 100%;
+        border: 0.5px solid black;
+        margin: auto;
+        margin-bottom: 35px;
+        background-color: azure;
+    }
+
+    .kop_rapor {
+
+        width: 100%;
+        text-align: left;
+        margin: auto;
+        border-radius: 5px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .kop_rapor p {
+        line-height: 2px;
+    }
+
+    .judul_rapor {
+        line-height: 5px;
+    }
+
+    .nama_siswa {
+        padding-left: 8px;
+    }
+
+    .nama_siswa table tr td {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .daftar_nilai {
+        padding: 10px;
+    }
+
+    .daftar_nilai table tr td {
+        font-size: 14px;
+        line-height: 14px;
+        border: 0.5px solid black;
+        padding: 5px;
+    }
+
+    .daftar_nilai table tr:nth-child(n+3) td:nth-child(2) {
+        text-align: left;
+    }
+
+    .nama_siswa table tr td {
+        text-align: left;
+    }
+
+    .tb_container {
+        text-align: left !important;
+        width: 100%;
+        margin: auto;
+        padding-left: 10px;
+        padding-bottom: 25px;
+    }
+
+    .ok {
+        padding: 5px 5px;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #41B55C;
+        border: 0.5px solid darkgreen;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 25px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 100px;
+    }
+
+    .ketdanlaku {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ketdanlaku .daftar_nilai:nth-child(2) {
+        padding-right: 25px;
+    }
+
+    .catatan {
+        text-align: left;
+        padding: 10px;
+        font-size: smaller;
+        font-style: italic;
+    }
+
+    .tandatangan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .ortu {
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 45px;
+    }
+
+    .wali {
+        text-align: left;
+        padding-right: 25px;
+    }
+
+    #pilsemester {
+        width: 220px;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+</style>
+</style>
+<link rel="stylesheet" href="http://localhost:8080/css/s_presensi.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <link rel="icon" href="http://localhost:8080/images/icon.png" type="image/gif" sizes="16x16">
+    <script src="http://localhost:8080/js/jquery.min.js"></script>
+</head>
+
+<body>
+            <div class="judul">
+            <h1>Selamat Pagi</h1>
+            <h2>Pak Guru 2</h2>
+            <button onclick="keluar();">Logout</button>
+        </div>
+    
+    
+            <div class="dkelas">
+            <div class="back-button">
+                <a href="/home"><img src="/assets/back.png" alt="back"></a>
+            </div>
+            <div class="center">
+                <div style="margin-left:0px;"><img src="/assets/nilai.png" alt="Ikon"></div>
+                <div class="judul_menu">&nbsp;Nilai</div>
+            </div>
+        </div>
+    
+
+    
+
+<h2>RAPOR SISWA</h2>
+<select name="pilsemester" id="pilsemester">
+    <option  value="midganjil">TENGAH SEMESTER GANJIL</option>
+    <option  value="raporganjil">AKHIR SEMESTER GANJIL</option>
+    <option  value="midgenap">TENGAH SEMESTER GENAP</option>
+    <option selected value="raporgenap">AKHIR SEMESTER GENAP</option>
+</select>
+
+<div style="font-size:16px;margin-bottom:15px;color: white">Nama Siswa
+    <select style="font-size: 16px;" name="daftarsiswa" id="daftarsiswa">
+                    <option selected value="5022">Siswa 31</option>
+                    <option  value="5023">Siswa 32</option>
+                    <option  value="5024">Siswa 33</option>
+                    <option  value="5025">Siswa 34</option>
+            </select>
+</div>
+
+<div class="rapor_container">
+    <div class="kop_rapor">
+        <p>PEMERINTAH BANTEN</p><p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+            <p>SMA NEGERI 9</p><p><span style=\'font-size:10px\'>Jalan Pinang Raya No. 9 , Cipondoh</span></p>
+            <p><span style=\'font-size:10px\'>Telp. 021 57772345 Email: sman9tangerangn@gmail.com</span></p>    </div>
+    <hr style="border: 0.5px solid #111;  width:680px;">
+    <div class="judul_rapor">
+        <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
+        <p>AKHIR SEMESTER GENAP</p>
+        <p>TAHUN PELAJARAN 2023/2024</p>
+    </div>
+    <div class="nama_siswa">
+        <table>
+            <tr>
+                <td style="width:80px">N a m a</td>
+                <td style="width:10px;">:</td>
+                <td style="width:200px;">Siswa 31</td>
+            </tr>
+            <tr>
+                <td>NIS / NISN</td>
+                <td>:</td>
+                <td>5022 / 2001000031</td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td>:</td>
+                <td>X-1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="daftar_nilai">
+        <table>
+            <tr>
+                <td rowspan="2" style="width:30px;"><b>No</b></td>
+                <td rowspan="2" style="width:450px;"><b>Mata Pelajaran</b></td>
+                <td colspan="2" style="width:80px;"><b>Nilai Hasil Belajar</b></td>
+            </tr>
+            <tr>
+                                    <td style="width:40px;">1</td>
+                                    <td style="width:40px;">2</td>
+                            </tr>
+
+                                    <tr>
+                            <td><b>A.</b> </td>
+                            <td><b>MATA PELAJARAN UMUM</b></td>
+                            <td></td>
+                        </tr>
+                                            <tr>
+                            <td>1</td>
+                            <td>Pendidikan Agama Islam dan Budi Pekerti</td>
+                                                                <td>80</td>
+                                                                <td>85</td>
+                            
+                        </tr>
+                                        <tr>
+                        <td>2</td>
+                        <td>Pendidikan Pancasila</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>3</td>
+                        <td>Bahasa Indonesia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>4</td>
+                        <td>Matematika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>5</td>
+                        <td>Fisika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>6</td>
+                        <td>Kimia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>7</td>
+                        <td>Biologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>8</td>
+                        <td>Sosiologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>9</td>
+                        <td>Ekonomi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>10</td>
+                        <td>Sejarah</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>11</td>
+                        <td>Geografi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td>Bahasa Inggris</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>13</td>
+                        <td>Pendidikan Jasmani Olahraga dan Kesehatan</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>14</td>
+                        <td>Informatika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>15</td>
+                        <td>Seni dan Prakarya</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                    
+        </table>
+    </div>
+    <div class="ketdanlaku">
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KETIDAKHADIRAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:140px; text-align: center;"><b>Alasan</b></td>
+                    <td style="width:100px; text-align: center; "><b>Jumlah</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Sakit</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Ijin</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Tanpa Keterangan</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KEPRIBADIAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:150px; text-align: center;"><b>Aspek</b></td>
+                    <td style="width:100px; text-align: center; "><b>Keterangan</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Kelakuan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Kerajinan/kedisiplinan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Kerapihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">4</td>
+                    <td style="text-align: left;"> Kebersihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="catatan">
+        <b>Catatan :</b>
+        <br>
+        A = Istimewa &nbsp;&nbsp;&nbsp; B = Baik &nbsp;&nbsp;&nbsp; C = Cukup &nbsp;&nbsp;&nbsp; D = Kurang &nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="tandatangan">
+        <div class="ortu">
+            Orang Tua / Wali,
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+        </div>
+        <div class="wali">
+            Diberikan di: Tangerang<br>
+            Pada tanggal: 22 Juni 2024<br>
+            Wali Kelas,
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>Guru 2</b>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+            NIP. 200001012020011002        </div>
+    </div>
+    <div class="tb_container">
+        <button class="ok" onclick="cetak_rapor()">Cetak Rapor</button>
+    </div>
+</div>
+
+
+
+
+            <div class="alamat">
+            <p>&copy; 2023 Sawo 3 Production</p>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    var selectedKelas;
+    var awalpil;
+
+    function keluar() {
+        window.open(\'http://localhost:8080/login/logout\', \'_self\');
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script>
+    var selectedNIS = "5022";
+    var valkelas = "w1";
+
+    $(document).ready(function() {
+        //fetchNewData(selectedNIS);
+    });
+
+    $(\'#daftarsiswa\').on(\'change\', function() {
+        updatepilihan();
+    });
+
+    $(\'#pilsemester\').on(\'change\', function() {
+        updatepilihan();
+    });
+
+    function updatepilihan() {
+        selectedNIS = $(\'#daftarsiswa\').val();
+        selectedSemester = $(\'#pilsemester\').val();
+        window.open("http://localhost:8080/nilai?kelas=" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_self");
+    }
+
+    function cetak_rapor() {
+        var nis = document.getElementById(\'daftarsiswa\').value;
+        window.open("http://localhost:8080/buatrapor/raporPDF?kelas=" + valkelas + "&nis=" + nis, "_blank");
+    }
+
+    function fetchNewData(selectedNIS) {
+        fetch(\'http://localhost:8080/nilai/get_daftar_rapor_siswa?nis=\' + selectedNIS)
+            .then(response => response.json())
+            .then(data => {
+                updateTable(data);
+            })
+            .catch(error => console.error(\'Error:\', error));
+    }
+
+    function updateTable(newData) {
+        // var dataSet = [];
+        // var nislama = "";
+        // var nomor = 0;
+        // var ntp = 0;
+
+        // for (var i = 0; i < newData.length; i++) {
+        //     var data = newData[i];
+        //     snomor = ""
+        //     nama = "";
+        //     if (nislama != data.nis) {
+        //         nislama = data.nis;
+        //         ntp = 0;
+        //         nomor++;
+        //         snomor = nomor;
+        //         nama = data.nama;
+        //     }
+        //     ntp++;
+        //     stp = "IP-" + ntp;
+        //     dataSet.push([i + 1, snomor, data.nis, nama, data.jenis_kelamin, data.alamat, data.telp, stp, data.nilai]);
+        // }
+
+        // $(\'#data-table\').DataTable().destroy();
+
+        // $(\'#data-table\').DataTable({
+        //     language: {
+        //         url: \'//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json\',
+        //     },
+        //     "aLengthMenu": [
+        //         [15, -1],
+        //         [15, "All"]
+        //     ],
+        //     data: dataSet,
+        //     responsive: true,
+        //     columnDefs: [{
+        //             responsivePriority: 1,
+        //             targets: 0
+        //         },
+        //         {
+        //             responsivePriority: 3,
+        //             targets: 2
+        //         },
+        //         {
+        //             responsivePriority: 2,
+        //             targets: -1
+        //         }
+        //     ],
+        //     columns: [{
+        //             title: \'Indeks\'
+        //         }, {
+        //             title: \'No\'
+        //         }, {
+        //             title: \'NIS\'
+        //         },
+        //         {
+        //             title: \'Nama\',
+        //         },
+        //         {
+        //             title: \'Jenis Kelamin\'
+        //         },
+        //         {
+        //             title: \'Alamat\'
+        //         },
+        //         {
+        //             title: \'No. Telp\'
+        //         },
+        //         {
+        //             title: \'IP *\'
+        //         },
+        //         {
+        //             title: \'Nilai\',
+        //             render: function(data, type, row) {
+        //                 return \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="1" \' + (data === \'1\' ? \'checked\' : \'\') + \'>MB \' +
+        //                     \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="2" \' + (data === \'2\' ? \'checked\' : \'\') + \'>SB \' +
+        //                     \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="3" \' + (data === \'3\' ? \'checked\' : \'\') + \'>BSH \' +
+        //                     \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="4" \' + (data === \'4\' ? \'checked\' : \'\') + \'>SB\';
+        //             }
+        //         }
+        //     ]
+        // });
+    }
+
+    // document.getElementById(\'tb_update\').addEventListener(\'click\', function() {
+
+    //     var table = $(\'#data-table\').DataTable();
+    //     var dataToSend = [];
+    //     var pilihankelas = document.getElementById(\'daftarkelas\').value;
+
+    //     table.rows().every(function(rowIdx, tableLoop, rowLoop) {
+    //         var data = this.data();
+    //         var NIS = data[2];
+    //         var indikator = data[7];
+
+    //         var radioElement = document.querySelector(\'input[name="keterangan_\' + data[0] + \'"]:checked\');
+    //         var selectedValue = radioElement ? radioElement.value : \'0\';
+
+    //         dataToSend.push({
+    //             NIS: NIS,
+    //             nilai: selectedValue,
+    //             indikator: indikator.substring(3, 4),
+    //         });
+
+    //     });
+
+    //     var postData = {
+    //         pilihankelas: pilihankelas,
+    //         idekskul: idekskul,
+    //         dataToSend: dataToSend
+    //     };
+
+    //     // alert(JSON.stringify(postData));
+
+    //     fetch(\'\', {
+    //             method: \'POST\',
+    //             headers: {
+    //                 \'Content-Type\': \'application/json\',
+    //             },
+    //             body: JSON.stringify(postData)
+    //         })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             // alert(JSON.stringify(data));
+    //             $(\'#tb_update\').hide();
+    //             $(\'#info_update\').show();
+    //             setTimeout(function() {
+    //                 $(\'#info_update\').hide();
+    //             }, 2000);
+    //         })
+    //         .catch(error => console.error(\'Gagal menyimpan data:\', error));
+    // });
+
+    // $(\'#data-table\').on(\'draw.dt\', function() {
+    //     $(\'.rbut\').change(function() {
+    //         $(\'#tb_update\').show();
+    //         $(\'#info_update\').hide();
+    //     });
+    // });
+</script>
+
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\layout\\layout_default.php -->
+
+<!-- DEBUG-VIEW ENDED 2 APPPATH\\Views\\v_nilai_rapor.php -->
+', true, false, true, false, 'C')
+ 4 APPPATH\Controllers\Nilai.php(231): App\Controllers\Nilai->generatePdf('<!-- DEBUG-VIEW START 2 APPPATH\\Views\\v_nilai_rapor.php -->
+<!-- DEBUG-VIEW START 1 APPPATH\\Views\\layout\\layout_default.php -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Sekolah</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/s_umum.css?v1.1">
+    <link rel="stylesheet" href="http://localhost:8080/css/mystyle.css?v1.1">
+    
+<style>
+    .rapor_container {
+        max-width: 700px;
+        width: 100%;
+        border: 0.5px solid black;
+        margin: auto;
+        margin-bottom: 35px;
+        background-color: azure;
+    }
+
+    .kop_rapor {
+
+        width: 100%;
+        text-align: left;
+        margin: auto;
+        border-radius: 5px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .kop_rapor p {
+        line-height: 2px;
+    }
+
+    .judul_rapor {
+        line-height: 5px;
+    }
+
+    .nama_siswa {
+        padding-left: 8px;
+    }
+
+    .nama_siswa table tr td {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .daftar_nilai {
+        padding: 10px;
+    }
+
+    .daftar_nilai table tr td {
+        font-size: 14px;
+        line-height: 14px;
+        border: 0.5px solid black;
+        padding: 5px;
+    }
+
+    .daftar_nilai table tr:nth-child(n+3) td:nth-child(2) {
+        text-align: left;
+    }
+
+    .nama_siswa table tr td {
+        text-align: left;
+    }
+
+    .tb_container {
+        text-align: left !important;
+        width: 100%;
+        margin: auto;
+        padding-left: 10px;
+        padding-bottom: 25px;
+    }
+
+    .ok {
+        padding: 5px 5px;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #41B55C;
+        border: 0.5px solid darkgreen;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 25px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 100px;
+    }
+
+    .ketdanlaku {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ketdanlaku .daftar_nilai:nth-child(2) {
+        padding-right: 25px;
+    }
+
+    .catatan {
+        text-align: left;
+        padding: 10px;
+        font-size: smaller;
+        font-style: italic;
+    }
+
+    .tandatangan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .ortu {
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 45px;
+    }
+
+    .wali {
+        text-align: left;
+        padding-right: 25px;
+    }
+
+    #pilsemester {
+        width: 220px;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+</style>
+</style>
+<link rel="stylesheet" href="http://localhost:8080/css/s_presensi.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <link rel="icon" href="http://localhost:8080/images/icon.png" type="image/gif" sizes="16x16">
+    <script src="http://localhost:8080/js/jquery.min.js"></script>
+</head>
+
+<body>
+            <div class="judul">
+            <h1>Selamat Pagi</h1>
+            <h2>Pak Guru 2</h2>
+            <button onclick="keluar();">Logout</button>
+        </div>
+    
+    
+            <div class="dkelas">
+            <div class="back-button">
+                <a href="/home"><img src="/assets/back.png" alt="back"></a>
+            </div>
+            <div class="center">
+                <div style="margin-left:0px;"><img src="/assets/nilai.png" alt="Ikon"></div>
+                <div class="judul_menu">&nbsp;Nilai</div>
+            </div>
+        </div>
+    
+
+    
+
+<h2>RAPOR SISWA</h2>
+<select name="pilsemester" id="pilsemester">
+    <option  value="midganjil">TENGAH SEMESTER GANJIL</option>
+    <option  value="raporganjil">AKHIR SEMESTER GANJIL</option>
+    <option  value="midgenap">TENGAH SEMESTER GENAP</option>
+    <option selected value="raporgenap">AKHIR SEMESTER GENAP</option>
+</select>
+
+<div style="font-size:16px;margin-bottom:15px;color: white">Nama Siswa
+    <select style="font-size: 16px;" name="daftarsiswa" id="daftarsiswa">
+                    <option selected value="5022">Siswa 31</option>
+                    <option  value="5023">Siswa 32</option>
+                    <option  value="5024">Siswa 33</option>
+                    <option  value="5025">Siswa 34</option>
+            </select>
+</div>
+
+<div class="rapor_container">
+    <div class="kop_rapor">
+        <p>PEMERINTAH BANTEN</p><p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+            <p>SMA NEGERI 9</p><p><span style=\'font-size:10px\'>Jalan Pinang Raya No. 9 , Cipondoh</span></p>
+            <p><span style=\'font-size:10px\'>Telp. 021 57772345 Email: sman9tangerangn@gmail.com</span></p>    </div>
+    <hr style="border: 0.5px solid #111;  width:680px;">
+    <div class="judul_rapor">
+        <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
+        <p>AKHIR SEMESTER GENAP</p>
+        <p>TAHUN PELAJARAN 2023/2024</p>
+    </div>
+    <div class="nama_siswa">
+        <table>
+            <tr>
+                <td style="width:80px">N a m a</td>
+                <td style="width:10px;">:</td>
+                <td style="width:200px;">Siswa 31</td>
+            </tr>
+            <tr>
+                <td>NIS / NISN</td>
+                <td>:</td>
+                <td>5022 / 2001000031</td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td>:</td>
+                <td>X-1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="daftar_nilai">
+        <table>
+            <tr>
+                <td rowspan="2" style="width:30px;"><b>No</b></td>
+                <td rowspan="2" style="width:450px;"><b>Mata Pelajaran</b></td>
+                <td colspan="2" style="width:80px;"><b>Nilai Hasil Belajar</b></td>
+            </tr>
+            <tr>
+                                    <td style="width:40px;">1</td>
+                                    <td style="width:40px;">2</td>
+                            </tr>
+
+                                    <tr>
+                            <td><b>A.</b> </td>
+                            <td><b>MATA PELAJARAN UMUM</b></td>
+                            <td></td>
+                        </tr>
+                                            <tr>
+                            <td>1</td>
+                            <td>Pendidikan Agama Islam dan Budi Pekerti</td>
+                                                                <td>80</td>
+                                                                <td>85</td>
+                            
+                        </tr>
+                                        <tr>
+                        <td>2</td>
+                        <td>Pendidikan Pancasila</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>3</td>
+                        <td>Bahasa Indonesia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>4</td>
+                        <td>Matematika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>5</td>
+                        <td>Fisika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>6</td>
+                        <td>Kimia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>7</td>
+                        <td>Biologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>8</td>
+                        <td>Sosiologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>9</td>
+                        <td>Ekonomi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>10</td>
+                        <td>Sejarah</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>11</td>
+                        <td>Geografi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td>Bahasa Inggris</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>13</td>
+                        <td>Pendidikan Jasmani Olahraga dan Kesehatan</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>14</td>
+                        <td>Informatika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>15</td>
+                        <td>Seni dan Prakarya</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                    
+        </table>
+    </div>
+    <div class="ketdanlaku">
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KETIDAKHADIRAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:140px; text-align: center;"><b>Alasan</b></td>
+                    <td style="width:100px; text-align: center; "><b>Jumlah</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Sakit</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Ijin</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Tanpa Keterangan</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KEPRIBADIAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:150px; text-align: center;"><b>Aspek</b></td>
+                    <td style="width:100px; text-align: center; "><b>Keterangan</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Kelakuan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Kerajinan/kedisiplinan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Kerapihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">4</td>
+                    <td style="text-align: left;"> Kebersihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="catatan">
+        <b>Catatan :</b>
+        <br>
+        A = Istimewa &nbsp;&nbsp;&nbsp; B = Baik &nbsp;&nbsp;&nbsp; C = Cukup &nbsp;&nbsp;&nbsp; D = Kurang &nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="tandatangan">
+        <div class="ortu">
+            Orang Tua / Wali,
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+        </div>
+        <div class="wali">
+            Diberikan di: Tangerang<br>
+            Pada tanggal: 22 Juni 2024<br>
+            Wali Kelas,
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>Guru 2</b>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+            NIP. 200001012020011002        </div>
+    </div>
+    <div class="tb_container">
+        <button class="ok" onclick="cetak_rapor()">Cetak Rapor</button>
+    </div>
+</div>
+
+
+
+
+            <div class="alamat">
+            <p>&copy; 2023 Sawo 3 Production</p>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    var selectedKelas;
+    var awalpil;
+
+    function keluar() {
+        window.open(\'http://localhost:8080/login/logout\', \'_self\');
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script>
+    var selectedNIS = "5022";
+    var valkelas = "w1";
+
+    $(document).ready(function() {
+        //fetchNewData(selectedNIS);
+    });
+
+    $(\'#daftarsiswa\').on(\'change\', function() {
+        updatepilihan();
+    });
+
+    $(\'#pilsemester\').on(\'change\', function() {
+        updatepilihan();
+    });
+
+    function updatepilihan() {
+        selectedNIS = $(\'#daftarsiswa\').val();
+        selectedSemester = $(\'#pilsemester\').val();
+        window.open("http://localhost:8080/nilai?kelas=" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_self");
+    }
+
+    function cetak_rapor() {
+        var nis = document.getElementById(\'daftarsiswa\').value;
+        window.open("http://localhost:8080/buatrapor/raporPDF?kelas=" + valkelas + "&nis=" + nis, "_blank");
+    }
+
+    function fetchNewData(selectedNIS) {
+        fetch(\'http://localhost:8080/nilai/get_daftar_rapor_siswa?nis=\' + selectedNIS)
+            .then(response => response.json())
+            .then(data => {
+                updateTable(data);
+            })
+            .catch(error => console.error(\'Error:\', error));
+    }
+
+    function updateTable(newData) {
+        // var dataSet = [];
+        // var nislama = "";
+        // var nomor = 0;
+        // var ntp = 0;
+
+        // for (var i = 0; i < newData.length; i++) {
+        //     var data = newData[i];
+        //     snomor = ""
+        //     nama = "";
+        //     if (nislama != data.nis) {
+        //         nislama = data.nis;
+        //         ntp = 0;
+        //         nomor++;
+        //         snomor = nomor;
+        //         nama = data.nama;
+        //     }
+        //     ntp++;
+        //     stp = "IP-" + ntp;
+        //     dataSet.push([i + 1, snomor, data.nis, nama, data.jenis_kelamin, data.alamat, data.telp, stp, data.nilai]);
+        // }
+
+        // $(\'#data-table\').DataTable().destroy();
+
+        // $(\'#data-table\').DataTable({
+        //     language: {
+        //         url: \'//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json\',
+        //     },
+        //     "aLengthMenu": [
+        //         [15, -1],
+        //         [15, "All"]
+        //     ],
+        //     data: dataSet,
+        //     responsive: true,
+        //     columnDefs: [{
+        //             responsivePriority: 1,
+        //             targets: 0
+        //         },
+        //         {
+        //             responsivePriority: 3,
+        //             targets: 2
+        //         },
+        //         {
+        //             responsivePriority: 2,
+        //             targets: -1
+        //         }
+        //     ],
+        //     columns: [{
+        //             title: \'Indeks\'
+        //         }, {
+        //             title: \'No\'
+        //         }, {
+        //             title: \'NIS\'
+        //         },
+        //         {
+        //             title: \'Nama\',
+        //         },
+        //         {
+        //             title: \'Jenis Kelamin\'
+        //         },
+        //         {
+        //             title: \'Alamat\'
+        //         },
+        //         {
+        //             title: \'No. Telp\'
+        //         },
+        //         {
+        //             title: \'IP *\'
+        //         },
+        //         {
+        //             title: \'Nilai\',
+        //             render: function(data, type, row) {
+        //                 return \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="1" \' + (data === \'1\' ? \'checked\' : \'\') + \'>MB \' +
+        //                     \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="2" \' + (data === \'2\' ? \'checked\' : \'\') + \'>SB \' +
+        //                     \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="3" \' + (data === \'3\' ? \'checked\' : \'\') + \'>BSH \' +
+        //                     \'<input class="rbut" type="radio" name="keterangan_\' + row[0] + \'" value="4" \' + (data === \'4\' ? \'checked\' : \'\') + \'>SB\';
+        //             }
+        //         }
+        //     ]
+        // });
+    }
+
+    // document.getElementById(\'tb_update\').addEventListener(\'click\', function() {
+
+    //     var table = $(\'#data-table\').DataTable();
+    //     var dataToSend = [];
+    //     var pilihankelas = document.getElementById(\'daftarkelas\').value;
+
+    //     table.rows().every(function(rowIdx, tableLoop, rowLoop) {
+    //         var data = this.data();
+    //         var NIS = data[2];
+    //         var indikator = data[7];
+
+    //         var radioElement = document.querySelector(\'input[name="keterangan_\' + data[0] + \'"]:checked\');
+    //         var selectedValue = radioElement ? radioElement.value : \'0\';
+
+    //         dataToSend.push({
+    //             NIS: NIS,
+    //             nilai: selectedValue,
+    //             indikator: indikator.substring(3, 4),
+    //         });
+
+    //     });
+
+    //     var postData = {
+    //         pilihankelas: pilihankelas,
+    //         idekskul: idekskul,
+    //         dataToSend: dataToSend
+    //     };
+
+    //     // alert(JSON.stringify(postData));
+
+    //     fetch(\'\', {
+    //             method: \'POST\',
+    //             headers: {
+    //                 \'Content-Type\': \'application/json\',
+    //             },
+    //             body: JSON.stringify(postData)
+    //         })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             // alert(JSON.stringify(data));
+    //             $(\'#tb_update\').hide();
+    //             $(\'#info_update\').show();
+    //             setTimeout(function() {
+    //                 $(\'#info_update\').hide();
+    //             }, 2000);
+    //         })
+    //         .catch(error => console.error(\'Gagal menyimpan data:\', error));
+    // });
+
+    // $(\'#data-table\').on(\'draw.dt\', function() {
+    //     $(\'.rbut\').change(function() {
+    //         $(\'#tb_update\').show();
+    //         $(\'#info_update\').hide();
+    //     });
+    // });
+</script>
+
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\layout\\layout_default.php -->
+
+<!-- DEBUG-VIEW ENDED 2 APPPATH\\Views\\v_nilai_rapor.php -->
+')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-03 06:22:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-03 06:27:06 --> Undefined variable $namasiswa
+in APPPATH\Views\v_nilai_rapor_aja.php on line 175.
+ 1 APPPATH\Views\v_nilai_rapor_aja.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namasiswa', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor_aja.php', 175)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor_aja.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor_aja', [], true)
+ 5 APPPATH\Controllers\Nilai.php(229): view('v_nilai_rapor_aja', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-03 06:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-03 06:29:02 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 531, false, 302.2917503333333)
+ 3 APPPATH\Controllers\Nilai.php(271): TCPDF->writeHTML('<!-- DEBUG-VIEW START 2 APPPATH\\Views\\v_nilai_rapor_aja.php -->
+<!-- DEBUG-VIEW START 1 APPPATH\\Views\\layout\\layout_default.php -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Sekolah</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/s_umum.css?v1.1">
+    <link rel="stylesheet" href="http://localhost:8080/css/mystyle.css?v1.1">
+    
+<style>
+    .rapor_container {
+        max-width: 700px;
+        width: 100%;
+        border: 0.5px solid black;
+        margin: auto;
+        margin-bottom: 35px;
+        background-color: azure;
+    }
+
+    .kop_rapor {
+
+        width: 100%;
+        text-align: left;
+        margin: auto;
+        border-radius: 5px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .kop_rapor p {
+        line-height: 2px;
+    }
+
+    .judul_rapor {
+        line-height: 5px;
+    }
+
+    .nama_siswa {
+        padding-left: 8px;
+    }
+
+    .nama_siswa table tr td {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .daftar_nilai {
+        padding: 10px;
+    }
+
+    .daftar_nilai table tr td {
+        font-size: 14px;
+        line-height: 14px;
+        border: 0.5px solid black;
+        padding: 5px;
+    }
+
+    .daftar_nilai table tr:nth-child(n+3) td:nth-child(2) {
+        text-align: left;
+    }
+
+    .nama_siswa table tr td {
+        text-align: left;
+    }
+
+    .tb_container {
+        text-align: left !important;
+        width: 100%;
+        margin: auto;
+        padding-left: 10px;
+        padding-bottom: 25px;
+    }
+
+    .ok {
+        padding: 5px 5px;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #41B55C;
+        border: 0.5px solid darkgreen;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 25px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 100px;
+    }
+
+    .ketdanlaku {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ketdanlaku .daftar_nilai:nth-child(2) {
+        padding-right: 25px;
+    }
+
+    .catatan {
+        text-align: left;
+        padding: 10px;
+        font-size: smaller;
+        font-style: italic;
+    }
+
+    .tandatangan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .ortu {
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 45px;
+    }
+
+    .wali {
+        text-align: left;
+        padding-right: 25px;
+    }
+
+    #pilsemester {
+        width: 220px;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+</style>
+</style>
+<link rel="stylesheet" href="http://localhost:8080/css/s_presensi.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <link rel="icon" href="http://localhost:8080/images/icon.png" type="image/gif" sizes="16x16">
+    <script src="http://localhost:8080/js/jquery.min.js"></script>
+</head>
+
+<body>
+            <div class="judul">
+            <h1>Selamat Pagi</h1>
+            <h2>Pak Guru 2</h2>
+            <button onclick="keluar();">Logout</button>
+        </div>
+    
+    
+            <div class="dkelas">
+            <div class="back-button">
+                <a href="/home"><img src="/assets/back.png" alt="back"></a>
+            </div>
+            <div class="center">
+                <div style="margin-left:0px;"><img src="/assets/nilai.png" alt="Ikon"></div>
+                <div class="judul_menu">&nbsp;Nilai</div>
+            </div>
+        </div>
+    
+
+    
+
+<div style="font-size:16px;margin-bottom:15px;color: white">Nama Siswa
+    <select style="font-size: 16px;" name="daftarsiswa" id="daftarsiswa">
+                    <option selected value="5022">Siswa 31</option>
+                    <option  value="5023">Siswa 32</option>
+                    <option  value="5024">Siswa 33</option>
+                    <option  value="5025">Siswa 34</option>
+            </select>
+</div>
+
+<div class="rapor_container">
+    <div class="kop_rapor">
+        <p>PEMERINTAH BANTEN</p><p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+            <p>SMA NEGERI 9</p><p><span style=\'font-size:10px\'>Jalan Pinang Raya No. 9 , Cipondoh</span></p>
+            <p><span style=\'font-size:10px\'>Telp. 021 57772345 Email: sman9tangerangn@gmail.com</span></p>    </div>
+    <hr style="border: 0.5px solid #111;  width:680px;">
+    <div class="judul_rapor">
+        <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
+        <p>AKHIR SEMESTER GENAP</p>
+        <p>TAHUN PELAJARAN 2023/2024</p>
+    </div>
+    <div class="nama_siswa">
+        <table>
+            <tr>
+                <td style="width:80px">N a m a</td>
+                <td style="width:10px;">:</td>
+                <td style="width:200px;">Siswa 31</td>
+            </tr>
+            <tr>
+                <td>NIS / NISN</td>
+                <td>:</td>
+                <td>5022 / 2001000031</td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td>:</td>
+                <td>X-1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="daftar_nilai">
+        <table>
+            <tr>
+                <td rowspan="2" style="width:30px;"><b>No</b></td>
+                <td rowspan="2" style="width:450px;"><b>Mata Pelajaran</b></td>
+                <td colspan="2" style="width:80px;"><b>Nilai Hasil Belajar</b></td>
+            </tr>
+            <tr>
+                                    <td style="width:40px;">1</td>
+                                    <td style="width:40px;">2</td>
+                            </tr>
+
+                                    <tr>
+                            <td><b>A.</b> </td>
+                            <td><b>MATA PELAJARAN UMUM</b></td>
+                            <td></td>
+                        </tr>
+                                            <tr>
+                            <td>1</td>
+                            <td>Pendidikan Agama Islam dan Budi Pekerti</td>
+                                                                <td>80</td>
+                                                                <td>85</td>
+                            
+                        </tr>
+                                        <tr>
+                        <td>2</td>
+                        <td>Pendidikan Pancasila</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>3</td>
+                        <td>Bahasa Indonesia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>4</td>
+                        <td>Matematika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>5</td>
+                        <td>Fisika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>6</td>
+                        <td>Kimia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>7</td>
+                        <td>Biologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>8</td>
+                        <td>Sosiologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>9</td>
+                        <td>Ekonomi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>10</td>
+                        <td>Sejarah</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>11</td>
+                        <td>Geografi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td>Bahasa Inggris</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>13</td>
+                        <td>Pendidikan Jasmani Olahraga dan Kesehatan</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>14</td>
+                        <td>Informatika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>15</td>
+                        <td>Seni dan Prakarya</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                    
+        </table>
+    </div>
+    <div class="ketdanlaku">
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KETIDAKHADIRAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:140px; text-align: center;"><b>Alasan</b></td>
+                    <td style="width:100px; text-align: center; "><b>Jumlah</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Sakit</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Ijin</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Tanpa Keterangan</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KEPRIBADIAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:150px; text-align: center;"><b>Aspek</b></td>
+                    <td style="width:100px; text-align: center; "><b>Keterangan</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Kelakuan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Kerajinan/kedisiplinan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Kerapihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">4</td>
+                    <td style="text-align: left;"> Kebersihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="catatan">
+        <b>Catatan :</b>
+        <br>
+        A = Istimewa &nbsp;&nbsp;&nbsp; B = Baik &nbsp;&nbsp;&nbsp; C = Cukup &nbsp;&nbsp;&nbsp; D = Kurang &nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="tandatangan">
+        <div class="ortu">
+            Orang Tua / Wali,
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+        </div>
+        <div class="wali">
+            Diberikan di: Tangerang<br>
+            Pada tanggal: 22 Juni 2024<br>
+            Wali Kelas,
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>Guru 2</b>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+            NIP. 200001012020011002        </div>
+    </div>
+    <div class="tb_container">
+        <button class="ok" onclick="cetak_rapor()">Cetak Rapor</button>
+    </div>
+</div>
+
+
+
+
+            <div class="alamat">
+            <p>&copy; 2023 Sawo 3 Production</p>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    var selectedKelas;
+    var awalpil;
+
+    function keluar() {
+        window.open(\'http://localhost:8080/login/logout\', \'_self\');
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\layout\\layout_default.php -->
+
+<!-- DEBUG-VIEW ENDED 2 APPPATH\\Views\\v_nilai_rapor_aja.php -->
+', true, false, true, false, 'C')
+ 4 APPPATH\Controllers\Nilai.php(232): App\Controllers\Nilai->generatePdf('<!-- DEBUG-VIEW START 2 APPPATH\\Views\\v_nilai_rapor_aja.php -->
+<!-- DEBUG-VIEW START 1 APPPATH\\Views\\layout\\layout_default.php -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Sekolah</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/s_umum.css?v1.1">
+    <link rel="stylesheet" href="http://localhost:8080/css/mystyle.css?v1.1">
+    
+<style>
+    .rapor_container {
+        max-width: 700px;
+        width: 100%;
+        border: 0.5px solid black;
+        margin: auto;
+        margin-bottom: 35px;
+        background-color: azure;
+    }
+
+    .kop_rapor {
+
+        width: 100%;
+        text-align: left;
+        margin: auto;
+        border-radius: 5px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-bottom: 0px;
+        font-size: 14px;
+    }
+
+    .kop_rapor p {
+        line-height: 2px;
+    }
+
+    .judul_rapor {
+        line-height: 5px;
+    }
+
+    .nama_siswa {
+        padding-left: 8px;
+    }
+
+    .nama_siswa table tr td {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .daftar_nilai {
+        padding: 10px;
+    }
+
+    .daftar_nilai table tr td {
+        font-size: 14px;
+        line-height: 14px;
+        border: 0.5px solid black;
+        padding: 5px;
+    }
+
+    .daftar_nilai table tr:nth-child(n+3) td:nth-child(2) {
+        text-align: left;
+    }
+
+    .nama_siswa table tr td {
+        text-align: left;
+    }
+
+    .tb_container {
+        text-align: left !important;
+        width: 100%;
+        margin: auto;
+        padding-left: 10px;
+        padding-bottom: 25px;
+    }
+
+    .ok {
+        padding: 5px 5px;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #41B55C;
+        border: 0.5px solid darkgreen;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 25px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 100px;
+    }
+
+    .ketdanlaku {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ketdanlaku .daftar_nilai:nth-child(2) {
+        padding-right: 25px;
+    }
+
+    .catatan {
+        text-align: left;
+        padding: 10px;
+        font-size: smaller;
+        font-style: italic;
+    }
+
+    .tandatangan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .ortu {
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 45px;
+    }
+
+    .wali {
+        text-align: left;
+        padding-right: 25px;
+    }
+
+    #pilsemester {
+        width: 220px;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+</style>
+</style>
+<link rel="stylesheet" href="http://localhost:8080/css/s_presensi.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+    <link rel="icon" href="http://localhost:8080/images/icon.png" type="image/gif" sizes="16x16">
+    <script src="http://localhost:8080/js/jquery.min.js"></script>
+</head>
+
+<body>
+            <div class="judul">
+            <h1>Selamat Pagi</h1>
+            <h2>Pak Guru 2</h2>
+            <button onclick="keluar();">Logout</button>
+        </div>
+    
+    
+            <div class="dkelas">
+            <div class="back-button">
+                <a href="/home"><img src="/assets/back.png" alt="back"></a>
+            </div>
+            <div class="center">
+                <div style="margin-left:0px;"><img src="/assets/nilai.png" alt="Ikon"></div>
+                <div class="judul_menu">&nbsp;Nilai</div>
+            </div>
+        </div>
+    
+
+    
+
+<div style="font-size:16px;margin-bottom:15px;color: white">Nama Siswa
+    <select style="font-size: 16px;" name="daftarsiswa" id="daftarsiswa">
+                    <option selected value="5022">Siswa 31</option>
+                    <option  value="5023">Siswa 32</option>
+                    <option  value="5024">Siswa 33</option>
+                    <option  value="5025">Siswa 34</option>
+            </select>
+</div>
+
+<div class="rapor_container">
+    <div class="kop_rapor">
+        <p>PEMERINTAH BANTEN</p><p>DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+            <p>SMA NEGERI 9</p><p><span style=\'font-size:10px\'>Jalan Pinang Raya No. 9 , Cipondoh</span></p>
+            <p><span style=\'font-size:10px\'>Telp. 021 57772345 Email: sman9tangerangn@gmail.com</span></p>    </div>
+    <hr style="border: 0.5px solid #111;  width:680px;">
+    <div class="judul_rapor">
+        <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
+        <p>AKHIR SEMESTER GENAP</p>
+        <p>TAHUN PELAJARAN 2023/2024</p>
+    </div>
+    <div class="nama_siswa">
+        <table>
+            <tr>
+                <td style="width:80px">N a m a</td>
+                <td style="width:10px;">:</td>
+                <td style="width:200px;">Siswa 31</td>
+            </tr>
+            <tr>
+                <td>NIS / NISN</td>
+                <td>:</td>
+                <td>5022 / 2001000031</td>
+            </tr>
+            <tr>
+                <td>Kelas</td>
+                <td>:</td>
+                <td>X-1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="daftar_nilai">
+        <table>
+            <tr>
+                <td rowspan="2" style="width:30px;"><b>No</b></td>
+                <td rowspan="2" style="width:450px;"><b>Mata Pelajaran</b></td>
+                <td colspan="2" style="width:80px;"><b>Nilai Hasil Belajar</b></td>
+            </tr>
+            <tr>
+                                    <td style="width:40px;">1</td>
+                                    <td style="width:40px;">2</td>
+                            </tr>
+
+                                    <tr>
+                            <td><b>A.</b> </td>
+                            <td><b>MATA PELAJARAN UMUM</b></td>
+                            <td></td>
+                        </tr>
+                                            <tr>
+                            <td>1</td>
+                            <td>Pendidikan Agama Islam dan Budi Pekerti</td>
+                                                                <td>80</td>
+                                                                <td>85</td>
+                            
+                        </tr>
+                                        <tr>
+                        <td>2</td>
+                        <td>Pendidikan Pancasila</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>3</td>
+                        <td>Bahasa Indonesia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>4</td>
+                        <td>Matematika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>5</td>
+                        <td>Fisika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>6</td>
+                        <td>Kimia</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>7</td>
+                        <td>Biologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>8</td>
+                        <td>Sosiologi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>9</td>
+                        <td>Ekonomi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>10</td>
+                        <td>Sejarah</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>11</td>
+                        <td>Geografi</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>12</td>
+                        <td>Bahasa Inggris</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>13</td>
+                        <td>Pendidikan Jasmani Olahraga dan Kesehatan</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>14</td>
+                        <td>Informatika</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                                        <tr>
+                        <td>15</td>
+                        <td>Seni dan Prakarya</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                            </tr>
+                    
+        </table>
+    </div>
+    <div class="ketdanlaku">
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KETIDAKHADIRAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:140px; text-align: center;"><b>Alasan</b></td>
+                    <td style="width:100px; text-align: center; "><b>Jumlah</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Sakit</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Ijin</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Tanpa Keterangan</td>
+                    <td style="text-align: center; ">- hari</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+        <div class="daftar_nilai">
+            <table>
+                <tr>
+                    <td colspan="3"><b>KEPRIBADIAN</b></td>
+                </tr>
+                <tr>
+                    <td style="width:30px; text-align:center;"><b>No</b></td>
+                    <td style="width:150px; text-align: center;"><b>Aspek</b></td>
+                    <td style="width:100px; text-align: center; "><b>Keterangan</b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">1</td>
+                    <td style="text-align: left;"> Kelakuan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">2</td>
+                    <td style="text-align: left;"> Kerajinan/kedisiplinan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">3</td>
+                    <td style="text-align: left;"> Kerapihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">4</td>
+                    <td style="text-align: left;"> Kebersihan</td>
+                    <td style="text-align: center; ">-</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="catatan">
+        <b>Catatan :</b>
+        <br>
+        A = Istimewa &nbsp;&nbsp;&nbsp; B = Baik &nbsp;&nbsp;&nbsp; C = Cukup &nbsp;&nbsp;&nbsp; D = Kurang &nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="tandatangan">
+        <div class="ortu">
+            Orang Tua / Wali,
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+        </div>
+        <div class="wali">
+            Diberikan di: Tangerang<br>
+            Pada tanggal: 22 Juni 2024<br>
+            Wali Kelas,
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>Guru 2</b>
+            <hr style=\'width:200px;text-align: left;border:0.5px solid black;margin-left:0\'>
+            NIP. 200001012020011002        </div>
+    </div>
+    <div class="tb_container">
+        <button class="ok" onclick="cetak_rapor()">Cetak Rapor</button>
+    </div>
+</div>
+
+
+
+
+            <div class="alamat">
+            <p>&copy; 2023 Sawo 3 Production</p>
+        </div>
+    </body>
+
+</html>
+
+<script>
+    var selectedKelas;
+    var awalpil;
+
+    function keluar() {
+        window.open(\'http://localhost:8080/login/logout\', \'_self\');
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\layout\\layout_default.php -->
+
+<!-- DEBUG-VIEW ENDED 2 APPPATH\\Views\\v_nilai_rapor_aja.php -->
+')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-03 06:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:46:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:46:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:49:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 06:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 07:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 07:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 07:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 07:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:28:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-03 09:34:38 --> Trying to access array offset on value of type null
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 7463.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(7463): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 7463)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(20127): TCPDF->Ln(0, true)
+ 3 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19233): TCPDF->addHTMLVertSpace(0, 0, true, false)
+ 4 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18446): TCPDF->openHTMLTagHandler([...], 179, true)
+ 5 APPPATH\Controllers\Buatrapor.php(220): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:490px;"></td>
+                    <td colspan="1" style="width:40px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    <td style="width:40px; text-align: center;">1</td>
+                </tr><tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:490px;"></td>
+                    <td colspan="1" style="width:40px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Hindu dan Budi Pekerti</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Sejarah</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Seni dan Budaya</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Fisika</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Informatika</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Matematika tingkat lanjut</td>
+                                <td style="text-align: center;"></td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-03 09:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-03 09:36:59 --> syntax error, unexpected token ")"
+in APPPATH\Controllers\Buatrapor.php on line 156.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\laragon\\www\\sim\\app\\Controllers\\Buatrapor.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Buatrapor')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Buatrapor')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Buatrapor', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-03 09:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 09:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:35:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:35:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 12:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 13:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 17:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 18:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 18:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 18:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-03 18:04:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1308,7 +1308,7 @@ class Admin extends BaseController
         }
 
         // echo "<pre>";
-        // echo var_dump($daftar_rombel);
+        // echo var_dump($daftar_kelas);
         // echo "</pre>";
 
         $data['sekolah'] = $datasekolah;
@@ -1799,6 +1799,7 @@ class Admin extends BaseController
         $data['kelas'] = $dataProjek['kelas'];
         $data['id_tema'] = $dataProjek['id_tema'];
         $data['nama_projek'] = $dataProjek['nama_projek'];
+        $data['tahun_ajaran'] = tahun_ajaran();
         $data['deskripsi_projek'] = $dataProjek['deskripsi_projek'];
 
         $simpandata = $this->M_sekolah->simpan_projek($data, "add");
@@ -1849,9 +1850,10 @@ class Admin extends BaseController
         $data['id_sekolah'] = $id_sekolah;
         $data['id_projek'] = $dataProjek['id_projek'];
 
-        $hapusdata = $this->M_sekolah->hapus_projek($data);
+        $hapusdata1 = $this->M_sekolah->hapus_projek($data);
+        $hapusdata2 = $this->M_sekolah->hapus_dimensi_projek($data);
 
-        if ($hapusdata)
+        if ($hapusdata2)
             $response = ['pesan' => "Berhasil"];
         else
             $response = ['pesan' => "Gagal Menghapus"];
@@ -2092,6 +2094,33 @@ class Admin extends BaseController
 
         $response = ['message' => "Berhasil diupdate"];
         return $this->response->setJSON($response);
+    }
+
+    public function bobot_nilai()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $info_sekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
+        $bobot_tes = $info_sekolah['bobot_tes'];
+        $data['sekolah'] = $datasekolah;
+        $data['bobot_tes'] = $bobot_tes;
+        $data['nama_user'] = session()->get('nama_user');
+        $data['tahun_ajaran'] = tahun_ajaran();
+
+        return view('v_admin_bobot_nilai', $data);
+    }
+
+    public function simpan_bobot_nilai()
+    {
+        $id_sekolah = session()->get('id_sekolah');
+
+        $tahun_ajaran = $this->request->getPost('tahunajaran');
+        $bobot_nilai = $this->request->getPost('bobotnilai');
+        $this->M_sekolah->simpanBobotNilai($id_sekolah, $tahun_ajaran, $bobot_nilai);
+        return redirect()->to("/admin/bobot_nilai");
     }
 
     public function kop_rapor()
@@ -2367,5 +2396,27 @@ class Admin extends BaseController
         $data['sub_kelas'] = 'B';
         $data['nama_mapel'] = $nama_mapel;
         $simpandata = $this->M_sekolah->tambah_mapelpilihan($data);
+    }
+
+    public function jadwal_ujian()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $this->cekdaftarmapel();
+
+        $id_sekolah = session()->get('id_sekolah');
+        $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
+        $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
+        $jenjang = $dataadmin['jenjang'];
+        $daftar_kelas = kelasdarijenjang($jenjang);
+        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
+        $data['sekolah'] = $datasekolah;
+        $data['tahun_ajaran'] = tahun_ajaran('lengkap');
+        $data['nama_user'] = session()->get('nama_user');
+        $data['daftar_kelas'] = $daftar_kelas;
+        $data['daftar_mapel'] = $daftar_mapel;
+
+        return view('v_admin_jadwal_ujian', $data);
     }
 }

@@ -507,7 +507,7 @@
             <div id="tb_update" style="display: none;"><button class="tbok">Update Presensi</button></div>
             <div id="info_update" class="info" style="display: none;">Data Tersimpan</div>
         </div>
-        <div>
+        <div style="display: none;">
             <button onclick="rekappresensi();" class="rekap">REKAP DATA PRESENSI SISWA</button>
         </div>
 

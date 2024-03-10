@@ -1,0 +1,819 @@
+CRITICAL - 2024-02-29 10:11:34 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 17, true, 122.4479196666667)
+ 3 APPPATH\Controllers\Buatrapor.php(204): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:530px;"></td>
+                    <td colspan="0" style="width:0px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Islam dan Budi Pekerti</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Fisika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Kimia</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Biologi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Sosiologi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Ekonomi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Sejarah</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Geografi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="padding-left: 5px;"> Informatika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="padding-left: 5px;"> Seni dan Prakarya</td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-02-29 10:11:43 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 17, true, 122.4479196666667)
+ 3 APPPATH\Controllers\Buatrapor.php(204): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:530px;"></td>
+                    <td colspan="0" style="width:0px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Islam dan Budi Pekerti</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Fisika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Kimia</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Biologi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Sosiologi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Ekonomi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Sejarah</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Geografi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="padding-left: 5px;"> Informatika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="padding-left: 5px;"> Seni dan Prakarya</td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:12:34 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 17, true, 122.4479196666667)
+ 3 APPPATH\Controllers\Buatrapor.php(204): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:530px;"></td>
+                    <td colspan="0" style="width:0px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Islam dan Budi Pekerti</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Fisika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Kimia</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Biologi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Sosiologi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Ekonomi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Sejarah</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Geografi</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="padding-left: 5px;"> Informatika</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="padding-left: 5px;"> Seni dan Prakarya</td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:21:41 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 17, true, 122.4479196666667)
+ 3 APPPATH\Controllers\Buatrapor.php(212): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:530px;"></td>
+                    <td colspan="0" style="width:0px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Islam dan Budi Pekerti</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Fisika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Kimia</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Biologi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Sosiologi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Ekonomi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Sejarah</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Geografi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="padding-left: 5px;"> Informatika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="padding-left: 5px;"> Seni dan Prakarya</td><td>-</td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:25:59 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 17, true, 122.4479196666667)
+ 3 APPPATH\Controllers\Buatrapor.php(212): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:530px;"></td>
+                    <td colspan="0" style="width:0px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Islam dan Budi Pekerti</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Fisika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Kimia</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Biologi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Sosiologi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Ekonomi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Sejarah</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Geografi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="padding-left: 5px;"> Informatika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="padding-left: 5px;"> Seni dan Prakarya</td><td>-</td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:27:52 --> Undefined array key "startcolumn"
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 19676.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(19676): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "startcolumn"', 'D:\\laragon\\www\\sim\\vendor\\tecnickcom\\tcpdf\\tcpdf.php', 19676)
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(18451): TCPDF->closeHTMLTagHandler([...], 17, true, 101.28125166666669)
+ 3 APPPATH\Controllers\Buatrapor.php(213): TCPDF->writeHTML('
+            <table border="1">
+                <tr>
+                    <td rowspan="2" style="width:30px;"></td>
+                    <td rowspan="2" style="width:490px;"></td>
+                    <td colspan="1" style="width:40px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                        <tr>
+                            <td style="text-align: center;">1</td>
+                            <td style="padding-left: 5px;"> Pendidikan Agama Islam dan Budi Pekerti</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">2</td>
+                            <td style="padding-left: 5px;"> Pendidikan Pancasila</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">3</td>
+                            <td style="padding-left: 5px;"> Bahasa Indonesia</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">4</td>
+                            <td style="padding-left: 5px;"> Matematika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">5</td>
+                            <td style="padding-left: 5px;"> Fisika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">6</td>
+                            <td style="padding-left: 5px;"> Kimia</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">7</td>
+                            <td style="padding-left: 5px;"> Biologi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">8</td>
+                            <td style="padding-left: 5px;"> Sosiologi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">9</td>
+                            <td style="padding-left: 5px;"> Ekonomi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="padding-left: 5px;"> Sejarah</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">11</td>
+                            <td style="padding-left: 5px;"> Geografi</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">12</td>
+                            <td style="padding-left: 5px;"> Bahasa Inggris</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">13</td>
+                            <td style="padding-left: 5px;"> Pendidikan Jasmani Olahraga dan Kesehatan</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">14</td>
+                            <td style="padding-left: 5px;"> Informatika</td><td>-</td>                           
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align: center;">15</td>
+                            <td style="padding-left: 5px;"> Seni dan Prakarya</td><td>-</td>                           
+                        </tr>
+                        </table><br>', true, false, true, true, 'L')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:35:18 --> Undefined array key "nip"
+in APPPATH\Controllers\Buatrapor.php on line 66.
+ 1 APPPATH\Controllers\Buatrapor.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nip"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Buatrapor.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Buatrapor->raporPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buatrapor))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:36:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:40:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:54:35 --> Undefined array key 1
+in APPPATH\Controllers\Agenda.php on line 30.
+ 1 APPPATH\Controllers\Agenda.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Agenda.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 10:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 10:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 10:55:03 --> Undefined array key 1
+in APPPATH\Controllers\Agenda.php on line 30.
+ 1 APPPATH\Controllers\Agenda.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Agenda.php', 30)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 11:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 11:00:02 --> Undefined array key 1
+in APPPATH\Controllers\Agenda.php on line 31.
+ 1 APPPATH\Controllers\Agenda.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Agenda.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 11:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 11:01:59 --> Undefined array key 1
+in APPPATH\Controllers\Agenda.php on line 31.
+ 1 APPPATH\Controllers\Agenda.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Agenda.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 11:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 11:09:52 --> Undefined array key 1
+in APPPATH\Controllers\Agenda.php on line 93.
+ 1 APPPATH\Controllers\Agenda.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Agenda.php', 93)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Agenda->simpan_agenda_kelas()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:21:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 11:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 12:11:10 --> Undefined variable $tglmidganjil
+in APPPATH\Views\v_nilai_rapor.php on line 346.
+ 1 APPPATH\Views\v_nilai_rapor.php(346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tglmidganjil', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 346)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(200): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 12:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 12:47:01 --> Undefined variable $tglmidganjil
+in APPPATH\Views\v_nilai_rapor.php on line 346.
+ 1 APPPATH\Views\v_nilai_rapor.php(346): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tglmidganjil', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php', 346)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai_rapor.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai_rapor', [], true)
+ 5 APPPATH\Controllers\Nilai.php(200): view('v_nilai_rapor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 12:47:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 12:50:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 12:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 12:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 12:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 13:25:07 --> Undefined array key "tgl_akhir_ganjil"
+in APPPATH\Controllers\Nilai.php on line 144.
+ 1 APPPATH\Controllers\Nilai.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tgl_akhir_ganjil"', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 144)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 13:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-29 13:25:47 --> Array to string conversion
+in APPPATH\Controllers\Nilai.php on line 153.
+ 1 APPPATH\Controllers\Nilai.php(153): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 153)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 13:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-02-29 13:47:25 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Nilai.php on line 30.
+ 1 APPPATH\Controllers\Nilai.php(30): substr(null, 0, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-02-29 13:47:25 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Nilai.php on line 31.
+ 1 APPPATH\Controllers\Nilai.php(31): substr(null, 1, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-02-29 13:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-29 13:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

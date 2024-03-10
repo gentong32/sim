@@ -86,4 +86,35 @@ class Tugas extends BaseController
         $response = ['message' => "OK"];
         return $this->response->setJSON($response);
     }
+
+    public function hapus_tugas()
+    {
+        if (!khusususer())
+            return redirect()->to("/");
+
+        $id_user = session()->get('id_user');
+        $id_sekolah = session()->get('id_sekolah');
+        $dataTugas = json_decode(file_get_contents('php://input'), true);
+        $id_tugas = $dataTugas['id_tugas'];
+
+        $kelaspilihan = $dataTugas['valkelas'];
+        $data_saya = $this->M_user->get_data_guru($id_user);
+        $nuptk = $data_saya->nuptk;
+        $daftarkelasajar = $this->M_user->cekajarkelas($nuptk, $id_sekolah);
+        $idx = substr($kelaspilihan, 1, 1);
+        $id_guru_mapel = $daftarkelasajar[($idx) - 1]['id_guru_mapel'];
+
+        $datawhere = array();
+        $datawhere['id'] = $id_tugas;
+        $datawhere['id_guru_mapel'] = $id_guru_mapel;
+
+        $hapusdata = $this->M_sekolah->hapus_tugas($datawhere);
+
+        if ($hapusdata)
+            $response = ['pesan' => "Berhasil"];
+        else
+            $response = ['pesan' => "Gagal Menghapus"];
+
+        return $this->response->setJSON($response);
+    }
 }

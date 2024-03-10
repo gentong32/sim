@@ -73,22 +73,24 @@
     var semuaGE = document.querySelectorAll('.ge');
     var semuaWGLE = document.querySelectorAll('.wgle');
 
+    // <?php //if ($daftarkelaswali) {
+        //     echo "lastSelected = 'w1';\n";
+        // } else if ($daftarkelasajar) {
+        //     if ($daftarkelasajar > 0)
+        //         echo "lastSelected = 'g1';\n";
+        // } else if ($daftarkelasajarlain) {
+        //     if ($daftarkelasajarlain > 0)
+        //         echo "lastSelected = 'l1';\n";
+        // } else if ($daftarwaliekskul) {
+        //     if ($daftarwaliekskul > 0)
+        //         echo "lastSelected = 'e1';\n";
+        // } 
+        ?>
+
     <?php
     if ($sekolah_saya['nama'] != "") { ?>
         localStorage.setItem('namasekolahsaya', "<?= $sekolah_saya['nama'] ?>");
     <?php } ?>
-    <?php if ($daftarkelaswali) {
-        echo "selectedKelas = 'w1';\n";
-    } else if ($daftarkelasajar) {
-        if ($daftarkelasajar > 0)
-            echo "selectedKelas = 'g1';\n";
-    } else if ($daftarkelasajarlain) {
-        if ($daftarkelasajarlain > 0)
-            echo "selectedKelas = 'l1';\n";
-    } else if ($daftarwaliekskul) {
-        if ($daftarwaliekskul > 0)
-            echo "selectedKelas = 'e1';\n";
-    } ?>
 
     var lastSelected = localStorage.getItem('pilihsebagai<?= session()->get('id_user') ?>');
     if (lastSelected) {
@@ -100,32 +102,24 @@
             }
         });
 
-        if (lastSelected.substring(0, 1) == "w")
-            tampilkanw();
-        else if (lastSelected.substring(0, 1) == "g")
-            tampilkang();
-        else if (lastSelected.substring(0, 1) == "l")
-            tampilkanl();
-        else if (lastSelected.substring(0, 1) == "e")
-            tampilkane();
     } else {
         const radiobuttons = document.querySelectorAll('input[name="toggle"]');
 
         radiobuttons.forEach(radiobutton => {
             if (radiobutton.checked) {
-                awalpil = radiobutton.value;
+                lastSelected = radiobutton.value;
             }
         });
-
-        if (awalpil.substring(0, 1) == "w") {
-            tampilkanw();
-        } else if (awalpil.substring(0, 1) == "g")
-            tampilkang();
-        else if (awalpil.substring(0, 1) == "l")
-            tampilkanl();
-        else if (awalpil.substring(0, 1) == "e")
-            tampilkane();
     }
+
+    if (lastSelected.substring(0, 1) == "w")
+        tampilkanw();
+    else if (lastSelected.substring(0, 1) == "g")
+        tampilkang();
+    else if (lastSelected.substring(0, 1) == "l")
+        tampilkanl();
+    else if (lastSelected.substring(0, 1) == "e")
+        tampilkane();
 
     document.addEventListener('DOMContentLoaded', function() {
         var radiobuttons = document.querySelectorAll('input[type="radio"]');
@@ -133,15 +127,15 @@
         radiobuttons.forEach(function(radiobutton) {
             radiobutton.addEventListener('change', function() {
                 if (this.checked) {
-                    selectedKelas = this.value;
+                    lastSelected = this.value;
                     localStorage.setItem('pilihsebagai<?= session()->get('id_user') ?>', this.value);
-                    if (selectedKelas.substring(0, 1) == "w") {
+                    if (lastSelected.substring(0, 1) == "w") {
                         tampilkanw();
-                    } else if (selectedKelas.substring(0, 1) == "g")
+                    } else if (lastSelected.substring(0, 1) == "g")
                         tampilkang();
-                    else if (selectedKelas.substring(0, 1) == "l")
+                    else if (lastSelected.substring(0, 1) == "l")
                         tampilkanl();
-                    else if (selectedKelas.substring(0, 1) == "e")
+                    else if (lastSelected.substring(0, 1) == "e")
                         tampilkane();
                 }
             });
@@ -163,8 +157,8 @@
     function appendKelasToLink(menu) {
         var link = document.querySelector('.menu-item a[href="/' + menu + '"]');
 
-        if (selectedKelas) {
-            link.href += '?kelas=' + selectedKelas;
+        if (lastSelected) {
+            link.href += '?kelas=' + lastSelected;
         }
     }
 

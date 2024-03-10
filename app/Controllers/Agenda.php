@@ -26,12 +26,19 @@ class Agenda extends BaseController
         $idx = substr($kelaspilihan, 1, 1);
         $data_saya = $this->M_user->get_data_guru($id_user);
         $nuptk = $data_saya->nuptk;
-        $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
-        $id_rombel = $daftarkelaswali[($idx) - 1]['id'];
+        $sebagai = substr($kelaspilihan, 0, 1);
+        if ($sebagai == "w") {
+            $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
+            $id_rombel = $daftarkelaswali[($idx) - 1]['id'];
+            $nama_rombel = $daftarkelaswali[$idx - 1]['nama_rombel'];
+        } else if ($sebagai == "g") {
+            $daftarkelasajar = $this->M_user->cekajarkelas($nuptk, $id_sekolah);
+            $id_rombel = $daftarkelasajar[($idx) - 1]['id'];
+            $nama_rombel = $daftarkelasajar[$idx - 1]['nama_rombel'];
+        }
 
         $datakalender = $this->M_sekolah->getAgendaKelas($id_sekolah, $id_rombel);
 
-        $nama_rombel = $daftarkelaswali[$idx - 1]['nama_rombel'];
         $pesan = session()->getFlashdata('pesan');
         $data['pesan'] = $pesan;
         $data['id_user'] = $id_user;
@@ -52,7 +59,9 @@ class Agenda extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $datakalender = $this->M_sekolah->getAgenda($id_sekolah, tahun_ajaran());
+        $tahun_sekarang = date("Y");
+        $id_user = session()->get('id_user');
+        $datakalender = $this->M_sekolah->getAgendaAll($id_sekolah, $id_user, $tahun_sekarang);
         $data['sekolah'] = $datasekolah;
         $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
@@ -80,17 +89,25 @@ class Agenda extends BaseController
         $idx = substr($kelaspilihan, 1, 1);
         $data_saya = $this->M_user->get_data_guru($id_user);
         $nuptk = $data_saya->nuptk;
-        $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
-        $id_rombel = $daftarkelaswali[($idx) - 1]['id'];
+        $sebagai = substr($kelaspilihan, 0, 1);
+        if ($sebagai == "w") {
+            $daftarkelaswali = $this->M_user->cekwalikelas($nuptk, $id_sekolah);
+            $id_rombel = $daftarkelaswali[($idx) - 1]['id'];
+            $jenisagenda = "3";
+        } else if ($sebagai == "g") {
+            $daftarkelasajar = $this->M_user->cekajarkelas($nuptk, $id_sekolah);
+            $id_rombel = $daftarkelasajar[($idx) - 1]['id'];
+            $jenisagenda = "4";
+        }
 
         session()->setFlashdata('pesan', $bulan . "-" . $tahun);
 
         $tanggalnya = $tahun . "-" . (intval($bulan) + 1) . "-" . $tanggal;
 
         if ($addedit == "add")
-            $this->M_sekolah->tambah_agenda_kelas($id_sekolah, $tanggalnya, $agenda, "3", $id_rombel, $id_user);
+            $this->M_sekolah->tambah_agenda_kelas($id_sekolah, $tanggalnya, $agenda, $jenisagenda, $id_rombel, $id_user);
         else
-            $this->M_sekolah->update_agenda_kelas($id_sekolah, $tanggalnya, $agenda, "3", $id_rombel, $id_user);
+            $this->M_sekolah->update_agenda_kelas($id_sekolah, $tanggalnya, $agenda, $jenisagenda, $id_rombel, $id_user);
 
         return redirect()->to(base_url() . 'agenda?kelas=' . $kelaspilihan);
     }

@@ -104,6 +104,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding-bottom: 20px;
+        font-size: 14px;
     }
 
     .ortu {
@@ -116,6 +117,13 @@
         text-align: left;
         padding-right: 25px;
     }
+
+    #pilsemester {
+        width: 220px;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
 </style>
 </style>
 <link rel="stylesheet" href="<?= base_url() ?>css/s_presensi.css">
@@ -127,6 +135,9 @@
 <?= $this->section('konten') ?>
 
 <?php
+
+use function PHPUnit\Framework\isNull;
+
 $jumlah_s = "-";
 $jumlah_i = "-";
 $jumlah_a = "-";
@@ -150,6 +161,12 @@ if ($kepribadian) {
 ?>
 
 <h2><?= "RAPOR SISWA" ?></h2>
+<select name="pilsemester" id="pilsemester">
+    <option <?= ($pilihsemester == "midganjil") ? "selected" : "" ?> value="midganjil">TENGAH SEMESTER GANJIL</option>
+    <option <?= ($pilihsemester == "raporganjil") ? "selected" : "" ?> value="raporganjil">AKHIR SEMESTER GANJIL</option>
+    <option <?= ($pilihsemester == "midgenap") ? "selected" : "" ?> value="midgenap">TENGAH SEMESTER GENAP</option>
+    <option <?= ($pilihsemester == "raporgenap") ? "selected" : "" ?> value="raporgenap">AKHIR SEMESTER GENAP</option>
+</select>
 
 <div style="font-size:16px;margin-bottom:15px;color: white">Nama Siswa
     <select style="font-size: 16px;" name="daftarsiswa" id="daftarsiswa">
@@ -180,7 +197,7 @@ if ($kepribadian) {
     <hr style="border: 0.5px solid #111;  width:680px;">
     <div class="judul_rapor">
         <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
-        <p>TENGAH SEMESTER GANJIL</p>
+        <p><?= $judulsemester ?></p>
         <p>TAHUN PELAJARAN 2023/2024</p>
     </div>
     <div class="nama_siswa">
@@ -205,43 +222,61 @@ if ($kepribadian) {
 
     <div class="daftar_nilai">
         <table>
-            <tr>
-                <td rowspan="2" style="width:30px;"><b>No</b></td>
-                <td rowspan="2" style="width:450px;"><b>Mata Pelajaran</b></td>
-                <td colspan="<?= $maks_kolom ?>" style="width:<?= $maks_kolom * 40 ?>px;"><b>Nilai Hasil Belajar</b></td>
+            <tr style="text-align: center;">
+                <td style="width:30px;"><b>No</b></td>
+                <td style="width:200px;"><b>Mata Pelajaran</b></td>
+                <td style="width:50px;"><b>Nilai Akhir</b></td>
+                <td style="width:340px;"><b>Capaian Kompetensi</b></td>
             </tr>
-            <tr>
-                <?php for ($a = 1; $a <= $maks_kolom; $a++) : ?>
-                    <td style="width:40px;"><?= $a ?></td>
-                <?php endfor ?>
-            </tr>
-
             <?php
             $nomor = 0;
+            $nomor2 = 0;
+            $sekali1 = 0;
+            $sekali2 = 0;
             foreach ($rapor_siswa as $row) :
                 if ($row['jenis'] == 0) {
+                    if ($sekali1 == 0 && $kelas >= 11) {
+                        $sekali1 = 1; ?>
+                        <tr>
+                            <td><b>A.</b> </td>
+                            <td colspan="3" style="text-align:left;width:582px;"><b>MATA PELAJARAN UMUM</b></td>
+                        </tr>
+                    <?php }
                     $string = $row['nama_mapel'];
                     $substring = $agamasiswa;
                     if (strstr($string, $substring)) {
                         $nomor++; ?>
                         <tr>
                             <td><?= $nomor ?></td>
-                            <td><?= $row['nama_mapel'] ?></td>
-                            <?php for ($a = 1; $a <= $maks_kolom; $a++) : ?>
-                                <td><?= (is_null($row['tugas_' . $a]) ? '' : $row['tugas_' . $a]) ?></td>
-                            <?php endfor ?>
-
+                            <td style="text-align: left;"><?= $row['nama_mapel'] ?></td>
+                            <td style="text-align: center;"><?= (!is_null($row['nilai_rata_rata']) ? round($row['nilai_rata_rata']) : "-") ?></td>
+                            <td style="text-align: left;"><?= (!is_Null($row['tujuan_pembelajaran_status'])) ? capaiannilai($row['tujuan_pembelajaran_status']) : "" ?></td>
                         </tr>
                     <?php }
-                } else {
+                } else if ($row['jenis'] == 1) {
                     $nomor++;
                     ?>
                     <tr>
                         <td><?= $nomor ?></td>
                         <td><?= $row['nama_mapel'] ?></td>
-                        <?php for ($a = 1; $a <= $maks_kolom; $a++) : ?>
-                            <td><?= (is_null($row['tugas_' . $a]) ? '' : $row['tugas_' . $a]) ?></td>
-                        <?php endfor ?>
+                        <td><?= $row['nilai_rata_rata'] ?></td>
+                        <td><?= $row['tujuan_pembelajaran_status'] ?></td>
+                    </tr>
+                    <?php } else if ($row['jenis'] == 2) {
+                    if ($sekali2 == 0) {
+                        $sekali2 = 1; ?>
+                        <tr>
+                            <td><b>B.</b></td>
+                            <td colspan="3" style="width:582px;"><b>MATA PELAJARAN PILIHAN</b></td>
+                        </tr>
+                    <?php }
+                    $nomor2++;
+                    ?>
+                    <tr>
+                        <td><?= $nomor2 ?></td>
+                        <td><?= $row['nama_mapel'] ?></td>
+                        <td><?= $row['nilai_rata_rata'] ?></td>
+                        <td><?= $row['tujuan_pembelajaran_status'] ?></td>
                     </tr>
             <?php }
             endforeach; ?>
@@ -333,7 +368,7 @@ if ($kepribadian) {
                             $tempat = str_replace('Kota ', '', $get_sekolah['kota']);
                             $tempat = str_replace('Kab. ', '', $tempat);
                             echo $tempat; ?><br>
-            Pada tanggal: <?= format_tanggal($tglmidganjil)['panjang'] ?><br>
+            Pada tanggal: <?= format_tanggal($tglakhir)['panjang'] ?><br>
             Wali Kelas,
             <br>
             <br>
@@ -341,7 +376,7 @@ if ($kepribadian) {
             <br>
             <b><?= $nama_wali ?></b>
             <hr style='width:200px;text-align: left;border:0.5px solid black;margin-left:0'>
-            NIP.
+            NIP. <?= $nip_wali ?>
         </div>
     </div>
     <div class="tb_container">
@@ -367,9 +402,18 @@ if ($kepribadian) {
     });
 
     $('#daftarsiswa').on('change', function() {
-        selectedNIS = $(this).val();
-        window.open("<?= base_url() . 'nilai?kelas=' ?>" + valkelas + "&nis=" + selectedNIS, "_self");
+        updatepilihan();
     });
+
+    $('#pilsemester').on('change', function() {
+        updatepilihan();
+    });
+
+    function updatepilihan() {
+        selectedNIS = $('#daftarsiswa').val();
+        selectedSemester = $('#pilsemester').val();
+        window.open("<?= base_url() . 'nilai?kelas=' ?>" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_self");
+    }
 
     function cetak_rapor() {
         var nis = document.getElementById('daftarsiswa').value;

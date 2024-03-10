@@ -519,9 +519,9 @@
             <div id="tb_update" style="display: none;"><button class="tbok">Update Nilai</button></div>
             <div id="info_update" class="info" style="display: none;">Data Tersimpan</div>
         </div>
-        <div>
+        <!-- <div>
             <button onclick="rekappresensi();" class="rekap">REKAP DATA NILAI EKSKUL SISWA</button>
-        </div>
+        </div> -->
     </div>
 <?php } else {
     echo "Silakan buat jadwal Tugas terlebih dahulu";
@@ -736,6 +736,7 @@
             var postData = {
                 pilihankelas: pilihankelas,
                 idekskul: idekskul,
+                semester: <?= $semester ?>,
                 dataToSend: dataToSend
             };
 

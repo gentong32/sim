@@ -183,7 +183,7 @@
 </div>
 <div id="guru" class="content_tab hiddent-content">
     <h2>Daftar Guru</h2>
-    <button onclick="tambahguru()" id="importButtonG" class="btn btn-tambah">Tambah Guru</button>
+    <button onclick="tambahguru()" class="btn btn-tambah">Tambah Guru</button>
     <table id="dataGuru" class="display">
         <thead>
             <tr>

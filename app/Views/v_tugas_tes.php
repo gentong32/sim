@@ -358,14 +358,15 @@
 
     .dtugas #tugas {
         height: 30px;
-        background: #e4eaf1;
+        background: #fff;
         box-shadow: 1px 1px darkgreen;
         color: black;
         padding-left: 7px;
         font-size: 16px;
     }
 
-    #dtgltugas {
+    #dtgltugas1,
+    #dtgltugas2 {
         height: 26px;
         background: #b5d0eb;
         box-shadow: 1px 1px darkgreen;
@@ -379,7 +380,8 @@
         width: 160px;
     }
 
-    #tbpiltgl {
+    #tbpiltgl1,
+    #tbpiltgl2 {
         height: 33px;
         display: inline-block;
         margin-top: 2px;
@@ -394,11 +396,27 @@
         display: flex;
         align-items: center;
         vertical-align: middle;
+        margin-top: -5px;
     }
 
     input::placeholder {
-        color: #999999;
+        color: #999;
+        background-color: #fff;
         font-style: italic;
+        border-color: #fff;
+    }
+
+    .select1 {
+        width: 200px;
+        font-size: 16px;
+        padding: 7px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        color: white;
     }
 </style>
 <?= $this->endSection() ?>
@@ -439,26 +457,45 @@
         </div>
 
         <div class="dtugas">
-            <label for="tugas">Untuk Tanggal</label><br>
-            <div id="dkaltb">
-                <div id="dtgltugas" style="display: inline-block;"></div>
-                <button onclick="tampilkal()" id="tbpiltgl"><img src="/assets/kalender.png" height="28px" alt=""></button>
-            </div>
-            <label for="tugas">Nama Tugas / Tes</label><br>
-            <input type="text" name="tugas" id="tugas" placeholder="mis. Ulangan 1" required>
+            <label for="jenis">Jenis</label><br>
+            <select class="select1" name="sjenis" id="sjenis">
+                <option value="1">Tes / Ulangan</option>
+                <option value="2">Tugas / PR</option>
+            </select>
 
-            <table class="tabel2" name="pilih_tp" id="pilih_tp">
-                <tr>
-                    <th>Tujuan Pembelajaran</th>
-                    <th>Pilih</th>
-                </tr>
-                <?php foreach ($daftar_tp as $data) : ?>
-                    <tr data-id="<?= $data->id ?>">
-                        <td><?= $data->tujuan_pembelajaran ?></td>
-                        <td><input type="checkbox"></td>
+            <br>
+            <label id="ltugas" for="tugas">Tanggal Pelaksanaan</label><br>
+            <div id="dkaltb">
+                <div id="dtgltugas1" style="display: inline-block;"></div>
+                <button onclick="tampilkal(1)" id="tbpiltgl1"><img src="/assets/kalender.png" height="28px" alt=""></button>
+            </div>
+
+            <label for="tugas">Nama Tugas / Tes</label><br>
+            <input type="text" name="tugas" id="tugas" placeholder="misal: Ulangan 1" required>
+            <br>
+
+            <div id="tgltujuan" style="display: none;">
+                <label for="tugas">Batas Pengumpulan Tugas / PR</label><br>
+                <div id="dkaltb">
+                    <div id="dtgltugas2" style="display: inline-block;"></div>
+                    <button onclick="tampilkal(2)" id="tbpiltgl2"><img src="/assets/kalender.png" height="28px" alt=""></button>
+                </div>
+            </div>
+
+            <div id="dtujuan">
+                <table class="tabel2" name="pilih_tp" id="pilih_tp">
+                    <tr>
+                        <th>Tujuan Pembelajaran</th>
+                        <th>Pilih</th>
                     </tr>
-                <?php endforeach ?>
-            </table>
+                    <?php foreach ($daftar_tp as $data) : ?>
+                        <tr data-id="<?= $data->id ?>">
+                            <td><?= $data->tujuan_pembelajaran ?></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
+            </div>
         </div>
 
         <button class="batal" id="tbbatal" onclick="batalinput()">Batal</button>
@@ -478,28 +515,37 @@ $tugas_lama = '';
         <th>Tanggal</th>
         <th>Nama Tugas / Tes</th>
         <th>Tujuan Pembelajaran</th>
-        <th>Tanggal Pengumpulan (Tugas / PR)</th>
         <th>Aksi</th>
     </tr>
 
-    <?php foreach ($daftar_tugas as $datarow) {
-        if ($datarow['id_tugas'] != $tugas_lama) {
+    <?php
+    $baris = 0;
+    foreach ($daftar_tugas as $datarow) {
+        $baris++;
+        $tanggalnya = substr($datarow['tanggal_tugas'], 8, 2) . " "
+            . $bulanpendek[intval(substr($datarow['tanggal_tugas'], 5, 2)) - 1] . " " . substr($datarow['tanggal_tugas'], 0, 4);
+        if ($tanggalnya != $tugas_lama) {
             echo "<tr style='border-top:1px solid #ddd'>";
-            $tugas_lama = $datarow['id_tugas'];
-            $tanggalnya = substr($datarow['tanggal_tugas'], 8, 2) . " "
-                . $bulanpendek[intval(substr($datarow['tanggal_tugas'], 5, 2)) - 1] . " " . substr($datarow['tanggal_tugas'], 0, 4);
+            $tugas_lama = $tanggalnya;
             echo "<td>" . $tanggalnya . "</td>";
-            echo "<td>" . $datarow['nama_tugas'] . "</td>";
         } else {
             echo "<tr>";
             echo "<td></td>";
-            echo "<td></td>";
         }
-        echo "<td>" . $datarow['tujuan_pembelajaran'] . "</td>";
-        $tanggalnya2 = substr($datarow['tanggal_tugas'], 8, 2) . " "
-            . $bulanpendek[intval(substr($datarow['tanggal_tugas'], 5, 2)) - 1] . " " . substr($datarow['tanggal_tugas'], 0, 4);
-        echo "<td>" . $tanggalnya2 . "</td>";
-        echo "<td><button onclick='hapustugas(" . $datarow['id'] . ")'>Hapus</button></td>";
+        echo "<td>" . $datarow['nama_tugas'] . "</td>";
+        if ($datarow['tujuan_pembelajaran'] == "") {
+            $tujuanpembelajaran = "-";
+        } else {
+            $tujuanpembelajaran = $datarow['tujuan_pembelajaran'];
+        }
+        echo "<td>" . $tujuanpembelajaran . "</td>";
+        // if ($datarow['tanggal_batas_tugas'] == null)
+        //     $tanggalnya2 = "-";
+        // else
+        //     $tanggalnya2 = substr($datarow['tanggal_batas_tugas'], 8, 2) . " "
+        //         . $bulanpendek[intval(substr($datarow['tanggal_batas_tugas'], 5, 2)) - 1] . " " . substr($datarow['tanggal_batas_tugas'], 0, 4);
+        // echo "<td>" . $tanggalnya2 . "</td>";
+        echo "<td><button onclick='hapustugas(this, " . $baris . "," . $datarow['id'] . ")'>Hapus</button></td>";
         echo "</tr>";
     }
     ?>
@@ -528,19 +574,80 @@ $tugas_lama = '';
     var selectedPilihan = 0;
     var selectedGuru = 0;
     var selectedMapel = 0;
+    var selectedKotakTanggal = 1;
+    var jenispil = 1;
 
     $(document).ready(function() {
         $('.js-example-basic-single').select2();
         todaykal(7);
     });
 
-    function tampilkal() {
+    document.getElementById('sjenis').addEventListener('change', function() {
+        jenispil = this.value;
+        if (jenispil == 1) {
+            document.getElementById('dtujuan').style.display = "block";
+            document.getElementById('ltugas').innerHTML = "Tanggal Pelaksanaan";
+            document.getElementById('tugas').placeholder = "misal: Ulangan 1";
+        } else {
+            document.getElementById('dtujuan').style.display = "block";
+            document.getElementById('ltugas').innerHTML = "Tanggal Pengumpulan Tugas";
+            document.getElementById('tugas').placeholder = "misal: PR hal. 1 - 3";
+        }
+    });
+
+    function getMonthAndYear(input) {
+        const parts = input.split(' '); // Memisahkan string berdasarkan spasi
+        const day = getMonthIndex(parts[0]); // Mendapatkan indeks bulan dari nama bulan
+        const month = getMonthIndex(parts[1]); // Mendapatkan indeks bulan dari nama bulan
+        const year = parseInt(parts[2]); // Mendapatkan tahun dalam bentuk angka
+
+        return {
+            day: day,
+            month: month,
+            year: year
+        };
+    }
+
+    function tampilkal(idx) {
+        selectedKotakTanggal = idx;
+
+        var tanggalterpilih = document.getElementById('dtgltugas' + idx).innerText;
+        if (tanggalterpilih == "")
+            tanggalterpilih = document.getElementById('dtgltugas1').innerText;
+        var bultah = getMonthAndYear(tanggalterpilih);
+
+        bulan = bultah.month;
+        tahun = bultah.year;
+
+        createCalendar(tahun, bulan);
         document.getElementById('overlayprojek').style.display = 'block';
         document.getElementById('formContainer').style.display = 'block';
     }
 
-    function hapustugas(id) {
-        alert(id);
+    function hapustugas(button, baris, id_tugas) {
+        if (confirm("Yakin mau menghapus tugas ini?")) {
+            var row = button.parentElement.parentElement;
+            var url = '<?= base_url() . "tugas/hapus_tugas" ?>';
+            var data = {
+                id_tugas: id_tugas,
+                valkelas: "<?= $valkelas ?>"
+            };
+
+            fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    row.remove();
+                })
+                .then()
+                .catch(error => console.error('Error:', error));
+
+        }
     }
 
     function batalkal() {
@@ -556,7 +663,7 @@ $tugas_lama = '';
         tahun = berikutnya.getFullYear();
         tglsaiki = tanggal + " " + getMonthName(bulan) + " " + tahun;
 
-        document.getElementById('dtgltugas').innerText = tglsaiki;
+        document.getElementById('dtgltugas1').innerText = tglsaiki;
 
         document.getElementById('overlayprojek').style.display = 'none';
         document.getElementById('formContainer').style.display = 'none';
@@ -568,7 +675,7 @@ $tugas_lama = '';
         tahun = thn
         tglsaiki = tanggal + " " + getMonthName(bulan) + " " + tahun;
 
-        document.getElementById('dtgltugas').innerText = tglsaiki;
+        document.getElementById('dtgltugas' + selectedKotakTanggal).innerText = tglsaiki;
 
         document.getElementById('overlayprojek').style.display = 'none';
         document.getElementById('formContainer').style.display = 'none';
@@ -745,6 +852,14 @@ $tugas_lama = '';
         return months[month];
     }
 
+    function getMonthIndex(monthName) {
+        const months = [
+            "Januari", "Pebruari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"
+        ];
+        return months.indexOf(monthName);
+    }
+
     $(document).ready(function() {
         var tglsaiki = today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate();
 
@@ -759,11 +874,13 @@ $tugas_lama = '';
 
     function ceksubmit() {
 
-        var isitanggal = document.getElementById('dtgltugas').innerHTML;
+        var isitanggal1 = document.getElementById('dtgltugas1').innerHTML;
+        // var isitanggal2 = document.getElementById('dtgltugas2').innerHTML;
         var isitugas = document.getElementById('tugas').value;
         var rows = document.getElementById('pilih_tp').getElementsByTagName('tr');
         var tpTerpilih = [];
         var jmlpilih = 0;
+        var valid = false;
 
         for (var i = 1; i < rows.length; i++) {
             var checkbox = rows[i].getElementsByTagName('input')[0];
@@ -776,7 +893,27 @@ $tugas_lama = '';
             }
         }
 
-        if (isitanggal != "" && isitugas != "" && jmlpilih > 0) {
+        pambiltanggal1 = getMonthAndYear(isitanggal1);
+
+        ktanggal1 = pambiltanggal1.day;
+        kbulan1 = pambiltanggal1.month;
+        ktahun1 = pambiltanggal1.year;
+
+        // pambiltanggal2 = getMonthAndYear(isitanggal2);
+
+        // ktanggal2 = pambiltanggal2.day;
+        // kbulan2 = pambiltanggal2.month;
+        // ktahun2 = pambiltanggal2.year;
+
+        if (jenispil == 1) {
+            if (isitanggal1 != "" && isitugas != "" && jmlpilih > 0)
+                valid = true;
+        } else {
+            if (isitanggal1 != "" && isitugas != "")
+                valid = true;
+        }
+
+        if (valid) {
             var url = '<?= base_url() . "tugas/simpan_tugas" ?>';
             var data = {
                 tanggaltugas: tahun + "/" + (bulan + 1) + "/" + tanggal,

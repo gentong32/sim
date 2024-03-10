@@ -57,6 +57,7 @@ $routes->post('/tujuan_pembelajaran/hapus_tj_pem_eks', 'Tujuanpembelajaran::hapu
 $routes->get('/tugas', 'Tugas::index');
 $routes->get('/tugas/get_tujuan_pembelajaran', 'Tugas::get_tujuan_pembelajaran');
 $routes->post('/tugas/simpan_tugas', 'Tugas::simpan_tugas');
+$routes->post('/tugas/hapus_tugas', 'Tugas::hapus_tugas');
 
 $routes->get('/nilai', 'Nilai::index');
 $routes->post('/nilai/simpan_nilai', 'Nilai::simpan_nilai');
@@ -67,6 +68,8 @@ $routes->get('/nilai/get_rombel/(:any)', 'Nilai::get_rombel/$1');
 $routes->get('/nilai/get_daftar_nilai_eks', 'Nilai::get_daftar_nilai_eks');
 $routes->post('/nilai/simpan_nilai_eks', 'Nilai::simpan_nilai_eks');
 $routes->get('/nilai/get_daftar_indikator_eks', 'Nilai::get_daftar_indikator_eks');
+
+$routes->get('/nilai/testabel', 'Nilai::testabel');
 
 $routes->get('/buatrapor/raporPDF', 'Buatrapor::raporPDF');
 
@@ -120,9 +123,11 @@ $routes->post('admin/update_rombel', 'Admin::update_rombel');
 $routes->post('admin/hapus_rombel', 'Admin::hapus_rombel');
 $routes->post('admin/get_rombel_mapel', 'Admin::get_rombel_mapel');
 $routes->post('admin/simpan_guru_mapel', 'Admin::simpan_guru_mapel');
+$routes->post('admin/hapus_mapel', 'Admin::hapus_mapel');
 $routes->post('admin/simpan_siswa_pindah', 'Admin::simpan_siswa_pindah');
 $routes->post('admin/simpan_projek', 'Admin::simpan_projek');
 $routes->post('admin/update_projek', 'Admin::update_projek');
+$routes->post('admin/hapus_projek', 'Admin::hapus_projek');
 $routes->post('admin/simpan_penilaian/(:any)', 'Admin::simpan_penilaian/$1');
 $routes->post('admin/simpan_ekskul', 'Admin::simpan_ekskul');
 $routes->post('admin/update_ekskul', 'Admin::update_ekskul');
@@ -131,6 +136,7 @@ $routes->post('admin/simpan_agenda', 'Admin::simpan_agenda');
 $routes->post('admin/hapus_agenda', 'Admin::hapus_agenda');
 $routes->post('admin/simpanKopRapor', 'Admin::simpanKopRapor');
 $routes->post('admin/simpan_mid', 'Admin::simpan_mid');
+$routes->post('admin/simpan_bobot_nilai', 'Admin::simpan_bobot_nilai');
 
 $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('/', 'Admin::index');
@@ -168,6 +174,7 @@ $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('agenda', 'Admin::agenda');
     $routes->get('list_agenda', 'Admin::list_agenda');
     $routes->get('kop_rapor', 'Admin::kop_rapor');
+    $routes->get('bobot_nilai', 'Admin::bobot_nilai');
     $routes->get('kalender_sekolah', 'Admin::kalender_sekolah');
     $routes->get('simpan_mid', 'Admin::simpan_mid');
     $routes->get('pengumuman', 'Admin::pengumuman');

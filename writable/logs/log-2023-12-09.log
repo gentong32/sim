@@ -1,0 +1,8 @@
+CRITICAL - 2023-12-09 11:17:05 --> Attempt to read property "nuptk" on null
+in APPPATH\Controllers\Nilai.php on line 401.
+ 1 APPPATH\Controllers\Nilai.php(401): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nuptk" on null', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 401)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->get_daftar_nilai_eks()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')

@@ -58,11 +58,53 @@ class Buatrapor extends BaseController
             $kop_rapor = $info_sekolah['kop_rapor'];
             $tglawalganjil = $infosekolah['tgl_awal_ganjil'];
             $tglmidganjil = $infosekolah['tgl_mid_ganjil'];
-            $absensi = $this->M_user->get_absensi($id_sekolah, $nisnsiswa, $tglawalganjil, $tglmidganjil);
+
+            $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
+
+            $awgj = $infosekolah['tgl_awal_ganjil'];
+            $mdgj = $infosekolah['tgl_mid_ganjil'];
+            $akgj = $infosekolah['tgl_rapor_ganjil'];
+            $awgn = $infosekolah['tgl_awal_genap'];
+            $mdgn = $infosekolah['tgl_mid_genap'];
+            $akgn = $infosekolah['tgl_rapor_genap'];
+
+            $pilihsemester = $this->request->getVar('semester');
+            if (!isset($pilihsemester)) {
+                $tg_sekarang = date("Y-m-d");
+                if ($tg_sekarang <= $akgn)
+                    $pilihsemester = "raporgenap";
+                if ($tg_sekarang <= $mdgn)
+                    $pilihsemester = "midgenap";
+                if ($tg_sekarang <= $akgj)
+                    $pilihsemester = "raporganjil";
+                if ($tg_sekarang <= $mdgj)
+                    $pilihsemester = "midganjil";
+            }
+
+            if ($pilihsemester == "midganjil") {
+                $tglawal = $awgj;
+                $tglakhir = $mdgj;
+                $judulsemester = "TENGAH SEMESTER GANJIL";
+            } else if ($pilihsemester == "raporganjil") {
+                $tglawal = $mdgj;
+                $tglakhir = $akgj;
+                $judulsemester = "AKHIR SEMESTER GANJIL";
+            } else if ($pilihsemester == "midgenap") {
+                $tglawal = $awgn;
+                $tglakhir = $mdgn;
+                $judulsemester = "TENGAH SEMESTER GENAP";
+            } else if ($pilihsemester == "raporgenap") {
+                $tglawal = $mdgn;
+                $tglakhir = $akgn;
+                $judulsemester = "AKHIR SEMESTER GENAP";
+            }
+
+            $absensi = $this->M_user->get_absensi($id_sekolah, $nisnsiswa, $tglawal, $tglakhir);
             $kepribadian = $this->M_user->get_pribadi($id_sekolah, $nisnsiswa, tahun_ajaran());
             $get_sekolah = $this->M_sekolah->getSekolah($id_sekolah);
             $get_datawali = $this->M_user->getDataGuru($id_user);
             $nama_wali = $get_datawali['nama'];
+            $nip_wali = $get_datawali['nip'];
 
             $jumlah_s = "-";
             $jumlah_i = "-";
@@ -96,7 +138,6 @@ class Buatrapor extends BaseController
             $pdf->SetMargins(5, 10, 0);
 
             $pdf->AddPage();
-            $pdf->SetFont('calibri', '', 10);
             $kop_rapor = str_replace("Comic Sans MS", "comicsansms3", $kop_rapor);
             $kop_rapor = str_replace("Arial,Helvetica,sans-serif", "arial", $kop_rapor);
             $kop_rapor = str_replace("Courier New,Courier,monospace", "courier", $kop_rapor);
@@ -110,12 +151,10 @@ class Buatrapor extends BaseController
 
             $pdf->writeHTML($html, true, false, true, false, '');
 
-            $pdf->SetFont('', '', 13);
-            $pdf->Cell(0, 0, 'LEMBAR HASIL KEGIATAN BELAJAR', 0, true, 'C', 0, '', 0, false, 'T', 'T');
-            $pdf->Cell(0, 0, 'TENGAH SEMESTER GANJIL', 0, true, 'C', 0, '', 0, false, 'T', 'T');
-            $pdf->Cell(0, 0, 'TAHUN PELAJARAN 2023/2024', 0, true, 'C', 0, '', 0, false, 'T', 'T');
+            $pdf->Cell(0, 5, 'LEMBAR HASIL KEGIATAN BELAJAR', 0, true, 'C', 0, '', 0, false, 'T', 'T');
+            $pdf->Cell(0, 5, 'TENGAH SEMESTER GANJIL', 0, true, 'C', 0, '', 0, false, 'T', 'T');
+            $pdf->Cell(0, 10, 'TAHUN PELAJARAN 2023/2024', 0, true, 'C', 0, '', 0, false, 'T', 'T');
 
-            $pdf->SetFont('', '', 12);
             $namaniskelas = '<br><div>
             <table id="namasiswa" border="0">
             <tr>
@@ -140,15 +179,27 @@ class Buatrapor extends BaseController
             // echo $posisihmapel;
             // die();
 
+            if ($maks_kolom == 0)
+                $maks_kolom = 1;
+
             $kolomheadernilai = "";
             for ($a = 1; $a <= $maks_kolom; $a++) {
                 $kolomheadernilai = $kolomheadernilai .
                     '<td style="width:40px; text-align: center;">' . $a . '</td>';
             }
 
-            $dafnilai = "";
+            if ($kelas >= 11) {
+                $dafnilai = '<tr>
+                    <td style="width:30px;text-align:center"><b>A.</b></td>
+                    <td style="width:' . (530 - ($maks_kolom * 40)) . 'px;"> <b>Mata Pelajaran Umum</b></td>
+                    </tr>';
+            } else {
+                $dafnilai = '';
+            }
 
             $nomor = 0;
+            $nomor2 = 0;
+            $sekali = true;
             foreach ($get_rapor_nilai as $row) :
                 if ($row['jenis'] == 0) {
                     $string = $row['nama_mapel'];
@@ -156,10 +207,14 @@ class Buatrapor extends BaseController
                     if (strstr($string, $substring)) {
                         $nomor++;
                         $koltugas = "";
-                        for ($a = 1; $a <= $maks_kolom; $a++) :
-                            $koltugas = $koltugas . "
+                        if ($maks_kolom == 0) {
+                            $koltugas = $koltugas . "<td>-</td>";
+                        } else {
+                            for ($a = 1; $a <= $maks_kolom; $a++) :
+                                $koltugas = $koltugas . "
                                 <td style=\"text-align: center;\">" . (is_null($row['tugas_' . $a]) ? '' : $row['tugas_' . $a]) . "</td>";
-                        endfor;
+                            endfor;
+                        }
                         $dafnilai = $dafnilai . "
                         <tr>
                             <td style=\"text-align: center;\">" . $nomor . "</td>
@@ -170,14 +225,31 @@ class Buatrapor extends BaseController
                     }
                 } else {
                     $nomor++;
+                    $nomornya = $nomor;
+                    if ($row['jenis'] == 2) {
+                        $nomor2++;
+                        $nomornya = $nomor2;
+                    }
+                    if ($row['jenis'] == 2 && $sekali == true) {
+                        $sekali = false;
+                        $dafnilai = $dafnilai . '<tr>
+                    <td style="width:30px;text-align:center"><b>B.</b></td>
+                    <td style="font-weight:bold;width:' . (530 - ($maks_kolom * 40)) . 'px;"> Mata Pelajaran Pilihan</td>
+                    </tr>';
+                    }
+
                     $koltugas = "";
-                    for ($a = 1; $a <= $maks_kolom; $a++) :
-                        $koltugas = $koltugas . "
+                    if ($maks_kolom == 0) {
+                        $koltugas = $koltugas . "<td>-</td>";
+                    } else {
+                        for ($a = 1; $a <= $maks_kolom; $a++) :
+                            $koltugas = $koltugas . "
                                 <td style=\"text-align: center;\">" . (is_null($row['tugas_' . $a]) ? '' : $row['tugas_' . $a]) . "</td>";
-                    endfor;
+                        endfor;
+                    }
                     $dafnilai = $dafnilai . "
                         <tr>
-                            <td style=\"text-align: center;\">" . $nomor . "</td>
+                            <td style=\"text-align: center;\">" . $nomornya . "</td>
                             <td style=\"padding-left: 5px;\"> " . $row['nama_mapel'] . "</td>" .
                         $koltugas . "                           
                         </tr>
@@ -190,7 +262,7 @@ class Buatrapor extends BaseController
                 <tr>
                     <td rowspan="2" style="width:30px;"></td>
                     <td rowspan="2" style="width:' . (530 - ($maks_kolom * 40)) . 'px;"></td>
-                    <td colspan="' . $maks_kolom . '" style="width:' . ($maks_kolom * 40) . 'px; text-align: center; "><b>Nilai Hasil Belajar</b></td>
+                    <td colspan="' . $maks_kolom . '" style="width:' . ($maks_kolom * 40) . 'px; text-align: center; font_weight:bold">Nilai Hasil Belajar</td>
                 </tr>
                 <tr>
                     ' . $kolomheadernilai . '
@@ -199,7 +271,6 @@ class Buatrapor extends BaseController
 
             // echo $namaniskelas;
             // die();
-
 
             $pdf->writeHTML($tabelnilai, true, false, true, true, 'L');
             $akhirY = $pdf->getY();
@@ -319,7 +390,7 @@ class Buatrapor extends BaseController
             $pdf->Cell(0, 0, '________________________', 0, true, 'L', 0, '', 0, false, 'T', 'T');
             $akhirY = $pdf->getY();
             $pdf->SetXY($poskanan, $akhirY);
-            $pdf->Cell(0, 0, 'NIP.', 0, true, 'L', 0, '', 0, false, 'T', 'T');
+            $pdf->Cell(0, 0, 'NIP. ' . $nip_wali, 0, true, 'L', 0, '', 0, false, 'T', 'T');
 
             $pdf->Output('example.pdf', 'I'); // 'D' untuk unduh, 'I' untuk tampilkan di browser
 

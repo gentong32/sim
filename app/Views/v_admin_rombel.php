@@ -260,7 +260,7 @@
         $('.js-example-basic-single').select2();
 
         <?php if (sizeof($daftar_rombel) == 0) { ?>
-            kelasPilihan = <?= $daftar_rombel[0]->kelas ?>;
+            kelasPilihan = <?= $daftar_kelas[0] ?>;
         <?php } else { ?>
             kelasPilihan = sessionStorage.getItem('kelaspilihan');
         <?php } ?>

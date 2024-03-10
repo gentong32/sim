@@ -132,3 +132,62 @@ function kelasdarijenjang($jenjang)
     }
     return $data;
 }
+
+function capaiannilai($string)
+{
+    $string = html_entity_decode($string);
+
+    $parts = explode(';', $string);
+    $parts = array_map('trim', $parts);
+
+    $pernyataan_per_status = [];
+
+    usort($parts, function ($a, $b) {
+        preg_match('/\d+/', $a, $matchesA);
+        preg_match('/\d+/', $b, $matchesB);
+        $kodeA = (int) $matchesA[0];
+        $kodeB = (int) $matchesB[0];
+        return $kodeB - $kodeA;
+    });
+
+    $statusunik = [];
+
+
+    foreach ($parts as $part) {
+        $hasil = ubahKodeMenjadiKata($part);
+        $status = explode('dalam hal', $hasil)[0];
+        if (in_array($status, $statusunik)) {
+            $hasil = str_replace($status . "dalam hal", "", $hasil);
+        } else {
+            $statusunik[] = $status;
+        }
+
+        $pernyataan_per_status[$status][] = $hasil;
+    }
+
+    $stringhasil = "";
+
+    foreach ($pernyataan_per_status as $status => $pernyataans) {
+        $pernyataan_tergabung = implode(', ', $pernyataans);
+        $stringhasil = $stringhasil . $pernyataan_tergabung . ". ";
+    }
+
+    return $stringhasil;
+}
+
+
+function ubahKodeMenjadiKata($matches)
+{
+    $kode = substr($matches, 0, 1);
+    $sangat = "";
+    $nilai = substr($matches, 1, 3);
+    if (intval($nilai) > 80)
+        $sangat = "sangat";
+    $tujuan_pembelajaran = substr($matches, 5);
+
+    if (substr($kode, 0, 1) == '1') {
+        return "Perlu pendampingan dalam hal " . $tujuan_pembelajaran;
+    } else {
+        return "Mencapai kompetensi dengan $sangat baik dalam hal " . $tujuan_pembelajaran;
+    }
+}
