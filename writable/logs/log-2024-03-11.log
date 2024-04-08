@@ -9,3 +9,62 @@ INFO - 2024-03-11 06:28:37 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-03-11 06:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-11 06:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-03-11 06:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 08:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-11 08:03:57 --> Too few arguments to function App\Models\M_sekolah::cek_mapel(), 2 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 1573 and exactly 3 expected
+in APPPATH\Models\M_sekolah.php on line 508.
+ 1 APPPATH\Controllers\Admin.php(1573): App\Models\M_sekolah->cek_mapel('2d7433d1-b060-4656-8fd4-5802b49ee54b', '10')
+ 2 APPPATH\Controllers\Admin.php(1551): App\Controllers\Admin->cekdaftarmapel()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-11 10:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-11 10:12:53 --> Too few arguments to function App\Models\M_sekolah::cek_mapel(), 2 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 1573 and exactly 3 expected
+in APPPATH\Models\M_sekolah.php on line 508.
+ 1 APPPATH\Controllers\Admin.php(1573): App\Models\M_sekolah->cek_mapel('2d7433d1-b060-4656-8fd4-5802b49ee54b', '10')
+ 2 APPPATH\Controllers\Admin.php(1551): App\Controllers\Admin->cekdaftarmapel()
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-11 10:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-11 10:13:30 --> Too few arguments to function App\Models\M_sekolah::get_daftar_mapel(), 1 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 1558 and at least 2 expected
+in APPPATH\Models\M_sekolah.php on line 461.
+ 1 APPPATH\Controllers\Admin.php(1558): App\Models\M_sekolah->get_daftar_mapel('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-11 10:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-11 10:37:01 --> Too few arguments to function App\Models\M_sekolah::get_daftar_mapel(), 1 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 2417 and at least 2 expected
+in APPPATH\Models\M_sekolah.php on line 461.
+ 1 APPPATH\Controllers\Admin.php(2417): App\Models\M_sekolah->get_daftar_mapel('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->jadwal_ujian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-11 10:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-11 10:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

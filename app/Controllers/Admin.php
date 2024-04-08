@@ -1432,7 +1432,7 @@ class Admin extends BaseController
 
     public function get_daftar_sub_kelas($id_sekolah, $tahun_ajaran)
     {
-        $datamapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
+        $datamapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, $tahun_ajaran);
         $daftar_sub_kelas = [];
         foreach ($datamapel as $row) {
             if (!in_array('[' . $row["kelas"] . ', "' . $row["sub_kelas"] . '"]', $daftar_sub_kelas)) {
@@ -1482,14 +1482,14 @@ class Admin extends BaseController
     public function get_sub_kelas_mapel($kelas)
     {
         $id_sekolah = session()->get('id_sekolah');
-        $datasubkelas = $this->M_sekolah->get_sub_kelas_mapel($id_sekolah, $kelas);
+        $datasubkelas = $this->M_sekolah->get_sub_kelas_mapel($id_sekolah, tahun_ajaran(), $kelas);
         return json_encode($datasubkelas);
     }
 
     public function get_mapel($kelas, $subkelas)
     {
         $id_sekolah = session()->get('id_sekolah');
-        $datamapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, $kelas, $subkelas);
+        $datamapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, tahun_ajaran(), $kelas, $subkelas);
         return json_encode($datamapel);
     }
 
@@ -1555,7 +1555,7 @@ class Admin extends BaseController
         $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
         $jenjang = $dataadmin['jenjang'];
         $daftar_kelas = kelasdarijenjang($jenjang);
-        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
+        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, tahun_ajaran());
         $data['sekolah'] = $datasekolah;
         $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
@@ -1570,11 +1570,11 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
         $jenjang = $dataadmin['jenjang'];
-        $cekmapel = $this->M_sekolah->cek_mapel($id_sekolah, kelasdarijenjang($jenjang)[0]);
+        $cekmapel = $this->M_sekolah->cek_mapel($id_sekolah, tahun_ajaran(), kelasdarijenjang($jenjang)[0]);
         if (!$cekmapel) {
             $this->M_sekolah->hapus_semuamapel($id_sekolah);
             foreach (kelasdarijenjang($jenjang) as $kelas) {
-                $this->M_sekolah->impor_mapel($id_sekolah, $kelas);
+                $this->M_sekolah->impor_mapel($id_sekolah, tahun_ajaran(), $kelas);
             }
         }
     }
@@ -1589,7 +1589,7 @@ class Admin extends BaseController
 
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
-        $dafmapelpilihan = $this->M_sekolah->get_daftar_mapel_pilihan($id_sekolah, $kelas, $sub_kelas);
+        $dafmapelpilihan = $this->M_sekolah->get_daftar_mapel_pilihan($id_sekolah, tahun_ajaran(), $kelas, $sub_kelas);
         $data['sekolah'] = $datasekolah;
         $data['nama_user'] = session()->get('nama_user');
         $data['kelas'] = $kelas;
@@ -1610,7 +1610,7 @@ class Admin extends BaseController
         $kelas = $datatosave['kelas'];
         $sub_kelas = $datatosave['sub_kelas'];
 
-        $this->M_sekolah->hapus_mapelpilihan($id_sekolah, $kelas, $sub_kelas);
+        $this->M_sekolah->hapus_mapelpilihan($id_sekolah, tahun_ajaran(), $kelas, $sub_kelas);
         foreach ($datatosave['mapelpilihan'] as $mapel_pilihan) {
 
             if ($mapel_pilihan != null) {
@@ -1622,6 +1622,7 @@ class Admin extends BaseController
                 $data['sub_kelas'] = $sub_kelas;
                 $data['kd_mapel'] = $mapel_pilihan;
                 $data['nama_mapel'] = $nama_mapel;
+                $data['tahun_ajaran'] = tahun_ajaran();
                 $simpandata = $this->M_sekolah->tambah_mapelpilihan($data);
             }
         }
@@ -1643,7 +1644,7 @@ class Admin extends BaseController
         $dataMapel = json_decode(file_get_contents('php://input'), true);
         $kelas = $dataMapel['kelas'];
         // $kelas = '5';
-        $impordata = $this->M_sekolah->impor_mapel($id_sekolah, $kelas);
+        $impordata = $this->M_sekolah->impor_mapel($id_sekolah, tahun_ajaran(), $kelas);
         if ($impordata)
             $response = ['pesan' => "Berhasil"];
         else
@@ -1672,6 +1673,7 @@ class Admin extends BaseController
         $data['jenis'] = $jenis;
         $data['sub_kelas'] = $sub_kelas;
         $data['nama_mapel'] = $dataMapel['cellContent'];
+        $data['tahun_ajaran'] = tahun_ajaran();
         $addedit = $dataMapel['addedit'];
         $idedit = $dataMapel['idedit'];
 
@@ -1707,14 +1709,21 @@ class Admin extends BaseController
         $data['kelas'] = $dataMapel['kelas'];
         $data['jenis'] = $jenis;
         $data['sub_kelas'] = $sub_kelas;
-        $data['urutan'] = $dataMapel['baris'];
+        $data['id'] = $dataMapel['id'];
 
-        $hapusdata = $this->M_sekolah->hapus_mapel($data);
+        $cekadanilai = $this->M_sekolah->cek_nilai_mapel($id_sekolah, $dataMapel['id']);
 
-        if ($hapusdata)
-            $response = ['pesan' => "Berhasil"];
-        else
-            $response = ['pesan' => "Gagal Menghapus"];
+        if ($cekadanilai) {
+            $response = ['pesan' => "Sudah ada nilai"];
+        } else {
+            $hapusdata = $this->M_sekolah->hapus_mapel($data);
+            if ($hapusdata)
+                $response = ['pesan' => "Berhasil"];
+            else
+                $response = ['pesan' => "Gagal Menghapus"];
+        }
+
+
 
         return $this->response->setJSON($response);
     }
@@ -1752,6 +1761,7 @@ class Admin extends BaseController
 
         $data = array();
         $data['id_sekolah'] = $id_sekolah;
+        $data['tahun_ajaran'] = tahun_ajaran();
         $data['kelas'] = $dataMapel['kelas'];
         $data['sub_kelas'] = $dataMapel['sub_kelas'];
 
@@ -1969,7 +1979,7 @@ class Admin extends BaseController
             $this->M_user->duplikat_guru_tahun_lalu($id_sekolah, tahun_ajaran());
             $getdaftarguru = $this->M_user->getDaftarGuru($id_sekolah, tahun_ajaran());
         }
-        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
+        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, tahun_ajaran());
         $daftar_rombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran());
         $daftar_guru_mapel = $this->M_user->get_daftar_guru_mapel($id_sekolah);
 
@@ -2395,6 +2405,7 @@ class Admin extends BaseController
         $data['jenis'] = 2;
         $data['sub_kelas'] = 'B';
         $data['nama_mapel'] = $nama_mapel;
+        $data['tahun_ajaran'] = tahun_ajaran();
         $simpandata = $this->M_sekolah->tambah_mapelpilihan($data);
     }
 
@@ -2410,13 +2421,66 @@ class Admin extends BaseController
         $dataadmin = $this->M_user->get_admin(session()->get('id_user'));
         $jenjang = $dataadmin['jenjang'];
         $daftar_kelas = kelasdarijenjang($jenjang);
-        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah);
+        $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, tahun_ajaran());
+        $datakalender = $this->M_sekolah->getAgenda($id_sekolah);
         $data['sekolah'] = $datasekolah;
         $data['tahun_ajaran'] = tahun_ajaran('lengkap');
         $data['nama_user'] = session()->get('nama_user');
         $data['daftar_kelas'] = $daftar_kelas;
         $data['daftar_mapel'] = $daftar_mapel;
+        $data['datakalender'] = json_encode($datakalender);
 
         return view('v_admin_jadwal_ujian', $data);
+    }
+
+    public function simpan_jadwal_ujian()
+    {
+        if (!khususadmin())
+            return redirect()->to("/");
+
+        $dataToSave = json_decode(file_get_contents('php://input'), true);
+        // $dataToSave = json_decode($this->request->getBody(), true);
+        // $dataToSave = $this->request->getJSON(true);
+
+        if (!$dataToSave) {
+            $response = ['message' => "Data JSON tidak tersedia"];
+            return $this->response->setJSON($response);
+        }
+
+        $id_sekolah = session()->get('id_sekolah');
+        $daftarsimpan = $dataToSave['daftarsimpan'];
+
+        if (!$daftarsimpan) {
+            $response = ['message' => "Daftar simpan tidak tersedia"];
+            return $this->response->setJSON($response);
+        }
+
+        foreach ($daftarsimpan as $row) {
+            $data['id'] = $row['id'];
+
+            $data['jadwal_semester_ganjil_tgl'] = null;
+            $data['jadwal_semester_ganjil_jam'] = null;
+            $data['jadwal_semester_genap_tgl'] = null;
+            $data['jadwal_semester_genap_jam'] = null;
+            if ($row['jam_m'] != "") {
+                $data['jadwal_semester_ganjil_tgl'] = $row['tgl'];
+                $data['jadwal_semester_ganjil_jam'] = $row['jam_m'] . " - " . $row['jam_a'];
+            }
+            if ($row['jam_mb'] != "") {
+                $data['jadwal_semester_genap_tgl'] = $row['tglb'];
+                $data['jadwal_semester_genap_jam'] = $row['jam_mb'] . " - " . $row['jam_ab'];
+            }
+            $this->M_sekolah->simpan_jadwal_ujian($id_sekolah, $data);
+        }
+
+        $response = ['message' => "sukses"];
+        return $this->response->setJSON($response);
+    }
+
+
+    public function tes()
+    {
+
+        return view('vtes');
     }
 }

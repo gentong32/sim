@@ -1,0 +1,103 @@
+CRITICAL - 2024-03-30 08:43:06 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Tujuanpembelajaran.php on line 59 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(59): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-30 08:47:18 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Nilai.php on line 136 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Nilai.php(136): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-30 08:56:56 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Nilai.php on line 136 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Nilai.php(136): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-30 08:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-30 08:58:27 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Nilai.php on line 136 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Nilai.php(136): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-30 08:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 08:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 09:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 09:01:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-30 09:02:45 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Tujuanpembelajaran.php on line 59 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(59): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-30 09:03:30 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Tujuanpembelajaran.php on line 59 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(59): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-30 09:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-30 09:03:37 --> Too few arguments to function App\Models\M_sekolah::get_daftar_kelas(), 1 passed in D:\laragon\www\sim\app\Controllers\Tujuanpembelajaran.php on line 59 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1443.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(59): App\Models\M_sekolah->get_daftar_kelas('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-30 09:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-30 16:10:03 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(237): CodeIgniter\Model->__call('rapor_nilai_ekskul', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-30 16:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-30 16:11:16 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(237): CodeIgniter\Model->__call('rapor_nilai_ekskul', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-30 17:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:24:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-30 17:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

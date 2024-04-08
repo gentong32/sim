@@ -33,13 +33,15 @@ class Presensi extends BaseController
             $nama_rombel = $daftarkelaswali[$idx - 1]['nama_rombel'];
             $kelas = $daftarkelaswali[$idx - 1]['kelas'];
 
-            $judul_submenu = "Presensi Kelas " . $nama_rombel;
+            $judul_submenu = "Presensi Siswa ";
             $data['judul_submenu'] = $judul_submenu;
             $data['valkelas'] = $kelas;
             $data['submenu'] = true;
             $data['menutitle'] = 'Presensi';
             $data['ikon'] = 'absen';
             $data['kelaspilihan'] = $kelaspilihan;
+            $data['daftarkelaswali'] = $daftarkelaswali;
+            $data['pilidx'] = $idx;
             $datakalender = $this->M_sekolah->getAgenda($id_sekolah);
             $data['datakalender'] = json_encode($datakalender);
             return view('v_presensi', $data);

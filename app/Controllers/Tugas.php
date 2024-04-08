@@ -53,6 +53,8 @@ class Tugas extends BaseController
         $data['submenu'] = true;
         $data['menutitle'] = 'TP';
         $data['ikon'] = 'tugas';
+        $data['daftarkelasajar'] = $daftarkelasajar;
+        $data['pilidx'] = $idx;
 
         return view('v_tugas_tes', $data);
     }

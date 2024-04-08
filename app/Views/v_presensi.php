@@ -305,6 +305,21 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('konten') ?>
+<h3>Kelas
+    <select class="pilkelas" name="daftarrombel" id="daftarrombel">
+        <?php
+        $indeks = 0;
+        foreach ($daftarkelaswali as $row) :
+            $indeks++;
+            $selected = "";
+            if ($pilidx == $indeks) {
+                $selected = "selected";
+            }
+        ?>
+            <option <?= $selected ?> value="<?= $indeks ?>"><?= $row['nama_rombel'] ?></option>
+        <?php endforeach ?>
+    </select>
+</h3>
 <div class="tbpiltgl">
     <button class="piltgl" onclick="pilihtanggal()">Per Tanggal</button>
 </div>
@@ -702,6 +717,10 @@
             $('#tb_update').show();
             $('#info_update').hide();
         });
+    });
+
+    document.getElementById('daftarrombel').addEventListener('change', function() {
+        window.open("<?= base_url() . 'presensi?kelas=w' ?>" + this.value, "_self");
     });
 </script>
 

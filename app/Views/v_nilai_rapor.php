@@ -283,6 +283,71 @@ if ($kepribadian) {
 
         </table>
     </div>
+
+    <div class="daftar_nilai">
+        <table>
+            <tr style="text-align: center;">
+                <td style="width:30px;"><b>No</b></td>
+                <td style="width:200px;"><b>Kegiatan Ekstrakurikuler</b></td>
+                <td style="width:50px;"><b>Predikat</b></td>
+                <td style="width:340px;"><b>Keterangan</b></td>
+            </tr>
+            <?php
+            $nomor = 0;
+            $nomor2 = 0;
+            $sekali1 = 0;
+            $sekali2 = 0;
+            foreach ($rapor_siswa as $row) :
+                if ($row['jenis'] == 0) {
+                    if ($sekali1 == 0 && $kelas >= 11) {
+                        $sekali1 = 1; ?>
+                        <tr>
+                            <td><b>A.</b> </td>
+                            <td colspan="3" style="text-align:left;width:582px;"><b>MATA PELAJARAN UMUM</b></td>
+                        </tr>
+                    <?php }
+                    $string = $row['nama_mapel'];
+                    $substring = $agamasiswa;
+                    if (strstr($string, $substring)) {
+                        $nomor++; ?>
+                        <tr>
+                            <td><?= $nomor ?></td>
+                            <td style="text-align: left;"><?= $row['nama_mapel'] ?></td>
+                            <td style="text-align: center;"><?= (!is_null($row['nilai_rata_rata']) ? round($row['nilai_rata_rata']) : "-") ?></td>
+                            <td style="text-align: left;"><?= (!is_Null($row['tujuan_pembelajaran_status'])) ? capaiannilai($row['tujuan_pembelajaran_status']) : "" ?></td>
+                        </tr>
+                    <?php }
+                } else if ($row['jenis'] == 1) {
+                    $nomor++;
+                    ?>
+                    <tr>
+                        <td><?= $nomor ?></td>
+                        <td><?= $row['nama_mapel'] ?></td>
+                        <td><?= $row['nilai_rata_rata'] ?></td>
+                        <td><?= $row['tujuan_pembelajaran_status'] ?></td>
+                    </tr>
+                    <?php } else if ($row['jenis'] == 2) {
+                    if ($sekali2 == 0) {
+                        $sekali2 = 1; ?>
+                        <tr>
+                            <td><b>B.</b></td>
+                            <td colspan="3" style="width:582px;"><b>MATA PELAJARAN PILIHAN</b></td>
+                        </tr>
+                    <?php }
+                    $nomor2++;
+                    ?>
+                    <tr>
+                        <td><?= $nomor2 ?></td>
+                        <td><?= $row['nama_mapel'] ?></td>
+                        <td><?= $row['nilai_rata_rata'] ?></td>
+                        <td><?= $row['tujuan_pembelajaran_status'] ?></td>
+                    </tr>
+            <?php }
+            endforeach; ?>
+
+        </table>
+    </div>
+
     <div class="ketdanlaku">
         <div class="daftar_nilai">
             <table>

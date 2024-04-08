@@ -34,6 +34,11 @@ class Home extends BaseController
         $data['daftarwaliekskul'] = $daftarwaliekskul;
         $data['sekolah_saya'] = $sekolah_saya;
 
+
+        // echo var_dump($daftarkelasajar);
+        // echo '</pre>';
+        // die();
+
         return view('v_beranda', $data);
     }
 

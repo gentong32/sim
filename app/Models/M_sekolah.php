@@ -458,16 +458,37 @@ class M_sekolah extends Model
         return $query;
     }
 
-    public function get_daftar_mapel($id_sekolah, $kelas = null, $sub_kelas = null)
+    public function get_daftar_siswa_ekskul($id_sekolah, $kelas, $nama_rombel, $tahun_ajaran, $id_ekskul)
+    {
+
+        $sql = "SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                LEFT JOIN tb_siswa ts ON ts.nisn = ss.nisn
+                WHERE ss.id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :nama_rombel: AND tahun_ajaran = :tahun_ajaran: AND es.id_ekskul = :id_ekskul: ORDER BY kelas, nama_rombel,nama";
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'kelas' => $kelas,
+            'nama_rombel' => $nama_rombel,
+            'tahun_ajaran' => $tahun_ajaran,
+            'id_ekskul' => $id_ekskul,
+        ]);
+
+        return $query->getResult();
+    }
+
+    public function get_daftar_mapel($id_sekolah, $tahun_ajaran, $kelas = null, $sub_kelas = null)
     {
         $andkelas = "";
         if ($kelas != null && $sub_kelas != null) {
             $andkelas = " AND kelas=:kelas: AND sub_kelas=:sub_kelas:";
         }
-        $sql = "SELECT * FROM tb_mapel WHERE id_sekolah=:id_sekolah:" . $andkelas;
+        $sql = "SELECT * FROM tb_mapel WHERE id_sekolah=:id_sekolah: AND tahun_ajaran=:tahun_ajaran: " . $andkelas . " ORDER BY kelas, jenis, sub_kelas, kd_mapel";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
             'kelas' => $kelas,
             'sub_kelas' => $sub_kelas,
         ]);
@@ -475,26 +496,28 @@ class M_sekolah extends Model
         return $query->getResultArray();
     }
 
-    public function get_sub_kelas_mapel($id_sekolah, $kelas)
+    public function get_sub_kelas_mapel($id_sekolah, $tahun_ajaran, $kelas)
     {
-        $sql = "SELECT sub_kelas FROM tb_mapel WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: GROUP BY sub_kelas";
+        $sql = "SELECT sub_kelas FROM tb_mapel WHERE id_sekolah=:id_sekolah: AND tahun_ajaran = :tahun_ajaran: AND kelas=:kelas: GROUP BY sub_kelas";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
             'kelas' => $kelas
         ]);
 
         return $query->getResultArray();
     }
 
-    public function get_daftar_mapel_pilihan($id_sekolah, $kelas, $sub_kelas)
+    public function get_daftar_mapel_pilihan($id_sekolah, $tahun_ajaran, $kelas, $sub_kelas)
     {
         $sql = "SELECT dm.*, tm.id FROM daf_mapel dm
-        LEFT JOIN tb_mapel tm ON dm.kd_mapel = tm.kd_mapel AND tm.id_sekolah=:id_sekolah: AND tm.sub_kelas=:sub_kelas:
+        LEFT JOIN tb_mapel tm ON dm.kd_mapel = tm.kd_mapel AND tm.id_sekolah=:id_sekolah: AND tm.tahun_ajaran = :tahun_ajaran: AND tm.sub_kelas=:sub_kelas:
         WHERE dm.kelas=:kelas: AND dm.jenis=2";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
             'kelas' => $kelas,
             'sub_kelas' => $sub_kelas
         ]);
@@ -502,31 +525,43 @@ class M_sekolah extends Model
         return $query->getResultArray();
     }
 
-    public function cek_mapel($id_sekolah, $kelas)
+    public function cek_mapel($id_sekolah, $tahun_ajaran, $kelas)
     {
-        $sql = "SELECT * FROM tb_mapel WHERE id_sekolah = :id_sekolah: AND kelas = :kelas:";
+        $sql = "SELECT * FROM tb_mapel WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran: AND kelas = :kelas:";
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
             'kelas' => $kelas
         ]);
 
         return $query->getResult();
     }
 
-    public function impor_mapel($id_sekolah, $kelas)
+    public function cek_nilai_mapel($id_sekolah, $idmapel)
     {
-        $sql = "INSERT INTO tb_mapel (id_sekolah, kd_mapel, kelas, jenis, nama_mapel)
+        $sql = "SELECT * FROM tb_nilai_siswa WHERE id_sekolah = :id_sekolah: AND id_mapel = :idmapel:";
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
+            'idmapel' => $idmapel,
+        ]);
+
+        return $query->getResult();
+    }
+
+    public function impor_mapel($id_sekolah, $tahun_ajaran, $kelas)
+    {
+        $sql = "INSERT INTO tb_mapel (id_sekolah, kd_mapel, kelas, jenis, nama_mapel, tahun_ajaran)
                 SELECT :id_sekolah:, kd_mapel, kelas, jenis, nama_mapel
                 FROM daf_mapel a
                 WHERE kelas = :kelas: AND jenis<2 AND NOT EXISTS (
                 SELECT 1
                 FROM tb_mapel b
-                WHERE b.kd_mapel = a.kd_mapel AND id_sekolah = :id_sekolah: 
-            )";
+                WHERE b.kd_mapel = a.kd_mapel AND id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:)";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
-            'kelas' => $kelas
+            'kelas' => $kelas,
+            'tahun_ajaran' => $tahun_ajaran
         ]);
 
         return $query;
@@ -539,6 +574,7 @@ class M_sekolah extends Model
         $jenis = $data['jenis'];
         $sub_kelas = $data['sub_kelas'];
         $nama_mapel = $data['nama_mapel'];
+        $tahun_ajaran = $data['tahun_ajaran'];
 
         $query = $this->db->table('tb_mapel')->insert($data);
 
@@ -592,14 +628,17 @@ class M_sekolah extends Model
         return $query;
     }
 
-    public function hapus_semuamapel($id_sekolah)
+    public function hapus_semuamapel($id_sekolah, $tahun_ajaran)
     {
-        $this->db->table('tb_mapel')->where('id_sekolah', $id_sekolah)->delete();
+        $this->db->table('tb_mapel')
+            ->where(['id_sekolah' => $id_sekolah, 'tahun_ajaran' => $tahun_ajaran])
+            ->delete();
     }
 
-    public function hapus_mapelpilihan($id_sekolah, $kelas, $sub_kelas)
+    public function hapus_mapelpilihan($id_sekolah, $tahun_ajaran, $kelas, $sub_kelas)
     {
-        $this->db->table('tb_mapel')->where(['id_sekolah' => $id_sekolah, 'kelas' => $kelas, 'sub_kelas' => $sub_kelas, 'jenis' => 2])->delete();
+        $this->db->table('tb_mapel')
+            ->where(['id_sekolah' => $id_sekolah, 'tahun_ajaran' => $tahun_ajaran, 'kelas' => $kelas, 'sub_kelas' => $sub_kelas, 'jenis' => 2])->delete();
     }
 
     public function get_namamapel($kd_mapel)
@@ -676,16 +715,17 @@ class M_sekolah extends Model
         return $query;
     }
 
-    public function hapus_mapel_pilihan($data)
+    public function hapus_mapel_pilihan($data, $tahun_ajaran)
     {
         $id_sekolah = $data['id_sekolah'];
         $kelas = $data['kelas'];
         $sub_kelas = $data['sub_kelas'];
 
-        $sql = "DELETE FROM tb_mapel WHERE id_sekolah=:id_sekolah: AND kelas=:kelas: AND jenis=2 AND sub_kelas=:sub_kelas:";
+        $sql = "DELETE FROM tb_mapel WHERE id_sekolah=:id_sekolah: AND tahun_ajaran=:tahun_ajaran: AND kelas=:kelas: AND jenis=2 AND sub_kelas=:sub_kelas:";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
             'kelas' => $kelas,
             'sub_kelas' => $sub_kelas,
         ]);
@@ -1338,6 +1378,16 @@ class M_sekolah extends Model
         return ($cek_data->getRow());
     }
 
+    public function cek_nilai_semester($data)
+    {
+        $id_sekolah = $data['id_sekolah'];
+        $nisn = $data['nisn'];
+        $id_mapel = $data['id_mapel'];
+        $semester = $data['semester'];
+        $cek_data = $this->db->table('tb_nilai_semester')->select('*')->where(['id_sekolah' => $id_sekolah, 'nisn' => $nisn, 'id_mapel' => $id_mapel, 'semester' => $semester])->get();
+        return ($cek_data->getRow());
+    }
+
     public function update_nilai($data)
     {
         $id_sekolah = $data['id_sekolah'];
@@ -1353,9 +1403,32 @@ class M_sekolah extends Model
         ])->update(['nilai' => $nilai]);
     }
 
+    public function update_nilai_semester($data)
+    {
+        $id_sekolah = $data['id_sekolah'];
+        $nisn = $data['nisn'];
+        $id_mapel = $data['id_mapel'];
+        $semester = $data['semester'];
+        $nilai = $data['nilai'];
+        $status = $data['status'];
+        $this->db->table('tb_nilai_semester')->where([
+            'id_sekolah' => $id_sekolah,
+            'nisn' => $nisn,
+            'id_mapel' => $id_mapel,
+            'semester' => $semester,
+        ])->update(['nilai' => $nilai, 'status' => $status]);
+    }
+
     public function insert_nilai($data)
     {
         $this->db->table('tb_nilai_siswa')->insert($data);
+        $lastInsertedID = $this->db->insertID();
+        return $lastInsertedID;
+    }
+
+    public function insert_nilai_semester($data)
+    {
+        $this->db->table('tb_nilai_semester')->insert($data);
         $lastInsertedID = $this->db->insertID();
         return $lastInsertedID;
     }
@@ -1387,14 +1460,15 @@ class M_sekolah extends Model
         return $query->getResultArray();
     }
 
-    public function get_daftar_kelas($id_sekolah)
+    public function get_daftar_kelas($id_sekolah, $tahun_ajaran)
     {
         $sql = "SELECT kelas FROM tb_mapel 
-                WHERE id_sekolah = :id_sekolah: 
+                WHERE id_sekolah = :id_sekolah: AND tahun_ajaran = :tahun_ajaran:
                 GROUP BY kelas";
 
         $query = $this->db->query($sql, [
             'id_sekolah' => $id_sekolah,
+            'tahun_ajaran' => $tahun_ajaran,
         ]);
 
         return $query->getResultArray();
@@ -1448,6 +1522,21 @@ class M_sekolah extends Model
             'id_sekolah' => $id_sekolah,
             'tahun_ajaran' => $tahun_ajaran,
             'tgl_mid' => $tgl_mid,
+        ]);
+    }
+
+    public function simpan_jadwal_ujian($id_sekolah, $data)
+    {
+        $id = $data['id'];
+        $tgl = $data['jadwal_semester_ganjil_tgl'];
+        $jam = $data['jadwal_semester_ganjil_jam'];
+        $tgl2 = $data['jadwal_semester_genap_tgl'];
+        $jam2 = $data['jadwal_semester_genap_jam'];
+
+        $sql = "UPDATE tb_mapel SET jadwal_semester_ganjil_tgl = '" . $tgl . "', jadwal_semester_ganjil_jam = '" . $jam . "', jadwal_semester_genap_tgl = '" . $tgl2 . "', jadwal_semester_genap_jam = '" . $jam2 . "' WHERE id_sekolah = :id_sekolah: AND id = " . $id;
+
+        $query = $this->db->query($sql, [
+            'id_sekolah' => $id_sekolah,
         ]);
     }
 }

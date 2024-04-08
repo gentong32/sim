@@ -30,7 +30,7 @@ function khusususer()
 function tanggal_sekarang()
 {
     $nama_bulan_panjang = ["Januari", "Pebruari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"];
-    $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nop", "Des"];
+    $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nop", "Des"];
 
     $tanggal = new DateTime();
     $strtanggal = $tanggal->format("d-m-Y-H-i-s");
@@ -48,7 +48,7 @@ function tanggal_sekarang()
 function format_tanggal($strtanggal)
 {
     $nama_bulan_panjang = ["Januari", "Pebruari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"];
-    $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nop", "Des"];
+    $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nop", "Des"];
 
     $tanggal = new DateTime($strtanggal);
     $strtanggal = $tanggal->format("Y/m/d");
@@ -61,6 +61,21 @@ function format_tanggal($strtanggal)
     $data['pendek'] = intval($tgl) . " " . $nama_bulan_pendek[$bln - 1] . " " . $thn;
 
     return $data;
+}
+
+function ubahtanggaldb($strtanggal)
+{
+    $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nop", "Des"];
+    if ($strtanggal != "0000-00-00") {
+        $ambiltanggal = explode("-", $strtanggal);
+        $tgl = $ambiltanggal[2];
+        $bln = intval($ambiltanggal[1]);
+        $thn = $ambiltanggal[0];
+        $tanggal = intval($tgl) . " " . $nama_bulan_pendek[$bln - 1] . " " . $thn;
+    } else
+        $tanggal = "";
+
+    return $tanggal;
 }
 
 function tahun_ajaran($opsi = null)
@@ -189,5 +204,64 @@ function ubahKodeMenjadiKata($matches)
         return "Perlu pendampingan dalam hal " . $tujuan_pembelajaran;
     } else {
         return "Mencapai kompetensi dengan $sangat baik dalam hal " . $tujuan_pembelajaran;
+    }
+}
+
+function capaianekskul($string)
+{
+    $string = html_entity_decode($string);
+
+    $parts = explode(';', $string);
+    $parts = array_map('trim', $parts);
+
+    $pernyataan_per_status = [];
+
+    usort($parts, function ($a, $b) {
+        preg_match('/\d+/', $a, $matchesA);
+        preg_match('/\d+/', $b, $matchesB);
+        $kodeA = (int) $matchesA[0];
+        $kodeB = (int) $matchesB[0];
+        return $kodeB - $kodeA;
+    });
+
+    $statusunik = [];
+
+
+    foreach ($parts as $part) {
+        $hasil = ubahKodeMenjadiKata2($part);
+        $status = explode('dalam hal', $hasil)[0];
+        if (in_array($status, $statusunik)) {
+            $hasil = str_replace($status . "dalam hal", "", $hasil);
+        } else {
+            $statusunik[] = $status;
+        }
+
+        $pernyataan_per_status[$status][] = $hasil;
+    }
+
+    $stringhasil = "";
+
+    foreach ($pernyataan_per_status as $status => $pernyataans) {
+        $pernyataan_tergabung = implode(', ', $pernyataans);
+        $stringhasil = $stringhasil . $pernyataan_tergabung . ". ";
+    }
+
+    return $stringhasil;
+}
+
+
+function ubahKodeMenjadiKata2($matches)
+{
+    $kode = substr($matches, 0, 1);
+    $tujuan_pembelajaran = substr($matches, 2);
+
+    if (substr($kode, 0, 1) == '1') {
+        return "Perlu diberikan pemahaman dalam hal " . strtolower($tujuan_pembelajaran);
+    } else if (substr($kode, 0, 1) == '2') {
+        return "Perlu peningkatan pemahaman dalam hal " . strtolower($tujuan_pembelajaran);
+    } else if (substr($kode, 0, 1) == '3') {
+        return "Sudah baik dalam hal " . strtolower($tujuan_pembelajaran);
+    } else if (substr($kode, 0, 1) == '4') {
+        return "Sangat baik dalam hal " . strtolower($tujuan_pembelajaran);
     }
 }

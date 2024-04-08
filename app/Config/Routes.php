@@ -69,11 +69,16 @@ $routes->get('/nilai/get_daftar_nilai_eks', 'Nilai::get_daftar_nilai_eks');
 $routes->post('/nilai/simpan_nilai_eks', 'Nilai::simpan_nilai_eks');
 $routes->get('/nilai/get_daftar_indikator_eks', 'Nilai::get_daftar_indikator_eks');
 
+$routes->get('/peserta_ekskul', 'User::peserta_ekskul');
+
 $routes->get('/nilai/testabel', 'Nilai::testabel');
 
 $routes->get('/buatrapor/raporPDF', 'Buatrapor::raporPDF');
 
 $routes->get('/pengumuman', 'Pengumuman::index');
+$routes->get('/admin/tes', 'Admin::tes');
+
+$routes->get('/get_rombel_kelas/(:any)', 'User::get_rombel_kelas/$1');
 
 $routes->post('/login/authenticate', 'Login::authenticate');
 $routes->post('/login/cek_passlama', 'Login::cek_passlama');
@@ -124,6 +129,7 @@ $routes->post('admin/hapus_rombel', 'Admin::hapus_rombel');
 $routes->post('admin/get_rombel_mapel', 'Admin::get_rombel_mapel');
 $routes->post('admin/simpan_guru_mapel', 'Admin::simpan_guru_mapel');
 $routes->post('admin/hapus_mapel', 'Admin::hapus_mapel');
+$routes->post('admin/simpan_mapel', 'Admin::simpan_mapel');
 $routes->post('admin/simpan_siswa_pindah', 'Admin::simpan_siswa_pindah');
 $routes->post('admin/simpan_projek', 'Admin::simpan_projek');
 $routes->post('admin/update_projek', 'Admin::update_projek');
@@ -137,6 +143,7 @@ $routes->post('admin/hapus_agenda', 'Admin::hapus_agenda');
 $routes->post('admin/simpanKopRapor', 'Admin::simpanKopRapor');
 $routes->post('admin/simpan_mid', 'Admin::simpan_mid');
 $routes->post('admin/simpan_bobot_nilai', 'Admin::simpan_bobot_nilai');
+$routes->post('admin/simpan_jadwal_ujian', 'Admin::simpan_jadwal_ujian');
 
 $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('/', 'Admin::index');
@@ -173,8 +180,9 @@ $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('ekskul', 'Admin::ekskul');
     $routes->get('agenda', 'Admin::agenda');
     $routes->get('list_agenda', 'Admin::list_agenda');
-    $routes->get('kop_rapor', 'Admin::kop_rapor');
+    $routes->get('jadwal_ujian', 'Admin::jadwal_ujian');
     $routes->get('bobot_nilai', 'Admin::bobot_nilai');
+    $routes->get('kop_rapor', 'Admin::kop_rapor');
     $routes->get('kalender_sekolah', 'Admin::kalender_sekolah');
     $routes->get('simpan_mid', 'Admin::simpan_mid');
     $routes->get('pengumuman', 'Admin::pengumuman');

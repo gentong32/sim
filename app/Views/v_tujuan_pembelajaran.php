@@ -196,7 +196,26 @@
 <?= $this->section('konten') ?>
 <div>
     <h2><?= $nama_mapel ?></h2>
-    <h3>Kelas <?= $kelas ?></h3>
+    <h3>Kelas
+        <select class="pilkelas" name="daftarrombel" id="daftarrombel">
+            <?php
+            $kelas_sudah = [];
+            $indeks = 0;
+            foreach ($daftarkelasajar as $row) :
+                $indeks++;
+                $selected = "";
+                if ($pilidx == $indeks) {
+                    $selected = "selected";
+                }
+                if (!in_array($row['kelas'], $kelas_sudah)) {
+                    $kelas_sudah[] = $row['kelas'];
+                    echo "<option " . $selected . " value=" . $indeks . ">" . $row['kelas'] . "</option>";
+                }
+            ?>
+
+            <?php endforeach ?>
+        </select>
+    </h3>
 
     <div class="kelas">
         <table class="tj_pem" id="itj_pem">
@@ -455,5 +474,9 @@
             button.setAttribute('disabled', 'disabled');
         });
     }
+
+    document.getElementById('daftarrombel').addEventListener('change', function() {
+        window.open("<?= base_url() . 'tujuan_pembelajaran?kelas=g' ?>" + this.value, "_self");
+    });
 </script>
 <?= $this->endSection() ?>

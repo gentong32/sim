@@ -1,0 +1,27 @@
+INFO - 2024-03-13 06:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 06:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 06:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 06:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 06:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 06:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 07:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-13 07:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-13 07:16:37 --> Too few arguments to function App\Models\M_sekolah::simpan_jadwal_ujian(), 1 passed in D:\laragon\www\sim\app\Controllers\Admin.php on line 2464 and exactly 2 expected
+in APPPATH\Models\M_sekolah.php on line 1464.
+ 1 APPPATH\Controllers\Admin.php(2464): App\Models\M_sekolah->simpan_jadwal_ujian([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_jadwal_ujian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-13 07:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-13 07:17:09 --> Undefined array key "jadwal_semester_genap_tgl"
+in APPPATH\Models\M_sekolah.php on line 1469.
+ 1 APPPATH\Models\M_sekolah.php(1469): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jadwal_semester_genap_tgl"', 'D:\\laragon\\www\\sim\\app\\Models\\M_sekolah.php', 1469)
+ 2 APPPATH\Controllers\Admin.php(2464): App\Models\M_sekolah->simpan_jadwal_ujian('2d7433d1-b060-4656-8fd4-5802b49ee54b', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_jadwal_ujian()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-13 07:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

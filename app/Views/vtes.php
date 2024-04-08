@@ -18,85 +18,35 @@
 
 <body>
 
-    <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Field 1</th>
-                <th>Field 2</th>
-                <!-- Atur kolom yang sesuai dengan Editor -->
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Isi tabel dengan data Editor yang diinginkan -->
-        </tbody>
-    </table>
+    <label for="start_time">Waktu</label>
+    <input type="text" id="start_time" name="start_time" maxlength="5" pattern="[0-9]{2}\:[0-9]{2}" title="Format harus HH:MM" placeholder="HH:MM">
+    <input type="text" id="end_time" name="end_time" maxlength="5" pattern="[0-9]{2}\:[0-9]{2}" title="Format harus HH:MM" placeholder="HH:MM">
 
     <script>
-        $(document).ready(function() {
-            var editor = new $.fn.dataTable.Editor({
-                // Konfigurasi Editor
-                ajax: "contoh_pengolahan_data.php",
-                table: "#example",
-                fields: [{
-                        label: "Field 1",
-                        name: "field1"
-                    },
-                    {
-                        label: "Field 2",
-                        name: "field2"
-                    }
-                    // Sesuaikan dengan struktur kolom yang sesuai
-                ]
-            });
+        var startTimeInput = document.getElementById("start_time");
+        var endTimeInput = document.getElementById("end_time");
 
-            // Inisialisasi DataTables dengan Editor
-            var table = $('#example').DataTable({
-                dom: 'Bfrtip',
-                ajax: "contoh_pengolahan_data.php",
-                columns: [{
-                        data: "field1"
-                    },
-                    {
-                        data: "field2"
-                    }
-                    // Sesuaikan dengan struktur kolom yang sesuai
-                ],
-                select: true,
-                buttons: [{
-                        extend: "create",
-                        editor: editor
-                    },
-                    {
-                        extend: "edit",
-                        editor: editor
-                    },
-                    {
-                        extend: "remove",
-                        editor: editor
-                    },
-                    'copy', 'excel'
-                ]
-            });
+        startTimeInput.addEventListener("input", function() {
+            var sanitizedValue = this.value.replace(/\D/g, "");
+            if (sanitizedValue.length === 4) {
+                var hour = sanitizedValue.substring(0, 2);
+                var minute = sanitizedValue.substring(2);
 
-            // Menangani event paste
-            $('#example').on('paste', function(e) {
-                var pasteData = (e.clipboardData || window.clipboardData).getData('text');
-                var rows = pasteData.split('\n');
+                this.value = hour + ":" + minute;
+            }
+        });
 
-                rows.forEach(function(row, rowIndex) {
-                    var columns = row.split('\t'); // Sesuaikan dengan pemisah yang sesuai (tab, koma, dll.)
-                    var rowData = {};
-                    columns.forEach(function(column, columnIndex) {
-                        rowData['field' + columnIndex] = column.trim();
-                    });
+        endTimeInput.addEventListener("input", function() {
+            var sanitizedValue = this.value.replace(/\D/g, "");
+            if (sanitizedValue.length === 4) {
+                var hour = sanitizedValue.substring(0, 2);
+                var minute = sanitizedValue.substring(2);
 
-                    editor.create(rowData)
-                        .set('row_id', 'new')
-                        .submit();
-                });
-            });
+                this.value = hour + ":" + minute;
+            }
         });
     </script>
+
 
 </body>
 

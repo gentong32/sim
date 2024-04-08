@@ -1,0 +1,874 @@
+INFO - 2024-03-31 08:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:23:02 --> Undefined variable $guru
+in APPPATH\Views\layout\layout_default.php on line 87.
+ 1 APPPATH\Views\layout\layout_default.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $guru', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 87)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_beranda', [], true)
+ 6 APPPATH\Controllers\Home.php(37): view('v_beranda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:33:42 --> Undefined array key "nama_mapel"
+in APPPATH\Views\layout\layout_default.php on line 141.
+ 1 APPPATH\Views\layout\layout_default.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 141)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_beranda', [], true)
+ 6 APPPATH\Controllers\Home.php(37): view('v_beranda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:36:17 --> Undefined array key "nama_mapel"
+in APPPATH\Views\layout\layout_default.php on line 141.
+ 1 APPPATH\Views\layout\layout_default.php(141): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_mapel"', 'D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php', 141)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\layout\\layout_default.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/layout_default', [], true)
+ 5 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_beranda', [], true)
+ 6 APPPATH\Controllers\Home.php(37): view('v_beranda', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:46:16 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(237): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:46:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:46:27 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(237): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:47:24 --> Undefined array key -1
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 43.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:59:50 --> Undefined array key -1
+in APPPATH\Controllers\Nilai.php on line 111.
+ 1 APPPATH\Controllers\Nilai.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 111)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 08:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 08:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 08:59:58 --> Undefined array key -1
+in APPPATH\Controllers\Nilai.php on line 168.
+ 1 APPPATH\Controllers\Nilai.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 168)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 09:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 09:00:31 --> Undefined array key -1
+in APPPATH\Controllers\Nilai.php on line 168.
+ 1 APPPATH\Controllers\Nilai.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 168)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 09:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 09:00:36 --> Undefined array key -1
+in APPPATH\Controllers\Nilai.php on line 168.
+ 1 APPPATH\Controllers\Nilai.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key -1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Nilai.php', 168)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 09:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 09:00:45 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(237): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 09:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 09:00:48 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(237): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 09:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 09:00:58 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(237): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 09:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 09:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 10:37:04 --> Undefined variable $daftar_kelas
+in APPPATH\Views\v_nilai.php on line 404.
+ 1 APPPATH\Views\v_nilai.php(404): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 404)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(278): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 10:37:14 --> Undefined variable $daftar_kelas
+in APPPATH\Views\v_nilai.php on line 404.
+ 1 APPPATH\Views\v_nilai.php(404): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 404)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(278): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 10:41:25 --> Undefined variable $daftar_kelas
+in APPPATH\Views\v_nilai.php on line 404.
+ 1 APPPATH\Views\v_nilai.php(404): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftar_kelas', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 404)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(278): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 10:41:56 --> Attempt to read property "nama_rombel" on array
+in APPPATH\Views\v_nilai.php on line 406.
+ 1 APPPATH\Views\v_nilai.php(406): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_rombel" on array', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 406)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(278): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:44:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 10:44:07 --> Undefined variable $rombel
+in APPPATH\Views\v_nilai.php on line 409.
+ 1 APPPATH\Views\v_nilai.php(409): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rombel', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 409)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:45:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 10:47:21 --> Undefined variable $substr
+in APPPATH\Views\v_nilai.php on line 417.
+ 1 APPPATH\Views\v_nilai.php(417): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $substr', 'D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php', 417)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 10:49:50 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:49:50 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:49:50 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 10:50:05 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:50:05 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 10:50:21 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:50:21 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 10:50:25 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Nilai.php on line 31.
+ 1 APPPATH\Controllers\Nilai.php(31): substr(null, 0, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:50:25 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Nilai.php on line 32.
+ 1 APPPATH\Controllers\Nilai.php(32): substr(null, 1, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:50:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 10:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 10:55:41 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:55:41 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:55:41 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 10:59:49 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:59:49 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 10:59:49 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 10:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 11:01:52 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 11:01:52 --> [DEPRECATED] explode(): Passing null to parameter #2 ($string) of type string is deprecated in APPPATH\Views\v_nilai.php on line 517.
+ 1 APPPATH\Views\v_nilai.php(517): explode(';', null)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(279): view('v_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 11:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 11:06:18 --> Undefined variable $daftarkelasajar
+in APPPATH\Views\v_tujuan_pembelajaran.php on line 203.
+ 1 APPPATH\Views\v_tujuan_pembelajaran.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftarkelasajar', 'D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran.php', 203)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tujuan_pembelajaran.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tujuan_pembelajaran', [], true)
+ 5 APPPATH\Controllers\Tujuanpembelajaran.php(52): view('v_tujuan_pembelajaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 11:07:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 11:09:34 --> Undefined array key 2
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 43.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'D:\\laragon\\www\\sim\\app\\Controllers\\Tujuanpembelajaran.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 11:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:09:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 11:15:57 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Tujuanpembelajaran.php on line 25.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(25): substr(null, 0, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 11:15:57 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Tujuanpembelajaran.php on line 26.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(26): substr(null, 1, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-31 11:15:57 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 11:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-03-31 11:16:03 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Tujuanpembelajaran.php on line 25.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(25): substr(null, 0, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+WARNING - 2024-03-31 11:16:03 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Tujuanpembelajaran.php on line 26.
+ 1 APPPATH\Controllers\Tujuanpembelajaran.php(26): substr(null, 1, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-31 11:16:03 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Tujuanpembelajaran.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tujuanpembelajaran->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tujuanpembelajaran))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 11:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:16:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 11:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 12:35:02 --> Undefined variable $daftarkelasajar
+in APPPATH\Views\v_tugas_tes.php on line 431.
+ 1 APPPATH\Views\v_tugas_tes.php(431): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $daftarkelasajar', 'D:\\laragon\\www\\sim\\app\\Views\\v_tugas_tes.php', 431)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_tugas_tes.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_tugas_tes', [], true)
+ 5 APPPATH\Controllers\Tugas.php(57): view('v_tugas_tes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Tugas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tugas))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-31 12:51:21 --> Undefined array key 1
+in APPPATH\Controllers\Presensi.php on line 33.
+ 1 APPPATH\Controllers\Presensi.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'D:\\laragon\\www\\sim\\app\\Controllers\\Presensi.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Presensi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Presensi))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-31 12:51:48 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(239): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-03-31 12:51:51 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(239): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 12:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 12:53:46 --> Undefined variable $kelas
+in APPPATH\Models\M_user.php on line 1189.
+ 1 APPPATH\Models\M_user.php(1189): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kelas', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 1189)
+ 2 APPPATH\Controllers\Nilai.php(239): App\Models\M_user->rapor_nilai_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', '2001000031', 'raporgenap', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 12:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:33:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 13:56:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 14:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 14:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:52:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 16:52:43 --> Undefined property: App\Controllers\User::$M_user
+in APPPATH\Controllers\User.php on line 24.
+ 1 APPPATH\Controllers\User.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\User::$M_user', 'D:\\laragon\\www\\sim\\app\\Controllers\\User.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 16:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 16:53:26 --> Undefined property: App\Controllers\User::$M_user
+in APPPATH\Controllers\User.php on line 26.
+ 1 APPPATH\Controllers\User.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\User::$M_user', 'D:\\laragon\\www\\sim\\app\\Controllers\\User.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 16:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 16:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 16:54:42 --> Undefined array key "id_mapel"
+in APPPATH\Controllers\User.php on line 43.
+ 1 APPPATH\Controllers\User.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_mapel"', 'D:\\laragon\\www\\sim\\app\\Controllers\\User.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 16:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-31 17:07:51 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\User.php(45): CodeIgniter\Model->__call('get_daftar_siswa_ekskul', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 17:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-31 17:12:10 --> mysqli_sql_exception: Unknown column 'ek.nisn' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT ek.nisn,...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT ek.nisn,...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT ek.nisn,...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(479): CodeIgniter\Database\BaseConnection->query('SELECT ek.nisn,...', Array)
+#4 D:\laragon\www\sim\app\Controllers\User.php(45): App\Models\M_sekolah->get_daftar_siswa_ekskul('2d7433d1-b060-4...', NULL, NULL, 2023, '202')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-03-31 17:12:10 --> Unknown column 'ek.nisn' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT ek.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT ek.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT ek.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\'')
+ 4 APPPATH\Models\M_sekolah.php(479): CodeIgniter\Database\BaseConnection->query('SELECT ek.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :nama_rombel: AND tahun_ajaran = :tahun_ajaran: AND es.id_ekskul = :id_ekskul:', [...])
+ 5 APPPATH\Controllers\User.php(45): App\Models\M_sekolah->get_daftar_siswa_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', null, null, 2023, '202')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 17:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-31 17:13:57 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT es.nisn,...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT es.nisn,...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT es.nisn,...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(474): CodeIgniter\Database\BaseConnection->query('SELECT es.nisn,...', Array)
+#4 D:\laragon\www\sim\app\Controllers\User.php(45): App\Models\M_sekolah->get_daftar_siswa_ekskul('2d7433d1-b060-4...', NULL, NULL, 2023, '202')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-03-31 17:13:57 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\' ORDER BY kelas, nama_rombel,nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\' ORDER BY kelas, nama_rombel,nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\' ORDER BY kelas, nama_rombel,nama')
+ 4 APPPATH\Models\M_sekolah.php(474): CodeIgniter\Database\BaseConnection->query('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                WHERE id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :nama_rombel: AND tahun_ajaran = :tahun_ajaran: AND es.id_ekskul = :id_ekskul: ORDER BY kelas, nama_rombel,nama', [...])
+ 5 APPPATH\Controllers\User.php(45): App\Models\M_sekolah->get_daftar_siswa_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', null, null, 2023, '202')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 17:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-31 17:14:54 --> mysqli_sql_exception: Column 'id_sekolah' in where clause is ambiguous in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT es.nisn,...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT es.nisn,...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT es.nisn,...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(475): CodeIgniter\Database\BaseConnection->query('SELECT es.nisn,...', Array)
+#4 D:\laragon\www\sim\app\Controllers\User.php(45): App\Models\M_sekolah->get_daftar_siswa_ekskul('2d7433d1-b060-4...', NULL, NULL, 2023, '202')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-03-31 17:14:54 --> Column 'id_sekolah' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                LEFT JOIN tb_siswa ts ON ts.nisn = ss.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\' ORDER BY kelas, nama_rombel,nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                LEFT JOIN tb_siswa ts ON ts.nisn = ss.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\' ORDER BY kelas, nama_rombel,nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                LEFT JOIN tb_siswa ts ON ts.nisn = ss.nisn
+                WHERE id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND kelas = NULL AND nama_rombel = NULL AND tahun_ajaran = 2023 AND es.id_ekskul = \'202\' ORDER BY kelas, nama_rombel,nama')
+ 4 APPPATH\Models\M_sekolah.php(475): CodeIgniter\Database\BaseConnection->query('SELECT es.nisn,nis,kelas,nama,nama_rombel 
+                FROM tb_ekskul_siswa es
+                LEFT JOIN tb_siswa_sekolah ss ON ss.nisn = es.nisn
+                LEFT JOIN tb_siswa ts ON ts.nisn = ss.nisn
+                WHERE id_sekolah = :id_sekolah: AND kelas = :kelas: AND nama_rombel = :nama_rombel: AND tahun_ajaran = :tahun_ajaran: AND es.id_ekskul = :id_ekskul: ORDER BY kelas, nama_rombel,nama', [...])
+ 5 APPPATH\Controllers\User.php(45): App\Models\M_sekolah->get_daftar_siswa_ekskul('2d7433d1-b060-4656-8fd4-5802b49ee54b', null, null, 2023, '202')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\User->peserta_ekskul()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-03-31 17:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-31 17:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

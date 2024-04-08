@@ -157,6 +157,14 @@ if ($kepribadian) {
 }
 ?>
 
+<h2><?= "RAPOR SISWA" ?></h2>
+<select name="pilsemester" id="pilsemester">
+    <option <?= ($pilihsemester == "midganjil") ? "selected" : "" ?> value="midganjil">TENGAH SEMESTER GANJIL</option>
+    <option <?= ($pilihsemester == "raporganjil") ? "selected" : "" ?> value="raporganjil">AKHIR SEMESTER GANJIL</option>
+    <option <?= ($pilihsemester == "midgenap") ? "selected" : "" ?> value="midgenap">TENGAH SEMESTER GENAP</option>
+    <option <?= ($pilihsemester == "raporgenap") ? "selected" : "" ?> value="raporgenap">AKHIR SEMESTER GENAP</option>
+</select>
+
 <div style="font-size:16px;margin-bottom:15px;color: white">Nama Siswa
     <select style="font-size: 16px;" name="daftarsiswa" id="daftarsiswa">
         <?php
@@ -406,5 +414,46 @@ if ($kepribadian) {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+<script>
+    var selectedNIS = "<?= $nis ?>";
+    var valkelas = "<?= $valkelas ?>";
+
+    $(document).ready(function() {
+        //fetchNewData(selectedNIS);
+    });
+
+    $('#daftarsiswa').on('change', function() {
+        updatepilihan();
+    });
+
+    $('#pilsemester').on('change', function() {
+        updatepilihan();
+    });
+
+    function updatepilihan() {
+        selectedNIS = $('#daftarsiswa').val();
+        selectedSemester = $('#pilsemester').val();
+        window.open("<?= base_url() . 'nilai?kelas=' ?>" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_self");
+    }
+
+    function cetak_rapor() {
+        var nis = document.getElementById('daftarsiswa').value;
+        window.open("<?= base_url() . 'buatrapor/raporPDF?kelas=' ?>" + valkelas + "&nis=" + nis, "_blank");
+    }
+
+    function fetchNewData(selectedNIS) {
+        fetch('<?= base_url() . "nilai/get_daftar_rapor_siswa?nis=" ?>' + selectedNIS)
+            .then(response => response.json())
+            .then(data => {
+                updateTable(data);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function updateTable(newData) {
+
+    }
+</script>
 
 <?= $this->endSection(); ?>

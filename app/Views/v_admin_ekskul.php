@@ -222,7 +222,7 @@
 
         <label for="dimensi"><b>Jenis</b></label>
         <select name="jenis" id="jenis">
-            <option value='Umum'>Umum</option>";
+            <option value='Pilihan'>Pilihan</option>";
             <option value='Wajib'>Wajib</option>";
         </select>
 

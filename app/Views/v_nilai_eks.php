@@ -638,8 +638,8 @@
                     {
                         title: 'Nilai',
                         render: function(data, type, row) {
-                            return '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="1" ' + (data === '1' ? 'checked' : '') + '>MB ' +
-                                '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="2" ' + (data === '2' ? 'checked' : '') + '>SB ' +
+                            return '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="1" ' + (data === '1' ? 'checked' : '') + '>BB ' +
+                                '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="2" ' + (data === '2' ? 'checked' : '') + '>MB ' +
                                 '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="3" ' + (data === '3' ? 'checked' : '') + '>BSH ' +
                                 '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="4" ' + (data === '4' ? 'checked' : '') + '>SB';
                         }

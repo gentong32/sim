@@ -424,7 +424,21 @@
 <?= $this->section('konten') ?>
 <div>
     <h2><?= $nama_mapel ?></h2>
-    <h3>Kelas <?= $nama_rombel ?></h3>
+    <h3>Kelas
+        <select class="pilkelas" name="daftarrombel" id="daftarrombel">
+            <?php
+            $indeks = 0;
+            foreach ($daftarkelasajar as $row) :
+                $indeks++;
+                $selected = "";
+                if ($pilidx == $indeks) {
+                    $selected = "selected";
+                }
+            ?>
+                <option <?= $selected ?> value="<?= $indeks ?>"><?= $row['nama_rombel'] ?></option>
+            <?php endforeach ?>
+        </select>
+    </h3>
 
     <div id="dtambah" style="display: none">
         <div id="overlayprojek"></div>
@@ -502,7 +516,7 @@
         <button class="ok" id="tbsubmit" onclick="ceksubmit()">Submit</button>
     </div>
 </div>
-<?= (!$daftar_tp) ? "<span style='color:red'>Silakan tambahkan Tujuan Pembelajaran melalui menu di depan,  sebelum membuat Tugas</span><br>" : "" ?>
+<?= (!$daftar_tp) ? "<span style='margin:auto; padding:10px; max-width:600px;color:red; background-color:white'><b>Silakan tambahkan Tujuan Pembelajaran melalui menu di depan,  sebelum membuat Tugas</b></span><br>" : "" ?>
 <button <?= (!$daftar_tp) ? "disabled" : "" ?> class="tbtambah" id="tbtambah" onclick="tampilinput()">Tambahkan Tugas / Tes</button>
 
 <?php
@@ -939,5 +953,9 @@ $tugas_lama = '';
             alert("Lengkapi isian");
         }
     }
+
+    document.getElementById('daftarrombel').addEventListener('change', function() {
+        window.open("<?= base_url() . 'tugas?kelas=g' ?>" + this.value, "_self");
+    });
 </script>
 <?= $this->endSection() ?>

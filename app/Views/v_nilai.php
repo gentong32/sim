@@ -398,7 +398,22 @@
 
 <?php if ($id_tugas > 0) { ?>
     <div class="dpiltugas">
-        <h3>Tugas / Tes Kelas <?= $nama_rombel ?></h3>
+        <h2><?= $nama_mapel ?></h2>
+        <h3>Tugas / Tes Kelas
+            <select class="pilkelas" name="daftarrombel" id="daftarrombel">
+                <?php
+                $indeks = 0;
+                foreach ($daftarkelasajar as $row) :
+                    $indeks++;
+                    $selected = "";
+                    if ($pilidx == $indeks) {
+                        $selected = "selected";
+                    }
+                ?>
+                    <option <?= $selected ?> value="<?= $indeks ?>"><?= $row['nama_rombel'] ?></option>
+                <?php endforeach ?>
+            </select>
+        </h3>
         <select name="piltugas" id="piltugas">
             <?php
             foreach ($daftar_tugas as $datatugas) {
@@ -407,6 +422,15 @@
                     $selected = " selected ";
                 echo "<option " . $selected . " value='" . $datatugas['id'] . "'>" . $datatugas['nama_tugas'] . "</option>";
             }
+
+            $selected1 = "";
+            $selected2 = "";
+            if ($semester == 1)
+                $selected1 = " selected ";
+            else if ($semester == 2)
+                $selected2 = " selected ";
+            echo "<option " . $selected1 . " value='ganjil'>Ujian Semester Ganjil</option>";
+            echo "<option " . $selected2 . " value='genap'>Ujian Semester Genap</option>";
             ?>
         </select>
     </div>
@@ -414,7 +438,7 @@
     <div id="formContainer">
         <div class="inputsiswa-container">
             <div id="dsiswa"><button id="tbmundur" onclick="mundursiswa()">&lt;</button>
-                <div id="dnamasiswa">Siswa 31</div><button id="tbmaju" onclick="majusiswa()">&gt;</button>
+                <div id="dnamasiswa">Siswa 3f1</div><button id="tbmaju" onclick="majusiswa()">&gt;</button>
             </div>
             <hr>
             <span>Nilai</span><br>
@@ -423,23 +447,40 @@
             <div id="dtepecontainer">
                 <table id="tabelinputan" class="dtepe">
                     <tr>
-                        <th>T. Pembelajaran</th>
+                        <?php if ($semester == 0) {
+                            echo "<th>T. Pembelajaran</th>";
+                        } else {
+                            echo "<th>T. Pembelajaran</th>";
+                        }
+                        ?>
+
                         <th>Tercapai</th>
                         <th>Tidak</th>
                     </tr>
                     <?php
                     $dafidtugastp = [];
                     $jmlbaristp = 0;
-                    foreach ($daftar_tp as $data_tp) :
-                        $jmlbaristp++;
-                        $dafidtugastp[] = $data_tp['id_tugas_tp'];
+                    if ($semester == 0) {
+                        foreach ($daftar_tp as $data_tp) :
+                            $jmlbaristp++;
+                            $dafidtugastp[] = $data_tp['id_tugas_tp'];
                     ?>
+                            <tr>
+                                <td><?= $data_tp['tujuan_pembelajaran'] ?></td>
+                                <td><input type="radio" id="tp_c<?= $jmlbaristp ?>" name="tepe<?= $jmlbaristp ?>"></td>
+                                <td><input type="radio" id="tp_t<?= $jmlbaristp ?>" name="tepe<?= $jmlbaristp ?>"></td>
+                            </tr>
+                        <?php endforeach;
+                    } else {
+                        $jmlbaristp = 1;
+                        ?>
                         <tr>
-                            <td><?= $data_tp['tujuan_pembelajaran'] ?></td>
-                            <td><input type="radio" id="tp_c<?= $jmlbaristp ?>" name="tepe<?= $jmlbaristp ?>"></td>
-                            <td><input type="radio" id="tp_t<?= $jmlbaristp ?>" name="tepe<?= $jmlbaristp ?>"></td>
+                            <td>KKM Nilai Ujian</td>
+                            <td><input type="radio" id="tp_c1" name="tepe1"></td>
+                            <td><input type="radio" id="tp_t1" name="tepe1"></td>
                         </tr>
-                    <?php endforeach ?>
+                    <?php }
+                    ?>
                 </table>
             </div>
 
@@ -468,7 +509,10 @@
                 $baris = 0;
                 foreach ($daftar_nilai_siswa as $datasiswa) {
                     $baris++;
-                    $nilaitp = $datasiswa['nilai_tp'];
+                    if ($semester == 0)
+                        $nilaitp = $datasiswa['nilai_tp'];
+                    else
+                        $nilaitp = $datasiswa['status'];
                     $ntpall = explode(";", $nilaitp);
                     $divmerahijo = "";
                     foreach ($ntpall as $ntp) {
@@ -495,11 +539,14 @@
             <div id="keterangan" style="margin-left: 10px;">
                 <label style="margin-left: -7px !important;">Keterangan TP:</label><br>
                 <?php
-                $baris = 0;
-                foreach ($daftar_tp as $data_tp) :
-                    $baris++; ?>
-                    <label>TP <?= $baris ?>: <?= $data_tp['tujuan_pembelajaran'] ?></label><br>
-                <?php endforeach ?>
+                if ($semester == 0) {
+                    $baris = 0;
+                    foreach ($daftar_tp as $data_tp) :
+                        $baris++; ?>
+                        <label>TP <?= $baris ?>: <?= $data_tp['tujuan_pembelajaran'] ?></label><br>
+                <?php endforeach;
+                }
+                ?>
                 <div class='ijo'></div> : Tercapai<br>
                 <div class='merah'></div> : Belum Tercapai<br>
                 <!-- <i> *) Jika semua hadir tidak perlu dilakukan penyimpanan</i> -->
@@ -540,7 +587,8 @@
         var selectedRowIndex = 0;
         var table = document.getElementById('data-table');
         var jmlbaristp = <?= $jmlbaristp ?>;
-        var daftarTugasTp = <?= json_encode($dafidtugastp); ?>
+        var daftarTugasTp = <?= json_encode($dafidtugastp) ?>;
+        const semester = <?= $semester ?>;
 
         var options = document.querySelector('.options');
         var selectedOption = document.querySelector('.selected-option span');
@@ -601,12 +649,17 @@
                     adaeror2 = true;
                 }
                 if (document.getElementById('tp_c' + a).checked == true) {
-                    dataijomerah = dataijomerah + "{" + daftarTugasTp[a - 1] + "=2},"
+                    if (semester == 0)
+                        dataijomerah = dataijomerah + "{" + daftarTugasTp[a - 1] + "=2},";
+                    else
+                        dataijomerah = dataijomerah + "{" + semester + "=2},";
                 } else {
-                    dataijomerah = dataijomerah + "{" + daftarTugasTp[a - 1] + "=1},"
+                    if (semester == 0)
+                        dataijomerah = dataijomerah + "{" + daftarTugasTp[a - 1] + "=1},";
+                    else
+                        dataijomerah = dataijomerah + "{" + semester + "=1},";
                 }
             }
-            // alert(dataijomerah);
 
             if (adaeror2) {
                 alert("Ketercapaian tujuan pembelajaran diisi dulu");
@@ -616,6 +669,7 @@
                 var data = {
                     valkelas: "<?= $valkelas ?>",
                     id_tugas: "<?= $id_tugas ?>",
+                    semester: "<?= $semester ?>",
                     id_mapel: "<?= $id_mapel ?>",
                     nilai: isinilai,
                     nis: nis,
@@ -689,7 +743,16 @@
         });
 
         document.getElementById('piltugas').addEventListener('change', function() {
-            window.open("<?= base_url() . 'nilai?kelas=' . $valkelas . '&tugas=' ?>" + this.value, "_self");
+            if (this.value == "ganjil")
+                window.open("<?= base_url() . 'nilai?kelas=' . $valkelas . '&semester=1' ?>", "_self");
+            else if (this.value == "genap")
+                window.open("<?= base_url() . 'nilai?kelas=' . $valkelas . '&semester=2' ?>", "_self");
+            else
+                window.open("<?= base_url() . 'nilai?kelas=' . $valkelas . '&tugas=' ?>" + this.value, "_self");
+        });
+
+        document.getElementById('daftarrombel').addEventListener('change', function() {
+            window.open("<?= base_url() . 'nilai?kelas=g' ?>" + this.value, "_self");
         });
 
         document.getElementById('tb_update').addEventListener('click', function() {

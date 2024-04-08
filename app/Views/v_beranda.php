@@ -10,6 +10,12 @@
             <p>Presensi</p>
         </a>
     </div>
+    <div class="menu-item es" style="display: none;">
+        <a href="/peserta_ekskul" onclick="appendKelasToLink('peserta_ekskul')">
+            <img src="assets/peserta.png" alt="Peserta">
+            <p>Peserta</p>
+        </a>
+    </div>
     <div class="menu-item ge" style="display: none;">
         <a href="/tujuan_pembelajaran" onclick="appendKelasToLink('tujuan_pembelajaran')">
             <img src="assets/tp.png" alt="Tujuan Pembelajaran">
@@ -71,6 +77,7 @@
     var semuaWs = document.querySelectorAll('.ws');
     var semuaGs = document.querySelectorAll('.gs');
     var semuaGE = document.querySelectorAll('.ge');
+    var semuaEs = document.querySelectorAll('.es');
     var semuaWGLE = document.querySelectorAll('.wgle');
 
     // <?php //if ($daftarkelaswali) {
@@ -171,6 +178,10 @@
             elemen.style.display = "block";
         });
 
+        semuaEs.forEach(function(elemen) {
+            elemen.style.display = "none";
+        });
+
         semuaGs.forEach(function(elemen) {
             elemen.style.display = "none";
         });
@@ -188,6 +199,10 @@
 
         semuaWGLE.forEach(function(elemen) {
             elemen.style.display = "block";
+        });
+
+        semuaEs.forEach(function(elemen) {
+            elemen.style.display = "none";
         });
 
         semuaGs.forEach(function(elemen) {
@@ -208,6 +223,10 @@
             elemen.style.display = "block";
         });
 
+        semuaEs.forEach(function(elemen) {
+            elemen.style.display = "none";
+        });
+
         semuaGs.forEach(function(elemen) {
             elemen.style.display = "none";
         });
@@ -223,6 +242,10 @@
         });
 
         semuaWGLE.forEach(function(elemen) {
+            elemen.style.display = "block";
+        });
+
+        semuaEs.forEach(function(elemen) {
             elemen.style.display = "block";
         });
 

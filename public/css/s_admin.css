@@ -79,6 +79,7 @@ html {
 }
 
 #submenuReferensi {
+  line-height: 8px;
   display: none;
 }
 
@@ -87,6 +88,7 @@ html {
 }
 
 #submenuKalender {
+  line-height: 8px;
   display: none;
 }
 

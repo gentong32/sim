@@ -25,6 +25,7 @@ class Nilai extends BaseController
 
         $kelaspilihan = $this->request->getVar('kelas');
         $tugasterpilih = $this->request->getVar('tugas');
+        $semesterterpilih = $this->request->getVar('semester');
         $data_saya = $this->M_user->get_data_guru($id_user);
         $nuptk = $data_saya->nuptk;
         $wgl = substr($kelaspilihan, 0, 1);
@@ -35,6 +36,9 @@ class Nilai extends BaseController
             $daftarkelasajar = $this->M_user->cekajarkelas($nuptk, $id_sekolah);
         } else if ($wgl == "l") {
             $daftarkelasajar = $this->M_user->cekajarlain($nuptk);
+        } else if ($wgl == "e") {
+        } else {
+            return redirect("home");
         }
 
         if ($wgl == "g") {
@@ -44,6 +48,13 @@ class Nilai extends BaseController
             $jenis_mapel = $daftarkelasajar[($idx) - 1]['jenis'];
 
             $daftartugas = $this->M_sekolah->get_tugas($id_guru_mapel, tahun_ajaran());
+
+            if (isset($semesterterpilih))
+                $semesterke = $semesterterpilih;
+            else {
+                $semesterke = 0;
+            }
+
             if (isset($tugasterpilih))
                 $id_tugas = $tugasterpilih;
             else {
@@ -72,9 +83,14 @@ class Nilai extends BaseController
                 }
             }
             // $id_guru = $daftarkelasajar[($idx) - 1]['id_guru'];
-            $daftartp = $this->M_sekolah->get_tugas_tp($id_tugas);
+            if ($semesterke > 0) {
+                $daftartp = "";
+                $daftarnilaisiswa = $this->M_user->getDaftarNilaiSemester($id_sekolah, tahun_ajaran(), $kelas, $nama_rombel, $semesterke, $agama);
+            } else {
+                $daftartp = $this->M_sekolah->get_tugas_tp($id_tugas);
+                $daftarnilaisiswa = $this->M_user->getDaftarnilai($id_sekolah, tahun_ajaran(), $kelas, $nama_rombel, $id_tugas, $agama);
+            }
             // $datakalender = $this->M_sekolah->getAgenda($id_sekolah);
-            $daftarnilaisiswa = $this->M_user->getDaftarnilai($id_sekolah, tahun_ajaran(), $kelas, $nama_rombel, $id_tugas, $agama);
             $data['kelas'] = $kelas;
             $data['nama_rombel'] = $nama_rombel;
             $data['nama_mapel'] = $nama_mapel;
@@ -83,13 +99,16 @@ class Nilai extends BaseController
             $data['id_tugas'] = $id_tugas;
             $data['tugasterpilih'] = $tugasterpilih;
             $data['daftar_tugas'] = $daftartugas;
+            $data['semester'] = $semesterke;
             $data['daftar_tp'] = $daftartp;
             $data['daftar_nilai_siswa'] = $daftarnilaisiswa;
-            $data['kelas'] = $kelas;
+            $data['daftarkelasajar'] = $daftarkelasajar;
+            $data['pilidx'] = $idx;
 
             // echo '<pre>';
-            // echo var_dump($daftarnilaisiswa);
+            // echo var_dump($daftarkelasajar);
             // echo '</pre>';
+            // die();
         } else if ($wgl == "l") {
             $jenis = $daftarkelasajar[($idx) - 1]['jenis_mapel'];
             $nama_mapel = $nama_mapel_lain[$jenis];
@@ -116,7 +135,7 @@ class Nilai extends BaseController
             $id_ekskul = $daftarwaliekskul[($idx) - 1]['id_ekskul'];
             $nama_ekskul = $daftarwaliekskul[($idx) - 1]['nama_ekskul'];
             $namakelaspilihan = $this->request->getVar('n_kelas');
-            $daftarkelas_sekolah = $this->M_sekolah->get_daftar_kelas($id_sekolah);
+            $daftarkelas_sekolah = $this->M_sekolah->get_daftar_kelas($id_sekolah, tahun_ajaran());
             if (!isset($namakelaspilihan)) {
                 $namakelaspilihan = $daftarkelas_sekolah[0]['kelas'];
             }
@@ -215,7 +234,10 @@ class Nilai extends BaseController
             if ($pilihsemester == "midganjil" || $pilihsemester == "midgenap") {
                 $get_rapor_nilai = $this->M_user->rapor_nilai_mid($id_sekolah, $kelas, $sub_kelas, $nisn, $maks_kolom, tahun_ajaran(), $tglawal, $tglakhir);
             } else {
-                $get_rapor_nilai = $this->M_user->rapor_nilai_akhir($id_sekolah, $kelas, $sub_kelas, $nisn, $maks_kolom, tahun_ajaran(), $tglawal, $tglakhir);
+                $persenujian = $info_sekolah['bobot_tes'];
+                $get_rapor_nilai = $this->M_user->rapor_nilai_akhir($id_sekolah, $kelas, $sub_kelas, $nisn, $pilihsemester, tahun_ajaran(), $tglawal, $tglakhir, $persenujian);
+                $get_nilai_ekskul = $this->M_user->rapor_nilai_ekskul($id_sekolah, $nisn, $pilihsemester, tahun_ajaran());
+                $data['nilai_ekskul'] = $get_nilai_ekskul;
                 // $get_rapor_p5 = $this->M_user->rapor_nilai_p5($id_sekolah, $kelas, $sub_kelas, $nisn, $maks_kolom, tahun_ajaran(), $tglawal, $tglakhir);
                 // echo '<pre>';
                 // echo var_dump($get_rapor_nilai);
@@ -260,7 +282,10 @@ class Nilai extends BaseController
         } else if ($wgl == "e") {
             return view('v_nilai_eks', $data);
         } else if ($wgl == "w") {
-            return view('v_nilai_rapor', $data);
+            if ($pilihsemester == "midganjil" || $pilihsemester == "midgenap")
+                return view('v_nilai_rapor_aja', $data);
+            else
+                return view('v_nilai_rapor', $data);
         }
     }
 
@@ -311,6 +336,7 @@ class Nilai extends BaseController
         $dataToSave = json_decode(file_get_contents('php://input'), true);
 
         $id_tugas = $dataToSave['id_tugas'];
+        $semester = $dataToSave['semester'];
         $id_mapel = $dataToSave['id_mapel'];
         $dataijomerah = $dataToSave['dataijomerah'];
         $nilai = $dataToSave['nilai'];
@@ -321,37 +347,60 @@ class Nilai extends BaseController
         $savedata['id_sekolah'] = $id_sekolah;
         $savedata['nisn'] = $nisn;
         $savedata['id_mapel'] = $id_mapel;
-        $savedata['id_tugas'] = $id_tugas;
         $savedata['nilai'] = $nilai;
 
-        $cek_nilai = $this->M_sekolah->cek_nilai($savedata);
+        if ($semester == 0) {
+            $savedata['id_tugas'] = $id_tugas;
+            $cek_nilai = $this->M_sekolah->cek_nilai($savedata);
+        } else {
+            $savedata['semester'] = $semester;
+            $cek_nilai = $this->M_sekolah->cek_nilai_semester($savedata);
+        }
+
+        if ($semester > 0) {
+            $pair = str_replace(['{', '}', ','], '', $dataijomerah);
+            $values = explode('=', $pair);
+            $id_tugas_tp = $values[0];
+            $status = $values[1];
+            $savedata['status'] = $status;
+        }
+
         if ($cek_nilai) {
             $lastInsertedID = $cek_nilai->id;
-            $this->M_sekolah->update_nilai($savedata);
-            $info = $id_sekolah . "-" . $nisn . "-" . $id_mapel . "-" . $id_tugas . "-" . $nilai;
+            if ($semester == 0) {
+                $this->M_sekolah->update_nilai($savedata);
+                $info = $id_sekolah . "-" . $nisn . "-" . $id_mapel . "-" . $id_tugas . "-" . $nilai;
+            } else {
+                $this->M_sekolah->update_nilai_semester($savedata);
+                $info = $id_sekolah . "-" . $nisn . "-" . $id_mapel . "-" . $semester . "-" . $nilai;
+            }
         } else {
-            $lastInsertedID = $this->M_sekolah->insert_nilai($savedata);
+            if ($semester == 0)
+                $lastInsertedID = $this->M_sekolah->insert_nilai($savedata);
+            else
+                $lastInsertedID = $this->M_sekolah->insert_nilai_semester($savedata);
             $info = "add";
         }
 
-
         // $dataijomerah = "{7=1},{8=1},";
 
-        $pairs = explode(',', $dataijomerah);
-        // if ($pairs)
-        foreach ($pairs as $pair) {
-            if ($pair != null) {
-                $pair = str_replace(['{', '}'], '', $pair);
-                $values = explode('=', $pair);
-                $id_tugas_tp = $values[0];
-                $status = $values[1];
-                $savedatatp['id_nilai_siswa'] = $lastInsertedID;
-                $savedatatp['id_tugas_tp'] = $id_tugas_tp;
-                $savedatatp['status'] = $status;
-                if ($cek_nilai) {
-                    $this->M_sekolah->update_nilai_tp($savedatatp);
-                } else {
-                    $this->M_sekolah->insert_nilai_tp($savedatatp);
+        if ($semester == 0) {
+            $pairs = explode(',', $dataijomerah);
+            // if ($pairs)
+            foreach ($pairs as $pair) {
+                if ($pair != null) {
+                    $pair = str_replace(['{', '}'], '', $pair);
+                    $values = explode('=', $pair);
+                    $id_tugas_tp = $values[0];
+                    $status = $values[1];
+                    $savedatatp['id_nilai_siswa'] = $lastInsertedID;
+                    $savedatatp['id_tugas_tp'] = $id_tugas_tp;
+                    $savedatatp['status'] = $status;
+                    if ($cek_nilai) {
+                        $this->M_sekolah->update_nilai_tp($savedatatp);
+                    } else {
+                        $this->M_sekolah->insert_nilai_tp($savedatatp);
+                    }
                 }
             }
         }
@@ -494,9 +543,9 @@ class Nilai extends BaseController
         else
             $semester = 2;
 
-        $daftar_nilai_p5 = $this->M_user->getDaftarNilaiEks($id_sekolah, tahun_ajaran(), $kelas, $rombel, $id_ekskul, $semester);
+        $daftar_nilai_eks = $this->M_user->getDaftarNilaiEks($id_sekolah, tahun_ajaran(), $kelas, $rombel, $id_ekskul, $semester);
 
-        return json_encode($daftar_nilai_p5);
+        return json_encode($daftar_nilai_eks);
     }
 
     public function simpan_nilai_eks()
@@ -540,6 +589,6 @@ class Nilai extends BaseController
 
     public function testabel()
     {
-        echo capaiannilai("2080 Menghapal surat Al A'la; 2085 Menghapal surat Al Mulk");
+        echo capaianekskul("3 Membuat api unggun; 2 Mendirikan tenda");
     }
 }

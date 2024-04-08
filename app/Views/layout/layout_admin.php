@@ -52,6 +52,7 @@
                         <li><a href="<?= base_url() ?>admin/projek">Projek Sekolah</a></li>
                         <li><a href="<?= base_url() ?>admin/dimensi">Dimensi Projek</a></li>
                         <li><a href="<?= base_url() ?>admin/ekskul">Ekskul</a></li>
+                        <li><a href="<?= base_url() ?>admin/jadwal_ujian">Jadwal Ujian</a></li>
                         <li><a href="<?= base_url() ?>admin/bobot_nilai">Bobot Nilai</a></li>
                         <li><a href="<?= base_url() ?>admin/kop_rapor">Kop Rapor</a></li>
                     </ul>

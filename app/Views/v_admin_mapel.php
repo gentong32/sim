@@ -209,7 +209,7 @@
                     if ($datarow['kelas'] == $kelas && ($datarow['jenis'] == 0 || $datarow['jenis'] == 1)) {
                         $baris++;
                         echo "<tr><td class='editable' contentEditable=false>" . $datarow['nama_mapel'] . "</td>";
-                        echo "<td><button class='edit' onclick='editMataPelajaran(this,`" . $datarow['id'] . "`)'>Edit</button> <button style = 'display:none' class = 'ok' onclick = 'okMataPelajaran(this,`umum`,`" . $kelas . "`,`" . $datarow['id'] . "`)'>OK</button><button style = 'display:none' class = 'batal' onclick = 'batalMataPelajaran(this, `" . $baris . "`)'>Batal</button><button class='delete' onclick = 'hapusMataPelajaran(this,`umum`,`" . $kelas . "`,`" . $baris . "`)'>Hapus</button></td></tr>";
+                        echo "<td><button class='edit' onclick='editMataPelajaran(this,`" . $datarow['id'] . "`)'>Edit</button> <button style = 'display:none' class = 'ok' onclick = 'okMataPelajaran(this,`umum`,`" . $kelas . "`,`" . $datarow['id'] . "`)'>OK</button><button style = 'display:none' class = 'batal' onclick = 'batalMataPelajaran(this)'>Batal</button><button class='delete' onclick = 'hapusMataPelajaran(this,`umum`,`" . $kelas . "`,`" . $datarow['id'] . "`)'>Hapus</button></td></tr>";
                     } else
                     if ($datarow['kelas'] == $kelas && $datarow['jenis'] == 2) {
                         if (!in_array($datarow['sub_kelas'], $daftar_pilihan)) {
@@ -300,7 +300,7 @@
         selection.addRange(range);
 
         cell = newRow.insertCell(1);
-        cell.innerHTML = '<button style = "display:none" class="edit" onclick="editMataPelajaran(this, ``)">Edit</button> <button class = "ok" onclick = "okMataPelajaran(this,`' + jenis + '`,`' + kelas + '`,`' + (table.rows.length - 1) + '`)"> OK</button><button class = "batal" onclick = "batalMataPelajaran(this, `' + (table.rows.length - 1) + '`)">Batal</button><button style = "display:none" class="delete"  onclick = "hapusMataPelajaran(this,`' + jenis + '`,`' + kelas + '`,`' + (table.rows.length - 1) + '`)">Hapus</button>';
+        cell.innerHTML = '<button style = "display:none" class="edit" onclick="editMataPelajaran(this, ``)">Edit</button> <button class = "ok" onclick = "okMataPelajaran(this,`' + jenis + '`,`' + kelas + '`,`' + (table.rows.length - 1) + '`)"> OK</button><button class = "batal" onclick = "batalMataPelajaran(this)">Batal</button><button style = "display:none" class="delete"  onclick = "hapusMataPelajaran(this,`' + jenis + '`,`' + kelas + '`,`' + (table.rows.length - 1) + '`)">Hapus</button>';
         disableEditDeleteButtons();
 
     }
@@ -395,14 +395,14 @@
 
     }
 
-    function hapusMataPelajaran(button, jenis, kelas, baris) {
+    function hapusMataPelajaran(button, jenis, kelas, id) {
         if (confirm("Yakin mau menghapus mapel ini")) {
             var row = button.parentElement.parentElement;
             var url = '<?= base_url() . "admin/hapus_mapel" ?>';
             var data = {
                 jenis: jenis,
                 kelas: kelas,
-                baris: baris,
+                id: id,
             };
 
             fetch(url, {
@@ -414,7 +414,11 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    row.remove();
+                    if (data.pesan === "Berhasil") {
+                        row.remove();
+                    } else if (data.pesan === "Sudah ada nilai") {
+                        alert("Gagal menghapus, karena mapel ini sudah ada nilai");
+                    }
                 })
                 .then()
                 .catch(error => console.error('Error:', error));
@@ -422,7 +426,7 @@
         }
     }
 
-    function batalMataPelajaran(button, baris) {
+    function batalMataPelajaran(button) {
         var row = button.parentElement.parentElement;
         var cell = row.querySelector('.editable');
         if (addedit == "add")

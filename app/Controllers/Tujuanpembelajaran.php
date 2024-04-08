@@ -45,6 +45,8 @@ class Tujuanpembelajaran extends BaseController
             $nama_mapel = $daftarkelasajar[($idx) - 1]['nama_mapel'];
             $id_guru = $daftarkelasajar[($idx) - 1]['id_guru'];
             $daftartp = $this->M_sekolah->getTP($id_guru, $id_mapel, $kelas, tahun_ajaran());
+            $data['daftarkelasajar'] = $daftarkelasajar;
+            $data['pilidx'] = $idx;
             $data['kelas'] = $kelas;
             $data['id_mapel'] = $id_mapel;
             $data['nama_mapel'] = $nama_mapel;
@@ -56,7 +58,7 @@ class Tujuanpembelajaran extends BaseController
             $id_ekskul = $daftarwaliekskul[($idx) - 1]['id_ekskul'];
             $nama_ekskul = $daftarwaliekskul[($idx) - 1]['nama_ekskul'];
             $namakelaspilihan = $this->request->getVar('n_kelas');
-            $daftarkelas_sekolah = $this->M_sekolah->get_daftar_kelas($id_sekolah);
+            $daftarkelas_sekolah = $this->M_sekolah->get_daftar_kelas($id_sekolah, tahun_ajaran());
             if (!isset($namakelaspilihan)) {
                 $namakelaspilihan = $daftarkelas_sekolah[0]['kelas'];
             }
