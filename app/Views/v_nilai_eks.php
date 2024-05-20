@@ -447,7 +447,15 @@
 
 <?php if ($jml_tp_eks > 0) { ?>
     <h2><?= $nama_ekskul ?></h2>
-    <div style="font-size:16px;margin-bottom:15px;color: white">Kelas
+    <div style="font-size:16px;margin-bottom:15px;color: white">
+        Semester
+        <select style="font-size: 16px;" name="semester" id="semester">
+            <option <?= ($semester == 1) ? "selected" : "" ?> value="1">1</option>
+            <option <?= ($semester == 2) ? "selected" : "" ?> value="2">2</option>
+        </select>
+    </div>
+    <div style="font-size:16px;margin-bottom:15px;color: white">
+        Kelas
         <select style="font-size: 16px;" name="daftarkelas" id="daftarkelas">
             <?php foreach ($daftar_kelas as $row) :
                 $selected = "";
@@ -546,6 +554,12 @@
             fetchNewData(selectedKelas, selectedRombel);
         });
 
+        document.getElementById('semester').addEventListener('change', function() {
+            nsemester = this.value;
+            nkelas = document.getElementById('daftarkelas').value;
+            window.open("<?= base_url() . 'nilai?kelas=' . $val_kelas ?>" + "&semester=" + nsemester, "_self");
+        });
+
         $('#daftarkelas').on('change', function() {
             selectedKelas = $(this).val();
             ambilrombel(selectedKelas);
@@ -558,7 +572,7 @@
         });
 
         function fetchNewData(selectedKelas, selectedRombel) {
-            fetch('<?= base_url() . "nilai/get_daftar_nilai_eks?valkelas=" . $valkelas . "&kelas=" ?>' + selectedKelas + '&rombel=' + selectedRombel)
+            fetch('<?= base_url() . "nilai/get_daftar_nilai_eks?valkelas=" . $valkelas . "&kelas=" ?>' + selectedKelas + '&rombel=' + selectedRombel + '&semester=' + <?= $semester ?>)
                 .then(response => response.json())
                 .then(data => {
                     updateTable(data);
@@ -592,7 +606,7 @@
 
             $('#data-table').DataTable({
                 language: {
-                    url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/id.json',
+                    url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/id.json',
                 },
                 "aLengthMenu": [
                     [15, -1],
@@ -638,9 +652,9 @@
                     {
                         title: 'Nilai',
                         render: function(data, type, row) {
-                            return '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="1" ' + (data === '1' ? 'checked' : '') + '>BB ' +
-                                '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="2" ' + (data === '2' ? 'checked' : '') + '>MB ' +
-                                '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="3" ' + (data === '3' ? 'checked' : '') + '>BSH ' +
+                            return '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="1" ' + (data === '1' ? 'checked' : '') + '>K ' +
+                                '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="2" ' + (data === '2' ? 'checked' : '') + '>C ' +
+                                '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="3" ' + (data === '3' ? 'checked' : '') + '>B ' +
                                 '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="4" ' + (data === '4' ? 'checked' : '') + '>SB';
                         }
                     }
@@ -648,7 +662,7 @@
             });
         }
 
-        function ambilrombel() {
+        function ambilrombel(selectedKelas) {
             fetch('<?= base_url() . "nilai/get_rombel/" ?>' + selectedKelas, {
                     method: 'GET',
                 })
@@ -680,8 +694,8 @@
                 });
         }
 
-        function ambilindikator() {
-            fetch('<?= base_url() . "nilai/get_daftar_indikator_eks?kelas=" ?>' + selectedKelas + '&id_ekskul=' + idekskul, {
+        function ambilindikator(selectedKelas) {
+            fetch('<?= base_url() . "nilai/get_daftar_indikator_eks?kelas=" ?>' + selectedKelas + '&id_ekskul=' + idekskul + '&semester=<?= $semester ?>', {
                     method: 'GET',
                 })
                 .then(response => response.json())

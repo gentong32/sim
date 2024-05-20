@@ -9,6 +9,7 @@
         "ext-intl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
+        "codeigniter4/queue": "dev-develop",
         "laminas/laminas-escaper": "^2.9",
         "phpoffice/phpexcel": "^1.8",
         "phpoffice/phpspreadsheet": "^1.29",

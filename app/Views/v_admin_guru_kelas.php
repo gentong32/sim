@@ -326,6 +326,7 @@
 
 
                 if ($datarow['kelas'] != $kelas_lama) {
+                    $mapel_lama = '';
                     echo '<div class="jkelas">Kelas ' . $datarow['kelas'] . '</div>';
                     echo '<table class="tabel">
                         <tr>

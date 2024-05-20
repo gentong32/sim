@@ -1,0 +1,118 @@
+CRITICAL - 2024-04-29 09:13:26 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 1883.
+ 1 APPPATH\Controllers\Admin.php(1883): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1883)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->dimensi()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-04-29 09:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-29 09:13:42 --> Undefined array key 0
+in APPPATH\Controllers\Admin.php on line 1883.
+ 1 APPPATH\Controllers\Admin.php(1883): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 1883)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->dimensi()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-04-29 09:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:15:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:16:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-29 09:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-29 13:19:27 --> Undefined variable $kerajinan
+in APPPATH\Controllers\Kepribadian.php on line 133.
+ 1 APPPATH\Controllers\Kepribadian.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kerajinan', 'D:\\laragon\\www\\sim\\app\\Controllers\\Kepribadian.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:21:06 --> Undefined variable $kerajinan
+in APPPATH\Controllers\Kepribadian.php on line 133.
+ 1 APPPATH\Controllers\Kepribadian.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kerajinan', 'D:\\laragon\\www\\sim\\app\\Controllers\\Kepribadian.php', 133)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:22:14 --> Undefined variable $kerajinan
+in APPPATH\Controllers\Kepribadian.php on line 132.
+ 1 APPPATH\Controllers\Kepribadian.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kerajinan', 'D:\\laragon\\www\\sim\\app\\Controllers\\Kepribadian.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:24:28 --> Too few arguments to function App\Models\M_user::simpan_kepribadian(), 1 passed in D:\laragon\www\sim\app\Controllers\Kepribadian.php on line 135 and exactly 8 expected
+in APPPATH\Models\M_user.php on line 647.
+ 1 APPPATH\Controllers\Kepribadian.php(135): App\Models\M_user->simpan_kepribadian([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:25:53 --> Too few arguments to function App\Models\M_user::simpan_kepribadian(), 1 passed in D:\laragon\www\sim\app\Controllers\Kepribadian.php on line 135 and exactly 8 expected
+in APPPATH\Models\M_user.php on line 647.
+ 1 APPPATH\Controllers\Kepribadian.php(135): App\Models\M_user->simpan_kepribadian([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:26:30 --> Too few arguments to function App\Models\M_user::simpan_kepribadian(), 1 passed in D:\laragon\www\sim\app\Controllers\Kepribadian.php on line 135 and exactly 8 expected
+in APPPATH\Models\M_user.php on line 647.
+ 1 APPPATH\Controllers\Kepribadian.php(135): App\Models\M_user->simpan_kepribadian([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:27:13 --> Too few arguments to function App\Models\M_user::simpan_kepribadian(), 1 passed in D:\laragon\www\sim\app\Controllers\Kepribadian.php on line 136 and exactly 8 expected
+in APPPATH\Models\M_user.php on line 647.
+ 1 APPPATH\Controllers\Kepribadian.php(136): App\Models\M_user->simpan_kepribadian([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:28:39 --> Too few arguments to function App\Models\M_user::simpan_kepribadian(), 1 passed in D:\laragon\www\sim\app\Controllers\Kepribadian.php on line 136 and exactly 8 expected
+in APPPATH\Models\M_user.php on line 647.
+ 1 APPPATH\Controllers\Kepribadian.php(136): App\Models\M_user->simpan_kepribadian([...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->simpan_kepribadian()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:36:29 --> Undefined variable $suffiks
+in APPPATH\Models\M_user.php on line 614.
+ 1 APPPATH\Models\M_user.php(614): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $suffiks', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 614)
+ 2 APPPATH\Controllers\Kepribadian.php(96): App\Models\M_user->getDaftarKepribadian('2d7433d1-b060-4656-8fd4-5802b49ee54b', 2023, '10', 'X-1', 'akhirgenap')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->get_data_kepribadian()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:37:21 --> Undefined variable $suffiks
+in APPPATH\Models\M_user.php on line 614.
+ 1 APPPATH\Models\M_user.php(614): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $suffiks', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 614)
+ 2 APPPATH\Controllers\Kepribadian.php(96): App\Models\M_user->getDaftarKepribadian('2d7433d1-b060-4656-8fd4-5802b49ee54b', 2023, '10', 'X-1', 'raporganjik')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->get_data_kepribadian()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-04-29 13:41:26 --> Undefined variable $suffiks
+in APPPATH\Models\M_user.php on line 614.
+ 1 APPPATH\Models\M_user.php(614): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $suffiks', 'D:\\laragon\\www\\sim\\app\\Models\\M_user.php', 614)
+ 2 APPPATH\Controllers\Kepribadian.php(96): App\Models\M_user->getDaftarKepribadian('2d7433d1-b060-4656-8fd4-5802b49ee54b', 2023, '10', 'X-1', 'akhirgenap')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kepribadian->get_data_kepribadian()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kepribadian))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')

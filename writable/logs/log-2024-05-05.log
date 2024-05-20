@@ -1,0 +1,263 @@
+INFO - 2024-05-05 09:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 09:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-05 11:38:48 --> mysqli_sql_exception: Unknown column 'n.id_tugas' in 'on clause' in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT \n       ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(1255): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Nilai.php(263): App\Models\M_user->rapor_nilai_akhir('2d7433d1-b060-4...', '10', '-', '2001000031', 'raporgenap', 2023, '2024-03-01', '2024-06-22', '60')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Nilai->index()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-05-05 11:38:48 --> Unknown column 'n.id_tugas' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 
+                    m.jenis,
+                    m.kd_mapel, 
+                    m.nama_mapel, 
+                    (0.4*AVG(n.nilai) + 0.6*ns.nilai) AS nilai_rata_rata, 
+                    t.tahun_ajaran, t.tanggal_tugas,
+                    GROUP_CONCAT(
+                        CONCAT(
+                            nt.status,
+                            LPAD(n.nilai, 3, \'0\'), 
+                            \' \',
+                            tp.tujuan_pembelajaran
+                        ) 
+                        SEPARATOR \'; \'
+                    ) AS tujuan_pembelajaran_status
+                FROM 
+                    tb_mapel m
+                LEFT JOIN 
+                    tb_nilai_semester ns ON m.id = ns.id_mapel AND ns.nisn = \'2001000031\' AND ns.semester = 2  
+                LEFT JOIN 
+                    tb_tugas t ON n.id_tugas = t.id AND (t.tanggal_tugas>=\'2024-03-01\' AND t.tanggal_tugas<=\'2024-06-22\')
+                LEFT JOIN 
+                    tb_nilai_siswa n ON m.id = n.id_mapel AND n.nisn = \'2001000031\' AND t.id = n.id_tugas
+                LEFT JOIN 
+                    tb_tugas_tp ttp ON t.id = ttp.id_tugas
+                LEFT JOIN 
+                    tb_tujuan_pembelajaran tp ON ttp.id_tp = tp.id
+                LEFT JOIN 
+                    tb_nilai_tp nt ON n.id = nt.id_nilai_siswa AND ttp.id = nt.id_tugas_tp
+                WHERE 
+                    m.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND m.tahun_ajaran=2023 AND m.kelas = \'10\' AND (m.sub_kelas = \'-\' OR m.sub_kelas = \'-\')
+                GROUP BY 
+                    m.kd_mapel, m.nama_mapel, t.tahun_ajaran', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                    m.jenis,
+                    m.kd_mapel, 
+                    m.nama_mapel, 
+                    (0.4*AVG(n.nilai) + 0.6*ns.nilai) AS nilai_rata_rata, 
+                    t.tahun_ajaran, t.tanggal_tugas,
+                    GROUP_CONCAT(
+                        CONCAT(
+                            nt.status,
+                            LPAD(n.nilai, 3, \'0\'), 
+                            \' \',
+                            tp.tujuan_pembelajaran
+                        ) 
+                        SEPARATOR \'; \'
+                    ) AS tujuan_pembelajaran_status
+                FROM 
+                    tb_mapel m
+                LEFT JOIN 
+                    tb_nilai_semester ns ON m.id = ns.id_mapel AND ns.nisn = \'2001000031\' AND ns.semester = 2  
+                LEFT JOIN 
+                    tb_tugas t ON n.id_tugas = t.id AND (t.tanggal_tugas>=\'2024-03-01\' AND t.tanggal_tugas<=\'2024-06-22\')
+                LEFT JOIN 
+                    tb_nilai_siswa n ON m.id = n.id_mapel AND n.nisn = \'2001000031\' AND t.id = n.id_tugas
+                LEFT JOIN 
+                    tb_tugas_tp ttp ON t.id = ttp.id_tugas
+                LEFT JOIN 
+                    tb_tujuan_pembelajaran tp ON ttp.id_tp = tp.id
+                LEFT JOIN 
+                    tb_nilai_tp nt ON n.id = nt.id_nilai_siswa AND ttp.id = nt.id_tugas_tp
+                WHERE 
+                    m.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND m.tahun_ajaran=2023 AND m.kelas = \'10\' AND (m.sub_kelas = \'-\' OR m.sub_kelas = \'-\')
+                GROUP BY 
+                    m.kd_mapel, m.nama_mapel, t.tahun_ajaran')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                    m.jenis,
+                    m.kd_mapel, 
+                    m.nama_mapel, 
+                    (0.4*AVG(n.nilai) + 0.6*ns.nilai) AS nilai_rata_rata, 
+                    t.tahun_ajaran, t.tanggal_tugas,
+                    GROUP_CONCAT(
+                        CONCAT(
+                            nt.status,
+                            LPAD(n.nilai, 3, \'0\'), 
+                            \' \',
+                            tp.tujuan_pembelajaran
+                        ) 
+                        SEPARATOR \'; \'
+                    ) AS tujuan_pembelajaran_status
+                FROM 
+                    tb_mapel m
+                LEFT JOIN 
+                    tb_nilai_semester ns ON m.id = ns.id_mapel AND ns.nisn = \'2001000031\' AND ns.semester = 2  
+                LEFT JOIN 
+                    tb_tugas t ON n.id_tugas = t.id AND (t.tanggal_tugas>=\'2024-03-01\' AND t.tanggal_tugas<=\'2024-06-22\')
+                LEFT JOIN 
+                    tb_nilai_siswa n ON m.id = n.id_mapel AND n.nisn = \'2001000031\' AND t.id = n.id_tugas
+                LEFT JOIN 
+                    tb_tugas_tp ttp ON t.id = ttp.id_tugas
+                LEFT JOIN 
+                    tb_tujuan_pembelajaran tp ON ttp.id_tp = tp.id
+                LEFT JOIN 
+                    tb_nilai_tp nt ON n.id = nt.id_nilai_siswa AND ttp.id = nt.id_tugas_tp
+                WHERE 
+                    m.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND m.tahun_ajaran=2023 AND m.kelas = \'10\' AND (m.sub_kelas = \'-\' OR m.sub_kelas = \'-\')
+                GROUP BY 
+                    m.kd_mapel, m.nama_mapel, t.tahun_ajaran')
+ 4 APPPATH\Models\M_user.php(1255): CodeIgniter\Database\BaseConnection->query('SELECT 
+                    m.jenis,
+                    m.kd_mapel, 
+                    m.nama_mapel, 
+                    (0.4*AVG(n.nilai) + 0.6*ns.nilai) AS nilai_rata_rata, 
+                    t.tahun_ajaran, t.tanggal_tugas,
+                    GROUP_CONCAT(
+                        CONCAT(
+                            nt.status,
+                            LPAD(n.nilai, 3, \'0\'), 
+                            \' \',
+                            tp.tujuan_pembelajaran
+                        ) 
+                        SEPARATOR \'; \'
+                    ) AS tujuan_pembelajaran_status
+                FROM 
+                    tb_mapel m
+                LEFT JOIN 
+                    tb_nilai_semester ns ON m.id = ns.id_mapel AND ns.nisn = :nisn: AND ns.semester = :semester:  
+                LEFT JOIN 
+                    tb_tugas t ON n.id_tugas = t.id AND (t.tanggal_tugas>=:tglawal: AND t.tanggal_tugas<=:tglakhir:)
+                LEFT JOIN 
+                    tb_nilai_siswa n ON m.id = n.id_mapel AND n.nisn = :nisn: AND t.id = n.id_tugas
+                LEFT JOIN 
+                    tb_tugas_tp ttp ON t.id = ttp.id_tugas
+                LEFT JOIN 
+                    tb_tujuan_pembelajaran tp ON ttp.id_tp = tp.id
+                LEFT JOIN 
+                    tb_nilai_tp nt ON n.id = nt.id_nilai_siswa AND ttp.id = nt.id_tugas_tp
+                WHERE 
+                    m.id_sekolah = :id_sekolah: AND m.tahun_ajaran=:tahun_ajaran: AND m.kelas = :kelas: AND (m.sub_kelas = \'-\' OR m.sub_kelas = :sub_kelas:)
+                GROUP BY 
+                    m.kd_mapel, m.nama_mapel, t.tahun_ajaran', [...])
+ 5 APPPATH\Controllers\Nilai.php(263): App\Models\M_user->rapor_nilai_akhir('2d7433d1-b060-4656-8fd4-5802b49ee54b', '10', '-', '2001000031', 'raporgenap', 2023, '2024-03-01', '2024-06-22', '60')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-05 11:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 11:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 13:52:48 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(828): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Nilai.php(266): CodeIgniter\Model->__call('rekap_nilai', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-05 13:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 13:53:15 --> Undefined variable $semester
+in APPPATH\Models\M_sekolah.php on line 1581.
+ 1 APPPATH\Models\M_sekolah.php(1581): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $semester', 'D:\\laragon\\www\\sim\\app\\Models\\M_sekolah.php', 1581)
+ 2 APPPATH\Controllers\Nilai.php(266): App\Models\M_sekolah->rekap_nilai('2d7433d1-b060-4656-8fd4-5802b49ee54b', '10', 'X-1', '2024-01-02', '2024-06-22', 2023)
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-05 13:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 13:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 15:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-05-05 16:43:49 --> [DEPRECATED] substr(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Controllers\Nilai.php on line 380.
+ 1 APPPATH\Controllers\Nilai.php(380): substr(null, 1, 1)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->rekap_nilai()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+CRITICAL - 2024-05-05 16:43:49 --> Unsupported operand types: string - int
+in APPPATH\Controllers\Nilai.php on line 382.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->rekap_nilai()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-05 16:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 16:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 17:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 17:09:41 --> Undefined variable $kop_rapor
+in APPPATH\Views\v_rekap_nilai.php on line 157.
+ 1 APPPATH\Views\v_rekap_nilai.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kop_rapor', 'D:\\laragon\\www\\sim\\app\\Views\\v_rekap_nilai.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_rekap_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_rekap_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(390): view('v_rekap_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->rekap_nilai()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-05 17:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 17:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 17:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 17:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 17:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 17:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-05 17:18:13 --> Undefined variable $kop_rapor
+in APPPATH\Views\v_rekap_nilai.php on line 157.
+ 1 APPPATH\Views\v_rekap_nilai.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kop_rapor', 'D:\\laragon\\www\\sim\\app\\Views\\v_rekap_nilai.php', 157)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\laragon\\www\\sim\\app\\Views\\v_rekap_nilai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1176): CodeIgniter\View\View->render('v_rekap_nilai', [], true)
+ 5 APPPATH\Controllers\Nilai.php(390): view('v_rekap_nilai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Nilai->rekap_nilai()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-05 17:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 18:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 18:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 18:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 18:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 18:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 18:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-05 19:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

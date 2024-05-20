@@ -342,7 +342,7 @@
 
 <?= $this->section('konten') ?>
 
-<?php if ($daf_projek) { ?>
+<?php if ($daf_projek && $kelas != "") { ?>
     <div id="dprojek">
 
         <div class="dselect">
@@ -429,7 +429,7 @@
         </div>
     </div>
 <?php } else {
-    echo "<span style='color:darkred; font-size:20px'><b>Projek belum didefinisikan oleh admin sekolah!</b></span>";
+    echo "<span style='color:darkred; font-size:20px'><b>Kelas atau Projek belum didefinisikan oleh admin sekolah!</b></span>";
 } ?>
 
 <?= $this->endSection(); ?>
@@ -601,69 +601,70 @@
                 {
                     title: 'Nilai',
                     render: function(data, type, row) {
-                        return '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="1" ' + (data === '1' ? 'checked' : '') + '>BB ' +
-                            '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="2" ' + (data === '2' ? 'checked' : '') + '>MB ' +
+                        return '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="1" ' + (data === '1' ? 'checked' : '') + '>MuB ' +
+                            '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="2" ' + (data === '2' ? 'checked' : '') + '>SeB ' +
                             '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="3" ' + (data === '3' ? 'checked' : '') + '>BSH ' +
-                            '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="4" ' + (data === '4' ? 'checked' : '') + '>SB';
+                            '<input class="rbut" type="radio" name="keterangan_' + row[0] + '" value="4" ' + (data === '4' ? 'checked' : '') + '>SaB';
                     }
                 }
             ]
         });
     }
+    <?php if ($daf_projek && $kelas != "") { ?>
+        document.getElementById('tb_update').addEventListener('click', function() {
 
-    document.getElementById('tb_update').addEventListener('click', function() {
+            var table = $('#data-table').DataTable();
+            var dataToSend = [];
+            var id_projek = document.getElementById('projek').value;
 
-        var table = $('#data-table').DataTable();
-        var dataToSend = [];
-        var id_projek = document.getElementById('projek').value;
+            table.rows().every(function(rowIdx, tableLoop, rowLoop) {
+                var data = this.data();
+                var NIS = data[2];
+                var elemen = data[7];
 
-        table.rows().every(function(rowIdx, tableLoop, rowLoop) {
-            var data = this.data();
-            var NIS = data[2];
-            var elemen = data[7];
+                var radioElement = document.querySelector('input[name="keterangan_' + data[0] + '"]:checked');
+                var selectedValue = radioElement ? radioElement.value : '0';
 
-            var radioElement = document.querySelector('input[name="keterangan_' + data[0] + '"]:checked');
-            var selectedValue = radioElement ? radioElement.value : '0';
+                dataToSend.push({
+                    NIS: NIS,
+                    nilai: selectedValue,
+                    elemen: elemen.substring(3, 4),
+                });
 
-            dataToSend.push({
-                NIS: NIS,
-                nilai: selectedValue,
-                elemen: elemen.substring(3, 4),
             });
 
+            var postData = {
+                id_projek: id_projek,
+                dataToSend: dataToSend
+            };
+
+            // alert(JSON.stringify(postData));
+
+            fetch('<?= base_url("nilai/simpan_nilai_p5") ?>', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(postData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    $('#tb_update').hide();
+                    $('#info_update').show();
+                    setTimeout(function() {
+                        $('#info_update').hide();
+                    }, 2000);
+                })
+                .catch(error => console.error('Gagal menyimpan data:', error));
         });
 
-        var postData = {
-            id_projek: id_projek,
-            dataToSend: dataToSend
-        };
-
-        // alert(JSON.stringify(postData));
-
-        fetch('<?= base_url("nilai/simpan_nilai_p5") ?>', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(postData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                $('#tb_update').hide();
-                $('#info_update').show();
-                setTimeout(function() {
-                    $('#info_update').hide();
-                }, 2000);
-            })
-            .catch(error => console.error('Gagal menyimpan data:', error));
-    });
-
-    $('#data-table').on('draw.dt', function() {
-        $('.rbut').change(function() {
-            $('#tb_update').show();
-            $('#info_update').hide();
+        $('#data-table').on('draw.dt', function() {
+            $('.rbut').change(function() {
+                $('#tb_update').show();
+                $('#info_update').hide();
+            });
         });
-    });
+    <?php } ?>
 </script>
 
 <?= $this->endSection(); ?>

@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <?php if (!isset($nofooter)) : ?>
         <div class="judul">
             <h1><?php
@@ -27,7 +28,12 @@
                     echo "Selamat Malam";
                 }
                 ?></h1>
-            <h2><?= (session()->get('sex') == "L") ? "Pak" : "Bu" ?> <?= session()->get('nama_user') ?></h2>
+
+            <h2><?php
+                if (isset($dariadmin) && $dariadmin) {
+                } else {
+                    echo (session()->get('sex') == "L") ? "Pak" : "Bu";
+                } ?> <?= session()->get('nama_user') ?></h2>
             <button onclick="keluar();">Logout</button>
         </div>
     <?php endif ?>
@@ -208,17 +214,28 @@
     <?php endif ?>
 
     <?php if (isset($submenu)) : ?>
+
         <div class="dkelas">
-            <div class="back-button">
-                <a href="/home"><img src="/assets/back.png" alt="back"></a>
-            </div>
+            <?php if (isset($dariadmin) && $dariadmin) { ?>
+                <div class="back-button">
+                    <a href="/pengumuman/daftar"><img src="/assets/back.png" alt="back"></a>
+                </div>
+            <?php } else if (isset($detilabsensi) && $detilabsensi) { ?>
+                <div class="back-button">
+                    <a href="/presensi_rekap/?kelas=<?= $kelasterpilih ?>"><img src="/assets/back.png" alt="back"></a>
+                </div>
+            <?php } else { ?>
+                <div class="back-button">
+                    <a href="/home"><img src="/assets/back.png" alt="back"></a>
+                </div>
+            <?php } ?>
+
             <div class="center">
                 <div style="margin-left:0px;"><img src="/assets/<?= $ikon ?>.png" alt="Ikon"></div>
-                <div class="judul_menu"><?= $judul_submenu ?></div>
+                <div class="judul_menu">&nbsp;<?= $judul_submenu ?></div>
             </div>
         </div>
     <?php endif ?>
-
 
     <?= $this->renderSection('konten') ?>
 

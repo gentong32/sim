@@ -119,4 +119,91 @@ class Tugas extends BaseController
 
         return $this->response->setJSON($response);
     }
+
+    public function tugas_siswa()
+    {
+        if (session()->get('sebagai') != "siswa")
+            return redirect()->to("/");
+
+        $id_sekolah = session()->get('id_sekolah');
+        $id_user = session()->get('id_user');
+        $mapelterpilih = $this->request->getVar('mapel');
+        $semesterterpilih = $this->request->getVar('semester');
+
+        $data_saya = $this->M_user->getDataSiswa($id_user, tahun_ajaran());
+
+        $kelas = $data_saya['kelas'];
+        $nisn = $data_saya['nisn'];
+        $agama = $data_saya['agama'];
+        $nama_rombel = $data_saya['nama_rombel'];
+        $getidrombel = $this->M_sekolah->get_id_rombel($id_sekolah, $kelas, $nama_rombel);
+        $id_rombel = $getidrombel['id'];
+        $sub_kelas = $getidrombel['sub_kelas'];
+
+        $id_sekolah = session()->get('id_sekolah');
+        $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
+
+        $awgj = $infosekolah['tgl_awal_ganjil'];
+        $mdgj = $infosekolah['tgl_mid_ganjil'];
+        $akgj = $infosekolah['tgl_rapor_ganjil'];
+        $awgn = $infosekolah['tgl_awal_genap'];
+        $mdgn = $infosekolah['tgl_mid_genap'];
+        $akgn = $infosekolah['tgl_rapor_genap'];
+
+        if (!isset($semesterterpilih)) {
+            $tg_sekarang = date("Y-m-d");
+            if ($tg_sekarang <= $akgn)
+                $semesterterpilih = "raporgenap";
+            if ($tg_sekarang <= $mdgn)
+                $semesterterpilih = "midgenap";
+            if ($tg_sekarang <= $akgj)
+                $semesterterpilih = "raporganjil";
+            if ($tg_sekarang <= $mdgj)
+                $semesterterpilih = "midganjil";
+        }
+
+        if ($semesterterpilih == "midganjil") {
+            $tglawal = $awgj;
+            $tglakhir = $mdgj;
+            $judulsemester = "TENGAH SEMESTER GANJIL";
+            $suffiks = "_mid_ganjil";
+            $nsemester = 1;
+        } else if ($semesterterpilih == "raporganjil") {
+            $tglawal = $awgj; //$mdgj;
+            $tglakhir = $akgj;
+            $judulsemester = "AKHIR SEMESTER GANJIL";
+            $suffiks = "_akhir_ganjil";
+            $nsemester = 1;
+        } else if ($semesterterpilih == "midgenap") {
+            $tglawal = $awgn;
+            $tglakhir = $mdgn;
+            $judulsemester = "TENGAH SEMESTER GENAP";
+            $suffiks = "_mid_genap";
+            $nsemester = 2;
+        } else if ($semesterterpilih == "raporgenap") {
+            $tglawal = $awgn; //$mdgn;
+            $tglakhir = $akgn;
+            $judulsemester = "AKHIR SEMESTER GENAP";
+            $suffiks = "_akhir_genap";
+            $nsemester = 2;
+        }
+
+        $tglsekarang = date('Y-m-d');
+
+        $get_daftar_tugas = $this->M_user->get_tugas_kelas($id_rombel, $tglsekarang);
+
+        $judul_submenu = "&nbsp;Tugas";
+
+        $data['judul_submenu'] = $judul_submenu;
+        $data['submenu'] = true;
+        $data['menutitle'] = 'TP';
+        $data['ikon'] = 'tugas';
+        $data['kelas'] = $kelas;
+        $data['rombel'] = $nama_rombel;
+        $data['mapel'] = $mapelterpilih;
+        $data['semester'] = $semesterterpilih;
+        $data['daftar_tugas'] = $get_daftar_tugas;
+
+        return view('v_tugas_siswa', $data);
+    }
 }

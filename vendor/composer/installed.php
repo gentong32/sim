@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/framework',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7d5ab4bb45d483ae77b8d0173e4b5a22eec37d6e',
+        'reference' => 'baf0e944761efdefefc36655798b5955aca94edf',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,10 +22,21 @@
         'codeigniter4/framework' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7d5ab4bb45d483ae77b8d0173e4b5a22eec37d6e',
+            'reference' => 'baf0e944761efdefefc36655798b5955aca94edf',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'codeigniter4/queue' => array(
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => 'bcca098b104bd70c25620b5ba5acd2ee870d2556',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../codeigniter4/queue',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
             'dev_requirement' => false,
         ),
         'composer/pcre' => array(

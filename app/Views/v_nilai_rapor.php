@@ -13,7 +13,6 @@
     }
 
     .kop_rapor {
-
         width: 100%;
         text-align: left;
         margin: auto;
@@ -99,6 +98,30 @@
         font-style: italic;
     }
 
+    .catatanwali {
+        text-align: left;
+        padding: 10px;
+        font-size: smaller;
+    }
+
+    .kotakcatatanwali {
+        border: 0.5px solid gray;
+        text-align: left;
+        padding: 10px;
+        margin-right: 0px;
+    }
+
+    .kotaknaik {
+        border: 0.5px solid gray;
+        text-align: center;
+        padding: 13px;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
     .tandatangan {
         display: flex;
         flex-wrap: wrap;
@@ -124,6 +147,14 @@
         margin-bottom: 10px;
         padding: 5px;
     }
+
+    .tombol_atas_rapor {
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 5px;
+    }
 </style>
 </style>
 <link rel="stylesheet" href="<?= base_url() ?>css/s_presensi.css">
@@ -147,16 +178,25 @@ if ($absensi) {
     $jumlah_a = ($absensi['Jumlah_A'] == 0) ? "-" : $absensi['Jumlah_A'];
 }
 
-$kelakuan = "-";
-$kerajinan = "-";
-$kerapihan = "-";
-$kebersihan = "-";
+$kelakuan = "";
+$kerajinan = "";
+$kerapihan = "";
+$kebersihan = "";
 
 if ($kepribadian) {
-    $kelakuan = $kepribadian['kelakuan_mid_ganjil'];
-    $kerajinan = $kepribadian['kerajinan_mid_ganjil'];
-    $kerapihan = $kepribadian['kerapihan_mid_ganjil'];
-    $kebersihan = $kepribadian['kebersihan_mid_ganjil'];
+    $kelakuan = $kepribadian['kelakuan' . $suffiks];
+    $kerajinan = $kepribadian['kerajinan' . $suffiks];
+    $kerapihan = $kepribadian['kerapihan' . $suffiks];
+    $kebersihan = $kepribadian['kebersihan' . $suffiks];
+}
+
+$nilaiangka = array("-", "Kurang", "Cukup", "Baik", "Sangat Baik");
+$nilaipribadi = array("-", "D", "C", "B", "A");
+if ($kelas == 6 || $kelas == 9 || $kelas == 12) {
+    $txtnaik = array("-", "Keterangan Kelulusan : Lulus", "Keterangan Kelulusan : Tidak Lulus");
+} else {
+    $kelasnext = $kelas + 1;
+    $txtnaik = array("-", "Keterangan Kenaikan : Naik ke kelas $kelasnext", "Keterangan Kenaikan : Tinggal di kelas $kelas");
 }
 ?>
 
@@ -190,6 +230,12 @@ if ($kepribadian) {
     </select>
 </div>
 
+<div class="tombol_atas_rapor">
+    <button onclick="rekap_nilai()" class="tb_biru">Rekap Nilai</button>
+    <button onclick="cetak_rapor()" class="tb_biru">Cetak Rapor</button>
+    <button style="float: right;" onclick="raporp5()" class="tb_biru">Rapor P5</button>
+</div>
+
 <div class="rapor_container">
     <div class="kop_rapor">
         <?= $kop_rapor ?>
@@ -198,7 +244,7 @@ if ($kepribadian) {
     <div class="judul_rapor">
         <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
         <p><?= $judulsemester ?></p>
-        <p>TAHUN PELAJARAN 2023/2024</p>
+        <p>TAHUN PELAJARAN <?= tahun_ajaran('lengkap') ?></p>
     </div>
     <div class="nama_siswa">
         <table>
@@ -259,7 +305,7 @@ if ($kepribadian) {
                     <tr>
                         <td><?= $nomor ?></td>
                         <td><?= $row['nama_mapel'] ?></td>
-                        <td><?= $row['nilai_rata_rata'] ?></td>
+                        <td><?= (!is_null($row['nilai_rata_rata']) ? round($row['nilai_rata_rata']) : "-") ?></td>
                         <td><?= $row['tujuan_pembelajaran_status'] ?></td>
                     </tr>
                     <?php } else if ($row['jenis'] == 2) {
@@ -275,7 +321,7 @@ if ($kepribadian) {
                     <tr>
                         <td><?= $nomor2 ?></td>
                         <td><?= $row['nama_mapel'] ?></td>
-                        <td><?= $row['nilai_rata_rata'] ?></td>
+                        <td><?= (!is_null($row['nilai_rata_rata']) ? round($row['nilai_rata_rata']) : "-") ?></td>
                         <td><?= $row['tujuan_pembelajaran_status'] ?></td>
                     </tr>
             <?php }
@@ -297,53 +343,40 @@ if ($kepribadian) {
             $nomor2 = 0;
             $sekali1 = 0;
             $sekali2 = 0;
-            foreach ($rapor_siswa as $row) :
-                if ($row['jenis'] == 0) {
-                    if ($sekali1 == 0 && $kelas >= 11) {
-                        $sekali1 = 1; ?>
-                        <tr>
-                            <td><b>A.</b> </td>
-                            <td colspan="3" style="text-align:left;width:582px;"><b>MATA PELAJARAN UMUM</b></td>
-                        </tr>
-                    <?php }
-                    $string = $row['nama_mapel'];
-                    $substring = $agamasiswa;
-                    if (strstr($string, $substring)) {
-                        $nomor++; ?>
-                        <tr>
-                            <td><?= $nomor ?></td>
-                            <td style="text-align: left;"><?= $row['nama_mapel'] ?></td>
-                            <td style="text-align: center;"><?= (!is_null($row['nilai_rata_rata']) ? round($row['nilai_rata_rata']) : "-") ?></td>
-                            <td style="text-align: left;"><?= (!is_Null($row['tujuan_pembelajaran_status'])) ? capaiannilai($row['tujuan_pembelajaran_status']) : "" ?></td>
-                        </tr>
-                    <?php }
-                } else if ($row['jenis'] == 1) {
-                    $nomor++;
-                    ?>
-                    <tr>
-                        <td><?= $nomor ?></td>
-                        <td><?= $row['nama_mapel'] ?></td>
-                        <td><?= $row['nilai_rata_rata'] ?></td>
-                        <td><?= $row['tujuan_pembelajaran_status'] ?></td>
-                    </tr>
-                    <?php } else if ($row['jenis'] == 2) {
-                    if ($sekali2 == 0) {
-                        $sekali2 = 1; ?>
-                        <tr>
-                            <td><b>B.</b></td>
-                            <td colspan="3" style="width:582px;"><b>MATA PELAJARAN PILIHAN</b></td>
-                        </tr>
-                    <?php }
-                    $nomor2++;
-                    ?>
-                    <tr>
-                        <td><?= $nomor2 ?></td>
-                        <td><?= $row['nama_mapel'] ?></td>
-                        <td><?= $row['nilai_rata_rata'] ?></td>
-                        <td><?= $row['tujuan_pembelajaran_status'] ?></td>
-                    </tr>
-            <?php }
-            endforeach; ?>
+            foreach ($rapor_ekskul_siswa as $row) :
+                $nomor++;
+                $str_nilai = $row['tujuan_pembelajaran_status'];
+                $sentences = explode(';', $str_nilai);
+                $jumlah_kalimat = count($sentences);
+
+                $sentencesbaru = "";
+
+                $maxChar  = 0;
+                $kalimatke = 0;
+                foreach ($sentences as $sentence) {
+                    $kalimatke++;
+                    $firstChar = trim(substr($sentence, 0, 1));
+                    if ($maxChar === 0 || $firstChar > $maxChar) {
+                        $maxChar = $firstChar;
+                    }
+                    if ($kalimatke < $jumlah_kalimat - 1)
+                        $sentencesbaru .= substr(trim($sentence), 1) . ", ";
+                    else if ($kalimatke < $jumlah_kalimat) {
+                        if ($jumlah_kalimat > 2)
+                            $sentencesbaru .= substr(trim($sentence), 1) . ", dan ";
+                        else
+                            $sentencesbaru .= substr(trim($sentence), 1) . " dan ";
+                    } else
+                        $sentencesbaru .= substr(trim($sentence), 1);
+                }
+            ?>
+                <tr>
+                    <td><?= $nomor ?></td>
+                    <td style="text-align: left;"><?= $row['nama_ekskul'] ?></td>
+                    <td><?= $nilaiangka[$maxChar] ?></td>
+                    <td style="text-align: left;"><?= ucfirst(strtolower($nilaiangka[$maxChar])) . " dalam hal " . strtolower($sentencesbaru) ?></td>
+                </tr>
+            <?php endforeach; ?>
 
         </table>
     </div>
@@ -391,22 +424,22 @@ if ($kepribadian) {
                 <tr>
                     <td style="text-align:center;">1</td>
                     <td style="text-align: left;"> Kelakuan</td>
-                    <td style="text-align: center; "><?= $kelakuan ?></td>
+                    <td style="text-align: center; "><?= ($kelakuan != "") ? $nilaipribadi[$kelakuan] : "-" ?></td>
                 </tr>
                 <tr>
                     <td style="text-align:center;">2</td>
                     <td style="text-align: left;"> Kerajinan/kedisiplinan</td>
-                    <td style="text-align: center; "><?= $kerajinan ?></td>
+                    <td style="text-align: center; "><?= ($kerajinan != "") ? $nilaipribadi[$kerajinan] : "-" ?></td>
                 </tr>
                 <tr>
                     <td style="text-align:center;">3</td>
                     <td style="text-align: left;"> Kerapihan</td>
-                    <td style="text-align: center; "><?= $kerapihan ?></td>
+                    <td style="text-align: center; "><?= ($kerapihan != "") ? $nilaipribadi[$kerapihan] : "-" ?></td>
                 </tr>
                 <tr>
                     <td style="text-align:center;">4</td>
                     <td style="text-align: left;"> Kebersihan</td>
-                    <td style="text-align: center; "><?= $kebersihan ?></td>
+                    <td style="text-align: center; "><?= ($kebersihan != "") ? $nilaipribadi[$kebersihan] : "-" ?></td>
                 </tr>
                 <tr>
                 </tr>
@@ -418,6 +451,17 @@ if ($kepribadian) {
         <br>
         A = Istimewa &nbsp;&nbsp;&nbsp; B = Baik &nbsp;&nbsp;&nbsp; C = Cukup &nbsp;&nbsp;&nbsp; D = Kurang &nbsp;&nbsp;&nbsp;
     </div>
+    <div class="catatanwali">
+        <b>Catatan Wali Kelas:</b>
+        <div class="kotakcatatanwali">
+            <?= $catatan_naik['catatan'] ?>
+        </div>
+    </div>
+    <?php if ($pilihsemester == "raporgenap") : ?>
+        <div class="kotaknaik">
+            <?= $txtnaik[$catatan_naik['status_naik']]; ?>
+        </div>
+    <?php endif ?>
     <div class="tandatangan">
         <div class="ortu">
             Orang Tua / Wali,
@@ -444,8 +488,14 @@ if ($kepribadian) {
             NIP. <?= $nip_wali ?>
         </div>
     </div>
-    <div class="tb_container">
-        <button class="ok" onclick="cetak_rapor()">Cetak Rapor</button>
+    <div class="tengah" style="display: flex; flex-direction: column; align-items: center; margin-bottom:20px;">
+        Mengetahui<br>
+        Kepala sekolah<br><br><br><br>
+        <div class="kepsek" style="text-align: left;">
+            <b><?= $nama_kepsek ?></b>
+            <hr style='width:200px; text-align: left; border: 0.5px solid black; margin-left: 0;'>
+            NIP. <?= $nip_kepsek ?>
+        </div>
     </div>
 </div>
 
@@ -480,9 +530,20 @@ if ($kepribadian) {
         window.open("<?= base_url() . 'nilai?kelas=' ?>" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_self");
     }
 
+    function raporp5() {
+        selectedNIS = $('#daftarsiswa').val();
+        selectedSemester = $('#pilsemester').val();
+        window.open("<?= base_url() . 'nilai?kelas=' ?>" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS + "&rapor=p5", "_self");
+    }
+
     function cetak_rapor() {
-        var nis = document.getElementById('daftarsiswa').value;
-        window.open("<?= base_url() . 'buatrapor/raporPDF?kelas=' ?>" + valkelas + "&nis=" + nis, "_blank");
+        selectedNIS = $('#daftarsiswa').val();
+        selectedSemester = $('#pilsemester').val();
+        window.open("<?= base_url() . 'buatrapor/raporPDF?kelas=' ?>" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_blank");
+    }
+
+    function rekap_nilai() {
+        window.open("<?= base_url() . 'nilai/rekap_nilai?kelas=' ?>" + valkelas, "_self");
     }
 
     function fetchNewData(selectedNIS) {

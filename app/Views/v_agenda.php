@@ -1,4 +1,4 @@
-<?= $this->extend('layout/layout_default') ?>
+<?php (session()->get('sebagai') != "siswa") ? $this->extend('layout/layout_default') : $this->extend('layout/layout_siswa') ?>
 
 <?= $this->section('style') ?>
 <style>
@@ -31,7 +31,7 @@
     }
 
     .today {
-        color: blue !important;
+        color: blue;
         font-weight: bold;
         font-size: 16px !important;
     }
@@ -463,6 +463,8 @@
 
                     const eventOnDateGuru = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() === (month) && new Date(event.date).getDate() === day && event.jenis == 4);
 
+                    const eventOnDateSiswa = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() === (month) && new Date(event.date).getDate() === day && event.jenis == 5);
+
                     cell.classList.add('has-event');
                     cell.dataset.addedit = "add";
                     cell.dataset.title = "";
@@ -534,12 +536,38 @@
                         }
 
                     }
+                    if (eventOnDateSiswa) {
+                        const eventDiv = document.createElement('div');
+                        eventDiv.textContent = eventOnDateSiswa.title;
+                        eventDiv.classList.add('event', eventOnDateSiswa.type);
+
+                        cell.classList.add('has-event');
+                        cell.dataset.title = eventOnDateSiswa.title;
+                        cell.dataset.type = eventOnDateSiswa.type;
+                        cell.dataset.jeniskal = eventOnDateSiswa.jeniskal;
+                        cell.dataset.id_uploader = eventOnDateSiswa.id_uploader;
+
+                        if (cell.dataset.id_uploader == iduser) {
+                            cell.dataset.addedit = "edit";
+                        } else {
+                            cell.dataset.addedit = "add";
+                            cell.dataset.title = "";
+                        }
+
+                        if (eventOnDateSiswa.type == "siswa") {
+                            cell.style.border = '2px solid green';
+                        }
+
+                    }
 
                     cell.dataset.tgl = day;
 
                     cell.addEventListener('click', function() {
-                        document.getElementById('overlaykalender').style.display = 'block';
-                        document.getElementById('formContainer').style.display = 'block';
+
+                        <?php if ($id_rombel != "") { ?>
+                            document.getElementById('overlaykalender').style.display = 'block';
+                            document.getElementById('formContainer').style.display = 'block';
+                        <?php } ?>
                         document.getElementById('judulinput').innerHTML = "Tanggal: " + cell.dataset.tgl + " " + getMonthName(month) + " " + year;
 
                         if (cell.dataset.id_uploader == iduser) {
@@ -653,10 +681,16 @@
             <div style='color:yellow'>${tanggalrange} ${getMonthName(new Date(event.date).getMonth())} ${new Date(event.date).getFullYear()}</div>
             <div style='color:yellow'>${event.title}</div>`
             } else {
-                entryDiv.innerHTML = `
+                if (event.type == "siswa") {
+                    entryDiv.innerHTML = `
+            <div style='color:lightgreen'>${tanggalrange} ${getMonthName(new Date(event.date).getMonth())} ${new Date(event.date).getFullYear()}</div>
+            <div style='color:lightgreen'>${event.title}</div>`
+                } else {
+                    entryDiv.innerHTML = `
             <div>${tanggalrange} ${getMonthName(new Date(event.date).getMonth())} ${new Date(event.date).getFullYear()}</div>
             <div>${event.title}</div>`
-            };
+                };
+            }
             agendaDiv.appendChild(entryDiv);
         });
     }

@@ -45,6 +45,18 @@
         margin-bottom: 10px;
     }
 
+    .tb-petunjuk {
+        background-color: #c4f8ab;
+        color: #000;
+        margin-bottom: 10px;
+        border: 0.5px solid blue;
+        border-radius: 5px;
+        font-size: 13px;
+        padding: 5px;
+        height: 30px;
+        width: 140px;
+    }
+
     .tab-container {
         display: flex;
 
@@ -142,7 +154,7 @@
 <?= $this->section('konten') ?>
 <h2 class="judul">Daftar User Sekolah</h2>
 <h3>Tahun Ajaran <?= $tahun_ajaran ?></h3>
-<button onclick="bukapetunjuk()">Petunjuk Impor Data</button>
+<button class="tb-petunjuk" onclick="bukapetunjuk()">Petunjuk Impor Data</button>
 <table class="info_user">
     <tr>
         <td>Data Guru</td>

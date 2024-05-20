@@ -134,9 +134,19 @@ class Login extends BaseController
                 session()->set('sebagai', "admin");
                 return redirect()->to(base_url('admin'));
             } else {
-                $cekloginsiswa = $this->M_user->cekLoginSiswa($username, $password);
-                if ($cekloginsiswa) {
+                $cekloginsiswa = $this->M_user->cekLoginSiswa($username, $password, tahun_ajaran());
+                $hasil = $cekloginsiswa['hasil'];
+                if ($hasil == "ok") {
+                    $id_sekolah = $cekloginsiswa['id_sekolah'];
+                    $id_user = $cekloginsiswa['id_user'];
+                    $nama_user = $cekloginsiswa['nama_user'];
+                    session()->set('loggedIn', true);
+                    session()->set('id_sekolah', $id_sekolah);
+                    session()->set('id_user', $id_user);
+                    session()->set('nama_user', $nama_user);
                     session()->set('sebagai', "siswa");
+                    $this->M_user->tambahlog();
+                    return redirect()->to(base_url('home'));
                 }
             }
             // session()->set('loggedIn', true);

@@ -18,6 +18,15 @@ function khususadmin()
     }
 }
 
+function khususguru()
+{
+    if (session()->get('sebagai') == "guru") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function khusususer()
 {
     if (session()->get('loggedIn')) {
@@ -66,7 +75,7 @@ function format_tanggal($strtanggal)
 function ubahtanggaldb($strtanggal)
 {
     $nama_bulan_pendek = ["Jan", "Peb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nop", "Des"];
-    if ($strtanggal != "0000-00-00") {
+    if ($strtanggal != "0000-00-00" && $strtanggal != null) {
         $ambiltanggal = explode("-", $strtanggal);
         $tgl = $ambiltanggal[2];
         $bln = intval($ambiltanggal[1]);

@@ -177,7 +177,14 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('konten') ?>
-<h2 class="judul">Peserta Ekskul <?= $nama_ekskul ?></h2>
+<div class="dkelas">
+    <div class="back-button">
+        <a href="/home"><img src="/assets/back.png" alt="back"></a>
+    </div>
+    <div class="center">
+        <div class="judul_menu">Peserta Ekskul <?= $nama_ekskul ?></div>
+    </div>
+</div>
 
 <div id="formContainer">
     <?php if (sizeof($daftar_peserta_ekskul) == 0) { ?>
@@ -195,7 +202,7 @@
                     <th>No</th>
                     <th>NIS</th>
                     <th>Nama</th>
-                    <th>Kelas</th>
+                    <th>Rombel</th>
                     <th>Aksi</th>
                 </tr>
                 <?php
@@ -205,8 +212,8 @@
                         <td><?= $nomor ?></td>
                         <td><?= $row['nis'] ?></td>
                         <td><?= $row['nama'] ?></td>
-                        <td><?= $row['kelas'] ?></td>
-                        <td><button>Hapus</button></td>
+                        <td><?= $row['nama_rombel'] ?></td>
+                        <td><button onclick="hapusSiswa('<?= $row['nisn'] ?>')">Hapus</button></td>
                     </tr>
                 <?php
                     $nomor++;
@@ -263,9 +270,7 @@
                 </tr>
                 <?php foreach ($datasiswa as $row) { ?>
                     <tr>
-                        <td><?php if ($row['status_pindah'] == 0) { ?>
-                                <input type="checkbox" class="check-item">
-                            <?php } ?>
+                        <td><input type="checkbox" class="check-item">
                         </td>
                         <td data-nisn="<?= $row['nisn'] ?>"><?= $row['nis'] ?></td>
                         <td><?= $row['nama'] ?></td>
@@ -378,27 +383,83 @@
         return true;
     }
 
+    function hapusSiswa(nisn) {
+        var idx_ekskul = <?= $idx_ekskul ?>;
+        var requestData = {
+            idx_ekskul: idx_ekskul,
+            selectedNisn: nisn
+        };
+
+        fetch('<?= base_url() ?>user/hapus_siswa_ekskul', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+    }
+
     function pindahKelas() {
-        var kelasTujuan = document.getElementById('filterKelasTujuan').value;
         var checkboxes = document.querySelectorAll('#daftarSiswa input[type="checkbox"]:checked');
         var tabelSiswaTahunNext = document.getElementById('daftarSiswaTahunNext');
 
         var totalpilihpindah = 0;
+
+        var selectedNisn = [];
+
+        var idx_ekskul = <?= $idx_ekskul ?>;
+
         checkboxes.forEach(function(checkbox) {
             totalpilihpindah++;
             var siswaBaru = checkbox.parentElement.parentElement.cloneNode(true);
             // var kolomKelas = siswaBaru.querySelector('td:nth-child(4)');
             // kolomKelas.textContent = kdaftarSiswaTahunNextelasTujuan;
 
-            tabelSiswaTahunNext.appendChild(siswaBaru);
-            checkbox.parentElement.parentElement.remove();
+            // tabelSiswaTahunNext.appendChild(siswaBaru);
+            var nisn = checkbox.closest('tr').querySelector('[data-nisn]').dataset.nisn;
+            // Menambahkan nilai data-nisn ke dalam array selectedNisn
+            selectedNisn.push(nisn);
+            // checkbox.parentElement.parentElement.remove();
         });
 
-        sortTable('daftarSiswaTahunNext', 2);
+        var requestData = {
+            idx_ekskul: idx_ekskul,
+            selectedNisn: selectedNisn
+        };
+
+        <?php
+        $jalan = true;
+        if ($jalan) { ?>
+            fetch('<?= base_url() ?>user/simpan_siswa_ekskul', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        <?php } ?>
+
+        // sortTable('daftarSiswaTahunNext', 2);
         if (totalpilihpindah == 0)
             alert("Pilih siswa yang akan dipindah")
-        else
-            document.getElementById('tb_simpan_kelas').disabled = false;
+        // else
+        // document.getElementById('tb_simpan_kelas').disabled = false;
     }
 
     function terapkan() {

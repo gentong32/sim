@@ -22,6 +22,11 @@ class Admin extends BaseController
 
     public function index()
     {
+        return redirect()->to('admin/info_sekolah');
+    }
+
+    public function info_sekolah()
+    {
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $infosekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
@@ -96,7 +101,10 @@ class Admin extends BaseController
         if ($npsn == "" || $npsn == null)
             die();
 
+        $id_sekolah = session()->get('id_sekolah');
+
         $data = [
+            'id_sekolah'    => $id_sekolah,
             'npsn'          => htmlspecialchars($npsn),
             'nama'          => htmlspecialchars($nama_sekolah),
             'alamat'        => htmlspecialchars($alamat_sekolah),
@@ -108,7 +116,6 @@ class Admin extends BaseController
             'email'         => htmlspecialchars($email_sekolah),
         ];
 
-        $id_sekolah = session()->get('id_sekolah');
 
         $this->M_sekolah->update_sekolah($data, $id_sekolah);
 
@@ -1572,7 +1579,7 @@ class Admin extends BaseController
         $jenjang = $dataadmin['jenjang'];
         $cekmapel = $this->M_sekolah->cek_mapel($id_sekolah, tahun_ajaran(), kelasdarijenjang($jenjang)[0]);
         if (!$cekmapel) {
-            $this->M_sekolah->hapus_semuamapel($id_sekolah);
+            $this->M_sekolah->hapus_semuamapel($id_sekolah, tahun_ajaran());
             foreach (kelasdarijenjang($jenjang) as $kelas) {
                 $this->M_sekolah->impor_mapel($id_sekolah, tahun_ajaran(), $kelas);
             }
@@ -1879,7 +1886,7 @@ class Admin extends BaseController
         $id_sekolah = session()->get('id_sekolah');
         $datasekolah = $this->M_sekolah->getSekolah($id_sekolah);
         $daftar_kelas = $this->get_daftar_kelas($id_sekolah, tahun_ajaran());
-        if ($kelas == null)
+        if ($kelas == null && $daftar_kelas)
             $kelas = $daftar_kelas[0];
         $dimensi_projek = $this->M_sekolah->get_dimensi_projek($id_sekolah, $kelas);
 
@@ -2016,17 +2023,28 @@ class Admin extends BaseController
 
         $id_mapel = $dataMapel['selectedMapel'];
         $id_guru = $dataMapel['selectedGuru'];
-        $this->M_sekolah->hapus_guru_mapel($id_mapel, $id_guru);
-        foreach ($daftarrombel as $rombelterpilih) {
-            $cek_rombel = $this->M_sekolah->cek_rombel($id_sekolah, $tahun_ajaran, $kelas, $rombelterpilih);
-            $id_rombel = $cek_rombel['id'];
-            if ($id_mapel == "mpbk")
-                $this->M_sekolah->insert_guru_bk_p5($id_rombel, 1, $id_guru);
-            else if ($id_mapel == "mpp5")
-                $this->M_sekolah->insert_guru_bk_p5($id_rombel, 2, $id_guru);
-            else
-                $this->M_sekolah->insert_guru_mapel($id_rombel, $id_mapel, $id_guru);
+
+        if ($id_mapel == "mpbk")
+            $jenis_mapel = 1;
+        else if ($id_mapel == "mpp5")
+            $jenis_mapel = 2;
+        if ($id_mapel == "mpbk" || ($id_mapel == "mpp5")) {
+            $this->M_sekolah->hapus_guru_lain($jenis_mapel, $id_guru, $kelas);
+        } else {
+            $this->M_sekolah->hapus_guru_mapel($id_mapel, $id_guru, $kelas);
         }
+        $id_rombel = "";
+        if ($daftarrombel)
+            foreach ($daftarrombel as $rombelterpilih) {
+                $cek_rombel = $this->M_sekolah->cek_rombel($id_sekolah, $tahun_ajaran, $kelas, $rombelterpilih);
+                $id_rombel = $cek_rombel['id'];
+                if ($id_mapel == "mpbk")
+                    $this->M_sekolah->insert_guru_bk_p5($id_rombel, 1, $id_guru);
+                else if ($id_mapel == "mpp5")
+                    $this->M_sekolah->insert_guru_bk_p5($id_rombel, 2, $id_guru);
+                else
+                    $this->M_sekolah->insert_guru_mapel($id_rombel, $id_mapel, $id_guru);
+            }
 
         $response = ['message' => $id_rombel];
         return $this->response->setJSON($response);
@@ -2422,6 +2440,7 @@ class Admin extends BaseController
         $jenjang = $dataadmin['jenjang'];
         $daftar_kelas = kelasdarijenjang($jenjang);
         $daftar_mapel = $this->M_sekolah->get_daftar_mapel($id_sekolah, tahun_ajaran());
+        // dd($daftar_mapel);
         $datakalender = $this->M_sekolah->getAgenda($id_sekolah);
         $data['sekolah'] = $datasekolah;
         $data['tahun_ajaran'] = tahun_ajaran('lengkap');
@@ -2481,6 +2500,35 @@ class Admin extends BaseController
     public function tes()
     {
 
-        return view('vtes');
+        // $queueModel = new EmailQueueModel();
+        // $emails = $queueModel->where('status', 'queued')->findAll();
+
+        // if (empty($emails)) {
+        //     return 'No emails in the queue.';
+        // }
+
+        $emails = [
+            'antok9000@gmail.com',
+            'antok2000@yahoo.com',
+            'antok2000@gmail.com',
+            // Tambahkan alamat email lainnya jika diperlukan
+        ];
+
+
+
+        foreach ($emails as $recipient) {
+            $email = \Config\Services::email();
+
+            $email->setFrom('hardianto@kemdikbud.go.id', 'Sekretariat');
+            $email->setSubject('Subject of Email');
+            $email->setMessage('Content of Email');
+            $email->setTo($recipient);
+
+            if ($email->send()) {
+                echo 'Email sent to ' . $recipient . '<br>';
+            } else {
+                echo 'Failed to send email to ' . $recipient . '<br>';
+            }
+        }
     }
 }

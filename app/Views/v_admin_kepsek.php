@@ -171,7 +171,7 @@
             <?php } ?>
             <div style="border:1px solid green;padding:10px;max-width:400px;background-color:honeydew;">
                 <label for="inputfiletdtgn">
-                    <h3>Input file tandatangan (file pdf max. 100KB):</h3>
+                    <h3>Input file tandatangan (file png max. 100KB):</h3>
                 </label>
                 <div id="inputfiletdtgn" class="form-group">
                     <input type="file" id="file_tdtgn" name="file_tdtgn" accept=".png" maxFileSize="102400">

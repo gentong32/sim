@@ -67,7 +67,8 @@
         border: none;
         border-radius: 2px;
         cursor: pointer;
-        height: 30px;
+        height: 40px;
+        width: 250px;
         transition: transform 0.2s, box-shadow 0.2s;
     }
 
@@ -111,7 +112,7 @@
     </tr>
 </table>
 <h3>Tahun Ajaran <?= $tahun_ajaran ?></h3>
-<button class="tbupdate" onclick="edit_sekolah()">Update Data Sekolah</button>
+<button class="tbupdate" onclick="edit_sekolah()">Update Data Sekolah & Admin</button>
 <div class="cardcontainer">
     <div class="card guru">
         <h4>Jumlah Guru</h4>

@@ -1,0 +1,814 @@
+ERROR - 2024-05-19 08:17:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'm
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = '...' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(932): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2021): App\Models\M_sekolah->hapus_guru_mapel('322', '279', '11')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-05-19 08:17:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'm
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = '...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = \'11\'
+                WHERE id_mapel = \'322\' AND id_guru = \'279\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = \'11\'
+                WHERE id_mapel = \'322\' AND id_guru = \'279\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = \'11\'
+                WHERE id_mapel = \'322\' AND id_guru = \'279\'')
+ 4 APPPATH\Models\M_sekolah.php(932): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = :kelas:
+                WHERE id_mapel = :id_mapel: AND id_guru = :id_guru:', [...])
+ 5 APPPATH\Controllers\Admin.php(2021): App\Models\M_sekolah->hapus_guru_mapel('322', '279', '11')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2024-05-19 08:20:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'm
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 1...' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(932): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2497): App\Models\M_sekolah->hapus_guru_mapel(322, 279, 11)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->tes()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-05-19 08:20:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'm
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 1...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 11
+                WHERE id_mapel = 322 AND id_guru = 279', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 11
+                WHERE id_mapel = 322 AND id_guru = 279')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 11
+                WHERE id_mapel = 322 AND id_guru = 279')
+ 4 APPPATH\Models\M_sekolah.php(932): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = :kelas:
+                WHERE id_mapel = :id_mapel: AND id_guru = :id_guru:', [...])
+ 5 APPPATH\Controllers\Admin.php(2497): App\Models\M_sekolah->hapus_guru_mapel(322, 279, 11)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->tes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+ERROR - 2024-05-19 08:20:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'm
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 1...' at line 1 in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_...')
+#3 D:\laragon\www\sim\app\Models\M_sekolah.php(932): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(2497): App\Models\M_sekolah->hapus_guru_mapel(322, 279, 11)
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->tes()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-05-19 08:20:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'm
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 1...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 11
+                WHERE id_mapel = 322 AND id_guru = 279', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 11
+                WHERE id_mapel = 322 AND id_guru = 279')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = 11
+                WHERE id_mapel = 322 AND id_guru = 279')
+ 4 APPPATH\Models\M_sekolah.php(932): CodeIgniter\Database\BaseConnection->query('DELETE FROM tb_guru_mapel m
+                LEFT JOIN tb_rombel r ON m.id_rombel = r.id AND r.kelas = :kelas:
+                WHERE id_mapel = :id_mapel: AND id_guru = :id_guru:', [...])
+ 5 APPPATH\Controllers\Admin.php(2497): App\Models\M_sekolah->hapus_guru_mapel(322, 279, 11)
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->tes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-19 08:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 08:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 08:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-19 08:30:04 --> Undefined variable $jenis_mapel
+in APPPATH\Controllers\Admin.php on line 2026.
+ 1 APPPATH\Controllers\Admin.php(2026): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jenis_mapel', 'D:\\laragon\\www\\sim\\app\\Controllers\\Admin.php', 2026)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->simpan_guru_mapel()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-19 08:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-19 08:55:30 --> mysqli_sql_exception: The used SELECT statements have a different number of columns in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT \n       ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(274): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1986): App\Models\M_user->get_daftar_guru_mapel('2d7433d1-b060-4...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-05-19 08:55:30 --> The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama')
+ 4 APPPATH\Models\M_user.php(274): CodeIgniter\Database\BaseConnection->query('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama', [...])
+ 5 APPPATH\Controllers\Admin.php(1986): App\Models\M_user->get_daftar_guru_mapel('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-19 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-19 08:55:42 --> mysqli_sql_exception: The used SELECT statements have a different number of columns in D:\laragon\www\sim\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\laragon\www\sim\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT \n       ...', 0)
+#1 D:\laragon\www\sim\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \n       ...')
+#2 D:\laragon\www\sim\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \n       ...')
+#3 D:\laragon\www\sim\app\Models\M_user.php(274): CodeIgniter\Database\BaseConnection->query('SELECT \n       ...', Array)
+#4 D:\laragon\www\sim\app\Controllers\Admin.php(1986): App\Models\M_user->get_daftar_guru_mapel('2d7433d1-b060-4...')
+#5 D:\laragon\www\sim\system\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+#6 D:\laragon\www\sim\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 D:\laragon\www\sim\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\sim\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\sim\system\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\...')
+#10 {main}
+CRITICAL - 2024-05-19 08:55:42 --> The used SELECT statements have a different number of columns
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = \'2d7433d1-b060-4656-8fd4-5802b49ee54b\' AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama')
+ 4 APPPATH\Models\M_user.php(274): CodeIgniter\Database\BaseConnection->query('SELECT 
+        GROUP_CONCAT(nama_rombel 
+        ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel, 
+        nama_mapel, 
+        nama, 
+        tr.kelas as kelas,
+            1 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_mapel gm ON tr.id = gm.id_rombel
+        LEFT JOIN 
+            tb_mapel tm ON tm.id = gm.id_mapel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gm.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            tr.kelas, gm.id_mapel, nama, tm.jenis, tm.sub_kelas
+        
+        UNION ALL
+        
+        SELECT 
+            GROUP_CONCAT(nama_rombel ORDER BY nama_rombel ASC SEPARATOR \', \') AS nama_rombel,  
+            (CASE 
+                WHEN jenis_mapel=\'1\' THEN \'BK\' 
+                WHEN jenis_mapel=\'2\' THEN \'P5\'
+                ELSE NULL END) as nama_mapel, 
+            nama, 
+            tr.kelas as kelas,
+            NULL as id_mapel,
+            2 as urutangrup
+        FROM 
+            tb_rombel tr
+        LEFT JOIN 
+            tb_guru_lain gl ON tr.id = gl.id_rombel
+        LEFT JOIN 
+            tb_guru_sekolah gs ON gs.id = gl.id_guru
+        LEFT JOIN 
+            tb_guru tg ON tg.nuptk = gs.nuptk
+        WHERE 
+            tr.id_sekolah = :id_sekolah: AND tahun_mulai = (SELECT MAX(tahun_mulai) FROM tb_rombel) 
+        GROUP BY 
+            jenis_mapel, nama, tr.kelas
+
+        ORDER BY 
+            kelas, urutangrup, id_mapel, nama_mapel, nama_rombel, nama', [...])
+ 5 APPPATH\Controllers\Admin.php(1986): App\Models\M_user->get_daftar_guru_mapel('2d7433d1-b060-4656-8fd4-5802b49ee54b')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Admin->guru_mapel()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\laragon\\www\\sim\\public\\index.php')
+INFO - 2024-05-19 10:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 10:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 12:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:43:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:47:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 13:57:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:03:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:07:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:19:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:47:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 14:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 15:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:55:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:55:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-19 16:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -315,7 +315,7 @@
         cell = newRow.insertCell(2);
         cell.classList.add('editable');
         cell.setAttribute('contenteditable', 'true');
-        cell.textContent = '...';
+        cell.textContent = '';
         cell.style.backgroundColor = 'white';
 
         cell.focus();

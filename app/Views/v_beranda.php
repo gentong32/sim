@@ -10,6 +10,12 @@
             <p>Presensi</p>
         </a>
     </div>
+    <div class="menu-item ws" style="display: none;">
+        <a href="/kepribadian" onclick="appendKelasToLink('kepribadian')">
+            <img src="assets/pribadi.png" alt="Kepribadian">
+            <p>Kepribadian</p>
+        </a>
+    </div>
     <div class="menu-item es" style="display: none;">
         <a href="/peserta_ekskul" onclick="appendKelasToLink('peserta_ekskul')">
             <img src="assets/peserta.png" alt="Peserta">
@@ -46,7 +52,13 @@
             <p>Soal</p>
         </a>
     </div>
-    <div class="menu-item wgle" style="display: none;">
+    <div class="menu-item ws" style="display: none;">
+        <a href="/nilai/rekap_nilai" onclick="appendKelasToLink('nilai/rekap_nilai')">
+            <img src="assets/nilai.png" alt="Nilai">
+            <p>Nilai</p>
+        </a>
+    </div>
+    <div class="menu-item gle" style="display: none;">
         <a href="/nilai" onclick="appendKelasToLink('nilai')">
             <img src="assets/nilai.png" alt="Nilai">
             <p>Nilai</p>
@@ -78,6 +90,7 @@
     var semuaGs = document.querySelectorAll('.gs');
     var semuaGE = document.querySelectorAll('.ge');
     var semuaEs = document.querySelectorAll('.es');
+    var semuaGLE = document.querySelectorAll('.gle');
     var semuaWGLE = document.querySelectorAll('.wgle');
 
     // <?php //if ($daftarkelaswali) {
@@ -190,6 +203,10 @@
             elemen.style.display = "none";
         });
 
+        semuaGLE.forEach(function(elemen) {
+            elemen.style.display = "none";
+        });
+
     }
 
     function tampilkang() {
@@ -210,6 +227,10 @@
         });
 
         semuaGE.forEach(function(elemen) {
+            elemen.style.display = "block";
+        });
+
+        semuaGLE.forEach(function(elemen) {
             elemen.style.display = "block";
         });
     }
@@ -234,6 +255,10 @@
         semuaGE.forEach(function(elemen) {
             elemen.style.display = "none";
         });
+
+        semuaGLE.forEach(function(elemen) {
+            elemen.style.display = "block";
+        });
     }
 
     function tampilkane() {
@@ -254,6 +279,10 @@
         });
 
         semuaGE.forEach(function(elemen) {
+            elemen.style.display = "block";
+        });
+
+        semuaGLE.forEach(function(elemen) {
             elemen.style.display = "block";
         });
     }

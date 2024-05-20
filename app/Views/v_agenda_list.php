@@ -1,8 +1,4 @@
-<?php
-$nama_bulan_panjang = ["Januari", "Pebruari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"];
-?>
-
-<?= $this->extend('layout/layout_default') ?>
+<?php (session()->get('sebagai') != "siswa") ? $this->extend('layout/layout_default') : $this->extend('layout/layout_siswa') ?>
 
 <?= $this->section('style') ?>
 <style>
@@ -164,6 +160,9 @@ $nama_bulan_panjang = ["Januari", "Pebruari", "Maret", "April", "Mei", "Juni", "
 <?= $this->endSection() ?>
 
 <?= $this->section('konten') ?>
+<?php
+$nama_bulan_panjang = ["Januari", "Pebruari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "Nopember", "Desember"];
+?>
 <div>
     <h2>Agenda Kalender Pendidikan</h2>
 

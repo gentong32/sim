@@ -22,6 +22,7 @@ class Tujuanpembelajaran extends BaseController
         $id_user = session()->get('id_user');
 
         $kelaspilihan = $this->request->getVar('kelas');
+        $semesterterpilih = $this->request->getVar('semester');
         $jenis = substr($kelaspilihan, 0, 1);
         $idx = substr($kelaspilihan, 1, 1);
         $data_saya = $this->M_user->get_data_guru($id_user);
@@ -62,11 +63,31 @@ class Tujuanpembelajaran extends BaseController
             if (!isset($namakelaspilihan)) {
                 $namakelaspilihan = $daftarkelas_sekolah[0]['kelas'];
             }
-            $daftartp = $this->M_sekolah->getTP_Ekskul($id_ekskul, $namakelaspilihan);
+
+            $id_sekolah = session()->get('id_sekolah');
+            $info_sekolah = $this->M_sekolah->getInfoSekolah($id_sekolah, tahun_ajaran());
+
+            $tgl_awal_ganjil = $info_sekolah['tgl_awal_ganjil'];
+            $tgl_awal_genap = $info_sekolah['tgl_awal_genap'];
+            if (date("Y-m-d") >= date($tgl_awal_ganjil)) {
+                $semester = 1;
+            }
+            if (date("Y-m-d") >= date($tgl_awal_genap)) {
+                $semester = 2;
+            }
+
+            if (isset($semesterterpilih))
+                $semesterke = $semesterterpilih;
+            else {
+                $semesterke = $semester;
+            }
+
+            $daftartp = $this->M_sekolah->getTP_Ekskul($id_ekskul, $namakelaspilihan, $semesterke);
             $data['daftar_kelas'] = $daftarkelas_sekolah;
             $data['kelas'] = $namakelaspilihan;
             $data['daftartp'] = $daftartp;
             $data['nama_ekskul'] = $nama_ekskul;
+            $data['semester'] = $semesterke;
             return view('v_tujuan_pembelajaran_ekskul', $data);
         }
 
@@ -88,6 +109,7 @@ class Tujuanpembelajaran extends BaseController
         $nuptk = $data_saya->nuptk;
         $daftarkelasajar = $this->M_user->cekajarkelas($nuptk, $id_sekolah);
         $kelaspilihan = $dataMapel['valkelas'];
+
         $idx = substr($kelaspilihan, 1, 1);
         $id_mapel = $daftarkelasajar[($idx) - 1]['id_mapel'];
         $kelas = $daftarkelasajar[($idx) - 1]['kelas'];
@@ -200,10 +222,12 @@ class Tujuanpembelajaran extends BaseController
         $daftarwaliekskul = $this->M_user->cekwaliekskul($nuptk, $id_sekolah, tahun_ajaran());
         $id_ekskul = $daftarwaliekskul[($idx) - 1]['id_ekskul'];
         $kelas = $dataMapel['kelasdipilih'];
+        $semesterpilihan = $dataMapel['semester'];
 
         $data = array();
         $data['id_ekskul'] = $id_ekskul;
         $data['kelas'] = $kelas;
+        $data['semester'] = $semesterpilihan;
         $data['tujuan_pembelajaran'] = htmlspecialchars($dataMapel['tj_pem'], ENT_QUOTES, 'UTF-8');
 
         $simpandata = $this->M_sekolah->tambah_tp_eks($data);

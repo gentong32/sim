@@ -1,5 +1,6 @@
 :root {
   --custom-height: calc(100vh - 60px);
+  --tinggi_logo: 40px;
 }
 
 body,
@@ -9,47 +10,136 @@ html {
 }
 
 .header {
-  background-color: #555;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 0 20px;
+  padding: 5px;
+  background-color: #6699c2; /* Sesuaikan dengan warna latar belakang Anda */
+  color: #fff; /* Warna teks putih */
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed; /* Membuat header tetap di atas */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Pastikan header berada di atas elemen lain */
 }
 
 .logo {
   display: flex;
   align-items: center;
-  color: #fff;
 }
 
 .logo img {
-  width: 40px;
-  height: 40px;
+  height: 40px; /* Sesuaikan dengan tinggi logo */
+  margin-right: 10px; /* Jarak antara logo dan nama sekolah */
+}
+
+.logo span {
+  font-size: 18px; /* Sesuaikan dengan ukuran teks */
+  white-space: nowrap; /* Mencegah teks nama sekolah melipat ke baris berikutnya */
+}
+
+.user-group {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#userLink {
+  color: #fff;
+  text-decoration: none;
   margin-right: 10px;
 }
 
+#userLink:hover {
+  text-decoration: none;
+}
+
+#toggleSidebar {
+  font-size: 24px; /* Ukuran ikon toggle */
+  background: none;
+  border: none;
+  color: #fff; /* Warna teks putih */
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none; /* Sembunyikan dropdown secara default */
+  position: absolute;
+  top: 100%; /* Posisikan dropdown di bawah elemen user-info */
+  right: 0; /* Sejajarkan dropdown dengan kanan elemen user-info */
+  background-color: #d3e5f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
+  padding: 3px 3px;
+}
+
+.dropdown li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  background-color: #575757; /* Warna latar saat dihover */
+}
+
 .container {
-  display: grid;
-  grid-template-columns: 250px 1fr; /* Atur lebar sidebar sesuai keinginan Anda */
-  grid-template-rows: 1fr;
+  display: flex;
+  /* grid-template-columns: 250px 1fr; /* Atur lebar sidebar sesuai keinginan Anda */
+  /* grid-template-rows: 1fr; */
   height: 100vh;
 }
 
 .sidebar {
   background-color: #333;
+  width: 250px;
   position: relative;
   overflow-x: hidden;
   transition: 0.3s;
   z-index: 999;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: calc(100% - 50px);
 }
 
 .content {
-  background-color: #f5f5f5; /* Warna latar belakang konten (opsional) */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f5f5f5;
   padding: 20px;
+  margin-top: 50px;
+  margin-left: 250px;
   transition: margin-left 0.3s;
-  position: relative;
-  box-sizing: border-box; /* Tambahkan ini */
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.alamat {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 20px;
+  background-color: #d8e5f3; /* Optional background color */
+  color: #0c0c0c; /* Optional text color */
 }
 
 .menu {
@@ -113,58 +203,11 @@ html {
   padding: 0 15px;
 }
 
-.user-group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.user-name {
-  margin-right: 10px; /* Memberikan jarak ke tombol garis tiga */
-}
-
-#userLink {
-  color: #fff; /* Warna teks putih */
-  text-decoration: none; /* Hapus garis bawah */
-  margin-right: 5px;
-}
-
-#userLink:hover {
-  text-decoration: none; /* Tambahkan garis bawah saat dihover */
-}
-
 #logoutDropdown a {
   color: black;
   padding: 0px 16px; /* Mengatur padding atas dan bawah menjadi 8px */
   text-decoration: none;
   display: block;
-}
-
-.dropdown {
-  position: absolute;
-  display: none;
-  background-color: #fff;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  padding: 0;
-  margin-top: 10px;
-  right: 20px;
-}
-
-.dropdown ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.dropdown ul li a {
-  padding: 3px;
-  text-decoration: none;
-  display: block;
-  margin: 0;
-}
-
-.dropdown ul li a:hover {
-  background-color: #f9f9f9;
 }
 
 #overlay {
@@ -228,4 +271,13 @@ html {
     right: 50px;
     margin-top: 5px;
   }
+}
+
+.aktif {
+  color: rgb(241, 220, 110) !important;
+  font-weight: bold;
+}
+
+.show {
+  display: block;
 }

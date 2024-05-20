@@ -124,6 +124,14 @@
         margin-bottom: 10px;
         padding: 5px;
     }
+
+    .tombol_atas_rapor {
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 5px;
+    }
 </style>
 </style>
 <link rel="stylesheet" href="<?= base_url() ?>css/s_presensi.css">
@@ -144,17 +152,20 @@ if ($absensi) {
     $jumlah_a = ($absensi['Jumlah_A'] == 0) ? "-" : $absensi['Jumlah_A'];
 }
 
-$kelakuan = "-";
-$kerajinan = "-";
-$kerapihan = "-";
-$kebersihan = "-";
+$kelakuan = "";
+$kerajinan = "";
+$kerapihan = "";
+$kebersihan = "";
 
 if ($kepribadian) {
-    $kelakuan = $kepribadian['kelakuan_mid_ganjil'];
-    $kerajinan = $kepribadian['kerajinan_mid_ganjil'];
-    $kerapihan = $kepribadian['kerapihan_mid_ganjil'];
-    $kebersihan = $kepribadian['kebersihan_mid_ganjil'];
+    $kelakuan = $kepribadian['kelakuan' . $suffiks];
+    $kerajinan = $kepribadian['kerajinan' . $suffiks];
+    $kerapihan = $kepribadian['kerapihan' . $suffiks];
+    $kebersihan = $kepribadian['kebersihan' . $suffiks];
 }
+
+$nilaipribadi = array("-", "D", "C", "B", "A");
+
 ?>
 
 <h2><?= "RAPOR SISWA" ?></h2>
@@ -187,6 +198,10 @@ if ($kepribadian) {
     </select>
 </div>
 
+<div class="tombol_atas_rapor">
+    <button onclick="cetak_rapor()" class="tb_biru">Cetak Rapor</button>
+</div>
+
 <div class="rapor_container">
     <div class="kop_rapor">
         <?= $kop_rapor ?>
@@ -195,7 +210,7 @@ if ($kepribadian) {
     <div class="judul_rapor">
         <p>LEMBAR HASIL KEGIATAN BELAJAR</p>
         <p><?= $judulsemester ?></p>
-        <p>TAHUN PELAJARAN 2023/2024</p>
+        <p>TAHUN PELAJARAN <?= tahun_ajaran('lengkap') ?></p>
     </div>
     <div class="nama_siswa">
         <table>
@@ -347,22 +362,22 @@ if ($kepribadian) {
                 <tr>
                     <td style="text-align:center;">1</td>
                     <td style="text-align: left;"> Kelakuan</td>
-                    <td style="text-align: center; "><?= $kelakuan ?></td>
+                    <td style="text-align: center; "><?= ($kelakuan != "") ? $nilaipribadi[$kelakuan] : "-" ?></td>
                 </tr>
                 <tr>
                     <td style="text-align:center;">2</td>
                     <td style="text-align: left;"> Kerajinan/kedisiplinan</td>
-                    <td style="text-align: center; "><?= $kerajinan ?></td>
+                    <td style="text-align: center; "><?= ($kerajinan != "") ? $nilaipribadi[$kerajinan] : "-" ?></td>
                 </tr>
                 <tr>
                     <td style="text-align:center;">3</td>
                     <td style="text-align: left;"> Kerapihan</td>
-                    <td style="text-align: center; "><?= $kerapihan ?></td>
+                    <td style="text-align: center; "><?= ($kerapihan != "") ? $nilaipribadi[$kerapihan] : "-" ?></td>
                 </tr>
                 <tr>
                     <td style="text-align:center;">4</td>
                     <td style="text-align: left;"> Kebersihan</td>
-                    <td style="text-align: center; "><?= $kebersihan ?></td>
+                    <td style="text-align: center; "><?= ($kebersihan != "") ? $nilaipribadi[$kebersihan] : "-" ?></td>
                 </tr>
                 <tr>
                 </tr>
@@ -400,9 +415,6 @@ if ($kepribadian) {
             NIP. <?= $nip_wali ?>
         </div>
     </div>
-    <div class="tb_container">
-        <button class="ok" onclick="cetak_rapor()">Cetak Rapor</button>
-    </div>
 </div>
 
 
@@ -438,8 +450,9 @@ if ($kepribadian) {
     }
 
     function cetak_rapor() {
-        var nis = document.getElementById('daftarsiswa').value;
-        window.open("<?= base_url() . 'buatrapor/raporPDF?kelas=' ?>" + valkelas + "&nis=" + nis, "_blank");
+        selectedNIS = $('#daftarsiswa').val();
+        selectedSemester = $('#pilsemester').val();
+        window.open("<?= base_url() . 'buatrapor/raporPDF?kelas=' ?>" + valkelas + "&semester=" + selectedSemester + "&nis=" + selectedNIS, "_blank");
     }
 
     function fetchNewData(selectedNIS) {

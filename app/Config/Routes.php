@@ -40,6 +40,13 @@ $routes->get('/presensi', 'Presensi::index');
 $routes->get('/presensi/get_data_presensi', 'Presensi::get_data_presensi');
 $routes->get('/presensi_rekap', 'Presensi::rekap');
 $routes->post('/presensi/simpan_presensi', 'Presensi::simpan_presensi');
+$routes->get('/absensi/saya', 'Presensi::absensi_siswa');
+$routes->get('/absensi/siswa', 'Presensi::absensi_siswa_nis');
+
+$routes->get('/kepribadian', 'Kepribadian::index');
+$routes->get('/kepribadian/get_data_kepribadian', 'Kepribadian::get_data_kepribadian');
+$routes->get('/kepribadian_rekap', 'Kepribadian::rekap');
+$routes->post('/kepribadian/simpan_kepribadian', 'Kepribadian::simpan_kepribadian');
 
 $routes->get('/agenda', 'Agenda::index');
 $routes->post('/agenda/simpan_agenda_kelas', 'Agenda::simpan_agenda_kelas');
@@ -58,6 +65,7 @@ $routes->get('/tugas', 'Tugas::index');
 $routes->get('/tugas/get_tujuan_pembelajaran', 'Tugas::get_tujuan_pembelajaran');
 $routes->post('/tugas/simpan_tugas', 'Tugas::simpan_tugas');
 $routes->post('/tugas/hapus_tugas', 'Tugas::hapus_tugas');
+$routes->get('/tugas/saya', 'Tugas::tugas_siswa');
 
 $routes->get('/nilai', 'Nilai::index');
 $routes->post('/nilai/simpan_nilai', 'Nilai::simpan_nilai');
@@ -68,14 +76,27 @@ $routes->get('/nilai/get_rombel/(:any)', 'Nilai::get_rombel/$1');
 $routes->get('/nilai/get_daftar_nilai_eks', 'Nilai::get_daftar_nilai_eks');
 $routes->post('/nilai/simpan_nilai_eks', 'Nilai::simpan_nilai_eks');
 $routes->get('/nilai/get_daftar_indikator_eks', 'Nilai::get_daftar_indikator_eks');
+$routes->get('/nilai/rekap_nilai', 'Nilai::rekap_nilai');
+$routes->post('/nilai/simpanrekap', 'Nilai::simpanrekap');
+
+$routes->get('/nilai/saya', 'Nilai::nilai_siswa');
 
 $routes->get('/peserta_ekskul', 'User::peserta_ekskul');
+
+$routes->get('/ekskul_saya', 'User::ekskul_siswa');
+$routes->post('/simpan_ekskul', 'User::simpan_ekskul_siswa');
 
 $routes->get('/nilai/testabel', 'Nilai::testabel');
 
 $routes->get('/buatrapor/raporPDF', 'Buatrapor::raporPDF');
 
 $routes->get('/pengumuman', 'Pengumuman::index');
+$routes->get('/pengumuman/daftar', 'Pengumuman::daftar');
+$routes->get('/pengumuman/baru', 'Pengumuman::pengumuman_baru');
+$routes->get('/pengumuman/edit/(:any)', 'Pengumuman::pengumuman_edit/$1');
+$routes->post('/pengumuman/simpanpengumuman', 'Pengumuman::simpanpengumuman');
+$routes->post('/pengumuman/hapuspengumuman', 'Pengumuman::hapuspengumuman');
+
 $routes->get('/admin/tes', 'Admin::tes');
 
 $routes->get('/get_rombel_kelas/(:any)', 'User::get_rombel_kelas/$1');
@@ -145,8 +166,12 @@ $routes->post('admin/simpan_mid', 'Admin::simpan_mid');
 $routes->post('admin/simpan_bobot_nilai', 'Admin::simpan_bobot_nilai');
 $routes->post('admin/simpan_jadwal_ujian', 'Admin::simpan_jadwal_ujian');
 
+$routes->post('user/simpan_siswa_ekskul', 'User::simpan_siswa_ekskul');
+$routes->post('user/hapus_siswa_ekskul', 'User::hapus_siswa_ekskul');
+
 $routes->group('admin', ['filter' => 'ceknpsn'], function ($routes) {
     $routes->get('/', 'Admin::index');
+    $routes->get('info_sekolah', 'Admin::info_sekolah');
     $routes->get('edit_sekolah', 'Admin::edit_sekolah');
     $routes->get('info_impor', 'Admin::info_impor');
     $routes->get('user', 'Admin::user');

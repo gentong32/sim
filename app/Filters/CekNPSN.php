@@ -23,8 +23,7 @@ class CekNPSN implements FilterInterface
 
         $id_sekolah = session()->get('id_sekolah');
         $ceknpsn = $this->M_sekolah->getSekolah($id_sekolah);
-
-        if ($ceknpsn['npsn'] == null) {
+        if (!$ceknpsn) {
             return redirect()->to("/admin/input_sekolah");
         }
     }

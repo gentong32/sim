@@ -87,6 +87,7 @@
                 <th>I</th>
                 <th>S</th>
                 <th>A</th>
+                <th>Detil</th>
             </tr>
         </thead>
         <tbody>
@@ -153,13 +154,18 @@
                 data.nama,
                 data.jml_ijin,
                 data.jml_sakit,
-                data.jml_alpha
+                data.jml_alpha, "<button onclick='detilabsensi(" + data.nis +
+                ")'>Lihat</button>"
             ]).draw(false);
         });
     }
 
     function kembali() {
         window.open("<?= base_url('presensi/?kelas=') . $kelaspilihan; ?>", "_self");
+    }
+
+    function detilabsensi(nis) {
+        window.open("<?= base_url('absensi/siswa?kelas=') . $kelaspilihan; ?>" + "&nis=" + nis, "_self ");
     }
 
     function getsemester(smst) {

@@ -77,18 +77,19 @@
 
 <?= $this->section('konten') ?>
 <h2 class="judul">Dimensi Penilaian Projek P5</h2>
-<label for="dimensi"><b>KELAS:</b></label>
-<select name="kelas" id="kelas">
-    <?php
-    foreach ($daftar_kelas as $row) {
-        $selected = "";
-        if ($row == $kelas)
-            $selected = "selected";
-        echo "<option " . $selected . " value='" . $row . "'>" . $row . "</option>";
-    }
-    ?>
-</select> <button class="button" id="tb_terapkan" style="display:none" onclick="terapkan()">Terapkan</button>
-
+<div class="konten">
+    <label for="dimensi"><b>KELAS:</b></label>
+    <select name="kelas" id="kelas">
+        <?php
+        foreach ($daftar_kelas as $row) {
+            $selected = "";
+            if ($row == $kelas)
+                $selected = "selected";
+            echo "<option " . $selected . " value='" . $row . "'>" . $row . "</option>";
+        }
+        ?>
+    </select> <button class="button" id="tb_terapkan" style="display:none" onclick="terapkan()">Terapkan</button>
+</div>
 <?php
 $baris = 0;
 $prev = ['', '', '']; // Penyimpanan nilai sebelumnya

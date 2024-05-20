@@ -30,9 +30,9 @@
     }
 
     .today {
-        color: blue !important;
+        /* color: blue; */
         font-weight: bold;
-        font-size: 16px !important;
+        font-size: 18px !important;
     }
 
     .tanggal_merah {

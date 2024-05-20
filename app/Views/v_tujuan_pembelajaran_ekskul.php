@@ -196,7 +196,7 @@
 <?= $this->section('konten') ?>
 <div>
     <h2><?= $nama_ekskul ?></h2>
-    <div style="font-size:16px;margin-bottom:15px;color: white">Kelas
+    <div style="display:inline-block;font-size:16px;margin-bottom:15px;color: white">Kelas
         <select style="font-size: 16px;" name="daftarkelas" id="daftarkelas">
             <?php foreach ($daftar_kelas as $row) :
                 $selected = "";
@@ -208,12 +208,19 @@
             <?php endforeach ?>
         </select>
     </div>
+    <div style="display:inline-block;font-size:16px;margin-bottom:15px;color: white">Semester
+        <select style="font-size: 16px;" name="semester" id="semester">
+            <option <?= ($semester == 1) ? "selected" : "" ?> value="1">1</option>
+            <option <?= ($semester == 2) ? "selected" : "" ?> value="2">2</option>
+        </select>
+    </div>
 
     <div class="kelas">
         <table class="tj_pem" id="itj_pem">
             <tr>
                 <th style="width: 20px;">No</th>
                 <th style="width: 160px;">Tujuan Pembelajaran</th>
+                <th style="width: 40px;">Semester</th>
                 <th style="width: 90px;">Aksi</th>
             </tr>
             <?php
@@ -223,6 +230,7 @@
                 $baris++;
                 echo "<tr><td>" . $baris . "</td>";
                 echo "<td class='editable' contentEditable=false>" . $datarow->tujuan_pembelajaran . "</td>";
+                echo "<td id='smst" . $baris . "' style='text-align:center'>" . $datarow->semester . "</td>";
                 echo "<td><button class='edit' onclick='editTujPem(this,`" . $baris . "`,`" . $datarow->kelas . "`)'>Edit</button> <button class='delete' onclick = 'hapustj_pem(this,`" . $baris . "`,`" . $datarow->kelas . "`)'>Hapus</button> <button style = 'display:none' class = 'ok' onclick = 'oktj_pem(this,`" . $baris . "`,`" . $datarow->kelas . "`)'>OK</button> <button style = 'display:none' class = 'batal' onclick = 'bataltj_pem(this, `" . $baris . "`)'>Batal</button></td></tr>";
             }
             ?>
@@ -257,6 +265,7 @@
 
     function tambahtj_pem() {
         var table = document.getElementById('itj_pem');
+        var semesterpil = document.getElementById('semester').value;
 
         addedit = "add";
         tj_pemlama = "";
@@ -282,6 +291,11 @@
         selection.addRange(range);
 
         cell = newRow.insertCell(2);
+        cell.style.textAlign = 'center';
+        cell.id = "smst" + baris;
+        cell.textContent = semesterpil;
+
+        cell = newRow.insertCell(3);
         cell.innerHTML = "<button style='display: none' class='edit' onclick='editTujPem(this,`" + baris + "`)'>Edit</button> <button style='display: none' class='delete' onclick = 'hapustj_pem(this, `" + baris + "`)'>Hapus</button> <button class = 'ok' onclick = 'oktj_pem(this, `" + baris + "`)'>OK</button> <button class = 'batal' onclick = 'bataltj_pem(this, `" + baris + "`)'>Batal</button>";
 
         $('.js-example-basic-single').select2();
@@ -335,6 +349,7 @@
     function oktj_pem(button, baris) {
         var row = button.parentElement.parentElement;
         var cell = row.querySelector('.editable');
+        var isisemester = row.querySelector('#smst' + baris).textContent;
         var editButton = row.querySelector('.edit');
         var deleteButton = row.querySelector('.delete');
         var okButton = row.querySelector('.ok');
@@ -363,6 +378,7 @@
             var data = {
                 valkelas: '<?= $valkelas ?>',
                 kelasdipilih: kelasdipilih,
+                semester: isisemester,
                 tj_pem: cellContent
             };
         } else {
@@ -387,7 +403,6 @@
                 window.location.reload();
             })
             .catch(error => console.error('Error:', error));
-
     }
 
     function hapustj_pem(button, baris) {
@@ -471,7 +486,14 @@
 
     document.getElementById('daftarkelas').addEventListener('change', function() {
         nkelas = this.value;
-        window.open("<?= base_url() . 'tujuan_pembelajaran?kelas=' ?>" + valkelas + "&n_kelas=" + nkelas, "_self");
+        nsemester = document.getElementById('semester').value;
+        window.open("<?= base_url() . 'tujuan_pembelajaran?kelas=' ?>" + valkelas + "&n_kelas=" + nkelas + "&semester=" + nsemester, "_self");
+    });
+
+    document.getElementById('semester').addEventListener('change', function() {
+        nsemester = this.value;
+        nkelas = document.getElementById('daftarkelas').value;
+        window.open("<?= base_url() . 'tujuan_pembelajaran?kelas=' ?>" + valkelas + "&n_kelas=" + nkelas + "&semester=" + nsemester, "_self");
     });
 </script>
 <?= $this->endSection() ?>

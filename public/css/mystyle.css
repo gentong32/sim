@@ -369,3 +369,27 @@ input[type="radio"]:checked + .slider:before {
 .kelaspil {
   padding-left: 13px !important;
 }
+
+.tb_biru {
+  backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: linear-gradient(
+    180deg,
+    #44bbdd 0%,
+    #40b5d6 30%,
+    #30a5c6 65%,
+    #129abc 100%
+  );
+  border-radius: 8px;
+  border: 0.5px solid #379;
+  padding: 9px 15px 6px 15px;
+  box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: initial;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-style: normal;
+}

@@ -57,7 +57,7 @@ class User extends BaseController
             $rombelsiswa = $daftar_rombel[0]->nama_rombel;
         }
 
-        $getdaftarsiswa = $this->M_user->getDaftarSiswa($id_sekolah, tahun_ajaran(), $kelassiswa, $rombelsiswa);
+        $getdaftarsiswa = $this->M_user->getDaftarsiswaBelumEkskul($id_sekolah, tahun_ajaran(), $id_ekskul, $kelassiswa, $rombelsiswa);
 
         $get_daftar_siswa_ekskul = $this->M_sekolah->get_daftar_siswa_ekskul($id_sekolah, $kelassiswa, $rombelsiswa, tahun_ajaran(), $id_ekskul);
 
@@ -70,6 +70,7 @@ class User extends BaseController
         // $data['info'] = $infosekolah;
         $data['nama_user'] = session()->get('nama_user');
         $data['nama_ekskul'] = $nama_ekskul;
+        $data['idx_ekskul'] = $idx;
 
         $data['tampil'] = $tampil;
         $data['daftar_kelas'] = $daftar_kelas;
@@ -101,5 +102,90 @@ class User extends BaseController
         $datarombel = $this->M_sekolah->get_rombel_sekolah($id_sekolah, tahun_ajaran(), $kelas);
 
         return json_encode($datarombel);
+    }
+
+    public function simpan_siswa_ekskul()
+    {
+        $id_sekolah = session()->get('id_sekolah');
+        $dataambil = json_decode(file_get_contents('php://input'), true);
+
+        $id_user = session()->get('id_user');
+        $data_saya = $this->M_user->get_data_guru($id_user);
+        $nuptk = $data_saya->nuptk;
+
+        $idx_ekskul = $dataambil['idx_ekskul'];
+        $dataNisn = $dataambil['selectedNisn'];
+
+        $daftarwaliekskul = $this->M_user->cekwaliekskul($nuptk, $id_sekolah, tahun_ajaran());
+        $id_ekskul = $daftarwaliekskul[($idx_ekskul) - 1]['id_ekskul'];
+
+        foreach ($dataNisn as $nisn) {
+
+            $dafsiswa = ['id_sekolah' => $id_sekolah, 'nisn' => $nisn, 'id_ekskul' => $id_ekskul];
+            // echo $nisn . ", ";
+            $this->M_user->tambah_siswa_ekskul($dafsiswa);
+        }
+
+        $response = ['message' => 'Data siswa berhasil disimpan'];
+        return $this->response->setJSON($response);
+    }
+
+    public function hapus_siswa_ekskul()
+    {
+        $id_sekolah = session()->get('id_sekolah');
+        $dataambil = json_decode(file_get_contents('php://input'), true);
+
+        $id_user = session()->get('id_user');
+        $data_saya = $this->M_user->get_data_guru($id_user);
+        $nuptk = $data_saya->nuptk;
+
+        $idx_ekskul = $dataambil['idx_ekskul'];
+        $nisn = $dataambil['selectedNisn'];
+
+        $daftarwaliekskul = $this->M_user->cekwaliekskul($nuptk, $id_sekolah, tahun_ajaran());
+        $id_ekskul = $daftarwaliekskul[($idx_ekskul) - 1]['id_ekskul'];
+
+        $this->M_user->hapus_siswa_ekskul($id_sekolah, $nisn, $id_ekskul);
+
+        $response = ['message' => 'Data siswa berhasil dihapus'];
+        return $this->response->setJSON($response);
+    }
+
+    public function ekskul_siswa()
+    {
+        $id_sekolah = session()->get('id_sekolah');
+
+        $id_user = session()->get('id_user');
+        $data_saya = $this->M_user->getDataSiswa($id_user, tahun_ajaran());
+        $nisn = $data_saya['nisn'];
+
+        $getDaftarEkskul = $this->M_user->get_ekskul_siswa($id_sekolah, tahun_ajaran(), $nisn);
+
+        // dd($getDaftarEkskul);
+
+        $judul_submenu = "&nbsp;Ekskul";
+        $data['judul_submenu'] = $judul_submenu;
+        $data['submenu'] = true;
+        $data['menutitle'] = 'TP';
+        $data['ikon'] = 'peserta';
+        $data['daftar_ekskul'] = $getDaftarEkskul;
+
+        return view('v_ekskul_siswa', $data);
+    }
+
+    public function simpan_ekskul_siswa()
+    {
+        $id_sekolah = session()->get('id_sekolah');
+
+        $id_user = session()->get('id_user');
+        $data_saya = $this->M_user->getDataSiswa($id_user, tahun_ajaran());
+        $nisn = $data_saya['nisn'];
+
+        $dataPost = json_decode(file_get_contents('php://input'), true);
+        $id_ekskul = $dataPost['idekskul'];
+
+        $this->M_user->tambah_ikut_ekskul($id_sekolah, $nisn, $id_ekskul);
+
+        return json_encode("sukses");
     }
 }
